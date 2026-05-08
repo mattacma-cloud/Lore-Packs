@@ -1,0 +1,125 @@
+{
+   "Description" : {
+      "Id" : "lancedef_mech_d10_FPTK_CW_4-2",
+      "Name" : "FP Tukayyid Kerensky's Star",
+      "Details" : "",
+      "Icon" : "",
+      "Cost" : 0,
+      "Rarity" : 0,
+      "Purchasable" : false
+   },
+   "Difficulty" : 10,
+   "LanceTags" : {
+      "items" : [
+         "BLACKLISTED"
+      ],
+      "tagSetSourceFile" : "Tags/LanceTags"
+   },
+   "LanceUnits" : [
+      {
+         "unitType" : "Mech",
+         "unitId" : "mechdef_daishi_dire_wolf-Kerensky",
+         "pilotId" : "pilot_fp_Khan_NatashaKerensky",
+         "unitTagSet" : {
+            "items" : [],
+            "tagSetSourceFile" : "Tags/UnitTags"
+         },
+         "excludedUnitTagSet" : {
+            "items" : [],
+            "tagSetSourceFile" : "Tags/UnitTags"
+         },
+         "pilotTagSet" : {
+            "items" : [],
+            "tagSetSourceFile" : "Tags/PilotTags"
+         },
+         "excludedPilotTagSet" : {
+            "items" : null,
+            "tagSetSourceFile" : "Tags/PilotTags"
+         }
+      },
+      {
+         "unitType" : "Mech",
+         "unitId" : "mechdef_masakari_warhawk-C",
+         "pilotId" : "pilot_d9_skirmisher",
+         "unitTagSet" : {
+            "items" : [],
+            "tagSetSourceFile" : "Tags/UnitTags"
+         },
+         "excludedUnitTagSet" : {
+            "items" : [],
+            "tagSetSourceFile" : "Tags/UnitTags"
+         },
+         "pilotTagSet" : {
+            "items" : [],
+            "tagSetSourceFile" : "Tags/PilotTags"
+         },
+         "excludedPilotTagSet" : {
+            "items" : null,
+            "tagSetSourceFile" : "Tags/PilotTags"
+         }
+      },
+      {
+         "unitType" : "Mech",
+         "unitId" : "mechdef_daishi_dire_wolf-A",
+         "pilotId" : "pilot_d8_skirmisher",
+         "unitTagSet" : {
+            "items" : [],
+            "tagSetSourceFile" : "Tags/UnitTags"
+         },
+         "excludedUnitTagSet" : {
+            "items" : [],
+            "tagSetSourceFile" : "Tags/UnitTags"
+         },
+         "pilotTagSet" : {
+            "items" : [],
+            "tagSetSourceFile" : "Tags/PilotTags"
+         },
+         "excludedPilotTagSet" : {
+            "items" : null,
+            "tagSetSourceFile" : "Tags/PilotTags"
+         }
+      },
+      {
+         "unitType" : "Mech",
+         "unitId" : "mechdef_gladiator_executioner-C",
+         "pilotId" : "pilot_d8_skirmisher",
+         "unitTagSet" : {
+            "items" : [],
+            "tagSetSourceFile" : "Tags/UnitTags"
+         },
+         "excludedUnitTagSet" : {
+            "items" : [],
+			"tagSetSourceFile" : "Tags/UnitTags"
+		 },
+         "pilotTagSet" : {
+            "items" : [],
+            "tagSetSourceFile" : "Tags/PilotTags"
+         },
+         "excludedPilotTagSet" : {
+            "items" : null,
+            "tagSetSourceFile" : "Tags/PilotTags"
+         }
+      },
+      {
+         "unitType" : "Mech",
+         "unitId" : "mechdef_manowar_gargoyle-B",
+         "pilotId" : "pilot_d8_MWDouglas",
+         "unitTagSet" : {
+            "items" : [],
+            "tagSetSourceFile" : "Tags/UnitTags"
+         },
+         "excludedUnitTagSet" : {
+            "items" : [],
+			"tagSetSourceFile" : "Tags/UnitTags"
+		 },
+         "pilotTagSet" : {
+            "items" : [],
+            "tagSetSourceFile" : "Tags/PilotTags"
+         },
+         "excludedPilotTagSet" : {
+            "items" : null,
+            "tagSetSourceFile" : "Tags/PilotTags"
+         }
+      }
+   ]
+}

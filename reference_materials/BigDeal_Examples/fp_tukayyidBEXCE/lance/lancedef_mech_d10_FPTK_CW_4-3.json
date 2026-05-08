@@ -1,0 +1,125 @@
+{
+   "Description" : {
+      "Id" : "lancedef_mech_d10_FPTK_CW_4-3",
+      "Name" : "FP Tukayyid Ward's Star",
+      "Details" : "",
+      "Icon" : "",
+      "Cost" : 0,
+      "Rarity" : 0,
+      "Purchasable" : false
+   },
+   "Difficulty" : 10,
+   "LanceTags" : {
+      "items" : [
+         "BLACKLISTED"
+      ],
+      "tagSetSourceFile" : "Tags/LanceTags"
+   },
+   "LanceUnits" : [
+      {
+         "unitType" : "Mech",
+         "unitId" : "mechdef_wolfhound_iic",
+         "pilotId" : "pilot_d10_flanker",
+         "unitTagSet" : {
+            "items" : [],
+            "tagSetSourceFile" : "Tags/UnitTags"
+         },
+         "excludedUnitTagSet" : {
+            "items" : [],
+            "tagSetSourceFile" : "Tags/UnitTags"
+         },
+         "pilotTagSet" : {
+            "items" : [],
+            "tagSetSourceFile" : "Tags/PilotTags"
+         },
+         "excludedPilotTagSet" : {
+            "items" : null,
+            "tagSetSourceFile" : "Tags/PilotTags"
+         }
+      },
+      {
+         "unitType" : "Mech",
+         "unitId" : "mechdef_thor_summoner-B",
+         "pilotId" : "pilot_d9_skirmisher",
+         "unitTagSet" : {
+            "items" : [],
+            "tagSetSourceFile" : "Tags/UnitTags"
+         },
+         "excludedUnitTagSet" : {
+            "items" : [],
+            "tagSetSourceFile" : "Tags/UnitTags"
+         },
+         "pilotTagSet" : {
+            "items" : [],
+            "tagSetSourceFile" : "Tags/PilotTags"
+         },
+         "excludedPilotTagSet" : {
+            "items" : null,
+            "tagSetSourceFile" : "Tags/PilotTags"
+         }
+      },
+      {
+         "unitType" : "Mech",
+         "unitId" : "mechdef_dragonfly_viper-B",
+         "pilotId" : "pilot_d10_scout",
+         "unitTagSet" : {
+            "items" : [],
+            "tagSetSourceFile" : "Tags/UnitTags"
+         },
+         "excludedUnitTagSet" : {
+            "items" : [],
+            "tagSetSourceFile" : "Tags/UnitTags"
+         },
+         "pilotTagSet" : {
+            "items" : [],
+            "tagSetSourceFile" : "Tags/PilotTags"
+         },
+         "excludedPilotTagSet" : {
+            "items" : null,
+            "tagSetSourceFile" : "Tags/PilotTags"
+         }
+      },
+      {
+         "unitType" : "Mech",
+         "unitId" : "mechdef_black_hawk_nova-D",
+         "pilotId" : "pilot_d10_scout",
+         "unitTagSet" : {
+            "items" : [],
+            "tagSetSourceFile" : "Tags/UnitTags"
+         },
+         "excludedUnitTagSet" : {
+            "items" : [],
+			"tagSetSourceFile" : "Tags/UnitTags"
+		 },
+         "pilotTagSet" : {
+            "items" : [],
+            "tagSetSourceFile" : "Tags/PilotTags"
+         },
+         "excludedPilotTagSet" : {
+            "items" : null,
+            "tagSetSourceFile" : "Tags/PilotTags"
+         }
+      },
+      {
+         "unitType" : "Mech",
+         "unitId" : "mechdef_fenris_ice_ferret-B",
+         "pilotId" : "pilot_d10_MWDimltrla",
+         "unitTagSet" : {
+            "items" : [],
+            "tagSetSourceFile" : "Tags/UnitTags"
+         },
+         "excludedUnitTagSet" : {
+            "items" : [],
+			"tagSetSourceFile" : "Tags/UnitTags"
+		 },
+         "pilotTagSet" : {
+            "items" : [],
+            "tagSetSourceFile" : "Tags/PilotTags"
+         },
+         "excludedPilotTagSet" : {
+            "items" : null,
+            "tagSetSourceFile" : "Tags/PilotTags"
+         }
+      }
+   ]
+}
