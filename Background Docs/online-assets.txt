@@ -1,0 +1,26 @@
+Curated online links for flashpoint and narrative authoring (edit as you like).
+The Flashpoint Creation Guide §1.6 cites these with codes where noted.
+Use Online Assets for extra bookmarks; if something becomes a repeat citation in the
+guide, add a matching (R#) line in §1.6 rather than scattering duplicate URLs in prose.
+
+Companion file: online-assets-additional.txt — flat URL list (ModTek raw docs, GitHub repos,
+community flashpoint mods) for quick copy/paste.
+
+ConverseTek — editor for BattleTech sim game conversations (.bytes)
+  Project / source & releases:
+    https://github.com/CWolfs/ConverseTek
+    https://github.com/CWolfs/ConverseTek/releases
+  Notes (high level; match releases to your game build):
+    - Copy ShadowrunDTO.dll and ShadowrunSerializer.dll from your install:
+        ...\BATTLETECH\BattleTech_Data\Managed\
+      into the ConverseTek folder before running ConverseTek.exe.
+    - Install the .NET runtime version requested by the release you download.
+    - Export graphs into your mod folder: simGameConversations\*.bytes
+    - Wire the exported conversation hex id into milestone System_StartConversation
+      "value" (see Flashpoint Creation Guide §3.4 and §3.2).
+
+Community references (context only; not official support)
+  Flashpoint Authors Guide (Paradox forum thread):
+    https://forum.paradoxplaza.com/forum/threads/flashpoint-authors-guide.1153590/
+  ConverseTek release blog (Mission Control site — change log / notes):
+    https://missioncontrolmod.com/blog/conversetek-release-1-4-0

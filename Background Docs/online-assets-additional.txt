@@ -1,0 +1,10 @@
+https://raw.githubusercontent.com/BattletechModders/ModTek/master/doc/MOD_JSON.md
+https://raw.githubusercontent.com/BattletechModders/ModTek/master/doc/MOD_JSON_FORMAT.md
+https://raw.githubusercontent.com/BattletechModders/ModTek/master/ModTek/Features/CustomResources/CustomResourcesFeature.cs
+https://github.com/BattletechModders/ModTek (and paths under it, via search results)
+https://github.com/BattletechModders/Flashpoint-Stock-Photos
+https://github.com/wmtorode/ColourfulFlashPoints
+https://github.com/Warenwolf/Flashpoints-of-the-Inner-Sphere
+https://forum.paradoxplaza.com/forum/threads/flashpoint-authors-guide.1153590/
+https://github.com/CWolfs/ConverseTek
+
