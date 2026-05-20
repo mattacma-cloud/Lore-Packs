@@ -12,6 +12,8 @@ The intent is to start with the Armed Forces of the Federated Suns on the Capell
 
 For those interested in contributing, please reach out to me, as the more the merrier in creating interesting content for other players to use.
 
+For those seeking more on the Lore Packs, a high level overview and approach is contained in the Project Scope folder.
+
 
 
 
