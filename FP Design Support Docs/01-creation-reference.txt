@@ -1,0 +1,3376 @@
+================================================================================
+FLASHPOINT CREATION GUIDE - Version 1: May 2026
+================================================================================
+This is a working reference for HBS BATTLETECH flashpoint authoring for
+Technically Illiterate Designers (TIDs), covering elements that include
+vanilla structures, DLC design data, and mod patterns.
+
+================================================================================
+STRUCTURAL OVERVIEW
+================================================================================
+Chapter 1 is the shared shelf: what a flashpoint is, how JSON and GUIDs work,
+where files live on disk, and a numbered resource list every later chapter cites
+as (R#).
+
+Chapter 2 is mod.json—the manifest—with tiered real-mod comparisons
+(simple / moderate / very complex).
+
+Chapters 3–8 walk through common to less commonly used data folders.
+
+Chapters 9–10 cover vanilla background data and HBS design-only trees.
+
+Appendix A provides a compact folder list for reference.
+
+================================================================================
+COMPANION DOCUMENTS
+================================================================================
+00-start-here.txt
+One-page index: recommended reading order, which numbered guide to open for each
+task, and pointers to ConverseTek / reference-sheets / worked examples.
+
+02-file-relationships-pathway.txt
+Provides an overview of how various files are nested and communicate within the
+BattleTech Flashpoint framework.
+
+03-story-scope-assistant.txt
+Helps guide new story tellers in crafting their story before using the Flashpoint
+Agent Design Template to drive its creation.
+
+04-agent-design-template.txt
+A template to assist TIDs effectively communicate their ideas to an AI Agent
+guided by this document to generate functional and effective Flashpoints. Worksheets
+for Parts 1–8, 1.7 (calendar/timeouts), and handoff to 04b for conversations.
+
+04b-conversation-design-template.txt
+Strategy-layer Leopard / dropship conversations: worksheets, ConverseTek JSON
+pipeline, and export to simGameConversations\*.bytes. Use with §3.4 and Part 6
+of the 04 template; do not duplicate tag tables here.
+
+05-creating-specific-units.txt
+Opposition mech/vehicle paint schemes: HeraldryDef, faction defaults, per-spawn
+customHeraldryDefId and customUnitName (whole factions, mixed battles, and
+regiments within a parent faction such as Chesterton Voltigeurs under House Liao).
+Tactical map markers and battle-side emblems (ChassisDef Icon, textureLogoID,
+FactionDef icon): Part I. Use with §3.3 contracts and §7.8 heraldry.
+
+06-date-specific-flashpoints.txt
+Calendar availability windows (timeline_* RequirementTags / ExclusionTags),
+ForcedTimelineEvent + SimGameEventDef, and sim-day AvailableTimeout / InProgressTimeout
+(not the same clock). Use with §3.1 FlashpointDef and Ch.5 §5.1 events.
+
+07-missions-maps-objectives-guids.txt
+Tactical missions: MapID, encounter layers, mission shapes, objective/GUID pairing,
+map×mission compatibility matrix, fire missions. Conceptual companion to §3.3
+contracts (07 explains what fits together; this guide gives field-by-field detail).
+
+================================================================================
+TRAINING MODS
+================================================================================
+This file was designed for the HBS BattleTech mod Extended - Tactics.
+Though many of the basic rules discussed here may work in other mods, this
+cannot be guaranteed in every case. The mod stack used to train the AI for this
+document was:
+	- BattleTech Extended Tactics and all standard included mods in that
+	download package.
+ 	- The Big Deal
+	- Custom Ammo Categories Compatibility (CAC-C)
+	- Expansion Pack
+	- Opportunity Missions
+	- Heraldry Picker
+	- Navigation Computer
+
+================================================================================
+CREDIT
+================================================================================
+I had zero knowledge of how to mod anything coming into this project, therefore
+all credit for the knowledge in this document must go to all those people who
+built the mods, help pages, readme files and other information that this document
+was based upon.
+
+This document and its companions are designed to support TIDs who have the
+technical knowledge and knowhow of a luddite take their ideas and make them real
+within BEXT for the enjoyment of others.
+
+If you are using this document and its companions to create Flashpoints for others
+to enjoy, please acknowledge the work of all those who came before us, work that
+enabled the telling of the stories we wish to share.
+
+================================================================================
+GLOSSARY
+================================================================================
+
+ How to read entries: "Def" entries are data records the game loads from JSON (or
+ related assets). IDs are the quoted strings inside Description.Id or "ID" fields.
+
+
+ Action / Result (milestones) — Actions are concrete commands (start talk, add
+ contract). Results group Actions and tag/stat changes under Flashpoint or
+ Company scope.
+
+ Beat — One step in a milestone set (one Milestones[] row). A "talk beat" runs
+ conversation; a "mission beat" injects or starts a contract.
+
+ BEXT / BT Extended — Mod stack this guide was written against (Training mods header).
+ Source currency — §1.10 (trust order when (R10), HBS editors, and ModTek docs disagree).
+
+ Camera (contract) — Cinematic or focus camera directives in the contract JSON
+ (intro pans, objective reveals); not the same as strategy-layer conversations.
+
+ Chunk (contract) — A timed segment of a mission file: spawn windows, objective
+ phases, reinforcement triggers grouped under chunkList.
+
+ ContractOverride — One tactical mission recipe: briefing, map wiring, objectives,
+ enemy spawns (§3.3).
+
+ ConverseTek — External editor for strategy-layer conversations → .bytes in
+ simGameConversations ((R9)).
+
+ CTD — Crash to desktop; often follows MissingDef or invalid JSON in the log.
+
+ DataAddendumEntries — Small JSON fragments merged into big core tables (enums,
+ factions) at load time (§2.6).
+
+ Def (suffix) — Short for "definition." File types end in Def: FlashpointDef,
+ ContractOverride, LanceDef, etc. The word is not a separate file; it names the
+ kind of record (poster, mission, lance roster, …).
+
+ DependsOn — Hard requirement: listed mods must load first or yours may break.
+ OptionallyDependsOn (soft deps) — Nice-to-have mods; your pack should still run if
+ they are missing (features from them simply stay off).
+
+ DLL — Compiled .dll code shipped with a mod for logic JSON cannot express; optional
+ on simple flashpoint packs (§2.6).
+
+ Enum / enumeration / mod-side enumeration — A numbered lookup table inside the game
+ (factions, ammo categories, …). Mods extend these via DataAddendumEntries rather
+ than editing vanilla enum files by hand (§2.6, §7.19).
+
+ FlashpointDef — Strategy-map offer: title, tags, employers, reward hook, link to
+ milestone set (§3.1).
+
+ GUID — Long hex label repeated in one contract file so spawns and objectives stay
+ paired (§1.4).
+
+ HeraldryDef — Crest / emblem data for employers and factions in UI (§7.8).
+
+ Lore shim — Mod that only merges FlashpointDef tweaks (e.g. BT_Extended_FPLore) with
+ no contracts of its own (§2.2).
+
+ MilestoneSetID vs StartingMilestoneID — Set id selects the whole screenplay file;
+ StartingMilestoneID is only the first beat inside that file (§3.2).
+
+ mod.json / Manifest — Cover sheet listing which folders load which def Types (Ch.2).
+
+ ModTek / loader — Tool chain that reads mod.json and injects mod folders into the
+ game data set ((R3)–(R5)).
+
+ Multi-tag hygiene — Clearing conflicting fp_choice_* (or similar) tags in one beat
+ before the next conversation, so old branch flags do not poison new choices.
+
+ Output log — Text trace file the game writes each launch (output_log.txt under
+ ...\BATTLETECH\) listing load errors, missing defs, Manifest issues (§1.9).
+
+ (R#) — Shorthand for resources listed in §1.6.
+
+ ShouldMergeJSON / ShouldAppendText (append flags) — Tell ModTek to patch existing
+ vanilla rows instead of replacing whole files (merge) or append lines to tables
+ (append). Wrong flag = duplicate ids or ignored patches (Ch.8).
+
+ SimGameMilestoneSet — Post-accept script of beats: talk, add contract, branch tags,
+ complete arc (§3.2).
+
+ Tag / tag database / tagSets — Text tokens (e.g. planet_name_detroit, fp_choice_a)
+ stored in game tag data. Flashpoint LocationRequirements and milestones add or
+ check tags; if a tag never exists in the loaded database, gates silently fail.
+
+ TalkForCancel — Milestone beat label pattern (e.g. ms_fp_theRaid_002_TalkForCancel):
+ a Leopard conversation that runs before branch logic so the player can abort the
+ arc with clear audio/UI.
+
+ UI — User interface: flashpoint card, briefing panels, employer portraits, skull
+ rating display.
+
+ VO (voice-over) — Spoken lines tied to CastDef / conversation nodes; cancel and
+ branch beats often need bespoke VO hooks.
+
+ 
+================================================================================
+1. INTRODUCTION
+================================================================================
+
+--------------------------------------------------------------------------------
+1.1 What a flashpoint is (big picture)
+--------------------------------------------------------------------------------
+ A flashpoint is a packaged scenario arc: a FlashpointDef (the offer on the map:
+ tags, employers, rewards) that points to a SimGameMilestoneSet that sequences
+ conversations, contracts, events, and completion. Mission behaviour lives in
+ contract overrides, while branching and pacing live in milestones and optional
+ SimGameEvents.
+
+ The Vanilla game ships FP templates (fp_TEMPLATE_*.json and matching
+ ms_fp_TEMPLATE_* milestone sets) under BattleTech_Data\StreamingAssets\data\
+ flashpoints and...\milestoneSets. Mods add or replace defs by path and many
+ entries use flags such as ShouldMergeJSON or AddToDB when your mod stack supports
+ them.
+
+ The goals of this guide are:
+ - To produce a shared vocabulary for IDs, folders, and manifest types to guide
+ technically illiterate designers seeking to tell storied in BEXT;
+ - Create fewer surprises for when wiring MilestoneSetID, contracts, cast, and rewards.
+ - Develop a stable instructional document to support the translation of TID stories
+ into effective and functional flashpoints.
+
+--------------------------------------------------------------------------------
+1.2 How later chapters cite this chapter
+--------------------------------------------------------------------------------
+ When you see (R3) or the words "Resource list", look up the matching code in
+ section 1.6 below. Chapters 2 onward use those codes instead of repeating long
+ URLs or folder lessons.
+
+--------------------------------------------------------------------------------
+1.3 Working with JSON text files
+--------------------------------------------------------------------------------
+ Most BattleTech defs you will edit—including mod.json—are JSON: plain text
+ with a strict layout the game parses like a form.
+
+ - Each setting has a name in double quotes, then a colon, then a value.
+ Example: "Enabled" : true means the setting named Enabled is set to the
+ boolean true. Another: "Name" : "fps_GDL" is a text value in quotes.
+ - Short text also sits in double quotes: "Name" : "My_Mod".
+ - Whole numbers are written plain: "Version" : "1.7.4b" is still text in quotes
+ in many mods; some fields use bare numbers where the schema expects them.
+ - True and false are lowercase words with no quotes.
+ - An empty list looks like this []. A list with items separates them with commas.
+ - null means "intentionally left empty" for an optional slot.
+
+ Why this matters: one stray comma, one missing quote, or one extra bracket
+ makes the entire file invalid. Always paste edited JSON through a validator
+ (such as https://jsonlint.com/) or use an editor that highlights errors
+ before you launch the game. If using and AI Agent, this task can be done by
+ the agent.
+
+--------------------------------------------------------------------------------
+1.4 GUIDs and "matching labels" inside a mission file
+--------------------------------------------------------------------------------
+ A GUID is a long hexadecimal label such as
+ 73275787-720a-4c33-9f20-953b1bbf48bd.
+
+ Contracts and encounter JSON repeat the same GUID in several lists so the game
+ knows two rows refer to the same spawn point or objective. If you change one
+ copy but not the other, the mission can refuse to load or soft-lock. Treat GUID
+ editing like matching serial numbers on duplicate paperwork—search the whole
+ file each time you touch one.
+
+--------------------------------------------------------------------------------
+1.5 Where to look for examples on disk
+--------------------------------------------------------------------------------
+ Vanilla runtime JSON (what the base game loads):
+ C:\Program Files (x86)\Steam\steamapps\common\BATTLETECH\
+ BattleTech_Data\StreamingAssets\data\
+ (also cited as (R2) in the resource list.)
+
+ HBS DLC design reference trees (layout examples, not always identical to your
+ installed build):
+ ...\BATTLETECH\(optional local clone of HBS DLC design data â€” not shipped in this repo)
+ (see (R8).)
+
+ Example flashpoint mod used throughout this guide for paths:
+ ...\BATTLETECH\Mods\fps_TheBigDealBEXCE\
+ Use it as a pattern library: mod.json, flashpoints\, milestoneSets\,
+ contracts\, and sibling folders.
+
+ Beginner “which file points to which” map (stepladder outline + quick table):
+ (local game Documents â€” see README; repo paths use Background Docs\)
+ 02-file-relationships-pathway.txt
+
+ AI / designer co-authoring scaffold (prompts, milestone tables, ConverseTek
+ worksheets — not game data until converted to mod files):
+ (local game Documents â€” see README; repo paths use Background Docs\)
+ 04-agent-design-template.txt (+ 04b for conversations)
+
+--------------------------------------------------------------------------------
+1.6 Resource list (codes used as (R#) later in this document)
+--------------------------------------------------------------------------------
+NOTE: All resources on the web would be referenced on guide publication, and others 
+uploaded and links updated. 
+
+(R1) reference-sheets spreadsheets (contracts, maps, encounter layers, cast, UI):
+ ../Background Docs/reference-sheets/ (in this repo)
+ Files include contracts.csv, map-names.csv, encounter-layer.csv,
+ flashpoint-reference.csv, cast-id-speaker-id.csv, uix-txr-conv.csv.
+ Optional link lists (../Background Docs/): online-assets.txt (ConverseTek +
+ narrative bookmarks) and online-assets-additional.txt (ModTek doc mirrors, repo
+ roots, community flashpoint/UI mods on GitHub).
+
+ (R2) Vanilla StreamingAssets data root (JSON defs the base game loads):
+ ...\BATTLETECH\BattleTech_Data\StreamingAssets\data\
+
+ (R3) ModTek wiki (overview of the loader and community tool chain):
+ https://github.com/BattletechModders/ModTek/wiki
+
+ (R4) ModTek primer for authors (developing mods):
+ https://github.com/BattletechModders/ModTek/blob/master/doc/PRIMER.md
+
+ (R5) ModTek mod.json format reference (field-by-field manifest rules):
+ https://github.com/BattletechModders/ModTek/blob/master/doc/MOD_JSON_FORMAT.md
+
+ (R6) Steam community thread (contracts UI / loader issues after updates—context
+ only, not official support):
+ https://steamcommunity.com/app/637090/discussions/3/3398435622566737123/
+
+ (R7) Mission Control documentation (optional advanced tooling for encounter
+ layers and per-contract overrides):
+ https://missioncontrolmod.com/docs/features/per-contract-overrides
+ https://missioncontrolmod.com/docs/contract-builder/setup
+
+ (R8) HBS DLC design data master (Flashpoint, HeavyMetal, UrbanWarfare trees):
+ ...\BATTLETECH\(optional local clone of HBS DLC design data â€” not shipped in this repo)
+
+ (R9) ConverseTek — community editor for sim (strategy-layer) conversations that
+ export to simGameConversations .bytes; used for branching Leopard / briefing
+ scenes (Chapter 3 §3.4):
+ https://github.com/CWolfs/ConverseTek
+ https://github.com/CWolfs/ConverseTek/releases
+ More bookmarks (forum threads, blogs) may also live in ..\Background Docs\reference-sheets\Online
+ Assets.txt and online-assets-additional.txt alongside (R9); prefer (R9) for the tool itself.
+
+ (R10) Flashpoint Authors Guide — a guide on how to craft a story in to a Flashpoint (FP) using ModTek
+ and other free tools.
+ https://forum.paradoxplaza.com/forum/threads/flashpoint-authors-guide.1153590/
+
+ Local mirror (reviewed May 2026): ..\Background Docs\r10-flashpoint-authors-guide.txt (forum export of the OP by
+ Amechwarrior, Feb 2019) [R10-2019]. Thread post #2 was reserved for advanced topics and was still
+ WIP when exported—treat failure milestones, conditional spawn gates, contextual
+ ConverseTek options, and art-asset sizing deep-dives as "see thread #2 if present" or
+ this Reference's chapters until you confirm the live forum post. Full trust table: §1.10.
+
+ How (R10) fits this Reference:
+ (R10) = story intent, editor workflow, testing habits, and "gotchas" from production.
+ This file = ids, mod.json Manifest rows, def folders, merge flags, BEXT-oriented examples.
+ Use both; neither replaces (R5) ModTek mod.json rules or (R9) ConverseTek's own docs.
+
+ [R10-2019] Age / stack caveat: (R10) predates many BEXT tools in the Training mods header. Prefer (R5),
+ (R7), (R9), and this Reference for loader flags; use (R10) for narrative structure and editor
+ workflow discipline. See §1.10 for trust order and stale-item list.
+
+--------------------------------------------------------------------------------
+1.7 Editing habits that prevent heartache
+--------------------------------------------------------------------------------
+ - Make a backup copy before large edits.
+ - Change one logical thing, validate JSON, launch, test, then continue.
+ - Make a backup copy before large edits.
+ - When something fails to load, read the game's output log and search for your
+ mod name, your contract ID, or the word Manifest.
+ - Make a backup copy before large edits.
+ - After big manifest or path changes, ModTek users often delete the BATTLETECH/
+ Mods/.modtek/cache folder so the loader rebuilds its index. This ensures the
+ game reads your new information.
+ - Make a backup copy before large edits.
+
+--------------------------------------------------------------------------------
+1.8 Relationship to chapter-specific checklists
+--------------------------------------------------------------------------------
+ Chapter 2 checklist lives in §2.9; ModTek links in §2.10. Chapter 3.3 ends with a contract-load
+ checklist. Chapter 4 ends with §4.8 (reward and unit def resolution). Chapter 5 ends with §5.7
+ (narrative and presentation assets). Chapter 6 ends with §6.5 (mission dialogue buckets).
+ Chapter 7 ends with §7.22 (supporting def resolution). Chapter 8 ends with §8.11 (merge / append /override sanity checks).
+ Opposition unit paint (regiment / per-spawn colours): companion 05-creating-specific-units.txt.
+ Calendar / era poster windows and sim events: companion 06 Creating Date Specific
+ Flashpoints and Events.txt (use 04 template Part 1.7 / §2.0 for worksheets).
+ Tactical missions (MapID, shapes, GUIDs, compatibility): companion 07 Missions, Maps,
+ Objectives and GUIDs.txt (use 04 Part 4 worksheets; field detail remains in §3.3).
+ All assume you already understand JSON (§1.3), resources (§1.6), and source currency (§1.10).
+
+--------------------------------------------------------------------------------
+1.9 output_log.txt (debug trace)
+--------------------------------------------------------------------------------
+
+ Each time you launch BATTLETECH the game appends a plain-text log beside the
+ install, typically:
+ C:\Program Files (x86)\Steam\steamapps\common\BATTLETECH\output_log.txt
+ (macOS/Linux paths differ; search your install folder for output_log.)
+
+ What it is: a chronological diary of loading—ModTek manifest lines, missing def
+ errors, JSON parse failures, and sometimes the exact id that failed. It is not shown
+ in-game; open it in Notepad after a crash or when content never appears.
+
+ What to search for: your mod "Name" from mod.json, Manifest, MissingDef,
+ TypeLoadException, ContractOverride, your contract or flashpoint id strings, and
+ StartConversation if talks fail silently.
+
+ Designer habit: reproduce the problem once, then search the log before changing ten
+ JSON files at random (see also §2.9 step 8).
+
+
+--------------------------------------------------------------------------------
+1.10 Source currency (BEXT / ModTek)
+--------------------------------------------------------------------------------
+
+ When sources disagree on a BEXT + ModTek install, use this trust order (highest first):
+
+ # | Source | Trust for | Known stale / verify on BEXT
+ --|------------------------|-----------------------------------------|------------------------------
+ 1 | (R5) mod.json format | Manifest Type, Path, DependsOn, flags | [verify ModTek] flag names differ by ModTek generation
+ 2 | (R4) + (R3) ModTek docs | Loader, cache, developing mods workflow | [verify ModTek] match your installed ModTek build
+ 3 | This Reference | FP folders, ids, BEXT-oriented examples | Examples from Training mods header; merge rules §8
+ 4 | (R7) Mission Control | Encounter layers, contract ENC overrides | Supersedes (R10) "tool coming soon" era [R10-2019]
+ 5 | (R9) ConverseTek | Strategy conversations → .bytes | [verify ModTek] + ExtendedConversations if your stack uses it
+ 6 | (R2) StreamingAssets | Vanilla defs, fp_TEMPLATE_* teaching ids | Not where mods load—copy into Mods\<pack>\ [R10-2019]
+ 7 | (R1) reference-sheets CSVs | Maps, contracts, encounter layers, cast | Replaces (R10) Google "FP Reference" spreadsheet [R10-2019]
+ 8 | HBS in-game editors | Draft fp_/ms_ structure, Contract Parser | Default save under vanilla data\ [R10-2019]; prototype only
+ 9 | (R10) ..\Background Docs\r10-flashpoint-authors-guide.txt | Story intent, branching cost, editor traps | Feb 2019 forum OP [R10-2019]; advanced post #2 was WIP in export
+
+ Inline tag key (on marked bullets elsewhere in this file):
+ [R10-2019] — Flashpoint Authors Guide OP; narrative/workflow still sound; tools may be dated.
+ [verify ModTek] — Field, flag, or merge rule may differ—open (R5) for your ModTek version before shipping.
+
+ Stale or verify-first items (do not repeat to players without checking):
+ • [R10-2019] Mission Control "very close to becoming the tool" → treat (R7) as current for encounter work.
+ • [R10-2019] Google Doc "FP Reference" Encounter Layer tab → use (R1) reference-sheets (map-names.csv, encounter-layer.csv, contracts.csv, â€¦).
+ • [R10-2019] FP Editor System_StartConversation dropdown (static MDDB) → paste ConverseTek graph id into ms_*.json by hand; see (R9).
+ • [R10-2019] ContractParser.exe + custom .bat paths only → JSON/Contract Parser optional; many BEXT authors skip parser.
+ • [R10-2019] VersionManifest.csv for Manifest Type list → use (R5) MOD_JSON_FORMAT.md instead.
+ • [verify ModTek] ShouldMergeJSON, ShouldAppendText, AddToDB, AddToAddendum on each Manifest row (Ch.8).
+ • [R10-2019] [verify ModTek] Consecutive-mission fields disableNegotations / disableCancelButton (sic in R10 export).
+ • [R10-2019] [verify ModTek] CastDef portrait .png via path without Manifest row (The Raid pattern)—retest per pack.
+ • [R10-2019] "Sound of Music" FP for fast reward testing → use any short, cancel-friendly arc you actually ship.
+ • [R10-2019] FP Editor "Reorder Milestones by Links" reward-MS renumber quirk → still hand-check ms_*.json after editor saves.
+
+
+================================================================================
+2. MOD.JSON (THE MOD MANIFEST)
+================================================================================
+
+--------------------------------------------------------------------------------
+2.1 What this file is (in plain terms)
+--------------------------------------------------------------------------------
+ mod.json is the cover sheet and table of contents for one mod folder. The game
+ (through ModTek or the built-in loader your install uses) reads it first. It
+ answers: Is this mod turned on? What is it called? What other mods must load
+ before it? Which folders contain which kinds of JSON or assets? Without a
+ correct mod.json, nothing else in the folder matters—no flashpoints, no
+ contracts, and no milestones will appear.
+
+ Quick reference (§2.1) — field → trigger → example
+ Topic | What it triggers | Example
+    ----------------|------------------------------------------|---------------------------
+ mod.json exists | Loader can see and open this mod folder | ...\Mods\<Pack>\mod.json
+ Enabled | Entire pack skipped when false | "Enabled": true
+ Manifest[] | Registers which def drawers load | FlashpointDef → "flashpoints"
+
+--------------------------------------------------------------------------------
+2.2 Worked examples — simple, moderate, and very complex packs
+--------------------------------------------------------------------------------
+ The Manifest does not grow because a story is long on paper; it grows because
+ you introduce more kinds of data (events, vehicles, merge patches, DLL logic).
+ Compare real mods from the same install (paths under ...\BATTLETECH\Mods\).
+
+ Simple — fps_GDL (Gray Death Legion flashpoints, repack)
+ Name key: "fps_GDL". No DependsOn, no DLL, no Website, no DataAddendumEntries.
+ Manifest loads: CastDef, ContractOverride, FlashpointDef, ItemCollectionDef,
+ LanceDef (AddToDB, ShouldMergeJSON false), MechDef, PilotDef, SimGameMilestoneSet,
+ SimGameConversations, Sprite for both sprites\ and portraits\, Texture2D with
+ AddToAddendum ConversationTexture.
+
+ Designer takeaway: self-contained FP arc—missions, cast, loot tables, 'Mechs,
+ milestones, and voice lines—without touching the wider strategy sim.
+
+ Simple-plus — fp_tukayyidBEXCE (Battle of Tukayyid)
+ Name key: "Battle_Of_Tukayyid". Still no DependsOn or DLL in its mod.json.
+ Extra line vs fps_GDL: MovementCapabilitiesDef with Path "movement" for custom
+ movement tables tied to that arc.
+
+ Designer takeaway: complexity can step up through one more def category without
+ new top-level machinery—watch for hidden dependencies inside those defs.
+
+ Moderate — Flashpoint-The-Raid (single narrative FP, standalone)
+ Name key: "Flashpoint_The_Raid". DependsOn is an empty array; OptionallyDependsOn
+ lists optional companion mods (e.g. cFixes). Includes Website for player-facing
+ links.
+ Manifest adds on top of the simple spine: BaseDescriptionDef, ConversationContent
+ (dialogue_buckets), DialogBucketDef, SimGameEventDef (events), HeraldryDef,
+ VehicleDef—still one folder per Type, but more story and mission systems are in
+ play.
+
+ Designer takeaway: when you want branching sim choices, dual conversation
+ pipelines (buckets plus simGameConversations), heraldry, or vehicles, the
+ manifest widens before you ever add a DLL.
+
+ Very complex — two different philosophies
+ (A) The_Big_Deal_Campaign_Add-on (folder fps_TheBigDealBEXCE) — long DependsOn
+ chain (BT Extended family + Timeline), DLL "TBD.dll", Settings block for the
+ DLL, DataAddendumEntries patching core enums, duplicate ItemCollectionDef paths
+ (append with ShouldAppendText), events plus eventsOverride, tags, tagSets,
+ emblems, and a long tail of combat defs (ammunition through weapons).
+
+ Designer takeaway: campaign hub—your FP is one module inside a living economy
+ and needs merges, append tables, and code support.
+
+ (B) Flashpoints of The Inner Sphere (folder BEX_FotIS) — DependsOn Timeline,
+ Mission Control, and BT_Extended_Timeline; Manifest pulls ForcedTimelineEvent
+ from folder "FTE", plus factions, turrets, vehicles, abilities, emblems, and
+ standard FP folders. Note the author-chosen Path spellings "heraldryDef" and
+ "vechdef" (folder names on disk must match those strings exactly).
+
+ Designer takeaway: anthology packs that hook timeline and Mission Control declare
+ those tools up front and may introduce manifest Types vanilla FP packs never
+ touch.
+
+ Edge case — BT_Extended_FPLore (lore shim
+ — see Glossary: Lore shim, not a mission pack)
+ Manifest is a single line: FlashpointDef with Path "flashpoints" and
+ ShouldMergeJSON true. OptionallyDependsOn lists many FP mods by Name. There is
+ no ContractOverride row because this mod only adjusts how existing flashpoint
+ defs behave in the campaign.
+ Designer takeaway: story complexity can live in other mods; your mod.json can
+ stay tiny when you only merge definitions.
+
+ Quick reference (§2.2) — field → trigger → example
+ Pattern (Name key) | What extra Manifest/deps imply | Example mod.json path
+    ---------------------|-------------------------------------------|----------------------------
+ fps_GDL | Simple FP spine, no DLL | ...\Mods\fps_GDL\mod.json
+ Battle_Of_Tukayyid | +movement tables (example) | ...\Mods\fp_tukayyidBEXCE\mod.json
+ Flashpoint_The_Raid | +events, buckets, vehicles (moderate) | ...\Mods\Flashpoint-The-Raid\mod.json
+ The_Big_Deal_... | DLL, merges, long DependsOn | ...\Mods\fps_TheBigDealBEXCE\mod.json
+ BEX_FotIS | Timeline + Mission Control hooks | ...\Mods\BEX_FotIS\mod.json
+ BT_Extended_FPLore | FlashpointDef merge-only shim | ...\Mods\BT_Extended_FPLore\mod.json
+
+--------------------------------------------------------------------------------
+2.3 Where it lives and what type of file it is
+--------------------------------------------------------------------------------
+ File name: mod.json
+ Location: the root of your mod folder (sits next to flashpoints\, contracts\, mod.json—not buried inside them).
+ Example path:
+ ...\BATTLETECH\Mods\Flashpoint-The-Raid\mod.json
+ sits beside ...\Flashpoint-The-Raid\flashpoints\, not inside flashpoints\mod.json.
+ File type: JSON text (see §1.3 for how JSON works).
+
+ In the file: the whole document is one big pair of braces { ... } wrapping
+ named sections.
+
+ Quick reference (§2.3) — field → trigger → example
+ Field / rule | What it triggers | Example
+    -------------|-------------------------------------|---------------------------
+ File name | Loader looks for this exact name | mod.json (only)
+ Location | Must sit at mod root | ...\Mods\<Pack>\mod.json beside flashpoints\
+ Format | Invalid JSON disables whole pack | validate per §1.3
+
+--------------------------------------------------------------------------------
+2.4 Why this file matters for flashpoints
+--------------------------------------------------------------------------------
+ Flashpoint content only reaches the game if mod.json lists the right Type and
+ Path pairs. A perfect milestone JSON that never appears in the Manifest might
+ as well not exist. The same is true for contracts, events, cast defs, and
+ conversation files.
+
+ Quick reference (§2.4) — field → trigger → example
+ Manifest Type | If row missing, flashpoint layer symptom | See in mod.json + folder
+    ----------------|-----------------------------------------------|---------------------------
+ FlashpointDef | No FP poster / offer on map | Path → flashpoints\*.json
+ SimGameMilestoneSet | Accept stalls / no beats | Path → milestoneSets\*.json
+ ContractOverride | Mission JSON never loads | Path → contracts\*.json
+
+--------------------------------------------------------------------------------
+2.5 Format (how the pieces fit together)
+--------------------------------------------------------------------------------
+ Top-level keys you will see in almost every mod:
+ "Name", "Enabled", "Version", "Description", "Author", optional "Website",
+ "DependsOn", optional "ConflictsWith", optional "DLL", optional "Settings",
+ optional "DataAddendumEntries", and the critical "Manifest" array.
+
+ The Manifest is an ordered list of objects. Each object normally includes:
+ "Type": the BattleTek def or asset kind (examples below)
+ "Path": folder name relative to the mod root where those files live
+ Optional flags such as "ShouldMergeJSON", "AddToDB", "ShouldAppendText",
+ "AddToAddendum" tell the loader how to combine your files with vanilla.
+
+ For the exact grammar ModTek expects, keep (R5) open while you edit. For a
+ philosophy of how mods are structured, read (R4). Official loader behaviour
+ evolves; when in doubt, trust the ModTek documentation for your installed
+ ModTek version over any single guide.
+
+ [verify ModTek] Source trust order when this Reference disagrees with (R10) or HBS editor
+ habits: §1.10.
+
+
+ Quick reference (§2.5) — field → trigger → example
+ Block / key | What it triggers | Example
+    ------------------|-------------------------------------------|---------------------------
+ "Manifest" array | Ordered list of Type+Path drawers | "Type":"FlashpointDef","Path":"flashpoints"
+ Type | Which BattleTek def family loads | ContractOverride, SimGameMilestoneSet, …
+ Path | Folder name under mod root (must match) | "contracts", "milestoneSets"
+ Optional flags | Merge / DB / addendum behaviour | ShouldMergeJSON, AddToDB, AddToAddendum
+
+--------------------------------------------------------------------------------
+2.6 Common fields (read like a form, top to bottom)
+--------------------------------------------------------------------------------
+ Name — internal mod key (often letters, numbers, underscores).
+ In the file: compare "fps_GDL" (simple pack), "Flashpoint_The_Raid" (moderate),
+ and "Flashpoints of The Inner Sphere" (folder BEX_FotIS, very complex anthology).
+ You might also see campaign codenames such as "The_Big_Deal_Campaign_Add-on".
+ Watch out: this string must match what other mods list inside their DependsOn
+ arrays—copy spelling from each target mod.json.
+
+ Enabled — master switch.
+ In the file: "Enabled": true in all samples above.
+ You might also see false while someone disables a pack without deleting it.
+ Watch out: false means the entire mod is skipped, no matter how good the JSON
+ inside folders is.
+
+ Version — text tag for humans and tools.
+ In the file: "1.0.0" (fps_GDL), "1.9.1.1" (Flashpoint-The-Raid), "2.1.1"
+ (BEX_FotIS), "1.7.4b" (fps_TheBigDealBEXCE).
+ Watch out: bumping the string does not auto-fix compatibility; DependsOn and
+ game version still rule.
+
+ Description and Author — notes for the mod list.
+ In the file: short author line on GDL ("Ablomis"), marketing blurb + Nexus link
+ on The Raid, multi-author lore text on BEX_FotIS, long campaign pitch on The Big
+ Deal.
+ Watch out: escape embedded quotes inside Description strings.
+
+ Website / Contact / OptionallyDependsOn — optional metadata and soft deps.
+ In the file: Flashpoint-The-Raid sets Website and OptionallyDependsOn; fps_GDL
+ omits both keys entirely.
+ Watch out: optional mods must still be harmless if absent—never hard-require a
+ feature without listing it under DependsOn.
+
+ DependsOn — ordered list of other mod Name strings that must load first.
+ In the file: [] on The Raid; ["Timeline","Mission Control","BT_Extended_Timeline"]
+ on BEX_FotIS; the long BT Extended list on The Big Deal (see that mod.json).
+ Watch out: missing or misspelled entries produce crashes or empty content when
+ your JSON references defs those packs supply.
+
+ DLL — optional compiled code shipped beside JSON.
+ In the file: "TBD.dll" on fps_TheBigDealBEXCE; absent on GDL, Tukayyid, The Raid,
+ and BEX_FotIS.
+ Watch out: if present, Settings and runtime behaviour usually depend on that
+ DLL staying compatible with the game version.
+
+
+ Plain English: a DLL (.dll file) is compiled program code the game loads in addition to
+ JSON. Mods use DLLs for features the data files cannot express (custom economy rules,
+ UI hooks, patched enums at runtime). If your flashpoint is JSON-only, leave the DLL
+ key out entirely—most single-arc packs never need one.
+
+
+ Settings — optional block read by that DLL or companion tools.
+ In the file: nested tuning object on fps_TheBigDealBEXCE; absent on the simpler
+ packs in §2.2.
+ Watch out: treat unknown keys as fragile—document them in your own readme.
+
+ DataAddendumEntries — small JSON fragments merged into big game tables.
+
+ Think of the game as a set of giant spreadsheets (faction lists, ammo families, enum
+ tables). Instead of replacing an entire spreadsheet, you drop in a sticky note that
+ says "add this row" or "change this one id." DataAddendumEntries points ModTek at those
+ sticky-note JSON files—common in campaign hubs, rare in one-mission flashpoint-only mods.
+
+ In the file: faction and ammo enum patches on fps_TheBigDealBEXCE; absent on
+ fps_GDL, fp_tukayyidBEXCE, Flashpoint-The-Raid, and BEX_FotIS in the samples here.
+ Watch out: confirm "name" strings against (R5); a wrong enumeration name fails
+ silently or loudly depending on loader version.
+
+ Quick reference (§2.6) — field → trigger → example
+ Field | What it triggers | Example
+    --------------------|--------------------------------------------|---------------------------
+ Name | Cross-mod DependsOn / Conflicts spelling | "fps_GDL", "Flashpoint_The_Raid"
+ Enabled | Whole mod on/off | true / false
+ Version | Human-readable rev tag | "1.9.1.1"
+ Description/Author | Mod-list blurb | quoted text blocks
+ Website | Optional player-facing link | Flashpoint-The-Raid includes it
+ OptionallyDependsOn | Soft deps
+ (see Glossary: OptionallyDependsOn / soft deps) if absent | cFixes-style companions
+ DependsOn | Hard load order / required packs | BT Extended lists in big packs
+ DLL | Optional compiled logic | "TBD.dll" on The Big Deal
+ Settings | Tuning for DLL / tools | nested object on TBD pack
+ DataAddendumEntries | Patches into core tables | faction / ammo rows
+
+--------------------------------------------------------------------------------
+2.7 The Manifest array (flashpoint-relevant entries)
+--------------------------------------------------------------------------------
+ Think of each line as a labelled drawer the loader opens. Type is the label;
+ Path is the drawer name under your mod folder. This means, for example, that
+ a flashpoint JSON related to a specific Flashpoint mod.json is located in the
+ /flashpoints folder of the mod. For example, a Flashpoint called "Bug Hunt"
+ might call its folder fp_bugHunt. Within fp_bugHunt would be
+ - fp_bugHunt/mod.json
+ - fp_bugHunt/flashpoints
+ - fp_bugHunt/flashpoints/fp_bugHunt.json
+
+ The manifest entry in Bug Hunt's mod.json:
+ { "Type": "FlashpointDef", "Path": "flashpoints" }
+ points the game to the fp_bugHunt/flashpoints folder where it will find the
+ fp_bugHunt.json
+
+ Minimum spine (every FP arc that runs its own missions)
+ { "Type": "FlashpointDef", "Path": "flashpoints" }
+ { "Type": "SimGameMilestoneSet", "Path": "milestoneSets" }
+ { "Type": "ContractOverride", "Path": "contracts" } (+ AddToDB true/false per
+ pack convention)
+ Present in: fps_GDL, fp_tukayyidBEXCE, Flashpoint-The-Raid, BEX_FotIS, The Big Deal.
+
+ What simple packs still add (see fps_GDL / fp_tukayyidBEXCE)
+ Cast, conversations, lances, mechs, pilots, item collections, art paths—and
+ optionally MovementCapabilitiesDef when custom movement tables are part of the
+ fantasy. All these are manifest entries as well as folders within the mod.
+
+ What moderate packs layer on (see Flashpoint-The-Raid)
+ BaseDescriptionDef, SimGameEventDef, ConversationContent dialogue_buckets,
+ DialogBucketDef, HeraldryDef, VehicleDef—story plus employer chrome plus special
+ units without yet touching DLLs or enum
+ (see Glossary: Enum / enumeration) surgery.
+
+ What very complex stacks add (see fps_TheBigDealBEXCE and BEX_FotIS)
+ Duplicate ItemCollection paths with append flags
+ (see Glossary: ShouldMergeJSON / ShouldAppendText), eventsOverride, tags, tagSets,
+ emblems, long combat-def tails, ForcedTimelineEvent / FactionDef / abilities, and
+ explicit DependsOn on Mission Control or timeline frameworks.
+
+ Watch outs that apply at every scale
+ Path must match the real folder on disk (custom spellings like "vechdef" are
+ legal only if you created that folder deliberately). If your manifest says
+ "vehicle definitions" and your folder is named "vechdef" the mod won't see the folder.
+ AddToDB / ShouldMergeJSON / ShouldAppendText change merge behaviour—confirm with
+ (R5) for your ModTek generation before relying on a flag.
+
+ Quick reference (§2.7) — field → trigger → example
+ Manifest "Type" | What it loads for FP work | Example "Path"
+    --------------------|-------------------------------------------|------------------
+ FlashpointDef | FP offers / FlashpointDef JSON | flashpoints
+ SimGameMilestoneSet | Post-accept beat machine | milestoneSets
+ ContractOverride | Tactical mission recipes | contracts
+ DialogBucketDef | In-mission dialogue bucket registry | conversationBuckets (Ch.6)
+ ConversationContent | Text lines inside buckets (manifest Type) | dialogue_buckets (Ch.6)
+ SimGameConversations| Dropship / sim dialogue assets | simGameConversations (varies)
+ CastDef | Speakers / VO hooks | cast or castDef (pack spelling)
+ ItemCollectionDef | Reward tables FP milestones call | itemCollections (typical)
+ MechDef | Built 'Mechs for lances / rewards | mech (Chapter 4)
+ LanceDef | Scripted enemy/ally lance compositions | lance (Chapter 4)
+ PilotDef | Pilot stats/abilities for lance slots | pilot (Chapter 4)
+ SimGameEventDef | Optional branching sim popups | events (The Raid pattern)
+ Sprite | Portraits / FP icons / UI tiles | sprites, portraits (Chapter 5)
+ Texture2D | Conversation plates (often addendum) | textures + ConversationTexture
+ VehicleDef | Special units | vehicles (when used)
+ Merge/append flags | How rows combine with vanilla | ShouldMergeJSON, ShouldAppendText (§8)
+
+--------------------------------------------------------------------------------
+2.8 How designers should read complexity
+--------------------------------------------------------------------------------
+ - Story length does not equal Manifest length. BT_Extended_FPLore proves you
+ can touch many flashpoints with a one-line Manifest merge.
+ - New mission behaviours (events, vehicles, dual dialogue pipelines) usually
+ appear as new Manifest Types before you add a DLL.
+ - Framework coupling (Timeline, Mission Control, BT Extended) explodes DependsOn
+ lists before the Manifest itself changes count much—plan load order early.
+
+ Simple English: before you add more folders to mod.json, you may already need five
+ other mods listed in DependsOn (Timeline, BT Extended, Mission Control, …). If mod A
+ must load before mod B, a typo in DependsOn means your flashpoint json never sees the
+ tags, factions, or maps those mods add—even if your story files are perfect. Decide
+ that dependency list early and test with the same mod stack players will use.
+
+ - When two "very complex" mods differ (The Big Deal vs FotIS), compare which
+ optional systems they declare: DLL + enum surgery vs timeline events + third-party
+ encounter tooling.
+
+ Quick reference (§2.8) — field → trigger → example
+ Designer lens | Trigger / takeaway | Example in this guide
+    ------------------------|-------------------------------------------|---------------------------
+ Story length | Does not equal Manifest row count | BT_Extended_FPLore one row
+ New sim systems | Usually new Types before DLL | The Raid vs GDL compare §2.2
+ Framework coupling | DependsOn explodes first | BEX_FotIS, The Big Deal
+ Philosophy split | DLL+enums vs Timeline+MC | TBD vs FotIS in §2.2
+
+--------------------------------------------------------------------------------
+2.9 If the mod or defs seem missing, check these in order
+--------------------------------------------------------------------------------
+ 1) Enabled is true and the mod appears in your launcher list in game via the mods
+ menu accessed from the game main screen.
+ 2) Every DependsOn mod is installed, Enabled, and loads before yours.
+ 3) mod.json sits at the mod root, not one folder too deep.
+ 4) JSON validates (§1.3)—a broken mod.json disables the entire pack.
+ 5) Each Manifest Path matches a real folder name (watch spelling and case).
+ 6) Each Manifest Type matches the kind of files inside that folder.
+ 7) After path or Type edits, ModTek users delete mods/.modtek/cache contents and
+ relaunch once (same habit as contract debugging in §3.3).
+ 8) Read the output log
+ (full description: §1.9 output_log.txt); search for Manifest, TypeLoadException, or your mod Name.
+
+ Quick reference (§2.9) — field → trigger → example
+ Step | What failing item triggers | Where to look
+    -----|-----------------------------------------------|----------------------------
+ 1 | Pack invisible / half-loaded | Enabled + launcher list
+ 2 | Missing defs from dependencies | DependsOn mod.json Names
+ 3 | Loader never opens manifest | mod.json at correct depth
+ 4 | Entire mod skipped | validate mod.json §1.3
+ 5–6 | Files not found / wrong category | Manifest Path + Type vs folders
+ 7 | Stale index after edits | delete Mods\.modtek cache
+ 8 | Crash hints | output_log.txt search
+
+--------------------------------------------------------------------------------
+2.10 Further reading (same entries as §1.6, focused on manifests)
+--------------------------------------------------------------------------------
+ ModTek overview (R3), author primer (R4), mod.json format (R5). Community thread
+ (R6) if the contract browser misbehaves after updates. Mission Control (R7) only
+ if you adopt that encounter toolchain (as BEX_FotIS does).
+
+ Vanilla examples for comparison always live under (R2).
+
+ Quick reference (§2.10) — field → trigger → example
+ Code | What it is (trigger to open it) | Example target
+    -----|-----------------------------------------------|---------------------------
+ (R3) | ModTek overview | wiki home §1.6 URL
+ (R4) | Author primer | doc/PRIMER.md §1.6 URL
+ (R5) | mod.json grammar (source of truth) | MOD_JSON_FORMAT.md §1.6 URL
+ (R6) | Community loader/UI threads | Steam thread §1.6 URL
+ (R7) | Mission Control / per-contract tooling | missioncontrolmod.com §1.6 URL
+ (R2) | Vanilla JSON to diff against | StreamingAssets\data\
+
+
+================================================================================
+3. CORE FLASHPOINT PIPELINE
+================================================================================
+This sectiondescribes the three folders that are the spine of every flashpoint:
+the offer on the map, the scripted state machine, and the tactical missions. This
+is where you build the core of your story. If the mod.json is the seed of the
+flashpoint, these folders are the truck of the tress, with other folders forming
+the branches.
+
+
+--------------------------------------------------------------------------------
+3.1 flashpoints
+--------------------------------------------------------------------------------
+
+What this is (in plain terms)
+ A flashpoint JSON is the strategy-map "help wanted" poster for a whole story arc.
+ When the game draws the flashpoint icon on a planet, it is reading this file to
+ learn about the title and blurb, which worlds may host it, who counts as the employer,
+ how scary the skull rating is, what reward table fires when the arc completes, and
+ which milestone script (§3.2) takes over the moment the commander hits Accept.
+ It does not place enemy 'Mechs or objectives—that is contract JSON (§3.3), which
+ milestones call when they are ready for a mission. General JSON rules: §1.3.
+
+How the game finds these files
+ Chapter 2: mod.json must list Type FlashpointDef and a Path (usually "flashpoints")
+ pointing at the folder that holds these JSON files. No manifest line, no poster,
+ no matter how polished the text inside the file is.
+
+Lookup tables on disk
+ Planet tags (e.g. planet_name_detroit) must exist in the tag database
+ — the game's master list of string tokens attached to systems,
+ planets, and your merc company. Flashpoint LocationRequirements only check tags that
+ were actually registered and applied in your save; copying a tag name from a spreadsheet
+ without the mod that defines and places it leaves the poster invisible.
+ your
+ campaign loads. Trace them through (R2) and your frame mod's docs; (R1) is
+ contract- and map-heavy but still useful for sanity checks with designers.
+
+Why this file matters
+ If this def is missing or invalid, players never see the offer—or they accept and
+ the game has nowhere to send them next when MilestoneSetID does not match a real
+ milestone set.
+
+ Quick reference (§3.1 — poster vs pipeline)
+ Field / topic | What it triggers | Example filename / path
+    -------------------|-----------------------------------------------|----------------------------------
+ FlashpointDef JSON | Strategy-map offer + links to milestone set | fp_theRaid.json, fp_birthOfALegend.json
+ mod.json Manifest | Loader finds your flashpoints folder | "Type":"FlashpointDef","Path":"flashpoints"
+ Planet / tag data | Icon only spawns where tags exist | planet_name_tieverton under (R2) tags trees
+ MilestoneSetID | Accept hands control to §3.2 | "ms_fp_theRaid" → ms_fp_theRaid.json
+
+--------------------------------------------------------------------------------
+File name and the IDs inside it
+--------------------------------------------------------------------------------
+ File type: JSON text — §1.3.
+ Convention: one flashpoint per file, name often fp_<story>.json .
+ Three ways authors hook the name up (same idea, different packs):
+ 1) Vanilla teaching slice: (R2) data\flashpoints\fp_TEMPLATE_oneContract.json
+ holds "Description.Id" : "fp_TEMPLATE_oneContract" — the id, file stem, and
+ tutorial purpose all line up for copy-paste learning.
+ 2) Gray Death pack: ...\Mods\fps_GDL\flashpoints\fp_birthOfALegend.json matches
+ "Description.Id" : "fp_birthOfALegend"; InternalName is the shorter
+ birthOfALegend for tools that dislike spaces.
+ 3) Stand-alone narrative mod: ...\Mods\Flashpoint-The-Raid\flashpoints\
+ fp_theRaid.json uses "Description.Id" : "fp_theRaid" plus a written-out Name
+ field for the player-facing title "The Raid."
+
+ Quick reference (§3.1 — names)
+ Field / rule | What it triggers | Example filename / id
+    --------------------|------------------------------------------|---------------------------
+ File stem vs Id | Humans + tools align when they match | fp_TEMPLATE_oneContract.json ↔ Description.Id
+ InternalName | Short handle for logs / utilities | birthOfALegend vs fp_birthOfALegend id
+ Mod vs vanilla | Same rules, different roots | ...\Mods\...\flashpoints\ vs (R2)\flashpoints\
+
+--------------------------------------------------------------------------------
+Format (big picture) — three ways the same knobs behave differently
+--------------------------------------------------------------------------------
+
+ One file, one offer
+ 1) fp_TEMPLATE_oneContract (vanilla template) — this is a minimal teaching
+ example with a single Davion-tied short arc.
+ 2) fp_TEMPLATE_3WaySplit (vanilla template) — still one file, but the linked
+ milestone set is built for three diverging player paths after the same accept.
+ 3) fp_tukayyid (mod: Battle_Of_Tukayyid) — one file, yet the linked milestones
+ span a full CAMPAIGN-length sequence instead of a single short beat
+ (see Glossary: Beat).
+
+ Where the icon may appear (LocationRequirements)
+ 1) fp_TEMPLATE_oneContract — requires tag planet_name_detroit under
+ Tags/PlanetNameTags; if Detroit never exists in your save, the poster never
+ lights up even though the JSON loads fine.
+ 2) fp_birthOfALegend — locks to planet_name_trell(trellwan) and also lists an
+ ExclusionTags entry (fp_finished_birthOfALegend) so finishing the arc once
+ removes the world from eligibility and won't allow it to re-spawn.
+ 3) fp_theRaid — demands planet_name_Tiverton but intentionally points
+ tagSetSourceFile at Tags/CompanyTags because the author tags worlds through
+ company map logic—different outcome if a beginner copies the block without
+ also copying the tag pipeline that places those tags on Tiverton.
+
+ Which script runs after Accept (MilestoneSetID versus first milestone id)
+ 1) fp_TEMPLATE_oneContract sets "MilestoneSetID" : "ms_fp_TEMPLATE_oneContract";
+ that string tells the engine which SimGameMilestoneSet JSON to load; inside
+ that file, StartingMilestoneID is ms_fp_TEMPLATE_oneContract_001_Start—a
+ different string that names only the first step.
+ 2) fp_theRaid uses "MilestoneSetID" : "ms_fp_theRaid" while the opening step id
+ is ms_fp_theRaid_001_Start—shows the pattern for a mod-authored arc with
+ branch/cancel dialogue early on.
+ 3) fp_tukayyid pairs "MilestoneSetID" : "ms_fp_tukayyid" with
+ ms_fp_tukayyid_001_Start, then many lines of later milestones—same
+ wiring rule, far heavier script.
+
+ Quick reference (§3.1 — shapes)
+ Knob / block | What it triggers | Example files / ids
+    -----------------------|------------------------------------------|---------------------------
+ Single-offer file | One poster, one MilestoneSetID | fp_TEMPLATE_oneContract.json
+ Branching templates | Same poster, split milestone scripts | fp_TEMPLATE_3WaySplit → ms_fp_TEMPLATE_split*
+ LocationRules | Planet allow / deny on star map | planet_name_detroit, exclusions on Trellwan
+ MilestoneSetID vs Start| First beat id lives inside milestone set | ms_fp_TEMPLATE_oneContract vs …_001_Start
+
+--------------------------------------------------------------------------------
+Common fields — what each one does, then three contrasting examples
+--------------------------------------------------------------------------------
+ For every field: plain English first, then Example A / B / C with different
+ player-visible or system outcomes.
+
+ Description.Id, Name, Details, Icon — registers the offer and feeds the UI
+ (see Glossary: UI).
+ What it triggers: Name sits on the flashpoint card; Details fills deeper info
+ panels where the UI reads it; Icon picks the banner texture key (blank means
+ "use default FP art path").
+ Example A — fp_TEMPLATE_oneContract: Id fp_TEMPLATE_oneContract, teaching Name,
+ empty Icon so new authors need no art pass.
+ Example B — fp_theRaid: Id fp_theRaid, marketing Name "The Raid", Details calls
+ out extreme difficulty and Atlas-tier rewards, Icon uixTxrSpot_fp_theRaid.png.
+ Example C — fp_tukayyid: Id fp_tukayyid, long Name/Details sells the ComStar proxy
+ war, Icon tukayyid_titlecard.png for a landmark operation.
+
+ Weight — biases random flashpoint draws when multiple arcs qualify on a planet. Most
+ flashpoints trigger based on a function like and internal game lottery. The higher the
+ weight, the better the chance of a given flashpoint appearing when the star map
+ refresh occurs.
+ What it triggers: higher weights make this def win the random pick more often
+ (framework mods may still normalize or cap pools).
+ Example A — fp_TEMPLATE_oneContract at 1 keeps the tutorial sample unobtrusive.
+ Example B — fp_birthOfALegend at 50 pushes the Grey Death storyline ahead of filler.
+ Example C — fp_tukayyid at 5000 swamps other entries whenever Tukayyid is legal so
+ the historical battle actually surfaces.
+
+ InternalName — compact handle sitting beside Description.Id for tools and logs.
+ What it triggers: DLLs or diagnostics may concatenate InternalName; keep it
+ stable once players have saves referencing the arc.
+ Example A — TEMPLATE_oneContract mirrors the template family.
+ Example B — theRaid short tag for Raid-specific utilities.
+ Example C — tukayyid aligns with the massive milestone namespace.
+
+ PublishState — tells packagers whether content is meant for live players.
+ What it triggers: anything other than PUBLISHED is often stripped from shipping
+ manifests, so the flashpoint never rolls in a release build.
+ Example A/B/C — fp_TEMPLATE_oneContract, fp_theRaid, and fp_tukayyid all use
+ PUBLISHED; a future draft row labelled UNPUBLISHED would keep the file in source
+ control but off the player map until toggled.
+
+ Difficulty — drives the skull count on the flashpoint card before per-mission tuning.
+ What it triggers: warns commanders how punishing the chain should feel; contracts
+ can still spike or soften individual drops.
+ Example A — Difficulty 1 on fp_TEMPLATE_oneContract for low-stakes learning.
+ Example B — Difficulty 4 on fp_birthOfALegend for mid-campaign tension.
+ Example C — Difficulty 10 on fp_theRaid and fp_tukayyid for "bring endgame tech."
+
+ Requirements — company-level gates that must pass before the offer may spawn.
+ What it triggers: each block checks Scope (usually Company) tag sets; failing any
+ block hides the flashpoint entirely—not merely the contract board.
+ Example A — fp_TEMPLATE_oneContract keeps Requirements [] so only planet tags matter.
+ Example B — fp_theRaid demands company_blackMarket_ON; pristine mercs who avoided
+ the black market never get the Trojan-horse plot hook.
+ Example C — fp_tukayyid (and fp_birthOfALegend) still declare a Company requirement
+ object with empty tag lists—authors reserved the slot for future reputation checks.
+
+ LocationRequirements — planet-level allow and deny lists for the poster.
+ What it triggers: the current star system must own every RequirementTags token and
+ must not carry ExclusionTags items or the icon never appears there.
+ Example A — fp_TEMPLATE_oneContract: planet_name_detroit under PlanetNameTags—fly
+ to Detroit to test quickly.
+ Example B — fp_birthOfALegend: planet_name_trell(trellwan) plus ExclusionTags
+ fp_finished_birthOfALegend so finished arcs stop respawning in place.
+ Example C — fp_theRaid: planet_name_Tiverton but tagSetSourceFile points at
+ Tags/CompanyTags—only works if your pipeline actually places those company tags
+ on Tiverton (copying the JSON without the pipeline yields "dead" requirements).
+
+ "Pipeline" here means everything that must happen before your tag exists in the
+ live campaign—not just the FlashpointDef JSON. For fp_theRaid, company tags on
+ Tiverton may come from timeline events, other mods, or TagSet files referenced by
+ tagSetSourceFile. If that upstream step never runs, planet_name_Tiverton alone is
+ not enough and the offer never spawns (see Glossary: Pipeline / tag pipeline).
+
+
+ PotentialEmployers — faction that "signs" the flashpoint in UI and copy.
+ What it triggers: chooses briefing VO, portraits, and some contractual flavor text;
+ unknown factions need mod-side enumerations
+ — the faction name string in JSON must exist in the game's faction
+ enum table. Vanilla lists Davion, Locals, ComStar, etc. A brand-new employer string
+ requires your mod (or a dependency) to append that name via DataAddendumEntries or
+ a FactionDef merge, not only typing it in PotentialEmployers (see Glossary: Enum;
+ §2.6 DataAddendumEntries; §7.19).
+ (Chapter 2).
+ Example A — Davion on fp_TEMPLATE_oneContract for stock Great House tone.
+ Example B — Locals on fp_theRaid for planetary-government hire framing.
+ Example C — ComStar on fp_tukayyid for neutral-mask bureaucracy.
+
+ TargetFaction — narrative opponent label for the arc, not the final word on lances.
+ What it triggers: steers writing and conflict theming, while the actual enemy forces
+ live in the contract's Lance definitions (§3.3).
+ Example A — INVALID_UNSET on fp_TEMPLATE_oneContract defers picking a villain until
+ contracts or milestones say so.
+ Example B — AuriganPirates on fp_theRaid promises anti-pirate heroics.
+ Example C — Unknown on fp_tukayyid and fp_runThroughTheJungle preserves spy-thriller
+ uncertainty until intel drops.
+
+ AllowRefitTime — whether downtime refits are allowed between flashpoint beats.
+ What it triggers: true lets milestone authors assume refit windows; false keeps
+ tension high for back-to-back missions.
+ Example A — true on fp_TEMPLATE_oneContract to cushion new players.
+ Example B — false on fp_theRaid and fp_birthOfALegend to match assault pacing.
+ Example C — false on fp_tukayyid for sustained operational tempo across many drops.
+
+ FlashpointLength — UI hint for SHORT vs LONG vs CAMPAIGN scope.
+ What it triggers: card chrome and copy set expectations; some frameworks read the
+ enum for automation or VO.
+ Example A — SHORT on fp_TEMPLATE_oneContract and fp_birthOfALegend for tight tales.
+ Example B — LONG on fp_theRaid and fp_runThroughTheJungle for multi-mission grinds.
+ Example C — CAMPAIGN on fp_tukayyid for headline operations that span many sessions.
+
+ Repeatable — whether the same FlashpointDef may return after completion.
+ What it triggers: false removes the job once done unless tags such as exclusions are
+ cleared; true would allow the flashpoint to respawn (rare in story packs).
+ Example A — false on fp_TEMPLATE_oneContract for one-and-done teaching.
+ Example B — false on fp_birthOfALegend combined with exclusion tags prevents double
+ cinematic rewards.
+ Example C — hypothetical true with cleared tags would let the arc respawn each
+ campaign year—only use when design intends farming or looping events.
+
+ MilestoneSetID — wiring harness into §3.2.
+ What it triggers: points the flashpoint, once a player hits the "Accept" button, at the
+ SimGameMilestoneSet JSON that owns the beat list. Any mismatch will yield silent failure
+ right after the player commits. This usually means returning to the main Argo screen where
+ "Flashpoint Available" may still be present despite the Flashpoint not activating.
+ Example A — ms_fp_TEMPLATE_oneContract for the vanilla tutorial arc.
+ Example B — ms_fp_theRaid for branching Raid milestones with early cancel dialogue.
+ Example C — ms_fp_tukayyid for the sprawling battle sequence.
+
+ Timeout fields (UseAvailableTimeoutOverride, AvailableTimeout,
+ UseInProgressTimeoutOverride, InProgressTimeout) — optional offer expiry and in-arc clocks.
+ What it triggers: non-zero values can despawn the posting or fail the arc if the
+ commander waits too long; overrides must be true for the numbers to bite.
+ It is important to carefully consider short Timeouts and articulate them in any supporting
+ text about Flashpoint or during the Flashpoint's conversations. Plyers need to know when
+ time is of the essence. These tools can add tension, but also frustration if misused or
+ poorly communicated.
+ Example A — all false / zero on fp_TEMPLATE_oneContract and fp_theRaid: timeless offers.
+ Example B — fp_runThroughTheJungle sets AvailableTimeout 2000 and InProgressTimeout 180
+ so the hook expires if ignored and tightens pacing once accepted.
+ Example C — fp_birthOfALegend leaves zeros: Trellwan keeps the invite until resolved.
+
+ Calendar date windows (no startDate field on poster JSON): company RequirementTags /
+ ExclusionTags (usually timeline_*) applied by Timeline / BT_Extended_Timeline or your
+ own SimGameEventDef. Hard historical open/close (e.g. offer only July–November 3032) —
+ companion 06-date-specific-flashpoints.txt Part C. Sim-day
+ AvailableTimeout above is a different mechanism.
+
+ RewardCollectionID — item table granted when milestones call completion with rewards.
+ What it triggers: resolves ItemCollectionDef bundles (§4.7); typos drop loot on
+ the floor or spam errors at payoff preventing players gaining the reward they earned.
+ Example A — itemCollection_loot_Item_rare on vanilla templates for generic prizes.
+ Example B — itemCollection_loot_Mech_SLDF on fp_theRaid for marquee 'Mech chances.
+ Example C — itemCollection_loot_Weapon_SLDF_Tukayyid on fp_tukayyid for themed salvage.
+
+ UnitDropTonnageHint / LanceDropTonnageHint — soft UI nudges for drop-planning screens.
+ What it triggers: steers auto-build suggestions and warning copy; does not hard cap
+ contract tonnage by itself. There are standards to use, which are none, light, mixed
+ and heavy. In thinking of traditional BattleTech terms, this can, but not always
+ translate to Light, Medium, Heavy, Assault. This is not a perfect one-to-one conversion
+ and should be used as a broad approximation, not an accurate translation.
+ Example A — both "None" on fp_TEMPLATE_oneContract leaves students unguided.
+ Example B — Lance "Heavy" on fp_tukayyid signals assault-focused deployments.
+ Example C — Unit "Heavy" with Lance "None" on fp_runThroughTheJungle spotlights
+ individual chassis mass over lance-wide rules.
+
+ FlashpointShortDescription — card blurb under the title. This is little more than a single
+ sentence designed to add some context to the Flashpoint title. For example, the Battle of Tukayyid
+ flashpoint title is supported by the short description "ComStar has offered us to participate in a
+ proxy battle against Clans for the control of Terra. The outcome of this battle will decide the
+ future of the Inner Sphere."
+ What it triggers: first narrative beat many players skim before accepting.
+ Example A — blank on fp_TEMPLATE_oneContract so authors paste prose later.
+ Example B — long noir briefing on fp_theRaid sets expectations about Black Market risk.
+ Example C — expedition mystery copy on fp_runThroughTheJungle tees up Lostech intrigue.
+
+ FlashpointDescriberCastDefId — CastDef that reads the short description aloud.
+ What it triggers: swaps VO, portrait, and scripted reactions in the cabin (Chapter 5).
+ Example A — castDef_DariusDefault on fp_TEMPLATE_oneContract and fp_runThroughTheJungle
+ for the standard of Darius being the speaker.
+ Example B — castDef_LocalsDefault on fp_theRaid for planetary government voice.
+ Example C — castDef_DariusDefault again on fp_tukayyid when the scope is inter-House politics.
+
+ Optional Tags — extra classification flags (blacklists, DLC gates, framework hooks).
+ What it triggers: systems scanning tags/FlashpointTags may hide, boost, or reroute
+ generation for this def.
+ Example A — omitted on fp_TEMPLATE_oneContract: vanilla-only behaviour.
+ Example B — BLACKLISTED in fp_runThroughTheJungle keeps the curated arc out of random
+ spawning pools unless the company carries the correct tag.
+ Example C — fp_tukayyid declares Tags with empty items but a tag file path—ready for
+ future toggles without reshaping the root object.
+
+ Quick reference (§3.1 — FlashpointDef fields)
+ Field / group | What it triggers | Example (file or value)
+    -------------------------|---------------------------------------------|---------------------------
+ Description.Id / Name / Details / Icon | Card + dossier text + art key | fp_theRaid + uixTxrSpot_fp_theRaid.png
+ Weight | Biases random FP picks on eligible worlds | 1 vs 50 vs 5000
+ InternalName | Tool/log shorthand | theRaid, tukayyid
+ PublishState | Can strip from shipping builds | PUBLISHED
+ Difficulty | Skull rating on poster | 1–10 examples above
+ Requirements | Company gates hide entire offer | [], or company_blackMarket_ON
+ LocationRequirements | Planet must match tags / exclusions | planet_name_Tiverton patterns
+ PotentialEmployers | Employer VO + flavor | Davion, Locals, ComStar
+ TargetFaction | Story opposition label | AuriganPirates, Unknown
+ AllowRefitTime | Refit windows between beats | true / false arcs above
+ FlashpointLength | SHORT / LONG / CAMPAIGN hint | fp_tukayyid CAMPAIGN
+ Repeatable | Can arc return after completion | usually false
+ MilestoneSetID | Which ms_*.json runs after Accept | ms_fp_theRaid
+ Timeout fields | Offer / in-arc expiry timings | fp_runThroughTheJungle numbers
+ RewardCollectionID | Completion loot table hook | itemCollection_loot_Mech_SLDF
+ Unit/LanceDropTonnageHint| Soft UI deployment hints | Heavy / None strings
+ FlashpointShortDescription | Card teaser blurb | noir copy on fp_theRaid
+ FlashpointDescriberCastDefId | VO for short description | castDef_LocalsDefault
+ Optional Tags | Blacklists / framework hooks | BLACKLISTED, tag file paths
+
+--------------------------------------------------------------------------------
+How three real arcs feel different to a designer
+--------------------------------------------------------------------------------
+ Teaching spine — fp_TEMPLATE_oneContract + ms_fp_TEMPLATE_oneContract shows the minimum:
+ Detroit lock-in, Davion hire, single storyline, generic rare loot, forgiving refit flag.
+ Puzzle noir — fp_theRaid + ms_fp_theRaid adds company_blackMarket_ON gating, locals voice over,
+ LONG length, early cancel conversation milestones, and Atlas-tier reward tables.
+ Living history — fp_tukayyid + ms_fp_tukayyid stacks CAMPAIGN length, massive Weight,
+ ComStar framing, exclusion tags to stop duplicate invasions, and bespoke SLDF payoff.
+
+ Quick reference (§3.1 — archetypes)
+ Arc pairing (fp + ms) | Designer "feel" trigger | Milestone file to open
+    ---------------------------|--------------------------------------|---------------------------
+ fp_TEMPLATE_oneContract + ms_fp_TEMPLATE_oneContract | Minimal teaching spine | data\milestoneSets\ms_fp_TEMPLATE_oneContract.json
+ fp_theRaid + ms_fp_theRaid | Cancel / noir branch hygiene early | Mods\Flashpoint-The-Raid\milestoneSets\ms_fp_theRaid.json
+ fp_tukayyid + ms_fp_tukayyid | Long operational campaign | mod pack ms_fp_tukayyid.json (very large)
+
+Practical habit
+ Travel to the world that owns your RequirementTag, watch the poster appear, Accept once,
+ and confirm the first milestone (§3.2) advances—or read the log immediately if it stalls.
+
+ Quick reference (§3.1 — test habit)
+ Action | What success triggers next | Log / file hint
+    --------------------|--------------------------------------------|---------------------------
+ Travel to test world| Tag on planet matches LocationRequirements | Temporary swap to known-good (R2) tag
+ Accept once | Starting milestone runs (§3.2) | Search log for MilestoneSetID / StartingMilestoneID
+
+--------------------------------------------------------------------------------
+If the flashpoint never appears or breaks on accept, check these in order
+--------------------------------------------------------------------------------
+ 1) Chapter 2: FlashpointDef Path, Enabled, DependsOn.
+ 2) JSON validates (§1.3).
+ 3) Description.Id does not collide with another mod unless you intend a merge.
+ 4) LocationRequirement tags truly exist on your intended worlds; test by temporarily
+ swapping in a known-good planet tag from (R2).
+ 5) MilestoneSetID matches a loaded milestone file (§3.2).
+ 6) Employer / reward / cast ids resolve.
+ 7) Log search: Description.Id, FlashpointDef, MilestoneSetID.
+
+ Quick reference (§3.1 — rescue order)
+ Check # | Failing piece (trigger) | Fix file / field
+    --------|---------------------------------|------------------
+ 1 | Loader never sees defs | mod.json FlashpointDef Path, Enabled
+ 2 | Parser rejects JSON | §1.3 validator on fp_*.json
+ 3 | Silent overwrite by another mod | unique Description.Id
+ 4 | Icon never appears | LocationRequirement planet tags real in save
+ 5 | Post-Accept dead end | MilestoneSetID ↔ ms_*.json pack id
+ 6 | UI / VO broken | employer, RewardCollectionID, CastDef ids
+ 7 | Still stuck | output_log Description.Id strings
+
+
+--------------------------------------------------------------------------------
+3.2 milestoneSets
+--------------------------------------------------------------------------------
+
+What this is (in plain terms)
+ After the commander accepts a flashpoint, the game needs a stage manager. That
+ manager is this JSON: it is a numbered list of beats (milestones). Each beat says,
+ "when I finish, run these Results." Each Result can add or remove tags, bump stats,
+ or fire Actions such as opening a conversation, inserting a contract, shoving the
+ camera to the contract room, launching the tactical mission, or ending the arc.
+ Milestones never replace contract files—they call them by id when the story is ready.
+ Syntax: §1.3; tag discipline: §1.4 for any GUID-adjacent work inside contracts the
+ milestones trigger.
+
+How the game finds these files
+ Chapter 2 lists Type SimGameMilestoneSet with Path "milestoneSets" (or your custom
+ folder). If that Manifest row is missing, Accept does nothing even when the poster
+ looked perfect in §3.1.
+
+Reference files — three library shelves to open when learning
+ Example A — (R2) ...\data\milestoneSets\ms_fp_TEMPLATE_oneContract.json keeps
+ placeholder strings like "(required)" so you can see slot order before you paste real
+ employer, contract, or conversation ids.
+ Example B — (R2) ...\data\milestoneSets\ms_fp_TEMPLATE_initialChoice.json shows how
+ extra milestones and tags create branching before the first battle.
+ Example C — ...\Mods\Flashpoint-The-Raid\milestoneSets\ms_fp_theRaid.json demonstrates
+ production ids: real conversation hex keys, four-way cancel tags, and branching
+ dialogue before contracts.
+
+Why this file matters
+ FlashpointDef only names the set via MilestoneSetID. This file is the executable
+ screenplay: skipped Actions, wrong next ids, or bad contract hooks strand players
+ in orbit with no prompts.
+
+ Quick reference (§3.2 — role + discovery)
+ Field / topic | What it triggers | Example filename / path
+    ----------------------|-------------------------------------------|----------------------------
+ SimGameMilestoneSet | Post-Accept beat runner (not contracts) | ms_fp_theRaid.json
+ mod.json row | Loader finds milestoneSets folder | "Type":"SimGameMilestoneSet","Path":"milestoneSets"
+ Template A (vanilla) | Placeholder slot order to learn | (R2) milestoneSets\ms_fp_TEMPLATE_oneContract.json
+ Template B (branching) | Early choice / tag splits | ms_fp_TEMPLATE_initialChoice.json
+ Mod reference | Production IDs + cancel hygiene | Mods\Flashpoint-The-Raid\milestoneSets\ms_fp_theRaid.json
+ Screenplay risk | Wrong Actions / ids strand in orbit | compare against templates before shipping
+
+--------------------------------------------------------------------------------
+The two IDs beginners swap by mistake
+--------------------------------------------------------------------------------
+ StartingMilestoneID (top of file) — must equal the Description.Id of the very first
+ milestone object inside Milestones[]. Think "Scene 1 call sheet."
+ Example A — ms_fp_TEMPLATE_oneContract_001_Start in the vanilla one-contract kit.
+ Example B — ms_fp_theRaid_001_Start in the Raid mod so the opening cleanup and
+ cancel-prep milestones run before scripted dialogue.
+ Example C — ms_fp_tukayyid_001_Start on the Tukayyid arc—same rule, many more
+ scenes follow.
+ Per-milestone Description.Id — every beat's unique backstage name; Flashpoint_SetNextMilestone
+ value fields must point at these ids exactly.
+ Example A — ms_fp_birthOfALegend_002_Briefing follows ms_fp_birthOfALegend_001_Start
+ inside the Grey Death pack for a gentle briefing hand-off.
+ Example B — ms_fp_theRaid_002_TalkForCancel shows a bespoke label when designers need
+ cancel-ready VO
+ (see Glossary: VO) before branching checks.
+ Example C — ms_fp_TEMPLATE_split beats continue the HBS numbering habit even when copied into a new arc.
+
+ Quick reference (§3.2 — ID wiring)
+ Field / id kind | What it triggers | Example value / file
+    -------------------------|------------------------------------------|---------------------------
+ StartingMilestoneID | First Milestones[] object must match | ms_fp_TEMPLATE_oneContract_001_Start
+ Per-beat Description.Id | Target of Flashpoint_SetNextMilestone | ms_fp_theRaid_002_TalkForCancel
+ Flashpoint_SetNextMilestone "value" | Must equal a real milestone id | chain in same ms_*.json
+
+--------------------------------------------------------------------------------
+Format (big picture) — three different milestone "shapes"
+--------------------------------------------------------------------------------
+
+ Milestones[] length and tone
+ Example A — ms_fp_TEMPLATE_oneContract: handful of beats—talk, add contract, fight, talk.
+ Example B — ms_fp_theRaid: early beats dedicate multiple Results to stripping branch
+ tags (fp_choice_* variants) before conversations run.
+ Example C — ms_fp_tukayyid: hundreds of milestones for staged deployments—same JSON
+ grammar, far longer narrative runway.
+
+ Results[] inside a single beat
+ Example A — Start beat in ms_fp_TEMPLATE_oneContract runs two Results: a Flashpoint-scoped
+ cleanup (tag wipes) and a Company-scoped advance carrying Flashpoint_SetNextMilestone.
+ Example B — ms_fp_birthOfALegend_001_Start uses only a Company Result that immediately jumps
+ to Briefing—no separate Flashpoint cleanup block, so pacing feels snappier.
+ Example C — ms_fp_theRaid_001_Start pairs a Flashpoint Result removing four cancel-choice
+ tags with a Company Result that chains TalkForCancel—showing multi-tag hygiene before scripts run.
+
+ TalkForCancel: a dedicated milestone beat (often named …TalkForCancel) that plays a
+ Leopard conversation so the player can back out of the arc with proper dialogue.
+ Multi-tag hygiene: stripping old fp_choice_* / cancel tags in the same beat before
+ new conversations run, so leftover flags from a previous attempt do not skip or
+ break branches (see Glossary: TalkForCancel, Multi-tag hygiene).
+
+
+ Actions[] payloads per Result
+
+ Plain English: each Result is a container; the Actions[] array inside it is the
+ to-do list the engine runs (play conversation X, add contract Y, jump to milestone Z).
+ "Payload" means the type string plus value and optional additionalValues slots that
+ fill in ids, room names, or UI strings for that action.
+
+ Example A — Template Talk beat uses System_StartConversation with value "(required)" until
+ the author drops in a real conversation GUID.
+ Example B — ms_fp_theRaid_002_TalkForCancel uses a concrete conversation id (for example
+ 9cc52ed03b2514c7432b5978) plus additionalValues that hard-code title, system orbit, room.
+ Example C — ms_fp_birthOfALegend_002_Briefing injects placeholders such as
+ {TGT_FLASHPOINT.Def.Description.Name} inside additionalValues so the card name and system
+ survive renames without re-editing every string.
+
+ Quick reference (§3.2 — structure)
+ Block inside beat | What it triggers | Example file / pattern
+    --------------------|-----------------------------------------------|---------------------------
+ Milestones[] | Ordered beats in this screenplay | handful vs hundreds (Tukayyid)
+ Results[] | Tag/stat/sim mutations after beat completes | Flashpoint vs Company scope rows
+ Actions[] | Concrete ops (talk, contract, launch, etc.) | System_StartConversation, Flashpoint_AddContract
+ additionalValues | Conversation / UI strings & slot fills | {TGT_FLASHPOINT...} in Briefing beats
+
+--------------------------------------------------------------------------------
+Action types you will script (what each triggers) — three outcomes each
+--------------------------------------------------------------------------------
+
+ Flashpoint_SetNextMilestone — queue the next beat.
+ What it triggers: once the current Result finishes, the engine jumps to the milestone whose
+ Description.Id matches "value"; no automatic call happens if you omit this Action.
+ Example A — Template Start beat chains ms_fp_TEMPLATE_oneContract_002_Talk after cleanup.
+ Example B — Raid TalkForCancel chains ms_fp_theRaid_003_BranchForCancel to set up bail-out.
+ Example C — Tukayyid Start jumps ms_fp_tukayyid_002_Briefing to begin scripted buildup.
+
+ System_StartConversation — open a sim-layer dialogue using simGameConversations content.
+ What it triggers: plays VO/text, may offer player buttons; usually paired with a SetNextMilestone
+ to move on when dialogue closes.
+ Example A — Template placeholder "(required)" halts until authors paste the GUID exported from
+ their conversation tool.
+ Example B — Raid supplies a finished GUID plus conference strings that mention Tiverton explicitly.
+ Example C — Grey Death references templated strings so renaming the flashpoint in §3.1 still fills titles.
+
+ Flashpoint_AddContract — hand the player a mission contract without leaving the FP flow.
+ What it triggers: inserts a ContractOverride by id, binds employer/target data, and sets which
+ milestone should run once the mission resolves—slot order matters, copy from a working row.
+ Example A — ms_fp_TEMPLATE_oneContract MissionSim beat drops the template contract placeholders.
+ Example B — Campaign arcs like Tukayyid repeat this Action with different contract ids per wave.
+ Example C — Raid milestones eventually call bespoke contract ids matching §3.3 files such as
+ c_fp_theRaid_* overrides shipped beside the mod.
+
+ [R10-2019] AddContract posts the mission on the Contracts screen (player can negotiate
+ pay/salvage) and is often paired with System_ForceDropshipRoom → Contract. StartContract skips
+ that negotiation step and forces the next drop immediately—use only when the story demands
+ back-to-back missions; warn players about tonnage limits before chaining StartContract or they
+ can trap themselves in deployment with no valid mechs (..\Background Docs\r10-flashpoint-authors-guide.txt; still valid on BEXT—
+ confirm Action names in your ms_*.json against (R2) templates).
+
+
+ System_ForceDropshipRoom — teleport UI focus to a Leopard room.
+ What it triggers: keeps players in the Contract, Barracks, or other pods so mission offers feel
+ intentional.
+ Example A — Template MissionSim beat forces the Contract room when the hiring screen should appear.
+ Example B — Extended arcs may force Contract repeatedly between sequential drops to mimic briefing cycles.
+ Example C — Some authors omit the Action when they want the player to roam freely—outcome: players may
+ miss prompts unless milestones also ping events.
+
+ Flashpoint_StartContract — launch tactical play from strategy state.
+ What it triggers: begins combat without a fresh visit to the star map contract UI; must line up with
+ contract readiness or the drop hangs.
+ Example A — ms_fp_TEMPLATE_split variants call this after dialogue commits the player to a fight.
+ Example B — Late waves on long mods call it when the next sortie must begin immediately after VO.
+ Example C — Omitting it when designers expected an auto-start leaves players hunting a Launch button.
+
+ Flashpoint_CompleteFlashpoint — curtain call plus reward plumbing hookup.
+ What it triggers: closes the arc UI, applies §3.1 RewardCollectionID payouts, clears flashpoint state
+ according to framework rules.
+ Example A — ms_fp_TEMPLATE_oneContract ends after debrief mileage with a single Complete action.
+ Example B — ms_fp_theRaid fires Complete only after the multi-mission spine resolves every branch guard.
+ Example C — ms_fp_tukayyid issues Complete once the monumental chain satisfies final victory requirements.
+
+ Quick reference (§3.2 — Actions)
+ Action name | What it triggers | Example context / file
+    ----------------------------|-------------------------------------------|---------------------------
+ Flashpoint_SetNextMilestone | Jump to next Description.Id | …_002_Talk after Start cleanup
+ System_StartConversation | Play sim dialogue node | hex GUID in ms_fp_theRaid.json
+ Flashpoint_AddContract | Drop ContractOverride by id into FP flow | c_fp_theRaid_* names in §3.3
+ System_ForceDropshipRoom | Focus UI to Contract / Barracks / etc. | Template MissionSim beat
+ Flashpoint_StartContract | Auto-launch tactical from strategy layer | ms_fp_TEMPLATE_split family
+ Flashpoint_CompleteFlashpoint | Finish arc + reward plumbing | after final debrief beat
+
+--------------------------------------------------------------------------------
+Common fields — what each does, then three contrasting examples
+--------------------------------------------------------------------------------
+
+ StartingMilestoneID — entry turnstile for the entire set.
+ What it triggers: the loader reads this before any other milestone; mismatch equals instant soft-lock.
+ Example A — ms_fp_TEMPLATE_oneContract_001_Start for vanilla pedagogy.
+ Example B — ms_fp_birthOfALegend_001_Start for the Grey Death cold open.
+ Example C — ms_fp_tukayyid_001_Start for the invasion prologue.
+
+ Per-milestone Description.Id / Name / Details / Icon — labels for logging, editing, and some UI breadcrumbs.
+ What it triggers: tooltips in editors, debug logs, and Flashpoint_SetNextMilestone targeting; Icon is
+ rarely used but must stay valid JSON (often null).
+ Example A — HBS templates set Details to the literal word "flashpoint" for quick identification.
+ Example B — Raid uses human labels such as TalkForCancel so designers see intent in version control.
+ Example C — Birth of a Legend marks "Starting milestone" vs "Briefing" to teach junior scripters the flow.
+
+ Scope (milestone-level) plus Requirements / Repeatable / UseRandomInvocation / InvokeChance — gating logic.
+ What it triggers: Requirements can demand company tags before the beat even tries to run; random flags
+ enable lottery milestones in advanced packs.
+ Example A — Template milestones keep Scope "Company" and empty Requirements for predictable testing.
+ Example B — Branching packs eventually add Requirements so only tagged paths fire retaliation beats.
+ Example C — Rare random-invocation beats might fire optional side missions—InvokeChance above zero matters only then.
+
+ Results[].Scope — who receives tag or stat mutations.
+ What it triggers: Flashpoint-scoped Results clean per-arc state; Company-scoped Results change persistent merc meta.
+ Example A — Template Start strips fp_choice_* tags under Flashpoint scope before advancing.
+ Example B — Raid removes fp_choice_a/b/c/cancel with Tags/CompanyTags scope to keep cancel memory consistent globally.
+ Example C — Birth of a Legend Start skips Flashpoint cleanup entirely—only Company advancement—so story feels immediate.
+
+ Results[].RemovedTags / AddedTags — bookkeeping tags that remember player choices or progression.
+ What it triggers: later Requirements read these tags to spawn alternate contracts or block repeats.
+ Example A — Template wipes fp_choice_a/b before a fresh split attempt.
+ Example B — Raid wipes four choice tags so prior cancelled routes cannot poison a new run.
+ Example C — Branching templates (initialChoice) add tags when the player picks A vs B paths, driving later milestones.
+
+ Stats / ForceEvents / TemporaryResult — optional sim consequences bundled with a beat.
+ What it triggers: can alter morale, funds, or force SimGameEvent popups; TemporaryResult governs duration.
+ Example A — Many FP templates leave Stats empty and ForceEvents null to stay simple.
+ Example B — Story-heavy overhaul milestones might grant permanent alliance stat bumps after treaty beats.
+ Example C — Temporary morale buffs might exist for celebratory milestones after major wins—expires after duration ticks.
+
+ Flashpoint_AddContract positioning (additionalValues slots) — precise wiring panel.
+ What it triggers: each array index maps to employer, target, map contract, completion milestone, etc.; shifting
+ entries misroutes missions.
+ Example A — Copy the slot order verbatim from ms_fp_TEMPLATE_oneContract until muscle memory forms.
+ Example B — Raid fills real contract ids while preserving slot order so callbacks still hit the correct follow-up milestone.
+ Example C — Tukayyid reuses the pattern dozens of times with different contract ids per wave—ordering discipline is mandatory.
+
+ Quick reference (§3.2 — milestone fields)
+ Field / pattern | What it triggers | Example
+    -----------------------------|-------------------------------------------|---------------------------
+ StartingMilestoneID | Loader entry scene | ms_fp_theRaid_001_Start
+ Description.Id / Name / … | Logging + SetNext targets | TalkForCancel labels (Raid)
+ Scope / Requirements / random| Optional gating per beat | InvokeChance on rare beats
+ Results[].Scope | Flashpoint vs Company mutations | tag wipes under Flashpoint scope
+ RemovedTags / AddedTags | Branch memory | fp_choice_* hygiene (Raid)
+ Stats / ForceEvents / Temp | Optional sim fallout | celebratory morale buffs (hypothetical)
+ Flashpoint_AddContract slots | Indexes map to employer/target/contract id| copy ms_fp_TEMPLATE_oneContract order
+
+--------------------------------------------------------------------------------
+How three archetypes feel in practice
+--------------------------------------------------------------------------------
+ Classroom spine — ms_fp_TEMPLATE_oneContract + fp_TEMPLATE_oneContract keeps placeholders visible until every slot is understood.
+ Noir gauntlet — ms_fp_theRaid layers cancel dialogue, company-tag hygiene, and LONG flashpoint pacing from §3.1 before combat pays off.
+ War epic — ms_fp_tukayyid chains staggering numbers of beats with identical action vocabulary—proof that complexity is breadth, not magic syntax.
+
+ Quick reference (§3.2 — archetypes)
+ Profile | What the player feels (trigger) | Milestone file to compare
+    -----------------|---------------------------------------------|---------------------------
+ Classroom | Placeholders visible, shortest spine | ms_fp_TEMPLATE_oneContract.json
+ Noir gauntlet | Early cancel / branch cleanup | ms_fp_theRaid.json
+ Campaign epic | Many beats, same action verbs | ms_fp_tukayyid.json
+
+Practical habit
+ Keep §3.1 open: MilestoneSetID must name this file's logical pack, StartingMilestoneID must be Scene 1, and every SetNext hop must land on a real id.
+
+ Quick reference (§3.2 — wiring habit)
+ Pair to verify | Mismatch trigger | Where edited
+    -------------------------------|-------------------------------------|------------------
+ MilestoneSetID ↔ this file stem| Accept → void | fp_*.json + ms_*.json
+ StartingMilestoneID ↔ first id | Immediate soft-lock | top of ms_*.json
+ SetNext graph | Mid-arc silence if id missing | search all Flashpoint_SetNextMilestone values
+
+--------------------------------------------------------------------------------
+If the flashpoint stalls after accept, check these in order
+--------------------------------------------------------------------------------
+ 1) Chapter 2: SimGameMilestoneSet manifest Path; JSON valid (§1.3).
+ 2) StartingMilestoneID equals first milestone Description.Id.
+ 3) Every Flashpoint_SetNextMilestone "value" matches a later milestone Id in the same file.
+ 4) System_StartConversation values exist in shipped conversation content.
+ 5) Flashpoint_AddContract lines reference real ContractOverride ids (§3.3).
+ 6) Compare behaviour against (R2) templates when a beat behaves oddly.
+ 7) Output log: milestone Id strings, StartConversation, ContractOverride.
+
+ Quick reference (§3.2 — rescue order)
+ Step | Typical failure trigger | Fix / open
+    -----|-------------------------------------|----------------------------------------
+ 1 | ms folder never loads | mod.json SimGameMilestoneSet Path
+ 2 | Scene 1 missing | StartingMilestoneID vs first Description.Id
+ 3 | Hop to nowhere | each SetNext value exists in file
+ 4 | Dialogue dead air | conversation GUID in shipped content
+ 5 | Mission offer missing | Flashpoint_AddContract id = §3.3 ID string
+ 6 | Odd beat vs vanilla | diff ms_fp_TEMPLATE_*.json under (R2)
+ 7 | Still stuck | log strings StartConversation, ContractOverride
+
+
+--------------------------------------------------------------------------------
+3.3 contracts
+--------------------------------------------------------------------------------
+
+What this is (in plain terms)
+ A "contract" file is the recipe for one mission: the briefing words, the
+ objectives the player sees, the map mood, who can drop which 'Mechs, and
+ (further down in the same file) where enemies spawn and which map pieces load.
+ Treat it like structured paperwork: punctuation must stay perfect (§1.3).
+ For matching GUID labels inside one file, read §1.4. For how the game discovers
+ these files at all, read Chapter 2 (Manifest entry Type ContractOverride,
+ Path contracts). For which map and mission shape can be combined (before you
+ edit JSON), read companion 07-missions-maps-objectives-guids.txt.
+
+How the game finds these files
+ Chapter 2 explains mod.json. Your mod must list ContractOverride with a Path that
+ points at the folder holding these JSON files. Subfolders are allowed for your
+ own organisation as long as the manifest path still matches.
+
+Lookup tables on disk
+ Spreadsheet reference pack: see (R1) in §1.6 (Background Docs/reference-sheets/).
+
+Why this file matters for a flashpoint
+ The flashpoint decides when missions happen; the contract decides what the
+ tactical mission actually is—what counts as a win, what the player reads in
+ the briefing, and what appears on the map. If the contract is wrong or
+ broken, the flashpoint story may start but the battle cannot run.
+
+ Quick reference (§3.3 — contract role)
+ Piece | What it triggers | Example path / id
+    --------------------|---------------------------------------------|---------------------------
+ Contract JSON | Defines one tactical drop (briefing + map) | c_fp_rTTJ_1_SimpleBattle.json
+ mod.json row | Loader walks your contracts tree | "Type":"ContractOverride","Path":"contracts"
+ Spreadsheets (R1) | Offline lookup for maps / layers / copy | reference-sheets CSV pack §1.6
+ vs fp / ms | FP posts offer; milestones schedule; this file runs combat | §3.1 §3.2 cross-links
+
+File name and the ID inside the file
+ File type: JSON text file (syntax rules: §1.3).
+ The file name usually matches the mission's internal ID so humans do not get
+ lost. Example you can open and compare:
+ ...\fps_TheBigDealBEXCE\contracts\RTTJ\c_fp_rTTJ_1_SimpleBattle.json
+ The very first important field inside is "ID" with the same text:
+ "ID" : "c_fp_rTTJ_1_SimpleBattle"
+ Think of the ID as the mission's backstage name; the file name is the drawer
+ label. They should match the name your flashpoint milestones call when they
+ hand the player that mission.
+
+ Quick reference (§3.3 — naming)
+ Field / rule | What it triggers | Example
+    -------------|------------------------------------------|---------------------------
+ File stem | Matches human expectation to mission id | c_fp_rTTJ_1_SimpleBattle.json
+ "ID" string | Must match Flashpoint_AddContract refs | "ID":"c_fp_rTTJ_1_SimpleBattle"
+ Subfolders | Allowed for authors; manifest path rules | fps_TheBigDealBEXCE\contracts\RTTJ\...
+
+--------------------------------------------------------------------------------
+Format (big picture, before the field-by-field list)
+--------------------------------------------------------------------------------
+
+Large single file
+ Contract files are long because one file carries both the "menu" information
+ (briefing, difficulty) and the "battlefield wiring" (chunks, lances, cameras) .
+
+ Chunks divide the mission timeline: when objectives activate, when enemy waves spawn,
+ and which lance defs appear in each phase (chunkList). Cameras are scripted viewpoint
+ moves or cuts during deployment and objective updates—they sell the set-piece but do not
+ replace DialogBucketDef tactical barks (see Glossary: Chunk, Camera).
+
+ Do not let the length intimidate you: work in the top section first, then move
+ downward when you are ready to touch on map spawns.
+
+Matching labels (GUIDs) inside one contract file
+ See §1.4 for the concept. In contracts, the same GUID must line up across
+ contractObjectiveList, objectiveList, chunkList, spawners, and dialogue hooks.
+
+contractDisplayStyle: flashpoint look versus normal career job
+ This line picks which user-interface "skin" and flow the mission expects.
+ Flashpoint missions almost always use:
+ "contractDisplayStyle" : "BaseFlashpoint"
+ Examples you can open and search for that line (it sits near the top):
+ fps_TheBigDealBEXCE\contracts\RTTJ\c_fp_rTTJ_1_SimpleBattle.json
+ fps_TheBigDealBEXCE\contracts\TBD\c_fp_theBigDeal_4A_3wayBattle.json
+ fps_TheBigDealBEXCE\contracts\WW\c_fp_wildWedding_1A_AmbushConvoy.json
+ A normal random career contract (not written as a flashpoint) usually uses
+ "BaseCampaignNormal" instead—for contrast, open vanilla:
+ BattleTech_Data\StreamingAssets\data\contracts\simplebattle\
+ SimpleBattle_SupplyLines.json
+ Rule of thumb for authors: if this mission is offered through your
+ flashpoint, keep BaseFlashpoint unless a maintainer of your mod stack tells
+ you a specific exception.
+
+ Quick reference (§3.3 — layout + UI shell)
+ Topic / field | What it triggers | Example filename
+    ---------------------|------------------------------------------|---------------------------
+ Two-layer file | Top = menu/briefing; bottom = map wiring | long RTTJ / fire-mission JSON
+ GUID discipline | Same label in objective/chunk/spawners | §1.4 search whole file
+ contractDisplayStyle | Mission UI chrome | BaseFlashpoint in c_fp_rTTJ_1_SimpleBattle.json
+ Career contrast | Non-FP missions often use different enum | SimpleBattle_SupplyLines.json (vanilla)
+
+--------------------------------------------------------------------------------
+Common fields (read top to bottom like a form)
+--------------------------------------------------------------------------------
+
+ ID — the backstage mission name every other file must use when referring to
+ this exact mission.
+ In the file: "ID" : "c_fp_rTTJ_1_SimpleBattle"
+ You might also see longer names such as c_fp_theBigDeal_4A_3wayBattle, or
+ special prefixes like c_special_sAV_1_CaptureBase inside the same mod pack.
+ Watch out: this string must match what milestones and dialogue buckets
+ expect. Vanilla non-flashpoint contracts often use a different naming style
+ (no c_fp_ prefix). If you change the ID later, every reference must change too.
+
+ contractName — the friendly title players read; it is allowed to contain spaces.
+ In the file: "contractName" : "Run Through The Jungle"
+ You might also see numbered titles such as "Run Through The Jungle III" in
+ c_fp_rTTJ_3_fireMission.json for a later step in the same story.
+ Watch out: changing this only changes the title on screen, not the internal
+ ID above.
+
+ contractDisplayStyle — which mission UI wrapper to use (see Format section).
+ In the file: "contractDisplayStyle" : "BaseFlashpoint"
+ You might also see: "BaseCampaignNormal" on non-flashpoint contracts in vanilla.
+ Watch out: mixing this up is a common reason a mission "feels" like a normal
+ contract even though it belongs to a flashpoint arc.
+
+ difficulty, difficultyUIModifier, weight, scope, finalDifficulty — knobs the
+ game uses for how hard the contract is shown and picked; treat them like
+ difficulty settings on a board game box until your framework docs say more.
+ In the file (example from c_fp_rTTJ_1_SimpleBattle.json):
+ "difficulty" : 7,
+ "difficultyUIModifier" : 0,
+ "weight" : 1,
+ "scope" : "MID_CAMPAIGN",
+ "finalDifficulty" : 0
+ You might also see higher numbers on later beats (difficulty 9 on
+ c_fp_rTTJ_3_fireMission.json).
+ Watch out: some overhaul mods change difficulty outside this file—ask your
+ pack lead how much you must tune these numbers yourself.
+
+ encounterPlayStyle and maxNumberOfPlayerUnits — who actually plays the mission.
+ In the file: "encounterPlayStyle" : "SinglePlayer", "maxNumberOfPlayerUnits" : 4
+ You might also see other styles if a future mod tool supports them.
+ Watch out: if you say four player slots, the tonnage lists below should have
+ four matching entries; mismatched counts confuse the drop deck UI.
+
+ lanceMinTonnage, lanceMaxTonnage, mechMinTonnages, mechMaxTonnages — limits on
+ which 'Mechs the player may bring.
+ In the file: four numbers in a row inside square brackets for the four slots.
+ "mechMaxTonnages" : [ 75, 75, 75, 75 ]
+ -1 usually means "no limit for that slot" in these packs.
+ You might also see lighter caps for recon missions or asymmetric rows.
+ Watch out: keep the list length equal to the number of player 'Mech slots.
+
+ mapMood and startingFogOfWarVisibility — lighting, weather feel, and how much
+ of the map is hidden at start.
+ In the file: "mapMood" : "JungleSunsetFoggy",
+ "startingFogOfWarVisibility" : "Surveyed"
+ You might also see urban or night moods for other themes.
+ Watch out: the mood name must be a real one shipped with the game or your
+ mod; a typo here can break the mission load. For MapID cross-checks, search
+ (R1) map_names.csv (§1.6).
+
+ shortDescription and longDescription — the briefing paragraphs.
+ In the file: two quoted paragraphs near the top of c_fp_rTTJ_1_SimpleBattle.json
+ You might also see placeholders such as {COMMANDER.FirstName} inside text
+ (example in c_fp_rTTJ_3_fireMission.json longDescription) which the game swaps
+ for the player's name automatically.
+ Watch out: very long text may clip in the UI; proofread in-game if possible.
+
+ representativeCastDefIDOverride, missionSuccessStatementOverride,
+ badFaithStatementOverride, goodFaithStatementOverride — optional overrides for
+ who speaks or which canned line plays; beginners can leave them null.
+ In the file: "representativeCastDefIDOverride" : null (and similar)
+ You might also see a castDef_* id string when a custom employer speaks.
+ Watch out: a mistyped cast id can remove voice lines or cause errors.
+
+ salvagePotential — starting point for how much salvage players can negotiate.
+ In the file: "salvagePotential" : 20 on the first RTTJ mission, 24 on the
+ heavier third mission in the same arc.
+ You might also see 0 when the story forbids salvage for that beat.
+ Watch out: other mods may still change economy rules; this is only the base.
+
+ requirementList — extra gates when the contract appears in the normal job
+ list (reputation, tags, etc.). Flashpoint-only missions often leave this empty
+ because the flashpoint itself controls who may start the arc.
+ In the file: "requirementList" : []
+ You might also see filled requirement blocks in hybrid contracts.
+ Watch out: do not duplicate gating in two places unless you intend to.
+
+ OnContractSuccessResults and OnContractFailureResults — what happens on the
+ strategy layer immediately when the mission ends (injuries, payouts, tags).
+ In the file: often [] in flashpoint packs because the next milestone handles
+ story consequences instead.
+ You might also see populated blocks if a mission must always grant a tag.
+ Watch out: if milestones also grant the same reward or tag, you can double-
+ apply; keep one clear "source of truth" per story beat.
+
+ contractObjectiveList — the contract-level view of objectives, each tied to a
+ GUID label the map understands.
+ In the file: look for "contractObjectiveList" in c_fp_rTTJ_1_SimpleBattle.json;
+ inside it, "EncounterObjectGuid" and a list "objectiveGuids" that points at
+ smaller objectives defined just below.
+ You might also see a single primary objective on simpler missions.
+ Watch out: every GUID listed here must have a partner entry under objectiveList.
+
+ objectiveList — the step-by-step objectives the player ticks off, still using
+ the same GUID labels.
+ In the file: two destroy-lance objectives in c_fp_rTTJ_1_SimpleBattle.json,
+ each with its own EncounterObjectGuid.
+ You might also see escort or base-capture wording in other files.
+ Watch out: if "OnSuccessDialogueGUID" or "OnFailureDialogueGUID" is filled,
+ that pointer must reference real dialogue content; null means "none."
+
+ chunkList, cameraFocusHelperList, dialogueList, and the enemy/player Lance
+ sections — the lower half of the file where the map is assembled piece by piece.
+ In the file: c_fp_rTTJ_1_SimpleBattle.json includes a named chunk
+ "Chunk_Ambush (Bonus)" and camera helpers such as "Spawner_PlayerLance".
+ You might also see much larger lower halves—for example the fire-mission file
+ c_fp_rTTJ_3_fireMission.json is long because artillery and platform pieces add
+ many chunks.
+ Watch out: this is where copy-paste errors hurt most; search the whole file for
+ each GUID you change and update every partner line.
+ Per-spawn paint: targetTeam → lanceOverrideList → unitSpawnPointOverrideList uses
+ customHeraldryDefId and customUnitName for lore-specific colours and labels.
+ See 05-creating-specific-units.txt (priority order, faction vs regiment, BEXT
+ heraldrydef_liao* examples, copy-paste spawn fragment).
+
+ Quick reference (§3.3 — contract fields)
+ Field / block | What it triggers | Example file / note
+    ------------------------|------------------------------------------|--------------------
+ ID | Backstage mission key for milestones | c_fp_theBigDeal_4A_3wayBattle.json
+ contractName | Player-visible title | "Run Through The Jungle"
+ contractDisplayStyle | FP vs career UI | BaseFlashpoint
+ difficulty knobs | Skull / pick weighting | c_fp_rTTJ_3_fireMission.json harder row
+ encounterPlayStyle, maxNumberOfPlayerUnits | Drop mode + slot count | SinglePlayer + 4 slots
+ tonnage caps | Drop deck limits per slot | mechMaxTonnages [75,...]
+ mapMood, fog | Lighting + FoW start | JungleSunsetFoggy + Surveyed
+ short/long Description | Briefing copy + tokens | {COMMANDER.FirstName}
+ cast overrides | Who speaks (optional) | representativeCastDefIDOverride null
+ salvagePotential | Baseline salvage offer | 20 vs 24 RTTJ beats
+ requirementList | Extra job-board gates (often [] in FP) | [] in FP-only beats
+ OnSuccess/OnFailure | Immediate sim results (often []) | avoid double-pay with milestones
+ contractObjectiveList | Contract-level objective glue + GUIDs | pairs with objectiveList
+ objectiveList | Player-visible step objectives + hooks | OnSuccessDialogueGUID
+ chunk/lance/camera tail | Map assembly + spawns | c_fp_rTTJ_3_fireMission.json length
+
+--------------------------------------------------------------------------------
+How flashpoints use contracts differently (story shapes)
+--------------------------------------------------------------------------------
+
+One mission versus a long arc
+ Some flashpoints are a single battle; others chain many contracts under one
+ employer voice. Compare the small vanilla template flow (milestone file
+ ms_fp_TEMPLATE_oneContract.json, which only demonstrates one loop) with the
+ many numbered files under fps_TheBigDealBEXCE\contracts\TBD\ for The Big Deal
+ (c_fp_theBigDeal_1_DestroyBase.json up through c_fp_theBigDeal_5A_CaptureEscort.json).
+
+Different mission types feel different in the same JSON "language"
+ (Mission shapes, map pairing, and fire-mission rules: companion 07 Part F.)
+ Escort: e.g. c_fp_rTTJ_2_captureEscort.json (same RTTJ folder).
+ Destroy base: e.g. c_fp_theBigDeal_1_DestroyBase.json.
+ Three-way battles: e.g. c_fp_theBigDeal_4A_3wayBattle.json or
+ fps_TheBigDealBEXCE\contracts\S&V\c_special_sAV_4_ThreeWayBattle.json.
+ Fire-style set pieces: c_fp_rTTJ_3_fireMission.json (notice the file is much
+ longer because extra map pieces and triggers are listed).
+
+Folders are for humans; the game cares about the manifest
+ Many authors sort missions into subfolders (RTTJ, WW, TBD, S&V, OW&NF, MMRNR in
+ The Big Deal). That helps you find files; the game still loads whatever your
+ mod.json lists under the contracts path. If something does not appear in-game,
+ check Chapter 2 first, then the file name, then validate JSON per §1.3.
+
+Practical habit for newcomers
+ When editing, change one thing, save, launch, test that mission only, then
+ continue. Keep a backup copy of the whole JSON before large edits so you can
+ revert if a comma slips in. (Same general habits as §1.7.)
+
+ Quick reference (§3.3 — story shapes)
+ Shape / pattern | What players see (trigger) | Example contract files / folder
+    -----------------|------------------------------------------|------------------------------
+ Single loop | One contract recycle in template | ms_fp_TEMPLATE_oneContract → one c_*.json
+ Long arc | Many numbered missions per employer | contracts\TBD\c_fp_theBigDeal_*.json
+ Escort | Escort-style objective wording | c_fp_rTTJ_2_captureEscort.json
+ Destroy base | Demolition beats | c_fp_theBigDeal_1_DestroyBase.json
+ Three-way | Multi-faction fights | c_fp_theBigDeal_4A_3wayBattle.json
+ Fire/set piece | Many chunks / artillery wiring | c_fp_rTTJ_3_fireMission.json
+ Subfolders | Human sorting only—loader uses manifest | RTTJ\, WW\, S&V\ under The Big Deal
+
+--------------------------------------------------------------------------------
+If the mission will not load, check these in order
+--------------------------------------------------------------------------------
+ Work down the list once before you assume the engine is broken. Most issues
+ are a single typo, a missing manifest line, or a stale mod cache.
+
+ 1) Mod switched on and dependencies running
+ Confirm your mod is enabled in the mod list and any mods listed under
+ DependsOn (for example BT_Extended packs) are also enabled and compatible with
+ your game version.
+
+ 2) mod.json actually loads your contracts folder
+ Open mod.json and find the Manifest entry whose Type is ContractOverride and
+ whose Path points at the folder where your JSON lives. If that line is
+ missing or the folder name is spelled wrong, the game never sees your file.
+
+ 3) The contract file is valid JSON
+ Follow §1.3: validate before every test launch.
+
+ 4) The contract ID matches the flashpoint wiring exactly
+ The "ID" field inside the contract must match—character for character—the ID
+ your milestone (or other script) hands to the player. If you rename the
+ file but forget to rename the ID inside, or the other way around, the link
+ breaks.
+
+ 5) Content the contract references really exists
+ Map moods, map IDs, MechDef names, LanceDef names, and cast ids must all
+ exist in the build you are running. Use spreadsheet pack (R1) plus vanilla
+ JSON under (R2) as your truth sources.
+
+
+ 5b) FP-only contracts excluded from procedural generation [R10-2019]
+ Every flashpoint mission JSON should include:
+ "excludedFromProceduralGeneration" : true
+ If false or missing, your FP mission can appear as a random career contract outside
+ the arc—one of the most common shipping mistakes (..\Background Docs\r10-flashpoint-authors-guide.txt). [verify ModTek]
+ BEXT packs still use this field; grep your contracts folder before release.
+
+
+ 6) GUID pairs still line up inside the same file
+ Search inside the contract for each long GUID and confirm every copy still
+ points at a real block. Orphan labels are the most common reason a mission
+ hangs or refuses to start after a manual edit.
+
+ 7) Clear the ModTek cache after large changes
+ Follow §1.7 (delete the .modtek folder under BATTLETECH\Mods, then relaunch).
+
+ 8) Read the game's output log when you are stuck
+ BattleTech writes a log file after each run. Search inside it for your
+ contract ID or the word ContractOverride; the first error line after you
+ try to launch the mission usually names the missing field or bad reference.
+
+ 9) Another mod is overriding the same contract ID
+ If two mods ship the same "ID", whichever loads last wins and the other
+ silently disappears. Rename yours to a unique prefix if you suspect a clash.
+
+ Optional note for advanced stacks (Mission Control and similar)
+ If you use those pipelines, read (R7) in §1.6 for encounter-layer overrides
+ and contract-builder setup (unique UUIDs, manifest entries).
+
+ [R10-2019] (R10) described Mission Control as forthcoming; on BEXT treat (R7) as the
+ current encounter-layer authority (§1.10 row 4).
+
+
+ Quick reference (§3.3 — mission-load rescue)
+ Step | Failure trigger | Fix / where
+    -----|----------------------------------------------|-------------
+ 1 | Pack / deps off | mod list + DependsOn
+ 2 | JSON never ingested | mod.json ContractOverride Path
+ 3 | Parser error | §1.3 validate c_*.json
+ 4 | ID drift vs milestones | rename file AND "ID" together
+ 5 | Bad defs referenced | (R1)+(R2) cross-check MapID/Lance/Mech
+ 5b | FP contract leaked to career board | excludedFromProceduralGeneration true (R10)
+ 6 | GUID orphans | search/replace per §1.4
+ 7 | Stale loader | delete Mods\.modtek
+ 8 | Cryptic hang | output_log contract ID / ContractOverride
+ 9 | Duplicate IDs | unique prefix vs other mods
+ MC | Encounter override mismatch | (R7) pipeline rules
+
+--------------------------------------------------------------------------------
+Further reading (resource codes)
+--------------------------------------------------------------------------------
+ ModTek overview (R3), author primer (R4), mod.json format (R5), community thread
+ (R6), Mission Control docs (R7). Vanilla JSON examples always under (R2).
+
+ Quick reference (§3.3 — docs)
+ Code | Opens / answers | Example use
+    -----|---------------------------------------------|------------------
+ (R1) | Offline CSV lookups (maps, contracts, cast) | map_names.csv sanity pass
+ (R2) | Vanilla truth JSON | contracts\simplebattle\*.json contrast
+ (R3–R6) | Loader + community context | when manifest debates arise
+ (R7) | Mission Control per-contract ENC layers | advanced stacks only
+
+================================================================================
+4. OpFor, REWARDS, EQUIPMENT
+================================================================================
+ Contracts (§3.3) point at LanceDef rows for encounter spawns; each LanceDef lists
+ units (usually MechDef ids) and pilotId hooks to PilotDef. MechDef
+ rows point at ChassisDef and HardpointDataDef ids for structure and weapon slots.
+ FlashpointDef.RewardCollectionID and many milestone Result blocks reference
+ ItemCollectionDef ids for payouts. MovementCapabilitiesDef is optional extra
+ plumbing when your pack needs custom movement tables (often alongside big
+ campaign-style mods). JSON basics: §1.3; manifest wiring: Chapter 2; vanilla file
+ layout: (R2).
+
+--------------------------------------------------------------------------------
+4.1 chassis
+--------------------------------------------------------------------------------
+
+What this is (in plain terms)
+ A chassis JSON is the reusable skeleton of a 'Mech: tonnage class, hardpoint
+ table link, movement-cap references, inventory slot layout, and tags the game
+ uses for filters (weight class, release status). It does not list which guns
+ are installed—that lives in the matching MechDef (§4.2).
+
+How the game finds these files
+ Chapter 2: mod.json lists Type ChassisDef and a Path such as "chassis"; another
+ row may load "chassisMerge" with ShouldMergeJSON when you patch vanilla chassis
+ without replacing whole files. Vanilla baseline trees live under
+ (R2) ...\data\chassis\ (example stem: chassisdef_atlas_AS7-D.json).
+
+Lookup tables on disk
+ (R2) for stock definitions; mod packs with custom bosses often ship parallel
+ chassis\ folders. Compare fps_TheBigDealBEXCE: mod.json includes ChassisDef for
+ both chassis\ and chassisMerge\.
+
+Why this matters for flashpoints
+ Any custom OpFor or scripted reward 'Mech needs a chassis id that actually exists
+ in the build. A contract Lance slot that names a MechDef whose ChassisID points
+ at a missing chassis will fail at load or drop time.
+
+File name and the IDs inside it
+ Convention: chassisdef_<family>_<variant>.json with Description.Id (or equivalent
+ id field per schema) matching what MechDef.ChassisID expects—often the same
+ string as the vanilla file stem. When authoring, copy working vanilla rows and
+ rename consistently across chassis + mech + lance references.
+
+Format (big picture)
+ Heavier FP hubs merge or replace chassis more often than tiny story packs;
+ fps_TheBigDealBEXCE demonstrates the dual pattern (full chassis\ plus
+ chassisMerge\ with ShouldMergeJSON true). Light packs such as fps_GDL may ship
+ MechDef-only changes that still point at vanilla chassisdef_* ids.
+
+Worked contrast
+ Vanilla teaching reference: open any (R2) chassisdef_*.json to see
+ MovementCapDefId, PathingCapDefId, HardpointDataDefID, Tonnage, and tag blocks.
+ Campaign add-on: fps_TheBigDealBEXCE\mod.json lines for ChassisDef show when a
+ maintainer expects you to add new skeletons alongside FP content.
+
+ Quick reference (§4.1) — field → trigger → example
+ Field / idea | What it triggers | Example filename / path
+    ---------------------------|------------------------------------------|-----------------------------
+ ChassisDef row in mod.json | Loader ingests your skeleton folder | { "Type":"ChassisDef","Path":"chassis" } (TBD)
+ Description.Id / Id keys | MechDef.ChassisID must match | chassisdef_shadowhawk_SHD-2D.json
+ HardpointDataDefID | Weapon slot layout for this frame | points at hardpoints\ def (§4.3)
+ MovementCapDefId / Pathing | Walk profile links | vanilla chassis top section
+ Tonnage + tags | UI filters, encounter budgeting | unit_medium, unit_heavy, etc.
+ chassisMerge + merge flag | Patch stock chassis without full replace | TBD mod.json second ChassisDef row
+
+--------------------------------------------------------------------------------
+4.2 mech
+--------------------------------------------------------------------------------
+
+What this is (in plain terms)
+ A MechDef is one fully built 'Mech: it names the ChassisID, fills each location
+ with weapons, ammo, structure/armor numbers, and tags that encounter and salvage
+ systems read. Enemy lances, ally escorts, and rare reward units all resolve
+ through MechDef ids.
+
+How the game finds these files
+ Manifest Type MechDef with Path often "mech" (see fps_GDL mod.json: "Path": "mech";
+ fps_TheBigDealBEXCE adds AddToDB true for its MechDef row). Vanilla reference
+ trees: (R2) ...\data\mech\.
+
+Why this matters for flashpoints
+ Flashpoint_AddContract beats reference contracts whose encounter chunks name
+ LanceDef ids (§4.5); those lances list MechDef and PilotDef ids (§4.6). If a
+ milestone grants a prized 'Mech, the ItemCollection (§4.7) usually
+ references MechPart or full Mech ids that must match real MechDefs.
+
+File name and the IDs inside it
+ Typical pattern: mechdef_<chassis>_<suffix>.json with Description.Id (or Mech id
+ field) matching contract/Lance text. Example from fps_GDL you can open:
+ ...\Mods\fps_GDL\mech\mechdef_shadowhawk_GDL_SHD-2D.json
+ Inside, "ChassisID" : "chassisdef_shadowhawk_SHD-2D" ties back to the vanilla
+ chassis while the Description.Id brands the mod-specific entry.
+
+Format (big picture)
+ Beginners should duplicate a working MechDef from their target chassis, then
+ rename Description.Id and filename together before editing loadouts. Keep each
+ ComponentRef's ComponentDefID pointed at defs that exist in your mod stack
+ (WeaponDef, AmmunitionBoxDef, JumpJet, etc.—large hubs like fps_TheBigDealBEXCE
+ manifest many of those Types).
+
+Worked contrast
+ Themed OpFor: extra tags such as faction or role tags on MechTags.items steer
+ autogenerated encounters in some frameworks. Reward purity: story grants may
+ use BLACKLISTED or custom rarity to keep prizes out of unrelated stores—your
+ economy mod docs override this guide.
+
+ Quick reference (§4.2) — field → trigger → example
+ Field / block | What it triggers | Example filename / value
+    ----------------------|----------------------------------------|---------------------------
+ Description.Id | Lance / collection references | mechdef_shadowhawk_GDL_SHD-2D
+ ChassisID | Skeleton + hardpoint source | chassisdef_shadowhawk_SHD-2D
+ Locations[] + refs | Installed gear and structure | ComponentRef blocks per limb
+ MechTags.items | Filters / blacklist / faction hints | unit_medium, BLACKLISTED, Davion
+ mod.json MechDef Path | Where loader scans | fps_GDL → "Path":"mech"
+
+--------------------------------------------------------------------------------
+4.3 hardpoints
+--------------------------------------------------------------------------------
+
+What this is (in plain terms)
+ HardpointDataDef JSON describes how many weapon/missile/energy mounts exist on
+ each chassis location and what categories they accept. ChassisDef points here;
+ MechDef must not place weapons into slots the hardpoint table forbids.
+
+How the game finds these files
+ Type HardpointDataDef with Path such as "hardpoints" (see fps_TheBigDealBEXCE
+ mod.json). Stock tables live under (R2) ...\data\hardpoints\.
+
+Why this matters for flashpoints
+ Custom chassis for boss fights need matching hardpoint ids; a typo in
+ HardpointDataDefID on the chassis produces silent mis-loads when the game tries
+ to attach weapons during encounter spawn.
+
+File name and the ID inside it
+ Names like hardpointdatadef_*; the ID string must match the chassis field
+ exactly. When cloning, change both chassis pointer and file together.
+
+Format (big picture)
+ Small FP mods often reuse vanilla hardpoints; campaign-scale packs add new defs
+ alongside new chassis.
+
+ Quick reference (§4.3) — field → trigger → example
+ Piece | What it triggers | Example
+    ---------------------|-------------------------------------|---------------------------
+ HardpointDataDef ID | ChassisDef.HardpointDataDefID target | hardpointdatadef_* (vanilla)
+ mod.json row | Loader pulls your tables | TBD: "Type":"HardpointDataDef","Path":"hardpoints"
+ Location groups | Slot counts / Omni flags | open vanilla JSON under (R2)\hardpoints\
+
+--------------------------------------------------------------------------------
+4.4 movement
+--------------------------------------------------------------------------------
+
+What this is (in plain terms)
+ MovementCapabilitiesDef tweaks how far classes of units walk, run, or jump when
+ referenced by chassis or other defs. Think of it as custom gait tables for
+ special content drops.
+
+How the game finds these files
+ Type MovementCapabilitiesDef with author-chosen Path—in Battle of Tukayyid the
+ mod uses "Path": "movement" (see fp_tukayyidBEXCE\mod.json). Vanilla references
+ sit under (R2) movement-related folders tied to DLC layouts; confirm against
+ your install.
+
+Why this matters for flashpoints
+ Most short FP arcs never touch this. Reach for it when design needs bespoke
+ mobility (campaign battles, specialist maps) and your framework already expects
+ those tables.
+
+Format (big picture)
+ Pair new movement defs with any custom chassis or mechs that reference them;
+ missing links behave like any other bad ComponentID—test one contract after wiring.
+
+ Quick reference (§4.4) — field → trigger → example
+ Field / topic | What it triggers | Example path / pack
+    ---------------------------|----------------------------------|---------------------------
+ MovementCapabilitiesDef row| Loader ingests movement folder | fp_tukayyidBEXCE\movement\*.json
+ mod.json Path "movement" | Matches folder name on disk | Battle_Of_Tukayyid pack
+ Chassis / cap references | Which units use the table | compare chassis MovementCapDefId to your new id
+
+--------------------------------------------------------------------------------
+4.5 LanceDef
+--------------------------------------------------------------------------------
+
+What this is (in plain terms)
+ A LanceDef is a named enemy (or ally) group recipe: difficulty hint, optional
+ LanceTags, and a LanceUnits array. Each slot names unitType (commonly "Mech"),
+ unitId (a MechDef id), and pilotId (a PilotDef id). Contracts and encounter
+ chunks reference lance ids when the mission needs a scripted OpFor composition
+ instead of pure random generation.
+
+How the game finds these files
+ Chapter 2: manifest Type LanceDef with Path such as "lance". fps_GDL uses
+ "Path": "lance", ShouldMergeJSON false, AddToDB true so the pack owns whole
+ lance rows without merging into vanilla tables; fps_TheBigDealBEXCE also lists
+ LanceDef with AddToDB true. Vanilla references: (R2) ...\data\lance\.
+
+Lookup tables on disk
+ (R2) for stock lances; mod FPS packs ship parallel lance\ with BLACKLISTED or
+ story-specific tags on LanceTags when those groups must not appear in generic
+ encounter pools.
+
+Why this matters for flashpoints
+ If a contract chunk references lancedef_myStory_boss and that id is missing or
+ a LanceUnits[].unitId points at an unloaded MechDef, the mission can fail to
+ spawn or throw when the encounter resolves.
+
+File name and the IDs inside it
+ Convention: lancedef_* stems matching Description.Id (see fps_GDL examples).
+ Open for structure:
+ ...\Mods\fps_GDL\lance\lancedef_mech_d10_FPST_2-1.json
+ Description.Id is "lancedef_mech_d10_FPST_2-1"; each LanceUnits row pairs
+ "unitId" such as mechdef_masakari_warhawk-PRIME with "pilotId" such as
+ pilot_d9_flanker—both must exist in your loaded defs.
+
+Format (big picture)
+ Tight FP arcs often author a handful of fixed lances; overhaul hubs ship dozens.
+ unitTagSet / pilotTagSet blocks steer tag-based tooling; empty items arrays are
+ common in simple packs. Keep pilotId in sync with real PilotDef ids (§4.6).
+
+Worked contrast
+ GDL ships multiple numbered FPST lances (lancedef_mech_d10_FPST_2-1 through
+ 2-3) parallel to its contract set. Compare vanilla lancedef_* under (R2) for
+ stock difficulty and tag habits before inventing new names.
+
+ Quick reference (§4.5) — field → trigger → example
+ Field / block | What it triggers | Example filename / value
+    -----------------------|----------------------------------------|---------------------------
+ Description.Id | Contract/encounter references | lancedef_mech_d10_FPST_2-1
+ Difficulty | Encounter budget hint | 10 in sample FPST row
+ LanceTags | Pool filters / BLACKLIST | BLACKLISTED + Tags/LanceTags
+ LanceUnits[].unitType | Kind of spawn slot | "Mech"
+ LanceUnits[].unitId | Must load as MechDef | mechdef_* id string
+ LanceUnits[].pilotId | Must load as PilotDef | pilot_d9_flanker
+ mod.json LanceDef Path | Folder scanned by loader | fps_GDL → "Path":"lance"
+
+--------------------------------------------------------------------------------
+4.6 PilotDef
+--------------------------------------------------------------------------------
+
+What this is (in plain terms)
+ A PilotDef JSON is the stats-and-abilities blueprint for one named pilot: gunnery,
+ piloting, guts, tactics, optional traits (abilityDefNames), voice key, tags, and
+ faction/flavour text. Lance slots and some scripted ally hooks reference pilot
+ ids; the engine snaps these rows onto the MechDef chosen in the same lance unit.
+
+How the game finds these files
+ Type PilotDef with Path commonly "pilot" (fps_GDL: "Path": "pilot"; The Big Deal
+ uses AddToDB true on its PilotDef row). Vanilla baseline: (R2) ...\data\pilot\.
+
+Lookup tables on disk
+ (R2) for stock pilots; mod FP packs add pilot\ alongside lance\ so custom
+ OpFor voices and skill curves stay in one mod.
+
+Why this matters for flashpoints
+ A LanceDef row whose pilotId points at a missing PilotDef breaks that spawn slot
+ the same way a bad MechDef id would. AbilityDef and TraitDef strings must exist
+ in builds that run your pack (framework mods often supply extended ability lists).
+
+File name and the IDs inside it
+ Typical stem pilot_*.json; Description.Id must match every pilotId reference.
+ Example from fps_GDL:
+ ...\Mods\fps_GDL\pilot\pilot_fp_1GR_LeeCleve.json
+ with Description.Id "pilot_fp_1GR_LeeCleve", skill bases, Voice "m_pro05_rick",
+ and PilotTags items such as pilot_officer.
+
+Format (big picture)
+ Story characters get bespoke rows; mooks often reuse stock pilot_d* templates.
+ When cloning, duplicate an existing pilot with similar skills, rename Id and file,
+ then wire LanceDef slots to the new id. Trait-heavy pilots increase dependency
+ surface—confirm DependsOn with your pack lead.
+
+Worked contrast
+ FPST-style lances in fps_GDL reference generic flanker/gunner pilot ids
+ (pilot_d9_flanker, etc.) while named FP characters use pilot_fp_* ids. Match
+ this pattern: anonymous waves reuse stock, spotlight NPCs get unique PilotDefs.
+
+ Quick reference (§4.6) — field → trigger → example
+ Field / block | What it triggers | Example
+    ------------------------|----------------------------------------|---------------------------
+ Description.Id | LanceDef pilotId target | pilot_fp_1GR_LeeCleve
+ BaseGunnery / Piloting / Guts / Tactics | AI + player-facing performance | "6","4","6","8" sample
+ abilityDefNames[] | Perks tied to ability defs | AbilityDefG5, TraitDef*
+ Voice | Bark / VO key | m_pro05_rick
+ PilotTags.items | Filtering / blacklist | pilot_officer, BLACKLISTED
+ mod.json PilotDef Path | Loader folder | fps_GDL → "Path":"pilot"
+
+--------------------------------------------------------------------------------
+4.7 itemCollections
+--------------------------------------------------------------------------------
+
+What this is (in plain terms)
+ ItemCollectionDef JSON is a loot table: weighted or fixed lists of Mech parts,
+ weapons, upgrades, or nested tables rolled when milestones fire rewards or when
+ FlashpointDef.RewardCollectionID resolves at arc completion.
+
+How the game finds these files
+ Type ItemCollectionDef with Path "itemCollections"; some hubs add a second row
+ with ShouldAppendText to extend vanilla tables (fps_TheBigDealBEXCE lists
+ itemCollectionsAppend). fps_GDL uses a single Path "itemCollections". If your
+ pack references an id, ensure the def exists in your mod or a dependency.
+
+Why this matters for flashpoints
+ §3.1 RewardCollectionID strings and milestone Result actions often call
+ itemCollection_loot_* ids. Typos yield empty rewards or log spam at payout.
+
+File name and the ID inside it
+ Common pattern: itemCollection_loot_<purpose>.json (exact id inside the file must
+ match milestone strings such as itemCollection_loot_fp_reward_a_theBigDeal in
+ fps_TheBigDealBEXCE\milestoneSets\ms_fp_theBigDeal.json). When searching the mod
+ for reward wiring, inspect milestone JSON before authoring new collections.
+
+Format (big picture)
+ Start from a vanilla or mod table with the mix you want (guaranteed part vs
+ random pools), duplicate, rename id, then point your FP reward hooks at the new
+ string. Nested collections can chain rolls for rarity layering.
+
+Worked contrast
+ Vanilla FP templates reference generic prize tables such as itemCollection_loot_
+ Item_rare (see §3.1 teaching examples). Large anthology packs define bespoke
+ itemCollection_loot_fp_reward_* per story inside the same mod that owns the
+ milestone.
+
+ Quick reference (§4.7) — field → trigger → example
+ Field / pattern | What it triggers | Example id / file habit
+    --------------------------|----------------------------------------|---------------------------
+ ItemCollectionDef Path | Loader scans loot folder | "Path":"itemCollections" (GDL, TBD)
+ ShouldAppendText row | Extends existing DB textually | itemCollectionsAppend (TBD)
+ items[].unitType / unitId | Defines roll entries | MechPart, Weapon, Mech, nested table id
+ Milestone / FP reward ref | Looks up collection by string id | itemCollection_loot_fp_reward_a_theBigDeal
+
+--------------------------------------------------------------------------------
+4.8 If loot or units fail to resolve, check these in order
+--------------------------------------------------------------------------------
+ 1) Chapter 2: every required Manifest Type is present (LanceDef, PilotDef when
+ you ship custom OpFor, MechDef, ChassisDef when you ship new frames,
+ ItemCollectionDef when you author loot, HardpointDataDef when you author new
+ chassis layouts, MovementCapabilitiesDef when referenced).
+ 2) JSON validates (§1.3).
+ 3) Id chain is unbroken: contract encounter → LanceDef.Description.Id exists;
+ each LanceUnits unitId → MechDef; each pilotId → PilotDef; MechDef → ChassisID
+ → chassis JSON; boss weapons reference live WeaponDef ids.
+ 4) itemCollection id strings in milestones exactly match ItemCollectionDef ids.
+ 5) Merge vs replace intent matches your flags—chassisMerge with ShouldMergeJSON
+ behaves differently from dropping a full replacement chassis; LanceDef
+ ShouldMergeJSON / AddToDB choices must match your pack convention.
+ 6) DependsOn provides defs your pack assumes (BT Extended weapon banks, stock
+ pilots you reference by id, etc.).
+ 7) After manifest changes, clear ModTek cache per §1.7.
+ 8) Output log: search MechDef, ChassisDef, LanceDef, PilotDef, ItemCollection,
+ MissingDef, or your custom id substring.
+
+ Quick reference (§4.8) — rescue order
+ Step | Failure trigger | Fix / where
+    -----|-----------------------------------|---------------------------------
+ 1 | Loader skipped folder | mod.json Type + Path spelling
+ 2 | Parser error | §1.3 validate
+ 3 | Spawn crash / blank Lance | LanceDef ↔ MechDef ↔ PilotDef ↔ Chassis
+ 4 | Empty FP reward | reward string ↔ ItemCollection id
+ 5 | Wrong chassis behaviour after patch| merge flags vs full file
+ 6 | Missing dependency defs | DependsOn + framework readme
+ 7 | Stale defs | delete .modtek
+ 8 | Cryptic error | output_log targeted search
+
+--------------------------------------------------------------------------------
+4.9 Further reading (resource codes)
+--------------------------------------------------------------------------------
+ ModTek manifest grammar (R5) when adding new Types/paths. Vanilla comparison
+ under (R2) for lance, pilot, chassis, mech, hardpoints, movement. Support spreadsheets (R1)
+ help cross-check rare id spellings when available. Mission Control (R7) if reward
+ or spawn pipelines integrate with encounter overrides. Chapters 2–3 for how FP
+ wiring calls these defs.
+
+ Quick reference (§4.9) — docs
+ Code | Use in this chapter | Example habit
+    ---------|--------------------------------------------------|------------------
+ (R2) | Source-of-truth chassis/mech/hardpoint samples | diff vanilla before cloning
+ (R5) | Confirm Manifest Type names / flags | add ChassisDef row correctly
+ (R1) | Optional CSV sanity for designers | inventory spot-checks
+ (R7) | Advanced encounter/reward tooling | only if stack uses MC
+ Ch.2–3 | Where FP hooks reference ids | RewardCollectionID, Lances
+
+================================================================================
+5. NARRATIVE, CAST, DIALOGUE
+================================================================================
+ This chapter covers sim-layer story plumbing: optional SimGameEventDef popups,
+ CastDef speakers, binary simGameConversations dropship scenes, and the art that
+ makes them visible (portraits, FP sprites, conversation textures). Milestones
+ (§3.2) call System_StartConversation and SimGameEvent actions; FlashpointDef
+ (§3.1) names FlashpointDescriberCastDefId and Icon keys. In-mission reactive
+ buckets (DialogBucketDef, ConversationContent) are the focus of Chapter 6—skim
+ that chapter if your contract references mission bark ids. JSON: §1.3; manifest:
+ Chapter 2; spreadsheets: (R1) for cast/UI hints where available.
+
+--------------------------------------------------------------------------------
+5.1 events (SimGameEventDef)
+--------------------------------------------------------------------------------
+
+What this is (in plain terms)
+ An event JSON is a strategy-layer popup the player can get outside tactical
+ combat: text, optional icon, requirements (tags, crew skills), and player options.
+ Each option leads to ResultSets that may add/remove tags, change MedTechSkill-style
+ stats, fire follow-up events, or grant items—think "shipboard crisis with
+ buttons" rather than a mission contract.
+
+How the game finds these files
+ Chapter 2: Type SimGameEventDef with Path commonly "events" (Flashpoint-The-Raid:
+ "Path": "events"). Heavy hubs may add a second row with eventsOverride and
+ AddToDB—match your framework's pattern. Vanilla and DLC references: (R2)
+ ...\data\events\ (folder layout varies by DLC).
+
+Lookup tables on disk
+ (R2) for vanilla event naming habits; mod packs colocate forcedevent_* or
+ story-prefixed ids beside milestones so authors can grep EventID strings.
+
+Why this matters for flashpoints
+ Milestones can queue events directly (Action types that reference EventID) so the
+ arc reacts on the Leopard without a new conversation file. Option tags and stats
+ often gate later milestones—copy tag names from working milestones before you add
+ new branches.
+
+File name and the IDs inside it
+ Convention: forcedevent_<pack>_<slug>.json or similar; Description.Id inside the
+ file must match every EventID reference. Example you can open:
+ ...\Mods\Flashpoint-The-Raid\events\forcedevent_FP_theRaid_cabalInfiltration.json
+ ms_fp_theRaid.json references EventID "forcedevent_FP_theRaid_cabalInfiltration"
+ alongside sim dialogue—shows how one arc mixes conversations and events.
+
+Format (big picture)
+ Trace Requirements / AdditionalRequirements before you add branches; Options[]
+ nested ResultSets mirror milestone Result pacing but are edited in the event
+ editor's JSON shape. Icon fields often point at Sprite/Texture keys shipped with
+ the same mod (see §5.5).
+
+Worked contrast
+ Light FP packs skip custom events entirely; moderate packs like The Raid use a few
+ forced events for morale or infiltrations; overhaul anthologies may ship dozens
+ under events\ and eventsOverride\.
+
+ Quick reference (§5.1) — field → trigger → example
+ Field / block | What it triggers | Example filename / id
+    ----------------------|----------------------------------------|---------------------------
+ Description.Id | Milestone EventID / other callers | forcedevent_FP_theRaid_cabalInfiltration
+ Scope / Requirements | When the popup may fire | Company + skill comparisons (The Raid)
+ Options[].ResultSets | Tags, stats, chained events | MedTechSkill -2 outcome in sample file
+ Weight | Relative draw priority where applicable | 10 in cabal sample
+ mod.json SimGameEventDef | Loader folder | Flashpoint-The-Raid → "events"
+
+--------------------------------------------------------------------------------
+5.2 cast
+--------------------------------------------------------------------------------
+
+What this is (in plain terms)
+ A cast def registers a speaking role: name strings, faction flavour, and which
+ portrait (emote) PNG the UI shows when that person talks on the dropship. It is
+ not the same as PilotDef (§4.6)—cast rows power employers, Darius-like officers,
+ and flashpoint describers, not tactical pilots.
+
+How the game finds these files
+ Type CastDef with Path "cast" in nearly every narrative pack (fps_GDL,
+ Flashpoint-The-Raid, fps_TheBigDealBEXCE). Files live under ...\Mods\<pack>\cast\.
+
+Why this matters for flashpoints
+ FlashpointDescriberCastDefId on the FlashpointDef (§3.1) must match a CastDef id;
+ contracts may set representativeCastDefIDOverride to swap who briefs a mission.
+ Missing cast ids remove portraits or silence lines tied to that speaker.
+
+File name and the IDs inside it
+ Engines accept both "id" and "ID" style keys depending on authoring tool;
+ internalName often mirrors the filename stem. Example from fps_GDL:
+ ...\Mods\fps_GDL\cast\castDef_fp_graysonCarlyle35.json
+ Portrait path example:
+ "../../Mods/fps_GDL/portraits/GCarlyle35.png"
+ fp_birthOfALegend.json uses "FlashpointDescriberCastDefId" :
+ "castDef_DariusDefault" while story-specific cast defs cover custom faces.
+
+Format (big picture)
+ defaultEmotePortrait.portraitAssetPath must reach a real image under your mod's
+ portraits\ (or shared art). Keep faction strings aligned with FactionDef merges
+ if your overhaul adds periphery employers (Chapter 7 snapshot).
+
+Worked contrast
+ fp_theRaid ties voice to Locals via Flashpoint copy; GDL ships multiple
+ castDef_fp_graysonCarlyle* rows for age-skipped portrait swaps across milestones.
+
+ Quick reference (§5.2) — field → trigger → example
+ Field / block | What it triggers | Example
+    ---------------------------|-------------------------------------|---------------------------
+ id / internalName | Referenced from Flashpoint / events | castDef_fp_graysonCarlyle35
+ defaultEmotePortrait path | Briefing / event portrait art | GCarlyle35.png
+ faction / callsign text | UI flavour | GrayDeathLegion, Col. Carlyle
+ mod.json CastDef Path | Loader folder | "Path":"cast"
+
+--------------------------------------------------------------------------------
+5.3 simGameConversations
+--------------------------------------------------------------------------------
+
+What this is (in plain terms)
+ These are compiled conversation graphs the engine plays inside the dropship UI:
+ nodes, camera cues, and player choices exported from HBS conversation tools into
+ binary .bytes files—not hand-editable JSON like milestones.
+
+How the game finds these files
+ Manifest Type SimGameConversations with Path such as "simGameConversations".
+ Example files in The Raid mod:
+ ...\Mods\Flashpoint-The-Raid\simGameConversations\FP_theRaid_002_TalkForCancel.bytes
+ ...\Mods\Flashpoint-The-Raid\simGameConversations\FP_theRaid_102_Talk.bytes
+ Milestones never reference the filename directly; System_StartConversation uses
+ the hexadecimal content id baked into the asset (export pipeline supplies it).
+
+Why this matters for flashpoints
+ Mismatch between the "value" string in System_StartConversation and the id inside
+ the .bytes package produces silent failures—dialogue never opens even though the
+ milestone advanced. Always re-export after narrative edits and paste the new id.
+
+File name and the ID inside it
+ Authoring convention: prefix + beat (e.g. FP_theRaid_002_TalkForCancel.bytes).
+ Wired example from ms_fp_theRaid.json:
+ "Type" : "System_StartConversation",
+ "value" : "9cc52ed03b2514c7432b5978",
+ "additionalValues" : ["The Raid","High Orbit — Tiverton","Conference",null]
+ The hex id is what you must keep in sync with the conversation project, not the
+ filename stem.
+
+Format (big picture)
+ Pair ConversationContent / dialogue_buckets entries (Chapter 6) when your stack
+ splits text keys from bytes; beginners should duplicate a working mod's export
+ flow before inventing new pipeline steps. Test each new conversation once on target
+ milestone before chaining SetNext milestones behind it.
+
+Worked contrast
+ GDL and The Raid both carry simGameConversations\ folders; vanilla FP templates use
+ teaching conversations under (R2) with parallel milestone placeholders until you
+ drop real exports.
+
+ Quick reference (§5.3) — field → trigger → example
+ Artifact / field | What it triggers | Example
+    ---------------------------|----------------------------------------|---------------------------
+ simGameConversations\*.bytes | Loader asset bundle | FP_theRaid_102_Talk.bytes
+ System_StartConversation value | Engine lookup id | 9cc52ed03b2514c7432b5978
+ additionalValues[] | Orbit text, room, UI chrome | Conference, High Orbit line
+ mod.json Path | Folder name on disk | "simGameConversations"
+
+--------------------------------------------------------------------------------
+5.4 portraits
+--------------------------------------------------------------------------------
+Manifest type: Sprite (often) or dedicated portrait paths
+File type: PNG/DDS per engine import rules; referenced from cast defs or UIs.
+
+Why important: Custom employers or villains need faces in briefings.
+
+Variation: Some packs reuse vanilla portraits; total conversion FPs replace sets.
+
+
+--------------------------------------------------------------------------------
+5.5 sprites
+--------------------------------------------------------------------------------
+
+What this is (in plain terms)
+ Sprite-manifested art covers flashpoint card spots, event icons, contract UI bits,
+ and other 2D elements referenced by string keys in JSON (e.g. Flashpoint Icon,
+ event Description.Icon).
+
+How the game finds these files
+ Type Sprite with Path "sprites" (and sometimes additional Sprite rows). Store PNG
+ assets under that folder; keys in JSON usually match filenames such as
+ uixTxrSpot_fp_theRaid.png on the FlashpointDef Icon field.
+
+Why this matters for flashpoints
+ Typos between "Icon": "myart.png" and the actual filename prevent the card from
+ finding art even though JSON validates.
+
+File name and the IDs inside it
+ Example keys from this guide's sample flashpoints:
+ fp_theRaid.json → "Icon" : "uixTxrSpot_fp_theRaid.png"
+ fp_birthOfALegend.json → "Icon" : "BOAL_Title_Card.png"
+ Place matching files under the mod's sprites\ (or Texture2D path if your pack
+ splits responsibility—see §5.6).
+
+Format (big picture)
+ Prefixes like uixTxrSpot_* signal UI contract/flashpoint art in modding tradition;
+ keep casing identical across FlashpointDef, ItemCollection icons, and filenames.
+
+ Quick reference (§5.5) — field → trigger → example
+ Field / pattern | What it triggers | Example filename
+    ---------------------|-----------------------------------|---------------------------
+ Flashpoint Icon key | Card / dossier banner | uixTxrSpot_fp_theRaid.png
+ Event Description.Icon | Event popup header art | uixTxrSpot_VentilationGrate.png
+ mod.json Sprite Path | Which folder loader scans | "Path":"sprites"
+
+--------------------------------------------------------------------------------
+5.6 textures
+--------------------------------------------------------------------------------
+
+What this is (in plain terms)
+ Texture2D manifest entries load larger UI plates—conversation backdrops, briefing
+ panels—often with AddToAddendum "ConversationTexture" so the conversation
+ renderer can resolve them.
+
+How the game finds these files
+ Example from Flashpoint-The-Raid mod.json:
+ { "Type": "Texture2D", "Path": "textures", "AddToAddendum": "ConversationTexture" }
+ fps_GDL uses the same triple: textures\ folder plus AddToAddendum.
+
+Why this matters for flashpoints
+ Missing Texture2D rows or wrong AddToAddendum strings leave conversations with
+ default grey plates even if PNGs exist on disk.
+
+File name and the IDs inside it
+ Follow export naming from your conversation tool; reference keys inside
+ conversation projects rather than guessing from JSON alone.
+
+Format (big picture)
+ Coordinate with §5.3 exports—artists usually drop finals into textures\ while
+ codework handles manifest declarations once per pack.
+
+ Quick reference (§5.6) — field → trigger → example
+ Manifest row | What it triggers | Example
+    -------------------------------------------|---------------------------|------------------
+ Texture2D + Path "textures" | Imports plate images | The Raid textures\
+ AddToAddendum "ConversationTexture" | Hooks UI pipeline | fps_GDL + The Raid pattern
+
+--------------------------------------------------------------------------------
+5.7 If dialogue, cast, or art fails to appear, check these in order
+--------------------------------------------------------------------------------
+ 1) Chapter 2: CastDef, SimGameConversations, SimGameEventDef, Sprite, Texture2D
+ Manifest rows exist with Paths matching real folders (and flags such as
+ AddToAddendum where your pack requires them).
+ 2) JSON validates for every text def (§1.3); binary .bytes updated after last
+ conversation export.
+ 3) System_StartConversation "value" hex matches the exported conversation id;
+ additionalValues slots line up with working milestones (compare §3.2).
+ 4) EventID strings in milestones match Description.Id inside event JSON.
+ 5) CastDef id keys match FlashpointDescriberCastDefId, contract overrides, or
+ event speakers referencing cast ids.
+ 6) Portrait relative paths resolve from the game working directory; Sprite
+ manifest covers the folder holding PNGs.
+ 7) Icon filenames referenced by flashpoints/events match sprites (or texture
+ pipeline) on disk—including case on case-sensitive installs.
+ 8) ModTek cache cleared after large manifest or art moves (§1.7).
+ 9) Output log: search cast id strings, missing texture, Conversation, SimGameEvent.
+
+ Quick reference (§5.7) — rescue order
+ Step | Failure trigger | Fix / where
+    -----|--------------------------------------|----------------------------------
+ 1 | Loader never indexed folder | mod.json Types + Paths
+ 2 | Parser error on JSON defs | §1.3 / stale export
+ 3 | Dialogue button does nothing | hex id vs .bytes project
+ 4 | Event never fires | EventID ↔ event Description.Id
+ 5 | Wrong/missing face | CastDef + portrait path
+ 6 | Portrait path valid but invisible | Sprite Path "portraits"
+ 7 | FP card lacks art | Icon string ↔ sprites\
+ 8 | Stale build | .modtek delete
+ 9 | Still stuck | output_log
+
+--------------------------------------------------------------------------------
+5.8 Further reading (resource codes)
+--------------------------------------------------------------------------------
+ (R1) reference-sheets hold cast/UI spreadsheets (cast-id-speaker-id.csv,
+ uix-txr-conv.csv) for cross-checking ids with designers. (R2) vanilla trees for
+ baseline CastDef and event samples. (R5) mod.json grammar for Sprite vs Texture2D
+ rows. (R3)/(R4) ModTek overview when diagnosing loader issues. Chapter 6 for
+ mission-time DialogBucketDef / ConversationContent that pairs with these sim
+ assets. Chapter 3 milestones for System_StartConversation wiring detail.
+
+ Quick reference (§5.8) — docs
+ Code | Use in this chapter | Example habit
+    ---------|--------------------------------------------|------------------
+ (R1) | Cast + UI string sanity | crosswalk Speaker/cast ids
+ (R2) | Vanilla reference defs | diff before custom cast
+ (R5) | Confirm Manifest + AddToAddendum spelling | ConversationTexture row
+ Ch.3, §3.2 | Milestone conversation actions | copy hex id discipline
+ Ch.6 | In-mission buckets vs sim bytes | §6.1-6.4 wiring
+
+================================================================================
+6. VANILLA CONVERSATION BUCKETS
+================================================================================
+ Chapter 5 covers dropship-side story (simGameConversations .bytes, cast, events).
+ This chapter covers tactical-side “buckets”: small JSON registries that name
+ which in-mission banter lines fire when objectives turn, enemies arrive, or the
+ mission auto-completes. Contracts (§3.3) reference bucket ids in dialogueList
+ rows and fields such as overrideAutoCompleteDialogueId; each bucket id must exist
+ as DialogBucketDef JSON and point at ConversationContent (often shipped under a
+ mod folder named dialogue_buckets). JSON: §1.3; GUIDs in camera hooks: §1.4;
+ manifest: Chapter 2; vanilla shape: (R2).
+
+--------------------------------------------------------------------------------
+6.1 What buckets are (sim versus tactical)
+--------------------------------------------------------------------------------
+
+What this is (in plain terms)
+ A bucket is a named bundle of mission dialogue the combat layer can pull from
+ when something scripted happens mid-fight. The engine first resolves a
+ DialogBucketDef (the registry), which lists one or more ConversationContent ids
+ (the actual “who says what” lines). This is separate from System_StartConversation
+ hex ids in milestones (§5.3)—those run on the Leopard; buckets run on the tac map.
+
+How the game finds these files
+ Typical moderate FP manifest pairs (Flashpoint-The-Raid):
+ { "Type": "ConversationContent", "Path": "dialogue_buckets" }
+ { "Type": "DialogBucketDef", "Path": "conversationBuckets" }
+ Vanilla teaching stub: (R2) ...\data\conversationBuckets\DialogBucketDef_Template.json
+ shows the two-field shape with placeholder content id.
+
+Why this matters for flashpoints
+ Custom FP missions reuse the same contract JSON pipeline as career jobs; without
+ matching bucket + content files, players hear silence or fall back to generic
+ universal buckets when your contract asked for story-specific lines.
+
+ Quick reference (§6.1) — idea → trigger → example
+ Layer | What triggers lookup | Where wired
+    -----------------|---------------------------------------------|---------------------------
+ Sim (dropship) | Milestone System_StartConversation | §5.3 .bytes + hex id
+ Tactical (map) | Contract dialogue hooks / objective events | §3.3 dialogueList, overrides
+ DialogBucketDef | Contract fields request this bucket id | conversationBuckets\*.json
+ Bkt content JSON | Lines + cast for that bucket | dialogue_buckets\*.json
+
+--------------------------------------------------------------------------------
+6.2 DialogBucketDef (folder: conversationBuckets)
+--------------------------------------------------------------------------------
+
+What this is (in plain terms)
+ A DialogBucketDef file is tiny: an identifier string plus DialogueContentIDs—an
+ array of content keys the game plays when that bucket is requested.
+
+How the game finds these files
+ Manifest Type DialogBucketDef with Path such as "conversationBuckets".
+ Example from Flashpoint-The-Raid:
+ ...\Mods\Flashpoint-The-Raid\conversationBuckets\DialogBucketDef_c_fp_theRaid_1_destroyBase.json
+ Body:
+ "identifier" : "DialogBucketDef_c_fp_theRaid_1_destroyBase",
+ "DialogueContentIDs" : [ "Bkt_c_fp_theRaid_1_destroyBase" ]
+
+Why this matters for flashpoints
+ Contracts reference the identifier (not the filename). If the string in
+ overrideAutoCompleteDialogueId or a dialogue override does not match a loaded
+ DialogBucketDef.identifier, the line queue is empty or wrong.
+
+File name and the IDs inside it
+ Convention: DialogBucketDef_<same suffix as contract beat>.json with identifier
+ matching the contract references character-for-character.
+
+Format (big picture)
+ One bucket often maps to exactly one Bkt_* content id; advanced missions may list
+ multiple content ids for shuffle or variant logic—copy patterns from vanilla DLC
+ contracts before improvising.
+
+Worked contrast
+ Vanilla DialogBucketDef_Template uses a dummy id; real packs mirror contract stems
+ (c_fp_theRaid_1_destroyBase) so authors can grep both contract and bucket trees.
+
+ Quick reference (§6.2) — field → trigger → example
+ Field / file | What it triggers | Example
+    ------------------------|-------------------------------------|---------------------------
+ identifier | Contract / objective dialogue target | DialogBucketDef_c_fp_theRaid_1_destroyBase
+ DialogueContentIDs[] | Which Bkt_* JSON to load | Bkt_c_fp_theRaid_1_destroyBase
+ mod.json DialogBucketDef| Loader folder | "Path":"conversationBuckets"
+
+--------------------------------------------------------------------------------
+6.3 ConversationContent (folder: dialogue_buckets)
+--------------------------------------------------------------------------------
+
+What this is (in plain terms)
+ ConversationContent JSON (ModTek Type ConversationContent) stores the spoken lines:
+ identifier plus a contents[] array of blocks with words, selectedCastDefId, camera
+ hints, and audio placeholders.
+
+How the game finds these files
+ Manifest Type ConversationContent with Path "dialogue_buckets" in The Raid (folder
+ name is author-chosen but must match Path). Files sit beside the mod, e.g.:
+ ...\Mods\Flashpoint-The-Raid\dialogue_buckets\Bkt_c_fp_theRaid_1_destroyBase.json
+ The identifier inside matches the string listed in DialogueContentIDs.
+
+Why this matters for flashpoints
+ A DialogBucketDef pointing at "Bkt_myBeat" must have a sibling JSON whose
+ identifier is exactly "Bkt_myBeat". Cast ids inside each line must resolve (§5.2).
+
+File name and the IDs inside it
+ Authoring habit: Bkt_<same stem as bucket>.json; keep identifier and filename stem
+ aligned for sanity.
+
+Format (big picture)
+ contents[] entries can reference EncounterObjectGuid or cameraFocusGuid for speaker
+ framing—follow §1.4 when cloning objectives so camera ids still exist.
+
+Worked contrast
+ The Raid lines mix Sumire, Darius, Locals, and merc commander cast defs inside one
+ Bkt file—proof that one bucket can chain many speakers for a single mission beat.
+
+ Quick reference (§6.3) — field → trigger → example
+ Field / block | What it triggers | Example
+    ------------------------|-----------------------------------|---------------------------
+ identifier | Must appear in DialogueContentIDs | Bkt_c_fp_theRaid_1_destroyBase
+ contents[].words | Subtitle / bark text | Commander, the area has been cleared...
+ contents[].selectedCastDefId | Portrait + VO speaker | castDef_SumireDefault
+ contents[].cameraFocusGuid | Tac camera anchor | GUID or "" per §1.4
+ mod.json ConversationContent | Loader scans dialogue folder | "Path":"dialogue_buckets"
+
+--------------------------------------------------------------------------------
+6.4 How contracts call buckets
+--------------------------------------------------------------------------------
+
+What this is (in plain terms)
+ Mission JSON wires buckets in two families: implicit auto-complete / staging hooks
+ (often overrideAutoCompleteDialogueId) and dialogueList entries that tie mission
+ events to overrideDialogueBucketId or inline dialogueContent.
+
+How the game finds these references
+ Search your ContractOverride for strings starting with DialogBucketDef_ or
+ Bkt_. Example: c_fp_theRaid_1_destroyBase.json sets
+ "overrideAutoCompleteDialogueId" : "DialogBucketDef_c_fp_theRaid_1_destroyBase"
+ Other beats use the same pattern with stems matching their DialogBucketDef files.
+
+Why this matters for flashpoints
+ Renaming a contract id without renaming every bucket + content triple breaks only
+ the dialogue path—combat may still run while story VO disappears.
+
+Format (big picture)
+ When copying vanilla contracts, preserve both universal buckets
+ (DialogBucketDef_Universal_* style) and FP-specific buckets; mix-ups are common when
+ authors paste a chunkList but not the matching conversationBuckets\ shipment.
+
+ Quick reference (§6.4) — contract field → trigger → example
+ Contract JSON hook | Typical trigger / meaning | Example value
+    --------------------------------|-----------------------------------|----------------------------------
+ overrideAutoCompleteDialogueId | Dialogue when mission wraps | DialogBucketDef_c_fp_theRaid_1_destroyBase
+ dialogueList[] / overrideDialogueBucketId | Event-driven mid-mission swap | DialogBucketDef_DefendBase_... (vanilla mix)
+
+--------------------------------------------------------------------------------
+6.5 If tactical dialogue fails, check these in order
+--------------------------------------------------------------------------------
+ 1) Chapter 2: DialogBucketDef and ConversationContent Manifest rows exist; Paths
+ match conversationBuckets\ and dialogue_buckets\ on disk.
+ 2) JSON validates (§1.3) for both def types and for the contract that references them.
+ 3) DialogBucketDef.identifier matches every contract string that points at it.
+ 4) Each DialogueContentIDs entry matches a ConversationContent identifier in your mod.
+ 5) Cast ids inside contents[] exist (§5.2); typos mute lines.
+ 6) Camera / objective GUIDs referenced in lines still exist in the same contract
+ if you edited objectives (§1.4).
+ 7) Load order: another mod’s ContractOverride with the same mission id can hide
+ your bucket wiring—check for duplicate IDs (§3.3 checklist).
+ 8) After manifest edits, clear ModTek cache (§1.7).
+ 9) Output log: search DialogBucket, Bkt_, ConversationContent, missing identifier.
+
+ Quick reference (§6.5) — rescue order
+ Step | Failure signal | Fix / where
+    -----|-------------------------------------|----------------------------------
+ 1 | Defs never load | mod.json Types + Paths
+ 2 | Parser errors | §1.3 validate three files
+ 3–4 | Mismatch / typo between layers | identifier triple across files
+ 5 | Silent faces | CastDef ids in contents
+ 6 | Wrong camera / missing focus | GUID search in contract
+ 7 | Wrong mod wins | duplicate contract id
+ 8 | Stale index | .modtek delete
+ 9 | Still stuck | output_log
+
+--------------------------------------------------------------------------------
+6.6 Further reading (resource codes)
+--------------------------------------------------------------------------------
+ (R2) ...\data\conversationBuckets\ for vanilla naming and extra buckets shipped
+ with the base game. (R1) conversation / UI CSVs if your team audits bark strings.
+ (R5) mod.json to confirm ConversationContent and DialogBucketDef spellings.
+ Chapter 3 §3.4 (FP briefing / branching .bytes), §3.3 (contracts), Chapter 5 (sim
+ conversations depth), and §7.4 (mission ConversationDef)
+ when you mix JSON node conversations with buckets. Appendix A lists dialogue_buckets
+ under optional mod folders.
+
+ Quick reference (§6.6) — docs
+ Code / section | Use in Chapter 6 | Habit
+    ----------------|-------------------------------------|----------------------
+ (R2) | Vanilla bucket templates | diff before custom id
+ (R5) | Manifest pair for buckets | both Types together
+ §3.4 | Leopard briefing / sim .bytes | before mission buckets
+ §3.3 | Contract dialogue hooks | grep override*Dialogue*
+ §5.3 | Contrast sim .bytes | do not confuse layers
+ Appx A | Folder name cheat sheet | dialogue_buckets path
+
+================================================================================
+7. OFTEN USED
+================================================================================
+Supporting defs contracts and milestones.
+
+
+--------------------------------------------------------------------------------
+7.1 abilities
+--------------------------------------------------------------------------------
+Def type: AbilityDef
+File type: JSON. Fields include Description.Id, activation, targeting, phases.
+
+Why important: Boss pilots or hero units in themed FPs.
+
+Variation: HM-era content; optional for purely stock-opfor FPs.
+
+
+--------------------------------------------------------------------------------
+7.2 ammunition
+--------------------------------------------------------------------------------
+Def type: AmmunitionDef
+File type: JSON (damage, modifiers, tags).
+
+Why important: Ensures ammo-based weapons in FP mechs resolve correctly.
+
+Variation: New ammo types for showcase weapons.
+
+
+--------------------------------------------------------------------------------
+7.3 ammunitionBox
+--------------------------------------------------------------------------------
+Def type: AmmunitionBoxDef
+File type: JSON linking AmmunitionDef to capacity/tonnage.
+
+Why important: MechDef inventory references boxes.
+
+Variation: Custom specialty ammo for set-piece fights.
+
+
+--------------------------------------------------------------------------------
+7.4 conversations
+--------------------------------------------------------------------------------
+Def type: ConversationDef (mission conversations; path varies by pack)
+File type: JSON defining nodes, choices, next IDs.
+
+Why important: Linear mission dialogue distinct from simGameConversations bytes.
+
+Variation: Some FPs rely solely on buckets + sim bytes; others add mission JSON.
+
+
+--------------------------------------------------------------------------------
+7.5 descriptions
+--------------------------------------------------------------------------------
+Def type: BaseDescriptionDef and related description defs
+File type: JSON for UI strings and tooltips.
+
+Why important: Consistent naming for custom gear introduced as FP rewards.
+
+Variation: Touch only when adding new components with UI text.
+
+
+--------------------------------------------------------------------------------
+7.6 dialogue_buckets
+--------------------------------------------------------------------------------
+ See Chapter 6 (especially §6.3): mod-local ConversationContent path in several packs
+ (ModTek Type ConversationContent). Keep Bkt_* identifiers aligned with
+ DialogBucketDef.DialogueContentIDs.
+
+
+--------------------------------------------------------------------------------
+7.7 factions
+--------------------------------------------------------------------------------
+Def type: FactionDef
+File type: JSON (icon, colors, hostility tables, tags).
+
+Why important: PotentialEmployers / TargetFaction strings must exist or be added
+via enums/faction merges.
+
+Variation: Custom periphery employers for modded FPs.
+
+
+--------------------------------------------------------------------------------
+7.8 heraldry
+--------------------------------------------------------------------------------
+Def type: HeraldryDef
+File type: JSON + sprite references.
+
+Why important: Employer crests in UI.
+
+Variation: Reuse vs bespoke crest for story villains.
+
+
+ Heraldry is the visual identity of a faction or employer on menus and flashpoint cards:
+ crest shape, colours, and backing art referenced by HeraldryDef JSON plus sprite paths.
+ You rarely need new heraldry for a minimal FP, but reusing or adding a crest makes the
+ employer feel distinct on the star map and in briefing chrome—pair with CastDef and
+ PotentialEmployers so the same faction name always resolves to art the UI can load.
+ Manifest: HeraldryDef row (e.g. Flashpoint-The-Raid) pointing at a heraldry\ folder.
+ Tactical-map unit colours and regiment overrides (customHeraldryDefId on contract
+ spawns) are in 05-creating-specific-units.txt — not repeated in this section.
+ Map markers, chassis silhouettes, and battle-side emblems (ChassisDef Icon,
+ textureLogoID, FactionDef icon): 05 Part I — not repeated here.
+
+
+--------------------------------------------------------------------------------
+7.9 lance
+--------------------------------------------------------------------------------
+Def type: LanceDef
+File type: JSON defining unit slots (MechDef/PilotDef pairs, tags).
+
+Why important: Contracts spawn OpFor lances from these templates.
+
+Variation: Fixed narrative lances vs scaled random tables.
+
+
+--------------------------------------------------------------------------------
+7.10 maps
+--------------------------------------------------------------------------------
+Def type: Map / encounter metadata (often JSON under maps; contracts reference map ids)
+
+Why important: Every mission resolves terrain; wrong id = broken contract.
+
+Variation: Vanilla-only maps vs mod maps; FP-specific moods via mapMood fields.
+
+
+--------------------------------------------------------------------------------
+7.11 weapon
+--------------------------------------------------------------------------------
+Def type: WeaponDef
+File type: JSON (Type, Damage, ranges, ammoCategory, tags).
+
+Why important: Reward weapons and OpFor loadouts.
+
+Variation: LosTech showcase vs standard arsenal.
+
+
+--------------------------------------------------------------------------------
+7.12 upgrades
+--------------------------------------------------------------------------------
+Def type: UpgradeDef (structure/heat/etc.)
+File type: JSON
+
+Why important: Special gear rewards (COIL, comps).
+
+Variation: HM-linked upgrades in equipment-heavy FPs.
+
+
+--------------------------------------------------------------------------------
+7.13 vehicle
+--------------------------------------------------------------------------------
+Def type: VehicleDef
+File type: JSON
+
+Why important: Convoy escort or armor columns in objectives.
+
+Variation: Urban warfare themed FPs emphasize vehicles.
+
+
+--------------------------------------------------------------------------------
+7.14 vehicleChassis
+--------------------------------------------------------------------------------
+Def type: VehicleChassisDef
+File type: JSON
+
+Why important: Base stats for vehicles used in contracts.
+
+Variation: Paired with VehicleDef for new enemy types.
+
+
+--------------------------------------------------------------------------------
+7.15 jumpjets
+--------------------------------------------------------------------------------
+Def type: JumpJetDef
+File type: JSON
+
+Why important: Validates jump-capable builds on custom mechs.
+
+Variation: Light skirmish FPs with JJ-focused OpFor.
+
+
+--------------------------------------------------------------------------------
+7.16 turret / turrets
+--------------------------------------------------------------------------------
+Def types: TurretDef (mods often folder "turret"); vanilla StreamingAssets uses
+data\turrets for placement defs.
+
+File type: JSON
+
+Why important: Base defense objectives reference turrets.
+
+Variation: Defend-base FPs add named turret tiers; naming differs mod vs vanilla.
+
+
+ Plain English: a turret is a stationary gun emplacement on the tactical map. Contracts
+ reference them by def id when objectives say "destroy turrets" or "defend the base."
+ TurretDef holds combat behaviour; placement often comes from encounter/map data bundled
+ with the contract. Mods may use folder name "turret" (singular) while vanilla StreamingAssets
+ uses data\turrets—match your mod.json Path spelling to the folder you actually ship.
+ For authors: confirm the turret id exists in manifest before playtesting defend/destroy
+ objectives; a typo reads as an empty map feature or mission fail. See also §7.17 chassis.
+
+
+--------------------------------------------------------------------------------
+7.17 turretChassis
+--------------------------------------------------------------------------------
+Def type: TurretChassisDef
+File type: JSON
+
+Why important: Structure underpins TurretDef.
+
+Variation: Same as turrets; mostly objective scripting.
+
+
+ TurretChassisDef is the stat skeleton (armor, structure, hit locations) under TurretDef
+ (§7.16). You usually author chassis first, then the turret def that points at it—same
+ relationship as Mech chassis vs built mech. Flashpoint missions rarely invent new turrets;
+ when they do, both defs must load and contract objective strings must reference the
+ TurretDef id the map spawner expects. Cross-check §7.16 manifest Path and (R2) vanilla
+ turrets samples before shipping defend-base arcs.
+
+
+--------------------------------------------------------------------------------
+7.18 heatsinks
+--------------------------------------------------------------------------------
+Def type: HeatSinkDef
+File type: JSON
+
+Why important: DHS/SHS balance for custom reward mechs.
+
+Variation: Rare outside mech-centric FPs.
+
+
+--------------------------------------------------------------------------------
+7.19 enums
+--------------------------------------------------------------------------------
+Manifest: DataAddendumEntries pointing at JSON fragments (e.g. enums/Faction.json)
+
+Why important: Adds employers, factions, ammo categories without overwriting whole enums.
+
+Variation: Campaign-style packs; minimal single-FP mods may skip entirely.
+
+
+--------------------------------------------------------------------------------
+7.20 tags / tagSets
+--------------------------------------------------------------------------------
+Def types: TagDef / TagSet JSON (paths vary; often tags\ or tagSets\)
+
+Why important: LocationRequirements, milestone tag adds, event requirements.
+
+Variation: Planet filters, fp_choice_* branch memory, modded biome gating.
+
+
+--------------------------------------------------------------------------------
+7.21 shipUpgrades
+--------------------------------------------------------------------------------
+Def type: ShipModuleUpgrade (Argo upgrades)
+File type: JSON
+
+Why important: Rare FP rewards that modify the Leopard/Argo.
+
+Variation: Long campaign FPs; uncommon in one-shot missions.
+
+
+================================================================================
+8. MERGE / OVERRIDE / APPEND PATTERNS
+================================================================================
+These are not alternate game roots; they are mod authoring conventions. Behavior
+depends on ModTek (or your loader) merge rules—verify against your stack version.
+
+
+ Chapter 8 is about "patching" instead of "replacing." Vanilla already ships thousands of
+ defs. Merge/append/override folders let your mod change one field or add one loot row
+ without copying a megabyte JSON file. The loader (ModTek) decides how two mods combine;
+ when two mods touch the same id, load order in DependsOn matters. [verify ModTek] Always
+ confirm flags on your Manifest row with (R5) for your ModTek version—names like ShouldMergeJSON
+ are not decorative switches (see §1.10 trust order row 1–2).
+
+
+--------------------------------------------------------------------------------
+8.1 chassisMerge / chassis_merge / meleeFixes-chassisMerge
+--------------------------------------------------------------------------------
+Purpose: Partial JSON merge into existing ChassisDef records.
+Common syntax: mirror Description.Id with only changed fields; ShouldMergeJSON in manifest.
+
+Why important: Patch stock chassis without copying full files.
+
+Variation: Different pack names for the same idea; keep ids identical to target.
+
+ Plain English: you are editing one 'Mech skeleton the game already knows—e.g. change
+ structure or slot layout—by shipping a tiny JSON with the same Description.Id as vanilla.
+ If the id does not match exactly, the game treats your file as a new chassis or ignores it.
+
+
+--------------------------------------------------------------------------------
+8.2 contractsMerge / contracts_merge / contracts_new / lance_new
+--------------------------------------------------------------------------------
+Purpose: Non-destructive patches or parallel contract libraries.
+
+Why important: Update single objective lines or spawn tables; isolate experimental contracts.
+
+Variation: Folder name signals intent (new vs merge); loader determines precedence.
+
+ Plain English: contracts_merge tweaks an existing mission; contracts_new (or a normal
+ contracts\ tree) adds missions with new ids. Use merge when balancing one objective line;
+ use new ids for flashpoint missions you reference from milestones (§3.3).
+
+
+--------------------------------------------------------------------------------
+8.3 eventsOverride
+--------------------------------------------------------------------------------
+Purpose: Replace or layer SimGameEventDef content by id.
+
+Why important: Change option outcomes without forking entire event files.
+
+Variation: Keep IDs stable; conflicts if multiple mods override same event.
+
+ Plain English: sim pop-up events (travel encounters, argo events) are referenced by id.
+ Override folders let you swap options or consequences while keeping the same event name
+ other mods expect—last writer wins if two packs override the same id.
+
+
+--------------------------------------------------------------------------------
+8.4 itemCollectionsAppend
+--------------------------------------------------------------------------------
+Purpose: Text or JSON append strategies to grow loot tables.
+
+Why important: Add FP rewards into global pools.
+
+Variation: ShouldAppendText vs merge JSON—follow ModTek manifest flags.
+
+ Plain English: reward tables (ItemCollectionDef) list what the player can win. Append
+ adds your loot line to an existing pool—common for "drop our unique gun into rare loot."
+ FlashpointDef RewardCollectionID must still point at a collection id that exists after
+ the append runs.
+
+
+--------------------------------------------------------------------------------
+8.5 starsystem / starsystem_merge / starsystemDefinitive
+--------------------------------------------------------------------------------
+Purpose: Alter star system defs (availability, tags) so FPs spawn where intended.
+
+Why important: Planet tags in FlashpointDef must match system data the sim uses.
+
+Variation: merge vs definitive replacement; load order sensitive.
+
+ Plain English: the star map reads system defs for which planets exist and which tags they
+ carry. If your flashpoint requires planet_name_foo but the system file never tags that
+ world, LocationRequirements fail. Merge patches tags onto an existing system; definitive
+ replaces the whole system record—higher risk if another mod edits the same star.
+
+
+--------------------------------------------------------------------------------
+8.6 timeline / timelineEvents
+--------------------------------------------------------------------------------
+Purpose: Era or campaign timeline hooks (mod-specific frameworks).
+
+Why important: Gates FP availability by year or story phase in extended mods.
+
+Variation: Only in timeline-integrated packs (e.g. BEX family).
+
+ Plain English: timeline mods fire events on dates (3028-04-14, etc.) that add tags, spawn
+ flashpoints, or force travel. Your FP may depend on a tag a timeline event adds—document
+ that dependency in DependsOn and test with the same timeline mod enabled.
+
+
+--------------------------------------------------------------------------------
+8.7 StreamingAssets (nested under mod)
+--------------------------------------------------------------------------------
+Purpose: Bundle asset bundles or non-JSON assets mirroring game layout.
+
+Why important: Ships custom audio/UI beyond loose files.
+
+Variation: Pack-specific; document paths inside your mod readme.
+
+ Plain English: some packs mirror the game's StreamingAssets layout inside the mod to ship
+ asset bundles, audio banks, or UI textures that are not plain JSON. Flashpoint-only
+ authors rarely need this unless adding custom voice packs or UI plates; when you do,
+ paths must match what the Manifest Type expects.
+
+
+--------------------------------------------------------------------------------
+8.8 emblems
+--------------------------------------------------------------------------------
+Purpose: Player/merc emblems addendum entries.
+
+Why important: Cosmetic rewards or FP-themed merc icons.
+
+Variation: AddToAddendum patterns in manifest.
+
+ Plain English: mercenary emblem picker entries can be appended like loot—rewarding a
+ unique crest for completing your arc. Usually paired with Sprite/Texture manifest rows.
+
+
+--------------------------------------------------------------------------------
+8.9 pathing
+--------------------------------------------------------------------------------
+Purpose: PathingCaps defs for unusual sizes or VTOL rules in advanced mods.
+
+Why important: Prevents AI path failures on custom units.
+
+Variation: Rare; appears with exotic movement FPs.
+
+ Plain English: pathing caps tell the AI which hexes and elevations a unit class can use.
+ Custom superheavy or VTOL units need matching caps or lances stand still or spin in place.
+
+
+--------------------------------------------------------------------------------
+8.10 ForcedEvents / FTE / illustrations / castSprites
+--------------------------------------------------------------------------------
+Purpose: One-off pack folders for tutorials, forced sim events, art dumps, or
+extra cast art beyond portraits.
+
+Why important: Campaign framing around a FP arc.
+
+Variation: Highly author-specific; treat as optional subprojects inside a mod.
+
+ Plain English: authors invent folder names (FTE, ForcedEvents, illustrations) for
+ timeline-triggered sim events, extra cast art, or tutorial beats. Treat as campaign chrome:
+ only add Manifest rows you actually populate; link forced events to milestone or timeline
+ ids in your readme so testers know what triggers them.
+
+
+================================================================================
+9. RELATED VANILLA DATA FOLDERS (BACKGROUND; NOT FP-SPECIFIC HEADERS)
+================================================================================
+These live under BattleTech_Data\StreamingAssets\data and support the whole game.
+Flashpoints rarely author here directly, but contracts and milestones depend on
+their content indirectly.
+
+Examples (non-exhaustive):
+ abilities, assetbundles, audioevents, backgroundQuestions, backgrounds,
+ behaviorVariables, buildings, constants, contentpacks, debug, designMasks,
+ dropship, genderedoptions, localization, loggerProfile, maps (also listed in
+ often-used), milestones (career sim milestones distinct from milestoneSets),
+ mods, nameLists, pathing (vanilla), regions, shops, simGameConstants,
+ simGameStatDesc, starsystem, tags, text, ui, ...
+
+Note: FlashpointDef wires to SimGameMilestoneSet via MilestoneSetID. The
+milestones folder holds other career milestones; do not confuse with the
+milestoneSets used for FP scripting.
+
+
+================================================================================
+10. DESIGN-ONLY (BT-DLC-DESIGNDATA-MASTER)
+================================================================================
+Under Documents\bt-dlc-designdata-master, HBS ships parallel trees:
+ - <DLC>\data\... (representative JSON payloads)
+ - <DLC>\design\... (designer-facing organization, mirrors contracts layout)
+
+These paths are not read from StreamingAssets at runtime in the same way mod
+folders are; they are reference packages for authors. Use them to study how HBS
+grouped contracts\flashpoint\<arcName> and related assets before mirroring that
+structure in your mod's contracts folder.
+
+
+================================================================================
+APPENDIX A — RETAINED COMPACT FOLDER LIST (REFERENCE)
+================================================================================
+"(Common)" means: present in all three DLC design-data roots (Flashpoint,
+HeavyMetal, UrbanWarfare under bt-dlc-designdata-master\...\data) OR in at least
+five of eight sample mods that had a top-level flashpoints folder. Use it as
+a hint for what most FP packs include, not a hard rule.
+
+Core flashpoint pipeline (Common)
+ - flashpoints (Common)
+ - milestoneSets (Common)
+ - contracts (Common) -- DLC design also uses subfolders such as
+ contracts\flashpoint\... and contracts\firemission\...
+
+OpFor, rewards, equipment (Common)
+ - chassis (Common)
+ - mech (Common)
+ - hardpoints (Common)
+ - movement (Common)
+ - itemCollections (Common)
+
+Narrative, cast, dialogue (Common)
+ - events (Common) -- in Flashpoint + HeavyMetal DLC design data; UrbanWarfare
+ design data does not list a top-level events folder, but vanilla data\events
+ remains relevant for story FPs
+ - cast (Common)
+ - simGameConversations (Common)
+ - portraits (Common)
+ - sprites (Common)
+ - textures (Common)
+
+Vanilla conversation buckets (Common for base-game paths)
+ - conversationBuckets (Common)
+
+Often used (not all met the strict Common rule)
+ - abilities -- Heavy Metal design data; some FP mods extend pilots/gear
+ - ammunition
+ - ammunitionBox
+ - conversations -- vanilla data\conversations
+ - descriptions
+ - dialogue_buckets -- mod-local ConversationContent path in several packs
+ - factions
+ - heraldry
+ - lance
+ - maps -- FP missions reference map IDs; often vanilla maps only
+ - weapon
+ - upgrades
+ - vehicle
+ - vehicleChassis
+ - jumpjets -- Heavy Metal design data
+ - turret / turrets -- vanilla uses data\turrets; mods may use "turret"
+ - turretChassis
+ - heatsinks
+ - enums -- DataAddendum-style merges in larger packs
+ - tags / tagSets
+ - shipUpgrades
+
+Merge / override / append patterns (mod naming varies)
+ - chassisMerge / chassis_merge / meleeFixes-chassisMerge
+ - contractsMerge / contracts_merge / contracts_new / lance_new
+ - eventsOverride
+ - itemCollectionsAppend
+ - starsystem / starsystem_merge / starsystemDefinitive
+ - timeline / timelineEvents
+ - StreamingAssets -- some packs nest extra assets here
+ - emblems
+ - pathing
+ - ForcedEvents / FTE / illustrations / castSprites -- one-off pack layouts
+
+Related vanilla data folders (background; not FP-specific headers)
+ Examples: abilities, assetbundles, audioevents, backgrounds, buildings,
+ constants, contentpacks, debug, designMasks, dropship, genderedoptions,
+ localization, loggerProfile, milestones, mods, nameLists, regions, shops,
+ simGameConstants, simGameStatDesc, starsystem, tags, text, ui, ...
+
+Note: vanilla has both milestones and milestoneSets. FlashpointDef uses
+MilestoneSetID -> SimGameMilestoneSet under milestoneSets. The milestones
+folder is mainly for other career sim milestones.
+
+Design-only (bt-dlc-designdata-master, not under StreamingAssets\data)
+ - design -- e.g. Flashpoint\design\... mirrors contracts structure for design
+ reference alongside Flashpoint\data\...
+
+
+Design-only (bt-dlc-designdata-master, not under StreamingAssets\data)
+ - design -- e.g. Flashpoint\design\... mirrors contracts structure for design
+ reference alongside Flashpoint\data\...
+
+
+--------------------------------------------------------------------------------
+Context pack (keep accurate if paths or tools change)
+--------------------------------------------------------------------------------
+ - Primary guide file (canonical):
+ (local game Documents â€” see README; repo paths use Background Docs\)
+ 01-creation-reference.txt
+ - File relationship pathway (beginner cascade: mod.json → flashpoint → milestones
+ → contract → lance → mech / pilot / chassis):
+ (local game Documents â€” see README; repo paths use Background Docs\)
+ 02-file-relationships-pathway.txt
+ - Story scope (before worksheets): 03-story-scope-assistant.txt
+ - Agent / designer template (prompts, tables — v0.4+):
+ (local game Documents â€” see README; repo paths use Background Docs\)
+ 04-agent-design-template.txt
+ - Conversation pipeline: 04b-conversation-design-template.txt
+ - Opposition paint / tactical icons: 05-creating-specific-units.txt
+ - Calendar windows / timeouts / sim events: 06-date-specific-flashpoints.txt
+ - Missions, maps, objectives, GUIDs: 07-missions-maps-objectives-guids.txt
+ - reference-sheets spreadsheets (contracts, maps, encounter layers, cast, UI):
+ Background Docs\reference-sheets (in this repo)
+ - Vanilla runtime JSON root (examples, templates):
+ ...\BATTLETECH\BattleTech_Data\StreamingAssets\data\
+ - HBS DLC design reference trees:
+ ...\BATTLETECH\(optional local clone of HBS DLC design data â€” not shipped in this repo)
+ - Example mods cited in the guide (folder names under ...\BATTLETECH\Mods\):
+ fps_TheBigDealBEXCE, fps_GDL, fp_tukayyidBEXCE, Flashpoint-The-Raid,
+ BEX_FotIS, BT_Extended_FPLore (and others as chapters expand).
+ - Resource list for URLs and repeat citations: Chapter 1, section 1.6 — codes
+ (R1) through (R9). Later chapters refer to (R#) instead of pasting long links.
+ - Loader: ModTek-oriented guidance; confirm flags (AddToDB, ShouldMergeJSON,
+ etc.) against the ModTek version the player actually runs — see (R3)-(R5).
+
+ - Source currency (BEXT / ModTek / R10 age): §1.10; inline [R10-2019] and [verify ModTek] on marked bullets.
+
+
+--------------------------------------------------------------------------------
+Conventions locked in for this document
+--------------------------------------------------------------------------------
+ - Audience: designers and authors; plain-language first; JSON/GUID primers live
+ in Chapter 1 (sections 1.3 and 1.4), not repeated at length in every chapter.
+ - Chapter 2 (mod.json): sections 2.1-2.10; tiered real-mod comparisons in 2.2;
+ mod checklist in 2.9; further reading codes in 2.10. Section 1.8 points here.
+ - Chapter 3.1-3.3 (poster, milestones, contracts): narrative + field walkthrough;
+ references §1.3, §1.4, Chapter 2, and (R1); mission-load checklist in §3.3;
+ companion 07-missions-maps-objectives-guids.txt for map/shape/GUID concepts.
+ - Chapter 3.4 (Flashpoint conversations): Leopard briefing and branching choices via
+ simGameConversations, ConverseTek ((R9)), milestone hex ids; §3.4 checklist;
+ worksheets and import pipeline: 04b-conversation-design-template.txt (04 Part 6);
+ ..\Background Docs\reference-sheets\online-assets.txt and online-assets-additional.txt for optional curated links.
+ - Chapter 4 (OpFor/rewards/equipment): §4.1-4.7 core defs (plain terms,
+ discovery, examples, quick-ref tables); §4.8 checklist; §4.9 further reading.
+ Section 1.8 references §4.8.
+ - Chapter 5 (narrative, cast, dialogue): §5.1-5.6 (events through textures) with
+ quick-ref tables; §5.7 checklist; §5.8 further reading. Section 1.8 references §5.7.
+ - Chapter 6 (tactical dialogue buckets): §6.1-6.4 pipeline; §6.5 checklist; §6.6
+ further reading. Section 1.8 references §6.5.
+ - Chapter 7 (often-used supporting defs): §7.1-§7.21 catalog; §7.22 checklist;
+ §7.23 further reading. Section 1.8 references §7.22. Regiment / opfor paint:
+ 05-creating-specific-units.txt (companion to §7.8 and §3.3). Calendar gates / timeouts:
+ 06-date-specific-flashpoints.txt (companion to §3.1 and Ch.5 §5.1).
+ - Chapter 8 (merge / override / append): §8.1-§8.10 patterns; §8.11 checklist;
+ §8.12 further reading. Section 1.8 references §8.11.
+ - Appendix A: retained compact folder list with "(Common)" rule as earlier defined.
+
+

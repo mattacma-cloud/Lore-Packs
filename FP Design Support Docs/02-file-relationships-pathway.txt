@@ -1,0 +1,179 @@
+================================================================================
+FLASHPOINT FILE RELATIONSHIPS PATHWAY
+================================================================================
+Companion: 00-start-here.txt | 01-creation-reference.txt
+  | 03-story-scope-assistant.txt
+  | 04-agent-design-template.txt | 04b-conversation-design-template.txt
+  | 05-creating-specific-units.txt | 06-date-specific-flashpoints.txt
+  | 07-missions-maps-objectives-guids.txt
+
+Suggested author order: 03 (story scope) → 04 (worksheets) → 07 (missions, before/during Part 4)
+  → 05 / 06 / 04b as needed.
+
+Legend: [DefType] = Manifest Type in mod.json. [NOTE] = unusual link only.
+Tree uses "> >" depth per Agent Example below. Repeat nodes when the same def
+appears under different parents.
+
+================================================================================
+Agent Example
+================================================================================
+> mod.json
+> > FlashpointDef JSON
+> > > SimGameMilestoneSet JSON
+> > > > Contract JSON
+> > > > > lanceDef JSON
+> > > > > > pilotDef JSON
+> > > Conversations
+> > > > Conversation 1
+
+
+================================================================================
+1. SINGLE RELATIONSHIP TREE (mod root → combat units + parallel branches)
+================================================================================
+
+> mod.json
+> > flashpoints\fp_*.json  [FlashpointDef]
+> > > milestoneSets\ms_fp_*.json  [SimGameMilestoneSet]  [NOTE: linked by FlashpointDef MilestoneSetID]
+> > > itemCollections\*.json  [ItemCollectionDef]  [NOTE: linked by FlashpointDef RewardCollectionID]
+> > > Requirements / ExclusionTags  [NOTE: company timeline_* or custom tags gate calendar offer window — 06 Part C.1]
+> > > AvailableTimeout / InProgressTimeout  [NOTE: sim-day clocks only — not YYYY-MM-DD; 06 Part C.5]
+> > > LocationRequirements / tags  [NOTE: tag strings in loaded tag DB — not always a file in your mod]
+> > > PotentialEmployers / TargetFaction  [NOTE: faction id strings — may need FactionDef or enum addendum in dependency mod]
+> > > Icon / Name / Details  [NOTE: may point at sprites\ or textures\ by asset key]
+> > > > Milestones[] beat  (Description.Id)
+> > > > > StartingMilestoneID  [NOTE: must equal first beat Description.Id in this file]
+> > > > > Results[]  [NOTE: tag/stat mutations — no child file; Scope Flashpoint vs Company]
+> > > > > Actions[] Flashpoint_SetNextMilestone  [NOTE: "value" = another beat Description.Id in same ms file]
+> > > > > Actions[] System_StartConversation
+> > > > > > simGameConversations\*.bytes  [SimGameConversations]
+> > > > > >   [NOTE: Action "value" = conversation graph hex id from ConverseTek — NOT the .bytes filename]
+> > > > > > cast\castdef_*.json  [CastDef]
+> > > > > > portraits\  [Sprite]
+> > > > > > textures\  [Texture2D]
+> > > > > >   [NOTE: holoscreen plates often Texture2D + AddToAddendum ConversationTexture in mod.json]
+> > > > > Actions[] System_ForceDropshipRoom  [NOTE: UI room only — no def file]
+> > > > > Actions[] Flashpoint_AddContract
+> > > > > > contracts\c_fp_*.json  [ContractOverride]
+> > > > > >   [NOTE: contract field "ID" must match Flashpoint_AddContract id character-for-character]
+> > > > > >   contractDisplayStyle BaseFlashpoint  [NOTE: differs from career contracts BaseCampaignNormal]
+> > > > > >   contractObjectiveList / objectiveList  [NOTE: GUID pairs must match inside same file]
+> > > > > >   mapMood / MapID / encounter refs  [NOTE: map content usually vanilla StreamingAssets\maps — mod maps if shipped]
+> > > > > >   Flashpoint_AddContract additionalValues  [NOTE: Map Name + Encounter GUID in milestone — contract type stays map-agnostic]
+> > > > > >   targetTeam → lanceOverrideList → unitSpawnPointOverrideList
+> > > > > >     [NOTE: customHeraldryDefId → heraldry\heraldrydef_*.json overrides faction-default paint; customUnitName = map label. Empty heraldry + milestone target faction (e.g. Liao) = FactionDef default. Regiment within a faction: Manual lance + per-slot heraldry — see 05-creating-specific-units.txt]
+> > > > > >   overrideAutoCompleteDialogueId → conversationBuckets\dialogbucket_*.json  [DialogBucketDef]
+> > > > > >   > dialogue_buckets\bkt_*.json  [ConversationContent]
+> > > > > >     [NOTE: tactical mission barks — not simGameConversations .bytes]
+> > > > > >   lance\lancedef_*.json  [LanceDef]
+> > > > > >   > mech\mechdef_*.json  [MechDef]
+> > > > > >   > > chassis\chassisdef_*.json  [ChassisDef]
+> > > > > >   > > > hardpoints\hardpointdata_*.json  [HardpointDataDef]
+> > > > > >   > > > movement\movementcap_*.json  [MovementCapabilitiesDef]  [NOTE: optional]
+> > > > > >   > > > pathing\pathingcap_*.json  [PathingCapsDef]  [NOTE: optional; rare in FP-only packs]
+> > > > > >   > > ComponentRef → weapon\  [WeaponDef]
+> > > > > >   > > ComponentRef → ammunition\  [AmmunitionDef]
+> > > > > >   > > ComponentRef → ammunitionBox\  [AmmunitionBoxDef]
+> > > > > >   > > ComponentRef → jumpjets\  [JumpJetDef]
+> > > > > >   > > ComponentRef → heatsinks\  [HeatSinkDef]
+> > > > > >   > > ComponentRef → upgrades\  [UpgradeDef]
+> > > > > >   > pilot\pilotdef_*.json  [PilotDef]
+> > > > > >     [NOTE: LanceUnits[].pilotId — may be stock pilot id with no file in your mod]
+> > > > > >   vehicle\vehicledef_*.json  [VehicleDef]  [NOTE: optional convoy/base missions]
+> > > > > >   > vehicleChassis\  [VehicleChassisDef]
+> > > > > >   turret\  [TurretDef]  [NOTE: optional; vanilla folder often data\turrets]
+> > > > > >   > turretChassis\  [TurretChassisDef]
+> > > > > Actions[] Flashpoint_StartContract
+> > > > > > contracts\c_fp_*.json  [ContractOverride]
+> > > > > >   [NOTE: same contract subtree as Flashpoint_AddContract; forces immediate drop — no negotiate screen]
+> > > > > Actions[] Flashpoint_CompleteFlashpoint
+> > > > > > itemCollections\*.json  [ItemCollectionDef]
+> > > > > >   [NOTE: may override FlashpointDef RewardCollectionID per branch in milestone data]
+> > > > > Actions[] EventID / SimGameEvent hooks
+> > > > > > events\*.json  [SimGameEventDef]
+> > > > > > eventsOverride\*.json  [SimGameEventDef]  [NOTE: override path — merge behaviour per mod.json flags]
+> > > > > Results[] → itemCollections\*.json  [ItemCollectionDef]  [NOTE: beat payouts parallel to Complete]
+> > > > > [NOTE: fp_choice_* tags set in ConverseTek Apply Flashpoint ScopeTag — read by branch beat Required Tags]
+> > > itemCollections\*.json  [ItemCollectionDef]
+> > > > weapon / mech / part / Reference rows  [NOTE: .csv source in some packs; loads as ItemCollectionDef]
+> > > > > itemCollections\*.json  [ItemCollectionDef]  [NOTE: nested collection id chains]
+> > > events\*.json  [SimGameEventDef]  [NOTE: optional — not every FP uses sim pop-ups]
+> > > simGameConversations\*.bytes  [SimGameConversations]  [NOTE: duplicate path — only milestone Action hex id links here]
+> > > cast\castdef_*.json  [CastDef]
+> > > heraldry\heraldrydef_*.json  [HeraldryDef]  [NOTE: linked from contract unitSpawnPointOverrideList customHeraldryDefId; full guide 05-creating-specific-units.txt]
+> > > emblems\  [NOTE: optional AddToAddendum — merc/icon rewards]
+> > > sprites\  [Sprite]
+> > > portraits\  [Sprite]
+> > > textures\  [Texture2D]
+> > > factions\faction_*.json  [FactionDef]  [NOTE: only when adding employers not in vanilla enum]
+> > > enums\*.json  [NOTE: via DataAddendumEntries in mod.json — not a normal Manifest Path]
+> > > tags\  [TagDef]
+> > > tagSets\  [TagSet]
+> > > starsystem\  [NOTE: merge/definitive packs — planet tags for LocationRequirements]
+> > forcedEvents\FE-*.json  [ForcedTimelineEvent]  [NOTE: DateToFire → EventID; 06 Part D]
+> > timelineEvents\*.json  [SimGameEventDef]  [NOTE: calendar sim event content — 06 Part D]
+> > > abilities\  [AbilityDef]  [NOTE: custom pilot abilities]
+> > > descriptions\  [BaseDescriptionDef]  [NOTE: lore tooltips [[DM.BaseDescriptionDefs[...]]] in text]
+> > > chassisMerge\  [ChassisDef merge]  [NOTE: ShouldMergeJSON — partial patch, same Description.Id]
+> > > contractsMerge\  [ContractOverride merge]  [NOTE: patch existing contract id]
+> > > itemCollectionsAppend\  [ItemCollectionDef append]  [NOTE: ShouldAppendText / merge flags]
+> > > DLL  [NOTE: optional compiled .dll beside mod.json — not JSON tree]
+
+
+================================================================================
+7. QUICK “IF YOU EDIT THIS, CHECK THAT” TABLE
+================================================================================
+
+  You change . . .          | First cross-checks
+  --------------------------+-------------------------------------------------
+  mod.json Path / Type      | Folder name on disk; cache rebuild (.modtek) §1.9 Reference
+  FlashpointDef Id          | MilestoneSetID exists; no duplicate mod ids
+  Milestone beat Id         | Flashpoint_SetNextMilestone targets a real beat id
+  System_StartConversation  | Hex id matches exported sim conversation graph
+  Contract “ID”             | Same string in Flashpoint_AddContract / encounter refs
+  LanceDef id               | Contract chunks reference this exact id
+  MechDef / PilotDef ids    | Lance rows; chassis + gear defs resolve
+  Reward / item strings     | ItemCollectionDef ids + manifest Types for gear
+  Dialog bucket id          | DialogBucketDef + ConversationContent pair; not .bytes
+  Tag strings               | Tag exists in loaded campaign / tag pipeline
+  ForcedTimelineEvent       | DateToFire matches SimGameEventDef.Id; DependsOn Timeline stack
+  Calendar poster window    | RequirementTags + ExclusionTags on FlashpointDef — 06 Part C.1
+  Sim-day offer timeout     | UseAvailableTimeoutOverride + AvailableTimeout — 06 Part C.5
+
+
+================================================================================
+8. COPY-PASTE DIAGRAM (Mermaid — optional)
+================================================================================
+Paste into any Mermaid viewer if you prefer a picture; same ideas as section 1.
+
+flowchart TD
+  MJ[mod.json Manifest]
+  MJ --> FP[FlashpointDef fp_*.json]
+  FP -->|MilestoneSetID| MS[SimGameMilestoneSet ms_*.json]
+  FP -->|RewardCollectionID| IC[ItemCollectionDef]
+  MS -->|Flashpoint_AddContract| CO[ContractOverride c_*.json]
+  MS -->|System_StartConversation| SIM[simGameConversations *.bytes]
+  MS -->|EventID| EV[SimGameEventDef]
+  CO -->|encounter / lance refs| LD[LanceDef]
+  CO -->|bucket id| DB[DialogBucketDef]
+  DB --> DC[ConversationContent]
+  LD -->|unitId| MD[MechDef]
+  LD -->|pilotId| PD[PilotDef]
+  MD -->|ChassisID| CH[ChassisDef]
+  CH --> HP[HardpointDataDef]
+  MD --> WP[WeaponDef / gear defs]
+
+================================================================================
+9. FURTHER READING (COMPANION DOCS)
+================================================================================
+
+  01-creation-reference.txt — field definitions and checklists
+  03-story-scope-assistant.txt — story scope before 04 worksheets
+  04-agent-design-template.txt — designer/agent handoff
+  04b-conversation-design-template.txt — simGameConversations pipeline
+  05-creating-specific-units.txt — heraldry, spawn paint, Part I icons
+  06-date-specific-flashpoints.txt — calendar tags, FTE, timeouts
+  07-missions-maps-objectives-guids.txt — MapID, mission shapes, GUID pairing, matrix
+
+================================================================================
+END
+================================================================================

@@ -1,0 +1,302 @@
+================================================================================
+STORY SCOPE ASSISTANT
+================================================================================
+This is a companion to the 04 Flashpoint Agent Design Template, and is designed to prompt writers in thinking through the story before putting text to JSONs, along with some story telling hints to assist in creating engaging and clean flashpoints, events and conversations.
+
+Related Documents (same folder):
+  00-start-here.txt — one-page index and reading order
+  01-creation-reference.txt — field-level authoring reference
+  02-file-relationships-pathway.txt — mod.json → contract → lance cascade
+  04-agent-design-template.txt — worksheets and agent handoff (use after scope)
+  04b-conversation-design-template.txt — Leopard conversation pipeline
+  05-creating-specific-units.txt — opposition paint and tactical icons (Part I)
+  06-date-specific-flashpoints.txt — calendar windows and timeouts
+  07-missions-maps-objectives-guids.txt — maps, mission shapes, objectives (with 04 Part 4)
+
+Story immersion is a key requirement of a good flashpoint, combining believable characters that players can connect with, either positively or negatively, lore accurate or aligned stories that sit cleanly in the BattleTech universe (BTU), and clean and effective writing.
+
+Knowing how to mod is half the battle, knowing how to tell a story through effective and engaging writing, supported by other assets, is the other half.
+
+This document is designed to help aspiring event and flashpoint authors think through the key aspects of telling the story. This helps experienced modders who might not have experience in story telling deliver a strong mod, or for those who can tell a story but not mod to save their lives, to set themselves up to effectively use the Flashpoint Agent Design Template successfully.
+
+Please note, though this guide can be used for anyone telling Flashpoint stories, it is focused on BattleTech Extended - Tactics (BEXT), which tries to align more closely with canon than many other mods.
+
+================================================================================
+1. THE IDEA
+================================================================================
+Your story idea can be many things, form an event, to a standalone flashpoint, all the way to a complex series of flashpoints that play out over a campaign of day or years.
+
+It is important to set your scale early, as this helps you refine your idea as you work through this guide.
+
+--------------------------------------------------------------------------------
+1.1 Singular Stories
+--------------------------------------------------------------------------------
+These are the best places to start for a new story teller. For the first time around you would likely focus on a single employer, world and opponent with a linear storyline to ensure simplicity and let you learn the ropes without having too many threads.
+
+Single stories can still have depth and complexity, and care and consideration of setting, motivations and characters are still vitally important to making an engaging and effective story. 
+
+--------------------------------------------------------------------------------
+1.2 Linked Stories
+--------------------------------------------------------------------------------
+Linked stories take singular story elements and piece them together across time and space. The Saga of the Grey Death Legion is an excellent example of this. There are five stories within the GDL sage, consisting of 19 separate missions across a time period that spans 30 years.
+
+Telling stories on this scale requires consideration of interactions and consequences from one story to the next. Linked stories provide great scope for investigation of character depth, building tension and high stakes through evolving relationships and can leave players with a feeling of satisfaction at the completion story if done well.
+
+--------------------------------------------------------------------------------
+1.3 Campaigns
+--------------------------------------------------------------------------------
+Campaigns can link a series of singular stories, linked stories, or both together as deeply immersive elements of flashpoint story telling. These can be tightly focused over a short time span on a single world, like Tukayyid, branch over several worlds with interlinked stories like The Big Deal, or tell universe shaping stories like the Arano Restoration.
+
+================================================================================
+2. STORY CORE
+================================================================================
+The structure of core of the story is key, and we'll use three examples to outline the process as we go through this guide.
+
+Your core is in many ways the aim, or the why of the story you are telling. Your core aim could be a simple and interesting standalone story where the player will meet an interesting character and gain some rare items, all the way to developing lore-accurate campaigns that bring the universe to life through the characters people may have read about in novels and sourcebooks.
+
+While defining your core, consider this important question: Is your story lore-adjacent, lore-aligned or lore-integrated?
+
+--------------------------------------------------------------------------------
+2.1 Lore-Adjacent Stories
+--------------------------------------------------------------------------------
+Lore-adjacent stories are those that exist within the BattleTech universe but do not rely on the great events or characters of the universe to shape them and vice-versa. Examples of these types of stories are the Raid Flashpoint. They comfortably sit within the lore established by BattleTech without trying to tip the boat over. 
+
+--------------------------------------------------------------------------------
+2.2 Lore-Aligned Stories
+--------------------------------------------------------------------------------
+Lore-aligned stories that can cross over into being affected and integrating with canon events and characters, while still remaining true to the overall lore and not seeking to change established story lines in the BTU. The best example of this is the House Arano story arc from the original game. HBS brought in a whole new faction and its story, but wove it into the existing BTU with care and skill. The Hyades Rim mod does the same thing with the Arano campaign.
+
+--------------------------------------------------------------------------------
+2.3 Lore-Integrated Stories
+--------------------------------------------------------------------------------
+Lore-integrated stories seek to tell a part of the lore of the BTU through the game, letting players feel they are part of the history, even if the actual event outcomes cannot be changed. The Saga of the Grey Death Legion is a good example of this kind of story telling.
+
+It should be noted that although these types of stories can appear to be the easiest to create - as there is often a lot of reference material to draw from - they can also be the hardest to get right, as mistreatment of loved and well known characters and events can rapidly sour players to the story you are trying to tell.
+
+--------------------------------------------------------------------------------
+2.4 Do Not's for BattleTech Story Telling
+--------------------------------------------------------------------------------
+There are some conventions to the BTU that are important to remember, with BEXT aligning to most of these. Universe breaking technologies, aliens and magic are not core BTU. Though there are some instances with the use of such elements, such as the Phantom Mech ability, the mis-Jump of the SLS Manassas and the novel Far Country, they have rarely been broadly accepted by fans of the BTU and are best left well alone when trying to tell a story that respects both the BTU and BEXT.
+
+--------------------------------------------------------------------------------
+2.5 Our Working Examples
+--------------------------------------------------------------------------------
+Through this document, there are three working examples to give new designers some ideas on how to approach story telling that can then be broken down for modding. These are three of stories the author is going to attempt to build over the course of developing the Lore Packs , so at some time in the future, we'll be able to see just how effective this approach was.
+
+--------
+2.5.1	EXAMPLE A: Lore-Adjacent Singular Story - "The Buzz Killers: Lethal Larva"
+--------
+
+Background
+My son has a terrible addiction to the Wasp - yes, there really is no accounting for taste - and I have created a small mercenary unit for him, with its own icon and characters, all in little Mechs adventuring across the Inner Sphere. This story would focus on their inception and the Buzz Killers first steps in the universe as an independent mercenary command.
+
+Aim
+To tell an original and engaging tale of an interesting mercenary unit.
+
+Key Considerations
+ - Free story telling within the BTU
+ - No need for integration with large events/characters
+ - Not constrained by known elements of the universe
+ - Limited fact checking required
+
+--------
+2.5.2	EXAMPLE B: Lore-Aligned Linked Story - "Strange Mechs"
+--------
+
+Background
+A strange contact, advanced technology, black ops missions against dangerous targets and an employer who does not like loose ends…
+
+Strange Mechs puts players in the 4th Succession War alongside the Myndo Waterly inspired attacks on Sarna and New Avalon. Wrap up missions give further depth and options, and put players in bed with a snake in a very high-risk, high-reward story.
+
+Aim
+To immerse players in two of the most significant black operations of the 4th Succession War with a significant story twist after the main events to "round out" the story with dangerous and consequential decisions.
+
+Key Considerations
+ - Semi-constrained story telling within the BTU combining actual lore with an original tail end to the story
+ - Some choice for integration with large events/characters
+ - Partially constrained by known elements of the universe
+ - Some fact checking required
+
+--------
+2.5.3	EXAMPLE C: Lore-Integrated Campaign - "Operation RAT"
+--------
+
+Background
+Operation RAT was the immense invasion of the Capellan Confederation by the Federated Suns in the Fourth Succession War. Operation RAT aims to give players the opportunity to choose which units to accompany through that conflict and experience it from the ground.
+
+Aim
+To immerse players in the events of the 4th Succession War via multiple pathways and missions.
+
+Key Considerations
+ - Semi-constrained story telling within the BTU combining actual lore with "on the ground" experiences for players
+ - Differing levels of choice for integration with large events/characters and new lore-respecting characters
+ - Heavily constrained by known elements of the universe
+ - Heavy fact checking required
+
+================================================================================
+3. STORY SPINE: EVENTS, FLASHPOINTS AND MISSIONS
+================================================================================
+The spine of the story is what everything else hangs of, and must adhere to the aim of what you are trying to accomplish. That is why the background and aim are critical, as are understanding the scale and lore requirements of the story. These foundational elements, when properly considered and understood, ensure that the spine is built to both respect and deliver on them.
+
+--------------------------------------------------------------------------------
+3.1 EVENTS
+--------------------------------------------------------------------------------
+Events can set up a story or be art of it. Some flashpoints and stories don't need them, while for others they are absolutely integral. It is important to consider what you need in terms of events, especially if they are foundational events that commence a story or link key elements of your story together. 
+
+Consider how events will set the tone, shape thinking and introduce characters, story elements and themes you want to explore. Events can be used to give a story gravitas, but if over- or poorly-used can make a story feel over directed and messy.
+
+EXAMPLE A: "The Buzz Killers: Lethal Larva"
+The Buzz Killer's are nothing more than another small merc unit with big dreams and no money. There's no event here, just a regular old flashpoint notification.
+
+EXAMPLE B: "Strange Mechs"
+Strange Mechs will use a slightly different event, one like those used when Danial Allard and Grayson Carlyle reach out to the company in game. However, to set the scene in the way the BTU of the time did, the event would rely on the shadowy contact trope. A hooded figure, offering great rewards at the height of a terrible war lets players know that the stakes are going to be high and come with real risk.
+
+EXAMPLE C: "Operation RAT"
+Operation RAT is a core element of the envisioned 4th Succession War Lore Pack, therefore, the game needs to point players at the intro mission and make sure they take it. The event and Darius's commentary need to be enticing and draw the player to Tikonov, where what appears to be a singular flashpoint is simply the taste tester for fighting beside the AFFS during the 4th Succession War.
+
+--------------------------------------------------------------------------------
+3.2 FLASHPOINTS
+--------------------------------------------------------------------------------
+The flashpoints are the centrepiece of the whole thing, that's why we are here, to drive big stompy robots all over the map. However, how to use them - in terms of branching and options - and just as importantly, where and when to put them, are absolutely critical considerations. This thinking creates the focal and branching points for our stories and drive the narration.
+
+EXAMPLE A: "The Buzz Killers: Lethal Larva"
+As a single flashpoint with no ties to the great lore of BTU, Lethal Larva has a lot more scope to set up somewhere off the beating track and at a time that works for the flashpoint. 
+
+ - Difficulty: 1 skull.
+ - Where: A specific location is not required, however, this could be a good one to start near the Lyran Periphery frontier where not much in game focus has occurred...perhaps it might link to the legends of the Red Corsair or old Rim Worlds Republic legends in future... 
+ - When: Not important, however, as the first story of a typical BTU mercenary unit, having a start pre-4th Succession War feels right. Let's have it kick off in 3026.
+ - Weight: Fairly standard, but we don't want it missed, so perhaps 200.
+ - Type: Simple flashpoint
+ - Structure: Linear introductory type approach
+
+EXAMPLE B: "Strange Mechs"
+
+ - Difficulty: 5 skulls.
+ - Where: Start point of Sarna, then to New Avalon, after that, an abandoned system near New Avalon with ComStar links...that makes it Versailles, one of the Hidden Five. 
+ - When: January 3029, then August 3029 and finally November 3029.
+ - Weight: No weighting - Flashpoint needs to trigger on specific dates and expire within a short period - say 120 days.
+ - Type: The first two flashpoints would be single, but exceptionally difficult missions, with the 3rd flashpoint a desperate attempt to escape both ComStar and a vengeful House Davion over several missions including a key choice.
+ - Structure: 2 x single mission flashpoints with high cash, low salvage rewards, with a final flashpoint with high salvage, low cash, interesting items and reputation change endings. The last would have a branch of changing to work for Davion against ComStar...of course that has ramifications too.
+
+EXAMPLE C: "Operation RAT"
+
+ - Difficulty: 1-5 skulls (story line dependent)
+ - Where: Start point of Tikonov and then Mira, before following one of five paths through the war. 
+ - When: April 3028 through to late 3029.
+ - Weight: No weighting - Flashpoint/s needs to trigger on specific dates and expire within a short period - say 60 days - to really push players and make them feel they are part of a rapid tempo war.
+ - Type: Big campaign where players choose a path that is suited to their skill and equipment level.
+ - Structure: 5 x story paths with different worlds offering different opponents and situations (see BT Lore Packs Overview).
+
+--------------------------------------------------------------------------------
+3.3 MISSIONS
+--------------------------------------------------------------------------------
+What are the missions that give the players battles that support the story of the flashpoint. These are important to consider in terms of not only the type of battle, but also the relevant biome,  mood and weather, and custom assets, lances, pilots and enemy formations that will be needed.
+
+EXAMPLE A: "The Buzz Killers: Lethal Larva"
+Out on the Periphery for a simple flashpoint, we likely don't need anything past the vanilla pirate factions of BEXT and some straight forward missions that tell an easy to digest story. Lets go with:
+ - Mission A: Hornet in the Nest - Bail out the Buzz Killers' bug mechs when a heavy Mech or two attack.
+ - Mission B: Scorpion's Sting - The Buzz Killer's CO was taken by the Pirates, time to rescue them from a defended base with Scorpion Mechs and tanks defending.
+ - Mission C: Chrysalis - The climactic battle where you go in side-by-side to break the pirates and win the day.
+
+EXAMPLE B: "Strange Mechs"
+Three flashpoints with 5 missions that are very different
+ - Mission A: Sarna - Killing ComStar's own people. Up against a pair of Level II ComStar formations (12 enemy) and a base to destroy.
+ - Mission B: New Avalon - Drop alongside a Level II of downgraded and not all that good ComStar forces while a company of the Davion Heavy Guards comes out to take heads, led by Hanse Davion himself in his Battlemaster.
+ - Mission C1: Versailles - ComStar are trying to silence you. You chose to sell them out to Davion and the Heavy Guards will forgive you if you fight beside them.
+ - Mission C2: Versailles - A three way battle where Davion are trying to kill you after you told the AFFS you'll honour your contract, then discovered ComStar want you dead as well.
+
+EXAMPLE C: "Operation RAT"
+See slide 13 of the BT Lore Packs Overview for a high-level view of how this campaign would play out.
+
+================================================================================
+4. CHARACTERS AND COVERSATIONS
+================================================================================
+The characters that populate your stories bring the whole thing to life, with allies, villains, honourable foes, useful and not so useful friends, and all sorts of others bringing depth and diversity to the tale. The characters help you tell the story and it is good to think about how they will do that. Showing, rather than telling in the story is often best, as is letting the story unfold instead of info dumping too much, too soon.
+
+Holding back information, outright lying in the script and some leaving questions to mystery are all useful tools as well. The player does not need to know everything, and later reveals can have real punch if served up well and at the right time. Though the missions carry the main "action" of the story, the conversations give those missions meaning and weight in terms of a player's emotional investment.
+
+It is also important to remember the limitations of the game's story telling features and work within them to best effect. Space for text is not large, and too many screens of heavy exposition,  conversation that goes nowhere, or has too many meaningless choices will only bore players. Use choice to drive interest and where you want to add detail, do it via Lore tags, keeping the main body of the conversation engaging and moving along at a good pace.
+
+EXAMPLE A: "The Buzz Killers: Lethal Larva"
+Most of the conversations would focus on building a picture of the Buzz Killers, their commander and key officers. Those connections can grow in later missions and Flashpoints. Using existing lore tags can also give depth without extra effort, while focusing players on the tribulations of the Buzz Killers.
+
+EXAMPLE B: "Strange Mechs"
+This is an example where the employer - ComStar - will both try to hide who it is and what it is ultimately trying to do. This can add significantly to the atmosphere of the flashpoints as well as forcing players to question everything put in front of them. As the Davion angle enters the game, the contrast between the "honourable" Davion Guards and the duplicitous ComStar representatives may well entice players to switch sides.
+
+EXAMPLE C: "Operation RAT"
+Operation RAT lets players meet characters like Ardan Sortek and other high ranking Davion officers as they go deep into the 4th Succession War. However, each string of flashpoints cannot simply follow the others. Each contact for the five strings of flashpoints needs to have their own personality, from the brash and egotistical Marshal Herbert Hobaugh of the 3rd Guards, to the practical Lieutenant-General Wilson Mandella of the 33rd Avalon Hussars, or the honourable and skilled Colonel	Mitch Nelson of the 12th Vegan Rangers. Other characters, like Justin Allard, Andrew Redburn, Morgan Hasek-Davion and others might also make appearances, even if only on the battlefield. 
+
+================================================================================
+5. REGIMENTS, MECHS AND REWARDS
+================================================================================
+Who you face, in terms of the factions, units, Mechs and pilots can have enormous affect on how a player engages with a Flashpoint. Also, as this is a game where you're building a command and growing it over time, the rewards that a player receives had better be worth it, and if not, totally understandable in terms of the story.
+
+Rewards don't need to be purely monetary, they can have reputation effects and add tags that have meaning down the road for players. Being clever with both positive and negative rewards is vital to ensuring that the end of any Flashpoint has meaning and gives the player additional satisfaction or prepares the player for the next flashpoint.
+
+Making rewards feel that way can often come down to who you fight with and against. When you know the BTU well and see that you're suddenly facing the Genyosha or the Davion Guards, you know you're going to be up against it and derive real satisfaction when you win. Even if you come close against the best and it costs you dearly, it can still be deeply satisfying. This is also where failure rewards can still be positive, where a strong opponent honours a player unexpectedly even in defeat, taking out the sting and leaving the player with a new insight into their foes. Just as important are the colours and unit icons that have made those units famous. They give players the chance to immerse deeply in the moment and take more away from the mission and flashpoint.
+
+Another consideration is that certain characters and units are noted for the Mechs that made them famous. Natasha Kerensky's Warhammer, the Bounty Hunter's Marauder, Phelan Kell's Wolfhound or the hordes of light Mechs that Walter Rhavannion thought would change warfare are all important considerations when designing a flashpoint. You don't always need a unique chassis, as the Xotl tables will often provide you with the Mech diversity that most unit's need. However, there are times when a certain Mech is needed, and using those types of additions to flashpoint sparingly gives them all the more impact.
+
+--------------------------------------------------------------------------------
+7.1 "The Buzz Killers: Lethal Larva"
+-------------------------------------------------------------------------------- 
+
+Regiments 
+The foes here can be generic pirates, or could be the region specific criminal faction. If creativity was abounding, they could be a Red Corsair wannabe as well. Allies would simply be the Buzz Killers. 
+
+Mechs
+These clowns use bug Mechs almost exclusively for the initial flashpoint, all painted black and yellow with red highlights. This includes Wasp and Stinger LAMs and Wasps, Stingers. Fireflys, Firebees, Fleas, Hornets, Locusts, and Spiders would expand the unit in later flashpoints, along with lance leaders in Cicadas, Crabs and Scorpions, while the commander might use a Grasshopper, and later upgrades might see Venoms and Tarantulas appear in the unit.
+
+Rewards
+Fighting alongside another hand-to-mouth  merc unit is not likely to come with great reward, though in defeating the pirates, perhaps you get their stash as well. A tool to use is a reward choice, where you and the Buzz Killers split the loot according to the player's choice.
+
+--------------------------------------------------------------------------------
+7.2 "Strange Mechs"
+--------------------------------------------------------------------------------
+
+Regiments 
+ComStar would be deploying Mechs looking like the Fifth Syrtis Fusiliers RCT alongside the player on Sarna against ComStar forces, then units disguised as the Death Commandos on New Avalon against the Davion Heavy Guards. After that, named ComStar units and the Heavy Guards would be used in the last flashpoint.
+
+Mechs
+Missions would focus on SLDF and Category A Davion equipment from 3025, while Hanse Davion's personal Battlemaster would also be required.
+
+Rewards
+Rewards here could come from Davion, if you switch sides, in terms of a rare ComStar SLDF Mech along with some other Lostech, or if you fight everyone, you might get nothing but what you can salvage. A clever designer could also borrow from the ComStar Hates Me mod to bias ComStar against the player after that, or do something similar for Davion for the attempt of the First Prince's life and a refusal to betray ComStar. This type of story opens itself to some interesting long-term grudges.
+
+--------------------------------------------------------------------------------
+7.3 "Operation RAT"
+--------------------------------------------------------------------------------
+
+Regiments 
+See the BEXT Lore Packs Overview for the many units that could be encountered here.
+
+Mechs
+Such a large scale campaign focusing on many units would largely use Xotl tables and what they toss up, apart from some specific missions where a particular lancedef is needed. However, there is one mission where pure chaos is the order of the day: the newborn Kathil Uhlans raid on Sian. 
+
+These missions would need custom pilot and mechdefs to account for some named canon characters and their Mechs. Also, in order to simulate the sabotaged triple-strength myomer that appeared on CCAF Mechs in that battle, mech and chassisdefs for the Capellan defenders of Sian might need to give CCAF mechs only 1 point of internal structure per Mech section. That would simulate the effect of exposing the myomers to the catalytic gas that set them on fire. Additionally, movement tables might need updating so that CCAF Mechs move faster or specific lancedefs for TSM equipped CCAF Mech might would be another option.
+
+Rewards
+These are as varied as the events, however, the Lore Pack also shows how you can use the Campaign to force hard choices. What of the player wants to fight another battle somewhere else and leaves the campaign? The AFFS would be pissed, therefore, there could be a significant reputation loss and a Campaign back out cost of $1,000,000, representing a bond the player's unit owes to House Davion for letting a Flashpoint expire.
+
+================================================================================
+6. BIGGER STORIES
+================================================================================
+
+Bigger stories require bigger planning. If you have not written stories in the past, it is bast to start small and then create bigger stories once you have the hang of things. That's not to say you can't be ambitious from the outset, you can, but map out your plan before diving in. The BEXT Lore Packs Overview shows one way of approaching planning, but use the tools and ways of thinking that work for you.
+
+================================================================================
+7. WRITING AND REVIEWING
+================================================================================
+
+Once you have written the conversations and other elements of the Flashpoints, events and missions, you need to make sure they make sense and are not full of errors. Bad writing breaks the suspension of disbelief and can ruin and otherwise well crafted flashpoint. Review you writing several times and get a document reader to read it back to you out loud - you'll be amazed at what you pick up.
+
+================================================================================
+8. KNOWING THE LORE
+================================================================================
+
+The more you know about the BTU, the better your flashpoints will be. This means research is important and there are plenty of good places to do that all over the web.
+
+The best place to start is Sarna.net (https://www.sarna.net/wiki/Main_Page), the BattleTech wiki where there is a vast amount of information you can draw from.
+
+If you are still wondering about something, between the official Catalyst Game Labs Discord (https://discord.gg/NVzp4NBF) and the BattleTech Forums (https://battletech.com/forums), you can find answers to almost anything BTU related. 
+

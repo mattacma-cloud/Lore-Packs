@@ -1,0 +1,640 @@
+================================================================================
+05 CREATING SPECIFIC UNITS — OPPOSITION PAINT & REGIMENT HERALDRY
+================================================================================
+Companion to:
+  01-creation-reference.txt  (COMPANION DOCUMENTS, §1.8, §3.3, §7.8)
+  02-file-relationships-pathway.txt  (contract spawn [NOTE])
+  03-story-scope-assistant.txt  (story scope before 04 worksheets)
+  04-agent-design-template.txt  (Part 1.6, 4.F, 5.4 worksheets)
+  06-date-specific-flashpoints.txt  (orthogonal — calendar, not paint)
+  07-missions-maps-objectives-guids.txt  (contracts / MapID — orthogonal to paint)
+  ..\Background Docs\r10-flashpoint-authors-guide.txt (Flashpoint Authors Guide — per-unit heraldry section)
+
+Audience: designers who need lore-correct enemy paint on the tactical map — whole
+factions, mixed battles, or a specific regiment (e.g. House Liao opposition with
+2nd Chesterton Voltigeurs colours on designated 'Mechs).
+
+How this document relates to others
+  - Poster employers, milestones, and contracts: 01 Reference Chapters 3.1–3.3.
+  - File wiring (mod.json → contract → spawn): 02 Pathway §1 tree.
+  - Design worksheets before JSON: 04 Agent Design Template Part 4–5.
+  - This file is the dedicated guide for WHO gets WHICH colours on the battlefield.
+
+================================================================================
+PART A — HOW OPPOSITION PAINT WORKS (SYSTEM OVERVIEW)
+================================================================================
+
+--------------------------------------------------------------------------------
+A.1 Core data: HeraldryDef
+--------------------------------------------------------------------------------
+Mech and vehicle **colours on the tactical map** come from **HeraldryDef** JSON
+files (folder habit: heraldry\heraldrydef_*.json). Paint is **not** stored on
+MechDef, LanceDef, or ChassisDef.
+
+Each HeraldryDef record defines:
+
+  Field                      | Role
+  ---------------------------|----------------------------------------------
+  primaryMechColorID         | Main paint slot (e.g. Green_03, Blue_04)
+  secondaryMechColorID         | Second slot (e.g. Metallic_Gold, Greyscale_02)
+  tertiaryMechColorID        | Third slot (e.g. Yellow_05, BrightRed_01)
+  textureLogoID              | Side emblem (e.g. uixTxrLogo_Liao) — visible only
+                             | on some mech skins / DLC skins
+  Description.Id             | Backstage id (e.g. heraldrydef_steiner) — must match
+                             | every reference string exactly
+
+Example (vanilla House Steiner):
+  ...\BattleTech_Data\StreamingAssets\data\heraldry\heraldrydef_steiner.json
+  → Blue_04 / Metallic_Gold / Greyscale_01 + uixTxrLogo_Steiner
+
+mod.json must include a Manifest row:
+  { "Type": "HeraldryDef", "Path": "heraldry" }
+(Path spelling must match your folder on disk.)
+
+--------------------------------------------------------------------------------
+A.2 Faction default: FactionDef → heraldryDefId
+--------------------------------------------------------------------------------
+Each **FactionDef** (e.g. faction_AuriganPirates.json) can point at a default scheme:
+
+  "factionID" : "AuriganPirates",
+  "heraldryDefId" : "heraldrydef_pirate"
+
+When a contract uses that faction as **target** (see Part B), units with **no**
+per-unit override inherit that faction’s heraldry.
+
+House Liao (vanilla):
+  faction_Liao → heraldrydef_liao
+  (Green_03 / Greyscale_02 / Yellow_05 + uixTxrLogo_Liao)
+
+--------------------------------------------------------------------------------
+A.3 Priority order on a mission (what wins)
+--------------------------------------------------------------------------------
+For **opposition units**, paint resolves roughly in this order (highest wins):
+
+  1. Per-unit override (best for storytelling)
+     Contract JSON → targetTeam → lanceOverrideList →
+     unitSpawnPointOverrideList → "customHeraldryDefId"
+     Example: "heraldrydef_FP_theRaid_aces" on ace pirate 'Mechs in
+     Flashpoint-The-Raid.
+
+  2. Team faction on the contract
+     targetTeam.faction (sometimes employerTeam.faction) set to a faction id.
+     Example: fps_GDL fp_secondTry_VandmaalCrossing.json sets
+     targetTeam.faction = "JadeFalcon" with empty customHeraldryDefId → all
+     such units use heraldrydef_jadefalcon from BT_Extended_Timeline.
+
+  3. Flashpoint milestone Flashpoint_AddContract
+     In ms_fp_*.json, additionalValues on Flashpoint_AddContract include
+     employer and **target** faction name strings after the contract id.
+     Example (The Raid): "Locals" / "AuriganPirates"
+     Example (GDL secondTry): "GrayDeathLegion" / "JadeFalcon"
+     At runtime this drives contract teams (TEAM_EMP / TEAM_TAR) and default
+     opfor paint when customHeraldryDefId is empty.
+
+  4. Tagged / procedural lances ("lanceDefId" : "Tagged")
+     With empty customHeraldryDefId, spawned units inherit paint from the
+     target team’s faction (from steps 2 or 3), not from LanceDef tags.
+
+  5. FlashpointDef PotentialEmployers / TargetFaction
+     Primarily **strategy-map poster** framing and copy. Mission paint still
+     comes from milestone + contract unless you override per unit or set
+     targetTeam.faction in the contract JSON.
+
+--------------------------------------------------------------------------------
+A.4 UI paint vs mech paint (storytelling gotcha)
+--------------------------------------------------------------------------------
+From R10 (still matches observed behaviour):
+
+  - customHeraldryDefId controls **mech/vehicle skin colours** and optional
+    **side logo** (textureLogoID) on supported skins.
+  - The **turn / active-unit badge** can still show the **controlling faction**
+    (employer/target from contract context), not the custom paint.
+  - You can have “Steiner colours on a pirate lance” visually while UI still
+    treats the unit under another faction for some elements.
+
+Plan briefing copy and customUnitName if players must recognize a regiment by name.
+
+--------------------------------------------------------------------------------
+A.5 Patterns seen in vanilla and mod packs
+--------------------------------------------------------------------------------
+  Pattern                    | Example                         | Paint behaviour
+  ---------------------------|---------------------------------|------------------
+  Custom heraldry on key     | Flashpoint-The-Raid             | Most waves
+  units only                 |                                 | customHeraldryDefId "";
+                             |                                 | ace wave uses
+                             |                                 | heraldrydef_FP_theRaid_aces
+  Faction only, no per-unit  | fps_GDL secondTry               | Milestone target
+  heraldry                   |                                 | JadeFalcon; contract
+                             |                                 | targetTeam.faction =
+                             |                                 | JadeFalcon; empty custom
+                             |                                 | heraldry → uniform Clan green
+  Mixed schemes, one map     | HBS Urban Warfare FP design     | Each manual unit
+                             | (uw1_4_destroyBase design)      | [CustomHeraldryDefId] per
+                             |                                 | named character
+  Named boss one-off         | fps_TheBigDealBEXCE             | heraldrydef_testarossa
+                             |                                 | on one unit; rest faction default
+  Era-specific Great House   | BT_Extended_Timeline\heraldry\  | heraldrydef_steinerC##,
+                             |                                 | heraldrydef_liaoA8, etc.
+
+--------------------------------------------------------------------------------
+A.6 BEXT / ModTek stack notes
+--------------------------------------------------------------------------------
+  - Training stack lists Heraldry Picker — aimed at **player/merc** heraldry in
+    the sim, not a substitute for opfor customHeraldryDefId wiring.
+  - ColourfulFlashPoints (see online-assets-additional.txt) is an optional community approach; not
+    required for standard flashpoint JSON authoring.
+  - New factions need FactionDef + HeraldryDef (and manifest rows) in a
+    dependency mod. Spelling must match milestone Flashpoint_AddContract
+    strings exactly (JadeFalcon, not "Jade Falcon").
+  - The Raid leaves targetTeam.faction as INVALID_UNSET but works for many waves
+    via milestone target AuriganPirates; GDL also sets targetTeam.faction in the
+    contract — **more reliable** if paint ever fails to inject.
+  - Confirm merge/load behaviour per §1.10 Source currency in 01 Reference.
+
+--------------------------------------------------------------------------------
+A.7 Practical authoring — whole faction or standard opfor
+--------------------------------------------------------------------------------
+  1. One faction, standard enemies
+     Set target in Flashpoint_AddContract (and optionally targetTeam.faction in
+     the contract). Leave customHeraldryDefId "". Ensure FactionDef.heraldryDefId
+     exists (vanilla or BEXT).
+
+  2. Disguise, allies, multi-faction ambush
+     Manual lances + customHeraldryDefId per spawn. Ship custom heraldrydef_* in
+     your mod heraldry\ folder.
+
+  3. Era-specific Great House
+     Prefer BEXT Timeline heraldrydef_*C## / *A## ids over generic
+     heraldrydef_steiner or heraldrydef_liao when the campaign year matters.
+
+  4. Poster vs mission
+     Align fp_* TargetFaction with milestone target for player expectations;
+     **paint** is still set in milestone + contract, not the poster alone.
+
+
+================================================================================
+PART B — WIRING CHECKLIST (FILE BY FILE)
+================================================================================
+
+  You change . . .              | Cross-check
+  ------------------------------+------------------------------------------
+  mod.json Path / Type          | heraldry\ folder + HeraldryDef row
+  New heraldrydef_*.json        | Description.Id unique; colours valid;
+                                | textureLogoID exists or reuse stock
+  FlashpointDef                 | TargetFaction / employers (story only unless
+                                | contract omits overrides)
+  ms_fp_*.json                  | Flashpoint_AddContract additionalValues:
+                                | employer + target faction strings
+  Contract "ID"                 | Matches milestone contract slot
+  targetTeam.faction            | Optional but recommended (e.g. Liao, JadeFalcon)
+  unitSpawnPointOverrideList    | customHeraldryDefId + customUnitName per slot
+  LanceDef id (Tagged)          | Empty heraldry → uses target faction default
+  DependsOn                     | Mod that owns FactionDef / extra heraldry (e.g.
+                                | BT_Extended_Timeline)
+
+
+================================================================================
+PART C — REGIMENT / SUB-UNIT PAINT WITHIN A PARENT FACTION
+================================================================================
+Example: opposition is **House Liao**, but designated units must look like
+**2nd Chesterton Voltigeurs** (not generic Capellan green/grey/yellow).
+
+--------------------------------------------------------------------------------
+C.1 Core idea: faction vs regiment
+--------------------------------------------------------------------------------
+  House Liao          = **faction** (Liao in Flashpoint_AddContract, TargetFaction,
+                      faction_Liao, TEAM_TAR in briefing).
+  Chesterton          = **regiment / paint scheme** — NOT inferred from
+  Voltigeurs            TargetFaction alone.
+
+Express regiment identity with:
+  - customHeraldryDefId on each spawn (required for distinct paint), and
+  - customUnitName (optional but recommended, e.g. "2nd Chesterton Voltigeurs").
+
+Do **not** edit faction_Liao.json → heraldryDefId unless you intend to recolour
+**every** Liao encounter in the entire game/mod stack.
+
+--------------------------------------------------------------------------------
+C.2 Recommended workflow (Chesterton Voltigeurs / Rat Race style)
+--------------------------------------------------------------------------------
+
+Step 1 — Keep strategic faction = Liao
+
+  Layer                         | Setting
+  ------------------------------|----------------------------------------
+  fp_*.json                     | TargetFaction: Liao
+  ms_fp_*.json                  | Flashpoint_AddContract target: Liao
+  Briefing copy                 | "Chesterton Voltigeurs (House Liao)"
+
+  fp-rat-race-v0-1 (draft) already uses target Liao in milestone and poster —
+  correct for "opposition is House Liao."
+
+Step 2 — Add a dedicated HeraldryDef for the regiment
+
+  Create in your mod:
+    heraldry\heraldrydef_chestertonVoltigeurs2.json
+  (Use your own id stem; match Description.Id everywhere.)
+
+  Template:
+
+    {
+      "Description" : {
+        "Id" : "heraldrydef_chestertonVoltigeurs2",
+        "Name" : "2nd Chesterton Voltigeurs",
+        "Details" : "Regiment paint for Rat Race / your arc",
+        ...
+      },
+      "textureLogoID" : "uixTxrLogo_LiaoC4",
+      "primaryMechColorID" : "Green_02",
+      "secondaryMechColorID" : "Greyscale_01",
+      "tertiaryMechColorID" : "Red_02"
+    }
+
+  Notes:
+    - Colour ids are the same palette families as vanilla (Green_*, Red_*,
+      Metallic_*, Greyscale_*). Open existing heraldry JSON and copy/adjust.
+    - textureLogoID must exist in loaded assets. You may reuse a BEXT logo
+      (e.g. uixTxrLogo_LiaoC4) or ship a custom uixTxrIcon_* / logo with sprites.
+    - Register HeraldryDef in mod.json Manifest.
+
+Step 3 — Wire only those units in the contract
+
+  Use lanceDefId "Manual" on targetTeam → lanceOverrideList → each spawn in
+  unitSpawnPointOverrideList:
+
+    "customUnitName" : "2nd Chesterton Voltigeurs",
+    "customHeraldryDefId" : "heraldrydef_chestertonVoltigeurs2",
+    "unitType" : "Mech",
+    "unitDefId" : "mechdef_...",
+    "pilotDefId" : "pilot_..."
+
+  Whole lance same regiment → same customHeraldryDefId on all four slots.
+
+  Mixed battle (Voltigeurs + generic Liao) → regiment slots get custom id;
+  other slots leave "customHeraldryDefId" : "" for default Liao paint
+  (heraldrydef_liao via faction Liao).
+
+  Reference implementation (mixed battle):
+    BEX_FotIS fp_SecondBattle003.json — waves with ""; Warrior House Kamata
+    wave uses heraldrydef_liaoA8 + customUnitName on four mechs; other factions
+    use heraldrydef_andurien on their slots.
+
+Step 4 — Optional: set targetTeam.faction to Liao in contract
+
+  Improves reliability for Tagged waves with empty heraldry (GDL secondTry
+  pattern). Manual Voltigeur slots still override via customHeraldryDefId.
+
+--------------------------------------------------------------------------------
+C.3 BEXT Timeline: existing “Liao, but not generic Liao” heraldry
+--------------------------------------------------------------------------------
+BT_Extended_Timeline ships regiment-level heraldry without replacing House Liao
+globally. Examples under Mods\BT_Extended_Timeline\heraldry\:
+
+  Heraldry id              | Name in JSON (examples)
+  -------------------------|------------------------------------------
+  heraldrydef_liao         | House Liao (default CAP)
+  heraldrydef_liaoC4       | Chesterton Reserves (Metallic_Silver / grey / red)
+  heraldrydef_liaoA8       | Warrior House Kamata (orange / red)
+  heraldrydef_liaoC8       | Kincade's Rangers
+  heraldrydef_liaoA3       | 1st McCarron's Armored Cavalry
+  …                        | Many more heraldrydef_liaoA* and heraldrydef_liaoC*
+
+There is **no** heraldrydef named "Voltigeurs" in a typical Timeline install.
+For lore-accurate 2nd Chesterton Voltigeurs you either:
+
+  A) Author a new heraldrydef_* in **your** mod (best for Rat Race), or
+  B) Reuse heraldrydef_liaoC4 if "Chesterton Reserves" colours are close enough
+     — set DependsOn Timeline and reference heraldrydef_liaoC4 in
+     customHeraldryDefId (no need to duplicate JSON if dependency loads it).
+
+Do **not** confuse with faction_LiaoC4 (Timeline sub-faction for other systems).
+For flashpoint **manual lances**, per-unit customHeraldryDefId is the right tool;
+milestone target can remain **Liao**.
+
+--------------------------------------------------------------------------------
+C.4 What stays “Liao” vs what looks “Voltigeurs”
+--------------------------------------------------------------------------------
+  Element                         | Stays Liao | Shows Voltigeur scheme
+  --------------------------------|------------|-------------------------
+  Flashpoint poster TargetFaction | ✓          |
+  Milestone AddContract target    | ✓          |
+  Briefing TEAM_TAR demonym       | ✓          |
+  Mech paint on designated units  |            | ✓ customHeraldryDefId
+  Floating unit name              |            | ✓ customUnitName
+  Turn UI faction badge           | Often Liao | Custom paint ≠ badge
+
+**Politically Liao, visually Voltigeurs** is intentional and supported.
+
+--------------------------------------------------------------------------------
+C.5 Rat Race tie-in (Documents workspace)
+--------------------------------------------------------------------------------
+  Rat_Race_Overview.txt specifies opposition: 2nd Chesterton Voltigeurs
+  (House Liao).
+
+  fp-rat-race-v0-1 currently has TargetFaction and milestone target Liao but
+  no contracts\ folder yet. When adding the mission:
+
+    1. heraldrydef_chestertonVoltigeurs2 (or reuse heraldrydef_liaoC4 after
+       in-game colour review).
+    2. Contract with Manual opfor lance + per-unit heraldry + customUnitName.
+    3. Keep milestone target Liao.
+    4. One full lance override is enough for a light-contact recon mission.
+
+
+================================================================================
+PART D — DECISION TREE
+================================================================================
+
+  Opposition is House [X] in story?
+    └─ Yes → milestone / poster target = "[X]" (faction id string)
+          └─ All units same regiment colours?
+                ├─ Yes → Manual lance; same customHeraldryDefId every spawn
+                └─ No  → Regiment slots: custom id; other slots: "" (faction default)
+          └─ Regiment colours already in Timeline?
+                ├─ Close enough → customHeraldryDefId = heraldrydef_liaoC4 (etc.)
+                │                 + DependsOn BT_Extended_Timeline
+                └─ Not in pack → new heraldrydef_* in YOUR mod + Manifest row
+
+  Need disguise / multi-faction one map?
+    └─ Manual lances; different customHeraldryDefId per wave or per unit
+       (see Flashpoint-The-Raid aces, FotIS Kamata / Andurien mix)
+
+  Need era-specific House colours?
+    └─ BEXT heraldrydef_*C## / *A## for year-appropriate palette, not generic
+       heraldrydef_liao or heraldrydef_steiner
+
+
+================================================================================
+PART E — COPY-PASTE CONTRACT SPAWN FRAGMENT (MANUAL MECH)
+================================================================================
+
+  {
+    "unitSpawnPoint" : {
+      "EncounterObjectGuid" : "<match encounter layer GUID>"
+    },
+    "customUnitName" : "2nd Chesterton Voltigeurs",
+    "customHeraldryDefId" : "heraldrydef_chestertonVoltigeurs2",
+    "unitType" : "Mech",
+    "unitDefId" : "mechdef_<your_mech_id>",
+    "unitTagSet" : { "items" : [], "tagSetSourceFile" : "tags/UnitTags" },
+    "unitExcludedTagSet" : { "items" : [], "tagSetSourceFile" : "tags/UnitTags" },
+    "spawnEffectTags" : { "items" : [], "tagSetSourceFile" : "tags/SpawnEffectTags" },
+    "pilotDefId" : "pilot_<id>",
+    "pilotTagSet" : { "items" : [], "tagSetSourceFile" : "tags/PilotTags" },
+    "pilotExcludedTagSet" : { "items" : [], "tagSetSourceFile" : "tags/PilotTags" },
+    "selectedUnitType" : "UNDEFINED",
+    "selectedUnitDefId" : null,
+    "selectedPilotDefId" : null
+  }
+
+Replace EncounterObjectGuid with the spawner GUID from your contract / encounter
+layer (see 01 Reference §1.4 GUID discipline).
+
+
+================================================================================
+PART F — RELATIONSHIP PATHWAY (MINI TREE)
+================================================================================
+
+> mod.json  [HeraldryDef → heraldry]
+> > heraldry\heraldrydef_*.json
+> > contracts\c_fp_*.json  [ContractOverride]
+> > > targetTeam → lanceOverrideList → unitSpawnPointOverrideList
+> > > > customHeraldryDefId → heraldry\heraldrydef_*.json
+> > > > customUnitName  (display only)
+> > ms_fp_*.json  [SimGameMilestoneSet]
+> > > Flashpoint_AddContract additionalValues → employer + target faction id
+> > >   [NOTE: default paint when customHeraldryDefId empty]
+> > flashpoints\fp_*.json
+> > > TargetFaction  [NOTE: story/poster; not a substitute for per-unit heraldry]
+> > factions\faction_*.json  (vanilla or dependency mod)
+> > > heraldryDefId → default scheme for that faction id
+
+
+================================================================================
+PART G — OPTIONAL MERMAID (SAME LOGIC AS 02 PATHWAY §8)
+================================================================================
+
+flowchart TD
+  MJ[mod.json]
+  MJ --> H[heraldrydef_*.json]
+  MJ --> CO[ContractOverride]
+  CO --> SP[unitSpawnPointOverrideList]
+  SP -->|customHeraldryDefId| H
+  MJ --> MS[SimGameMilestoneSet]
+  MS -->|Flashpoint_AddContract target| F[FactionDef Liao etc.]
+  F -->|heraldryDefId default| H
+  CO -->|targetTeam.faction| F
+  MJ --> FP[FlashpointDef TargetFaction]
+
+
+================================================================================
+PART I — UNIT ICONS, MAP MARKERS & BATTLE-SIDE EMBLEMS
+================================================================================
+Companion to Part A (heraldry paint) and Part C (regiment overrides). Those sections
+cover **mech colours**; this section covers **icons** — what players see on the
+tactical map and on the active-turn / team badge, plus optional crests on 'Mech skins.
+
+--------------------------------------------------------------------------------
+I.1 Three different icons (do not mix them up)
+--------------------------------------------------------------------------------
+
+  What you see in battle          | Data source              | Sprite id habit
+  --------------------------------|--------------------------|---------------------------
+  **Unit marker on the map**      | ChassisDef →             | uixTxrIcon_<chassis>
+  (silhouette over the hex)       | Description.Icon         | (per chassis)
+  **Turn / active-unit badge**    | Controlling **FactionDef** | uixTxrLogo_<faction>
+  ("whose turn" / team crest)     | → "icon" field           | (see faction_*.json)
+  **Side emblem on the 'Mech**    | HeraldryDef →            | uixTxrLogo_* or
+  (paint decal, limited skins)    | textureLogoID            | uixTxrIcon_* (mods)
+
+  Plain English:
+    - The **map marker** is the little unit icon on the hex grid — it comes from the
+      **chassis**, not from HeraldryDef and not from MechDef directly.
+    - The **battle-side emblem** in the turn UI is usually the **faction** icon for
+      whoever controls that unit (employer / target team), even if paint is custom
+      (see Part A.4).
+    - A **regiment crest on the 'Mech body** is HeraldryDef textureLogoID, wired with
+      customHeraldryDefId on the contract spawn (Part C). Many skins never show it.
+
+  Vehicles: vehicleChassisdef_* uses a separate stock icon name (e.g. "STRIKER",
+  "MANTICORE") in Description.Icon — not the uixTxrIcon_* pipeline. This section
+  focuses on 'Mechs; vehicle authors should clone a vanilla vehicle chassis icon pattern.
+
+--------------------------------------------------------------------------------
+I.2 Map marker for a custom 'Mech (ChassisDef Icon)
+--------------------------------------------------------------------------------
+
+Goal: Your custom mechdef appears on the tactical map with its own silhouette icon
+(tinted by team colour like any other unit).
+
+Step 1 — Art asset
+
+  - Format: .dds (preferred) or .png (some packs use png; test in your build).
+  - Naming: **uixTxrIcon_<YourStem>.dds** on disk.
+  - Id string in JSON: **uixTxrIcon_<YourStem>** (no file extension).
+  - Size: match a vanilla chassis icon from the same tonnage class (open an existing
+    uixTxrIcon_* in StreamingAssets or a mod sprites\ folder and copy dimensions).
+  - R10 faction-emblem rules (256×256, flip vertically only) apply to **crest**
+    art (I.3); chassis map icons follow the same **uixTxrIcon_** prefix and Sprite
+    manifest pattern as BT_Extended / vanilla chassis icons.
+
+Step 2 — Register the sprite (ModTek)
+
+  mod.json Manifest row:
+
+    { "Type": "Sprite", "Path": "sprites" }
+
+  Place the file at:
+
+    Mods\<YourPack>\sprites\uixTxrIcon_<YourStem>.dds
+
+  ModTek registers the texture id from the filename stem (uixTxrIcon_<YourStem>).
+
+Step 3 — Point ChassisDef at the icon
+
+  In your custom chassisdef_*.json:
+
+    "Description" : {
+      "Id" : "chassisdef_myCustomZeus",
+      ...
+      "Icon" : "uixTxrIcon_myCustomZeus"
+    }
+
+  Your MechDef must reference this ChassisDef id. The map marker updates when the
+  chassis Icon changes — editing MechDef alone does not change the tactical icon.
+
+Step 4 — Spawn in the contract
+
+  Use the MechDef in Manual lance unitSpawnPointOverrideList (Part E). Team colour
+  on the marker still comes from battle side / faction paint rules (Part A); only
+  the **shape** of the marker is chassis-driven.
+
+  Verify: load mission → zoom map → icon shape matches your art; wrong id = pink
+  missing texture or vanilla fallback in output_log / UI.
+
+--------------------------------------------------------------------------------
+I.3 Battle-side emblem (HeraldryDef textureLogoID + faction icon)
+--------------------------------------------------------------------------------
+
+Goal A — Crest on designated opfor 'Mechs (same pipeline as Part C)
+
+  In heraldrydef_*.json set:
+
+    "textureLogoID" : "uixTxrIcon_myRegimentCrest"
+
+  or reuse a loaded stock / dependency logo, e.g.:
+
+    "textureLogoID" : "uixTxrLogo_Liao"
+    "textureLogoID" : "uixTxrIcon_blackmarketEmblem"
+
+  (Flashpoint-The-Raid aces use uixTxrIcon_blackmarketEmblem on heraldrydef_FP_theRaid_aces.)
+
+  Wire on each spawn:
+
+    "customHeraldryDefId" : "heraldrydef_myRegiment"
+
+  Asset rules (R10 — Faction Emblems / custom crests):
+
+    - Prefix: **uixTxrIcon_** (R10; mods also use **uixTxrLogo_** on FactionDef)
+    - .dds preferred, **256×256** stock size for crest-style art
+    - **Flip vertically only** before export (game UV expectation)
+    - Ship via **Sprite** manifest (same sprites\ folder as I.2)
+
+  Limitation: only some 'Mech skins display textureLogoID on the model. Plan for
+  players who may not see the side decal even when the id is correct.
+
+Goal B — Turn badge / "which side" emblem for the whole enemy team
+
+  The active-unit and team UI badge use **FactionDef.icon**, not HeraldryDef.
+
+  In faction_*.json (vanilla or your mod):
+
+    "factionID" : "MySubFaction",
+    "icon" : "uixTxrLogo_mySubFaction",
+    "heraldryDefId" : "heraldrydef_mySubFaction"
+
+  Point **targetTeam.faction** (and milestone Flashpoint_AddContract target string)
+  at that faction id so opfor units resolve the same icon in the turn UI.
+
+  If you only use customHeraldryDefId with milestone target **Liao**, paint can look
+  like a sub-unit while the badge may still show **uixTxrLogo_Liao** (Part A.4, C.4).
+
+  To align badge + paint + optional map tint expectations:
+    - Add a dedicated FactionDef + HeraldryDef + uixTxrLogo_* sprite, or
+    - Accept vanilla faction badge and rely on customHeraldryDefId + customUnitName
+      for storytelling.
+
+--------------------------------------------------------------------------------
+I.4 One regiment: map marker vs crest vs badge (checklist)
+--------------------------------------------------------------------------------
+
+  Need                              | Author in…
+  ----------------------------------|------------------------------------------
+  Custom silhouette on map          | ChassisDef Description.Icon + Sprite
+  Custom colours on model           | HeraldryDef colours + customHeraldryDefId
+  Custom crest on model (if skin    | HeraldryDef textureLogoID + same heraldry id
+  supports it)                      |
+  Custom name floating on unit      | customUnitName on spawn (Part C)
+  Custom turn / team badge          | FactionDef icon + targetTeam.faction id
+  Label text above unit             | customUnitName (overrides pilot skill line)
+
+  Example — 2nd Chesterton Voltigeurs on stock Shadow Hawk chassis:
+    - Map icon: vanilla uixTxrIcon_shadowhawk (no new chassis art required)
+    - Paint + side crest: heraldrydef_chestertonVoltigeurs2 (Part C.2)
+    - Badge: still **Liao** unless you add a sub-faction with its own icon field
+
+--------------------------------------------------------------------------------
+I.5 mod.json rows (icons only)
+--------------------------------------------------------------------------------
+
+  Asset type        | Manifest Type | Path (habit)     | Used by
+  ------------------|---------------|------------------|-------------------------
+  Map / crest .dds  | Sprite        | sprites          | ChassisDef Icon,
+                    |               |                  | HeraldryDef textureLogoID
+  Faction crest UI  | Sprite        | sprites          | FactionDef icon
+  Heraldry record   | HeraldryDef   | heraldry         | customHeraldryDefId
+  Chassis + mech    | ChassisDef,   | chassis, mech    | MechDef → chassis Icon
+                    | MechDef       |                  |
+  Faction (badge)   | FactionDef    | factions         | targetTeam.faction
+
+  Player merc **emblem picker** rewards (mod.json AddToAddendum → PlayerEmblems) are
+  a separate system (01 Reference §8.8). They do not replace opfor map markers or
+  contract heraldry wiring.
+
+--------------------------------------------------------------------------------
+I.6 Troubleshooting
+--------------------------------------------------------------------------------
+
+  Symptom                          | Likely cause
+  ---------------------------------|------------------------------------------
+  Pink / missing map icon          | Sprite not in Manifest; wrong filename vs
+                                   | ChassisDef Icon string; typo in uixTxrIcon_*
+  Map icon ok, no crest on 'Mech   | Skin does not show textureLogoID; wrong
+                                   | heraldry id; empty customHeraldryDefId
+  Crest colours ok, badge wrong    | FactionDef icon still parent faction; set
+                                   | targetTeam.faction or accept A.4 behaviour
+  Icon ok in mod, not in FP mission| Contract spawns different chassisdef / mechdef
+                                   | than you edited; Tagged lance pulled other unit
+
+  Data to grep when cloning:
+    Vanilla: BattleTech_Data\StreamingAssets\data\chassis\ → Description.Icon
+    Vanilla: data\factions\faction_*.json → "icon"
+    Vanilla: data\heraldry\heraldrydef_*.json → textureLogoID
+    Mod example: Flashpoint-The-Raid\heraldry\heraldrydef_FP_theRaid_aces.json
+
+
+================================================================================
+PART H — FURTHER READING (01 REFERENCE & COMPANION DOCS)
+================================================================================
+
+  §3.2 milestoneSets — Flashpoint_AddContract additionalValues (employer/target)
+  §3.3 contracts — lanceOverrideList, Manual vs Tagged, spawn overrides
+  §7.8 heraldry — HeraldryDef folder and UI chrome
+  §1.10 Source currency — trust order for BEXT / R10 / ModTek vs this guide
+  04-agent-design-template.txt — Part 1.6, 4.F opposition paint, Part 5.4 icons
+  06-date-specific-flashpoints.txt — calendar gates (not paint)
+  07-missions-maps-objectives-guids.txt — contract spawn fields (not heraldry)
+
+================================================================================
+END OF 05 CREATING SPECIFIC UNITS
+================================================================================
