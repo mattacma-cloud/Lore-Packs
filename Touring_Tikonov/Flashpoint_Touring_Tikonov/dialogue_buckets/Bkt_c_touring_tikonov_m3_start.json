@@ -1,0 +1,21 @@
+{
+    "identifier":  "Bkt_c_touring_tikonov_m3_start",
+    "contents":  [
+                     {
+                         "cameraHeight":  "Default",
+                         "emote":  "Default",
+                         "wordsColor":  {
+                                            "g":  1,
+                                            "r":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "words":  "Do not mess around down here, Commander - the 4th Tau Ceti are not a unit to be taken lightly.",
+                         "cameraDistance":  "Far",
+                         "revealRadius":  -1,
+                         "cameraFocusGuid":  "",
+                         "selectedCastDefId":  "castDef_Travert",
+                         "audioName":  "NONE"
+                     }
+                 ]
+}

@@ -1,0 +1,20 @@
+{
+    "id": "castDef_Shannahan",
+    "internalName": "Shannahan",
+    "firstName": "Ohren",
+    "lastName": "Shannahan",
+    "callsign": "Sparkles",
+    "rank": "Captain",
+    "showRank": true,
+    "showCallsign": true,
+    "showFirstName": true,
+    "showLastName": true,
+    "gender": "Male",
+    "factionID": "Davion",
+    "sgCharType": "UNSET",
+    "defaultEmotePortrait": {
+        "emote": "Default",
+        "portraitAssetPath": "sprites/Portraits/guiTxrPort_backerVoyls_utr.png"
+    },
+    "emotePotraitList": []
+}

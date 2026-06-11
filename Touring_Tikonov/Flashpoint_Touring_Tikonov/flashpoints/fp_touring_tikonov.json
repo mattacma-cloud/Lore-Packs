@@ -1,0 +1,74 @@
+{
+    "AllowRefitTime":  true,
+    "AvailableTimeout":  0,
+    "Description":  {
+                        "Icon":  "uixTxrSpot_fp_touring_tikonov.png",
+                        "Name":  "Touring Tikonov",
+                        "Id":  "fp_touring_tikonov",
+                        "Details":  "House Davion seeks capable mercenary commands for a challenging reconnaissance and strike tour on Tikonov during the Fourth Succession War."
+                    },
+    "InProgressTimeout":  0,
+    "UnitDropTonnageHint":  "Mixed",
+    "Repeatable":  false,
+    "FlashpointDescriberCastDefId":  "castDef_Travert",
+    "LocationRequirements":  {
+                                 "Scope":  "StarSystem",
+                                 "RequirementTags":  {
+                                                         "items":  [
+                                                                       "planet_name_tikonov"
+                                                                   ],
+                                                         "tagSetSourceFile":  "Tags/PlanetNameTags"
+                                                     },
+                                 "RequirementComparisons":  [
+
+                                                            ],
+                                 "ExclusionTags":  {
+                                                       "items":  [
+
+                                                                 ],
+                                                       "tagSetSourceFile":  ""
+                                                   }
+                             },
+    "RewardCollectionID":  "itemCollection_loot_none",
+    "TargetFaction":  "Liao",
+    "PotentialEmployers":  [
+                               "Davion"
+                           ],
+    "PublishState":  "PUBLISHED",
+    "FlashpointShortDescription":  "House Davion seeks capable mercenary commands for a challenging reconnaissance and strike tour on Tikonov off the back of Operation GALAHAD.",
+    "MilestoneSetID":  "ms_fp_touring_tikonov",
+    "Difficulty":  4,
+    "Tags":  {
+                 "items":  [
+                               "BLACKLISTED"
+                           ],
+                 "tagSetSourceFile":  "tags/FlashpointTags"
+             },
+    "UseAvailableTimeoutOverride":  false,
+    "UseInProgressTimeoutOverride":  false,
+    "Requirements":  [
+                         {
+                             "Scope":  "Company",
+                             "RequirementTags":  {
+                                                     "items":  [
+                                                                   "touring_tikonov_available"
+                                                               ],
+                                                     "tagSetSourceFile":  "Tags/CompanyTags"
+                                                 },
+                             "RequirementComparisons":  [
+
+                                                        ],
+                             "ExclusionTags":  {
+                                                   "items":  [
+                                                                 "touring_tikonov_closed",
+                                                                 "fp_finished_touring_tikonov"
+                                                             ],
+                                                   "tagSetSourceFile":  "Tags/CompanyTags"
+                                               }
+                         }
+                     ],
+    "LanceDropTonnageHint":  "None",
+    "FlashpointLength":  "MEDIUM",
+    "InternalName":  "touring_tikonov",
+    "Weight":  10
+}

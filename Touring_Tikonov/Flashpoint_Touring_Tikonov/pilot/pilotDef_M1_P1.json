@@ -1,0 +1,41 @@
+{
+    "Description":  {
+                        "Id":  "pilotDef_M1_P1",
+                        "Name":  "Lydia Meyrick",
+                        "FirstName":  "Lydia",
+                        "LastName":  "Meyrick",
+                        "Callsign":  "Grizzle",
+                        "Gender":  "Female",
+                        "factionID":  "Liao",
+                        "Age":  30,
+                        "Details":  "Commander in McCrimmon's Light Cavalry.",
+                        "Icon":  "guiTxrPort_TEMPLATE_NamedEnemy"
+                    },
+    "BaseGunnery":  "3",
+    "BonusGunnery":  0,
+    "BasePiloting":  "4",
+    "BonusPiloting":  0,
+    "BaseGuts":  "4",
+    "BonusGuts":  0,
+    "BaseTactics":  "3",
+    "BonusTactics":  0,
+    "ExperienceUnspent":  0,
+    "ExperienceSpent":  0,
+    "Injuries":  0,
+    "Health":  3,
+    "LethalInjury":  false,
+    "Incapacitated":  false,
+    "Morale":  0,
+    "Voice":  "m_pro07_allan",
+    "abilityDefNames":  [
+                            
+                        ],
+    "AIPersonality":  "Undefined",
+    "PilotTags":  {
+                      "items":  [                                    
+                                    "BLACKLISTED"
+                                ],
+                      "tagSetSourceFile":  ""
+                  },
+    "PilotCost":  0
+}

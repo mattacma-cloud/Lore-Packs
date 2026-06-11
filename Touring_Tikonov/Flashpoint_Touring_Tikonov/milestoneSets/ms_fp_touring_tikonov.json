@@ -1,0 +1,1339 @@
+{
+    "StartingMilestoneID":  "ms_fp_touring_tikonov_001_Start",
+    "Milestones":  [
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Start",
+                                               "Id":  "ms_fp_touring_tikonov_001_Start",
+                                               "Details":  "flashpoint"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Flashpoint",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+                                                                                 "fp_choice_e",
+                                                                                 "fp_choice_d",
+                                                                                 "fp_choice_c",
+                                                                                 "fp_choice_b",
+                                                                                 "fp_choice_a",
+                                                                                 "fp_rewchoice_b",
+                                                                                 "fp_rewchoice_a"
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  [
+
+                                                         ],
+                                               "Actions":  [
+
+                                                           ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0
+                                           },
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  [
+
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  null,
+                                                                   "value":  "ms_fp_touring_tikonov_002_TalkChoice",
+                                                                   "Type":  "Flashpoint_SetNextMilestone"
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Talk Choice",
+                                               "Id":  "ms_fp_touring_tikonov_002_TalkChoice",
+                                               "Details":  "flashpoint"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  [
+
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "Touring Tikonov: Corvus Urbanus",
+                                                                                            "High Orbit — Tikonov",
+                                                                                            "Conference",
+                                                                                            null
+                                                                                        ],
+                                                                   "value":  "9c1752d738a270a962c22369",
+                                                                   "Type":  "System_StartConversation"
+                                                               },
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  null,
+                                                                   "value":  "ms_fp_touring_tikonov_003_Branch",
+                                                                   "Type":  "Flashpoint_SetNextMilestone"
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Branch",
+                                               "Id":  "ms_fp_touring_tikonov_003_Branch",
+                                               "Details":  "flashpoint"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  {
+                                                                    "Scope":  "Flashpoint",
+                                                                    "RequirementTags":  {
+                                                                                            "items":  [
+                                                                                                          "fp_choice_a"
+                                                                                                      ],
+                                                                                            "tagSetSourceFile":  ""
+                                                                                        },
+                                                                    "RequirementComparisons":  [
+
+                                                                                               ],
+                                                                    "ExclusionTags":  {
+                                                                                          "items":  [
+
+                                                                                                    ],
+                                                                                          "tagSetSourceFile":  ""
+                                                                                      }
+                                                                },
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  [
+
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  null,
+                                                                   "value":  "ms_fp_touring_tikonov_100_Mission",
+                                                                   "Type":  "Flashpoint_SetNextMilestone"
+                                                               }
+                                                           ]
+                                           },
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  {
+                                                                    "Scope":  "Flashpoint",
+                                                                    "RequirementTags":  {
+                                                                                            "items":  [
+
+                                                                                                      ],
+                                                                                            "tagSetSourceFile":  ""
+                                                                                        },
+                                                                    "RequirementComparisons":  [
+
+                                                                                               ],
+                                                                    "ExclusionTags":  {
+                                                                                          "items":  [
+                                                                                                        "fp_choice_a"
+                                                                                                    ],
+                                                                                          "tagSetSourceFile":  ""
+                                                                                      }
+                                                                },
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  [
+
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  null,
+                                                                   "value":  "ms_fp_touring_tikonov_300_Cancel-Complete",
+                                                                   "Type":  "Flashpoint_SetNextMilestone"
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Mission",
+                                               "Id":  "ms_fp_touring_tikonov_100_Mission",
+                                               "Details":  "flashpoint"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  {
+                                                                    "Scope":  "Company",
+                                                                    "RequirementTags":  {
+                                                                                            "items":  [
+
+                                                                                                      ],
+                                                                                            "tagSetSourceFile":  ""
+                                                                                        },
+                                                                    "RequirementComparisons":  [
+
+                                                                                               ],
+                                                                    "ExclusionTags":  {
+                                                                                          "items":  [
+
+                                                                                                    ],
+                                                                                          "tagSetSourceFile":  ""
+                                                                                      }
+                                                                },
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  null,
+                                               "ForceEvents":  null,
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "",
+                                                                                            "",
+                                                                                            "c_fp_touring_tikonov_m1",
+                                                                                            "Davion",
+                                                                                            "Liao",
+                                                                                            "4",
+                                                                                            "ms_fp_touring_tikonov_101_Talk",
+                                                                                            null,
+                                                                                            null,
+                                                                                            "ms_fp_touring_tikonov_900_Talk",
+                                                                                            null,
+                                                                                            null
+                                                                                        ],
+                                                                   "value":  "mapGeneral_terracePlaza_uTech",
+                                                                   "Type":  "Flashpoint_AddContract"
+                                                               },
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "BaseFlashpoint"
+                                                                                        ],
+                                                                   "value":  "Contract",
+                                                                   "Type":  "System_ForceDropshipRoom"
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Talk",
+                                               "Id":  "ms_fp_touring_tikonov_101_Talk",
+                                               "Details":  "flashpoint"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  {
+                                                                    "Scope":  "Company",
+                                                                    "RequirementTags":  {
+                                                                                            "items":  [
+
+                                                                                                      ],
+                                                                                            "tagSetSourceFile":  ""
+                                                                                        },
+                                                                    "RequirementComparisons":  [
+
+                                                                                               ],
+                                                                    "ExclusionTags":  {
+                                                                                          "items":  [
+
+                                                                                                    ],
+                                                                                          "tagSetSourceFile":  ""
+                                                                                      }
+                                                                },
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  null,
+                                               "ForceEvents":  null,
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "Touring Tikonov: Geminae Vindicationes",
+                                                                                            "High Orbit — Tikonov",
+                                                                                            "Conference",
+                                                                                            null
+                                                                                        ],
+                                                                   "value":  "9c89386facd9557b1686f8ed",
+                                                                   "Type":  "System_StartConversation"
+                                                               },
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  null,
+                                                                   "value":  "ms_fp_touring_tikonov_102_Mission",
+                                                                   "Type":  "Flashpoint_SetNextMilestone"
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Mission",
+                                               "Id":  "ms_fp_touring_tikonov_102_Mission",
+                                               "Details":  "flashpoint"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  {
+                                                                    "Scope":  "Company",
+                                                                    "RequirementTags":  {
+                                                                                            "items":  [
+
+                                                                                                      ],
+                                                                                            "tagSetSourceFile":  ""
+                                                                                        },
+                                                                    "RequirementComparisons":  [
+
+                                                                                               ],
+                                                                    "ExclusionTags":  {
+                                                                                          "items":  [
+
+                                                                                                    ],
+                                                                                          "tagSetSourceFile":  ""
+                                                                                      }
+                                                                },
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  null,
+                                               "ForceEvents":  null,
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "",
+                                                                                            "",
+                                                                                            "c_fp_touring_tikonov_m2",
+                                                                                            "Davion",
+                                                                                            "Liao",
+                                                                                            "4",
+                                                                                            "ms_fp_touring_tikonov_103_Talk",
+                                                                                            null,
+                                                                                            null,
+                                                                                            "ms_fp_touring_tikonov_900_Talk",
+                                                                                            null,
+                                                                                            null
+                                                                                        ],
+                                                                   "value":  "mapGeneral_terraceLakes_vLow",
+                                                                   "Type":  "Flashpoint_AddContract"
+                                                               },
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "BaseFlashpoint"
+                                                                                        ],
+                                                                   "value":  "Contract",
+                                                                   "Type":  "System_ForceDropshipRoom"
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Talk",
+                                               "Id":  "ms_fp_touring_tikonov_103_Talk",
+                                               "Details":  "flashpoint"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  {
+                                                                    "Scope":  "Company",
+                                                                    "RequirementTags":  {
+                                                                                            "items":  [
+
+                                                                                                      ],
+                                                                                            "tagSetSourceFile":  ""
+                                                                                        },
+                                                                    "RequirementComparisons":  [
+
+                                                                                               ],
+                                                                    "ExclusionTags":  {
+                                                                                          "items":  [
+
+                                                                                                    ],
+                                                                                          "tagSetSourceFile":  ""
+                                                                                      }
+                                                                },
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  null,
+                                               "ForceEvents":  null,
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "Touring Tikonov: Catapulta Delapsa",
+                                                                                            "High Orbit — Tikonov",
+                                                                                            "Conference",
+                                                                                            null
+                                                                                        ],
+                                                                   "value":  "9cd3bad3f9c69be8874972ac",
+                                                                   "Type":  "System_StartConversation"
+                                                               },
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  null,
+                                                                   "value":  "ms_fp_touring_tikonov_104_Mission",
+                                                                   "Type":  "Flashpoint_SetNextMilestone"
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Mission",
+                                               "Id":  "ms_fp_touring_tikonov_104_Mission",
+                                               "Details":  "flashpoint"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  {
+                                                                    "Scope":  "Company",
+                                                                    "RequirementTags":  {
+                                                                                            "items":  [
+
+                                                                                                      ],
+                                                                                            "tagSetSourceFile":  ""
+                                                                                        },
+                                                                    "RequirementComparisons":  [
+
+                                                                                               ],
+                                                                    "ExclusionTags":  {
+                                                                                          "items":  [
+
+                                                                                                    ],
+                                                                                          "tagSetSourceFile":  ""
+                                                                                      }
+                                                                },
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  null,
+                                               "ForceEvents":  null,
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "",
+                                                                                            "",
+                                                                                            "c_fp_touring_tikonov_m3",
+                                                                                            "Davion",
+                                                                                            "Liao",
+                                                                                            "4",
+                                                                                            "ms_fp_touring_tikonov_105_Talk",
+                                                                                            null,
+                                                                                            null,
+                                                                                            "ms_fp_touring_tikonov_900_Talk",
+                                                                                            null,
+                                                                                            null
+                                                                                        ],
+                                                                   "value":  "mapGeneral_cragMire_vLow",
+                                                                   "Type":  "Flashpoint_AddContract"
+                                                               },
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "BaseFlashpoint"
+                                                                                        ],
+                                                                   "value":  "Contract",
+                                                                   "Type":  "System_ForceDropshipRoom"
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Talk",
+                                               "Id":  "ms_fp_touring_tikonov_105_Talk",
+                                               "Details":  "flashpoint"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  {
+                                                                    "Scope":  "Company",
+                                                                    "RequirementTags":  {
+                                                                                            "items":  [
+
+                                                                                                      ],
+                                                                                            "tagSetSourceFile":  ""
+                                                                                        },
+                                                                    "RequirementComparisons":  [
+
+                                                                                               ],
+                                                                    "ExclusionTags":  {
+                                                                                          "items":  [
+
+                                                                                                    ],
+                                                                                          "tagSetSourceFile":  ""
+                                                                                      }
+                                                                },
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  null,
+                                               "ForceEvents":  null,
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "Touring Tikonov: Captus Cataphracti",
+                                                                                            "High Orbit — Tikonov",
+                                                                                            "Conference",
+                                                                                            null
+                                                                                        ],
+                                                                   "value":  "9cf083f3790fe9ebccf02a51",
+                                                                   "Type":  "System_StartConversation"
+                                                               },
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  null,
+                                                                   "value":  "ms_fp_touring_tikonov_106_Mission",
+                                                                   "Type":  "Flashpoint_SetNextMilestone"
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Mission",
+                                               "Id":  "ms_fp_touring_tikonov_106_Mission",
+                                               "Details":  "flashpoint"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  {
+                                                                    "Scope":  "Company",
+                                                                    "RequirementTags":  {
+                                                                                            "items":  [
+
+                                                                                                      ],
+                                                                                            "tagSetSourceFile":  ""
+                                                                                        },
+                                                                    "RequirementComparisons":  [
+
+                                                                                               ],
+                                                                    "ExclusionTags":  {
+                                                                                          "items":  [
+
+                                                                                                    ],
+                                                                                          "tagSetSourceFile":  ""
+                                                                                      }
+                                                                },
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  null,
+                                               "ForceEvents":  null,
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "",
+                                                                                            "ef5271e3-ef24-4b9f-963b-9117d9d8bec2",
+                                                                                            "c_fp_touring_tikonov_m4",
+                                                                                            "Davion",
+                                                                                            "Liao",
+                                                                                            "4",
+                                                                                            "ms_fp_touring_tikonov_107_Talk",
+                                                                                            null,
+                                                                                            null,
+                                                                                            "ms_fp_touring_tikonov_900_Talk",
+                                                                                            null,
+                                                                                            null
+                                                                                        ],
+                                                                   "value":  "mapGeneral_highway_vLow",
+                                                                   "Type":  "Flashpoint_AddContract"
+                                                               },
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "BaseFlashpoint"
+                                                                                        ],
+                                                                   "value":  "Contract",
+                                                                   "Type":  "System_ForceDropshipRoom"
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Talk",
+                                               "Id":  "ms_fp_touring_tikonov_107_Talk",
+                                               "Details":  "flashpoint"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  {
+                                                                    "Scope":  "Company",
+                                                                    "RequirementTags":  {
+                                                                                            "items":  [
+
+                                                                                                      ],
+                                                                                            "tagSetSourceFile":  ""
+                                                                                        },
+                                                                    "RequirementComparisons":  [
+
+                                                                                               ],
+                                                                    "ExclusionTags":  {
+                                                                                          "items":  [
+
+                                                                                                    ],
+                                                                                          "tagSetSourceFile":  ""
+                                                                                      }
+                                                                },
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  null,
+                                               "ForceEvents":  null,
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "Touring Tikonov: Magna Victoria",
+                                                                                            "High Orbit — Tikonov",
+                                                                                            "Conference",
+                                                                                            null
+                                                                                        ],
+                                                                   "value":  "9c1c67a509006001af41bc20",
+                                                                   "Type":  "System_StartConversation"
+                                                               },
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  null,
+                                                                   "value":  "ms_fp_touring_tikonov_107_Complete",
+                                                                   "Type":  "Flashpoint_SetNextMilestone"
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Complete",
+                                               "Id":  "ms_fp_touring_tikonov_107_Complete",
+                                               "Details":  "Branch rewards from 107 Talk"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  {
+                                                                    "Scope":  "Flashpoint",
+                                                                    "RequirementTags":  {
+                                                                                            "items":  [
+                                                                                                          "itemCollection_fp_touring_tikonov_reward_a"
+                                                                                                      ],
+                                                                                            "tagSetSourceFile":  ""
+                                                                                        },
+                                                                    "RequirementComparisons":  [
+
+                                                                                               ],
+                                                                    "ExclusionTags":  {
+                                                                                          "items":  [
+
+                                                                                                    ],
+                                                                                          "tagSetSourceFile":  ""
+                                                                                      }
+                                                                },
+                                               "AddedTags":  {
+                                                                 "items":  [
+                                                                               "fp_finished_touring_tikonov",
+                                                                               "fp_touring_tikonov_success",
+                                                                               "activate_operation_rat",
+                                                                               "Ardan_is_Interested"
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+                                                                                 "touring_tikonov_available",
+                                                                                 "itemCollection_fp_touring_tikonov_reward_a",
+                                                                                 "itemCollection_fp_touring_tikonov_reward_b"
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  null,
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "itemCollection_fp_touring_tikonov_reward_a",
+                                                                                            null
+                                                                                        ],
+                                                                   "value":  "ms_fp_touring_tikonov_108_Reward_A",
+                                                                   "Type":  "Flashpoint_CompleteFlashpoint"
+                                                               },
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  null,
+                                                                   "value":  "Ship",
+                                                                   "Type":  "System_ForceDropshipRoom"
+                                                               }
+                                                           ]
+                                           },
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  {
+                                                                    "Scope":  "Flashpoint",
+                                                                    "RequirementTags":  {
+                                                                                            "items":  [
+                                                                                                          "itemCollection_fp_touring_tikonov_reward_b"
+                                                                                                      ],
+                                                                                            "tagSetSourceFile":  ""
+                                                                                        },
+                                                                    "RequirementComparisons":  [
+
+                                                                                               ],
+                                                                    "ExclusionTags":  {
+                                                                                          "items":  [
+
+                                                                                                    ],
+                                                                                          "tagSetSourceFile":  ""
+                                                                                      }
+                                                                },
+                                               "AddedTags":  {
+                                                                 "items":  [
+                                                                               "fp_finished_touring_tikonov",
+                                                                               "fp_touring_tikonov_success",
+                                                                               "activate_operation_rat",
+                                                                               "Ardan_is_Interested"
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+                                                                                 "touring_tikonov_available",
+                                                                                 "itemCollection_fp_touring_tikonov_reward_a",
+                                                                                 "itemCollection_fp_touring_tikonov_reward_b"
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  null,
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "itemCollection_fp_touring_tikonov_reward_b",
+                                                                                            null
+                                                                                        ],
+                                                                   "value":  "ms_fp_touring_tikonov_108_Reward_B",
+                                                                   "Type":  "Flashpoint_CompleteFlashpoint"
+                                                               },
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  null,
+                                                                   "value":  "Ship",
+                                                                   "Type":  "System_ForceDropshipRoom"
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Reward-A",
+                                               "Id":  "ms_fp_touring_tikonov_108_Reward_A",
+                                               "Details":  "Branch A arc payout (Enforcer loot)"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  [
+                                                             {
+                                                                 "valueConstant":  null,
+                                                                 "typeString":  "System.Int32",
+                                                                 "name":  "Funds",
+                                                                 "value":  "400000",
+                                                                 "set":  false
+                                                             },
+                                                             {
+                                                                 "valueConstant":  null,
+                                                                 "typeString":  "System.Int32",
+                                                                 "name":  "Reputation.Davion",
+                                                                 "value":  "5",
+                                                                 "set":  false
+                                                             }
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Reward-B",
+                                               "Id":  "ms_fp_touring_tikonov_108_Reward_B",
+                                               "Details":  "Branch B arc payout (Valkyrie loot)"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  [
+                                                             {
+                                                                 "valueConstant":  null,
+                                                                 "typeString":  "System.Int32",
+                                                                 "name":  "Funds",
+                                                                 "value":  "400000",
+                                                                 "set":  false
+                                                             },
+                                                             {
+                                                                 "valueConstant":  null,
+                                                                 "typeString":  "System.Int32",
+                                                                 "name":  "Reputation.Davion",
+                                                                 "value":  "5",
+                                                                 "set":  false
+                                                             }
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Cancel-Complete",
+                                               "Id":  "ms_fp_touring_tikonov_300_Cancel-Complete",
+                                               "Details":  "flashpoint"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+                                                                               "flashpoint_touring_tikonov_cancel"
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  [
+
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  null,
+                                                                   "value":  "Ship",
+                                                                   "Type":  "System_ForceDropshipRoom"
+                                                               },
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            null,
+                                                                                            "CompletedWithoutReward"
+                                                                                        ],
+                                                                   "value":  null,
+                                                                   "Type":  "Flashpoint_CompleteFlashpoint"
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Talk",
+                                               "Id":  "ms_fp_touring_tikonov_900_Talk",
+                                               "Details":  "FP failed Ã¢â‚¬â€ fail debrief"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  {
+                                                                    "Scope":  "Company",
+                                                                    "RequirementTags":  {
+                                                                                            "items":  [
+
+                                                                                                      ],
+                                                                                            "tagSetSourceFile":  ""
+                                                                                        },
+                                                                    "RequirementComparisons":  [
+
+                                                                                               ],
+                                                                    "ExclusionTags":  {
+                                                                                          "items":  [
+
+                                                                                                    ],
+                                                                                          "tagSetSourceFile":  ""
+                                                                                      }
+                                                                },
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  null,
+                                               "ForceEvents":  null,
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "Touring Tikonov: Defectus Ignobilis",
+                                                                                            "High Orbit — Tikonov",
+                                                                                            "Conference",
+                                                                                            null
+                                                                                        ],
+                                                                   "value":  "9cb99dd5d2be7ceacc36b769",
+                                                                   "Type":  "System_StartConversation"
+                                                               },
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  null,
+                                                                   "value":  "ms_fp_touring_tikonov_900_Complete",
+                                                                   "Type":  "Flashpoint_SetNextMilestone"
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Complete",
+                                               "Id":  "ms_fp_touring_tikonov_900_Complete",
+                                               "Details":  "Fail end — tags + CompleteFlashpoint after debrief"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+                                                                               "fp_touring_tikonov_failed",
+                                                                               "activate_operation_rat"
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+                                                                                 "fp_choice_e",
+                                                                                 "fp_choice_d",
+                                                                                 "fp_choice_c",
+                                                                                 "fp_choice_b",
+                                                                                 "fp_choice_a",
+                                                                                 "fp_rewchoice_b",
+                                                                                 "fp_rewchoice_a"
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  [
+                                                             {
+                                                                 "valueConstant":  null,
+                                                                 "typeString":  "System.Int32",
+                                                                 "name":  "Reputation.Davion",
+                                                                 "value":  "1",
+                                                                 "set":  false
+                                                             }
+                                                         ],
+                                               "ForceEvents":  null,
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  null,
+                                                                   "value":  "Ship",
+                                                                   "Type":  "System_ForceDropshipRoom"
+                                                               },
+                                                               {
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            null,
+                                                                                            "CompletedWithoutReward"
+                                                                                        ],
+                                                                   "value":  null,
+                                                                   "Type":  "Flashpoint_CompleteFlashpoint"
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       }
+                   ]
+}

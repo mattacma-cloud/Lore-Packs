@@ -1,0 +1,69 @@
+{
+    "identifier":  "Bkt_c_touring_tikonov_m4_mission_start",
+    "contents":  [
+                     {
+                         "cameraHeight":  "Default",
+                         "emote":  "Default",
+                         "wordsColor":  {
+                                            "g":  1,
+                                            "r":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "words":  "Do not overstep here, Commander - there is too much that can go wrong.",
+                         "cameraDistance":  "Far",
+                         "revealRadius":  -1,
+                         "cameraFocusGuid":  "",
+                         "selectedCastDefId":  "castDef_Travert",
+                         "audioName":  "NONE"
+                     },
+                     {
+                         "cameraHeight":  "Default",
+                         "emote":  "Default",
+                         "wordsColor":  {
+                                            "g":  1,
+                                            "r":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "words":  "Colonel Travert? Can you hear me? Colonel Travert?",
+                         "cameraDistance":  "Far",
+                         "revealRadius":  -1,
+                         "cameraFocusGuid":  "",
+                         "selectedCastDefId":  "castDef_Shannahan",
+                         "audioName":  "NONE"
+                     },
+                     {
+                         "cameraHeight":  "Default",
+                         "emote":  "Default",
+                         "wordsColor":  {
+                                            "g":  1,
+                                            "r":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "words":  "Dammit, long range radio is still cactus. Incoming mercs, get your war face on.",
+                         "cameraDistance":  "Far",
+                         "revealRadius":  -1,
+                         "cameraFocusGuid":  "",
+                         "selectedCastDefId":  "castDef_Shannahan",
+                         "audioName":  "NONE"
+                     },
+                     {
+                         "cameraHeight":  "Default",
+                         "emote":  "Default",
+                         "wordsColor":  {
+                                            "g":  1,
+                                            "r":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "words":  "There is a nasty FrankeMech hunting us that took out my lance. I have intel for Travert, so get my ass out of here.",
+                         "cameraDistance":  "Far",
+                         "revealRadius":  -1,
+                         "cameraFocusGuid":  "",
+                         "selectedCastDefId":  "castDef_Shannahan",
+                         "audioName":  "NONE"
+                     }
+                 ]
+}

@@ -1,0 +1,47 @@
+{
+    "Description":  {
+                        "Id":  "lancedef_tt_m4_ally_wounded",
+                        "Name":  "lancedef_tt_m4_ally_wounded",
+                        "Details":  "lancedef_tt_m4_ally_wounded",
+                        "Icon":  "",
+                        "Cost":  0,
+                        "Rarity":  0,
+                        "Purchasable":  false
+                    },
+    "Difficulty":  4,
+    "LanceTags":  {
+                      "items":  [
+                                    "BLACKLISTED"
+                                ],
+                      "tagSetSourceFile":  "Tags/LanceTags"
+                  },
+    "LanceUnits":  [
+                       {
+                           "unitType":  "Mech",
+                           "unitId":  "valkyrie_VLK-QA",
+                           "pilotId":  "pilotDef_tt_ally_wounded",
+                           "unitTagSet":  {
+                                              "items":  [
+
+                                                        ],
+                                              "tagSetSourceFile":  "Tags/UnitTags"
+                                          },
+                           "excludedUnitTagSet":  {
+                                                      "items":  [
+
+                                                                ],
+                                                      "tagSetSourceFile":  "Tags/UnitTags"
+                                                  },
+                           "pilotTagSet":  {
+                                               "items":  [
+
+                                                         ],
+                                               "tagSetSourceFile":  "Tags/PilotTags"
+                                           },
+                           "excludedPilotTagSet":  {
+                                                       "items":  null,
+                                                       "tagSetSourceFile":  "Tags/PilotTags"
+                                                   }
+                       }
+                   ]
+}
