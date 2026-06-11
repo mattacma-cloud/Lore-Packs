@@ -12,6 +12,6 @@ For those interested in contributing, please reach out to me, as the more the me
 
 For those seeking more on the Lore Packs, a high level overview and approach is contained in the Project Scope folder.
 
-
+Touring Tikonov was my first attempt at a Flashpoint and it will later be the key start point of the Operation Rat Campaign of the 4th Succession War Lore Pack.
 
 
