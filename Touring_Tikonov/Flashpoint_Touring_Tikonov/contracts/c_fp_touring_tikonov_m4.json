@@ -13,7 +13,7 @@
     "goodFaithStatementOverride":  "You fell at the last hurdle, I will not hold that against you.",
     "shortDescription":  "Commander, I do not know what is down there, but whatever \"it\" is ate a whole lance of the 4th Crucis with little fuss. I need intel and I do not need more dead soldiers, so get me what I need. Do that and I can do right by you when you get back.",
     "longDescription":  "Commander, this might be nastier than it sounds. I do not believe in horror stories but the Crucis lancers did not walk away.",
-    "salvagePotential":  8,
+    "salvagePotential":  12,
     "requirementList":  [
 
                         ],
@@ -2973,8 +2973,8 @@
     "useTravelCostPenalty":  false,
     "usesExpiration":  false,
     "expirationTimeOverride":  -1,
-    "negotiatedSalary":  1,
-    "negotiatedSalvage":  1,
+    "negotiatedSalary":  0.5,
+    "negotiatedSalvage":  0.5,
     "excludedFromProceduralGeneration":  true,
     "player1Team":  {
                         "encounterLayerData":  {
