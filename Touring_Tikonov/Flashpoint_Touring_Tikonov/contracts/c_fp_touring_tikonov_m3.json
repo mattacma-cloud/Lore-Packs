@@ -9,7 +9,7 @@
     "finalDifficulty":  0,
     "shortDescription":  "Commander, the 4th Tau Ceti Rangers mean business and are well equipped. I will not sugar coat this: Expect serious opposition that is well equipped and knows how to fight. Best of luck to you; you are proving you know how to fight and I would prefer for you to come back in one piece.",
     "longDescription":  "Well-equipped and serious opposition make for interesting times. Be sharp down there commander.",
-    "salvagePotential":  8,
+    "salvagePotential":  12,
     "requirementList":  [
                             {
                                 "Scope":  "StarSystem",
@@ -722,8 +722,8 @@
     "useTravelCostPenalty":  false,
     "usesExpiration":  false,
     "expirationTimeOverride":  -1,
-    "negotiatedSalary":  1,
-    "negotiatedSalvage":  1,
+    "negotiatedSalary":  0.5,
+    "negotiatedSalvage":  0.5,
     "excludedFromProceduralGeneration":  true,
     "player1Team":  {
                         "encounterLayerData":  {
