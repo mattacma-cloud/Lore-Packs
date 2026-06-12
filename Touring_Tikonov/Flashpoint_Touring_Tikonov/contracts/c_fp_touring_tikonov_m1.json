@@ -8,7 +8,7 @@
     "finalDifficulty":  0,
     "shortDescription":  "Commander, I need you to get in close to Bulan and find out who is there. The CCAF is moving units about Tikonov constantly and we need a better understanding of what unit is garrisoning what area. Get in, get out, no fracking about.",
     "longDescription":  "Commander, this might be nastier than Travert is letting on. Capellans love defending in tight, be careful.",
-    "salvagePotential":  8,
+    "salvagePotential":  12,
     "requirementList":  [
 
                         ],
@@ -243,8 +243,8 @@
     "useTravelCostPenalty":  false,
     "usesExpiration":  false,
     "expirationTimeOverride":  -1,
-    "negotiatedSalary":  1,
-    "negotiatedSalvage":  1,
+    "negotiatedSalary":  0.5,
+    "negotiatedSalvage":  0.5,
     "excludedFromProceduralGeneration":  true,
     "player1Team":  {
                         "encounterLayerData":  {
