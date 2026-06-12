@@ -8,7 +8,7 @@
     "finalDifficulty":  0,
     "shortDescription":  "Commander, we are not sure what part of the Chesterton Voltigeurs are operating near New Moscow, and it is your job to find out. I do not care if you want to kill things, try to avoid the urge and just do your job. Glory can wait for another day.",
     "longDescription":  "No fighting. Uh huh. Let us see how that pans out.",
-    "salvagePotential":  8,
+    "salvagePotential":  12,
     "requirementList":  [
 
                         ],
@@ -405,8 +405,8 @@
     "useTravelCostPenalty":  false,
     "usesExpiration":  false,
     "expirationTimeOverride":  -1,
-    "negotiatedSalary":  1,
-    "negotiatedSalvage":  1,
+    "negotiatedSalary":  0.5,
+    "negotiatedSalvage":  0.5,
     "excludedFromProceduralGeneration":  true,
     "player1Team":  {
                         "encounterLayerData":  {
