@@ -3,6 +3,8 @@ The Lore Packs are intended to be a large series of campaigns that bring the can
 
 In order to develop the Lore Packs, significant research was undertaken into how to deliver new flashpoints as an unskilled mod maker. Any advice, hints and tips you might have are welcomed in making these Flashpoints better. I am only new to modding and I welcome any advice from those with more experience.
 
+Specail thanks to Victor Lapin for his assistance in getting this project off the ground.
+
 The planned series of Lore Packs are as follows:
 <img width="1973" height="1167" alt="image" src="https://github.com/user-attachments/assets/771133b8-5d72-40e4-9c04-3348c1aeecc4" />
 
