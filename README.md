@@ -18,18 +18,17 @@ For those seeking more on the Lore Packs, a high level overview and approach is 
 
 Touring Tikonov was my first attempt at a Flashpoint and it will later be the key start point of the Operation Rat Campaign of the 4th Succession War Lore Pack.
 
-**Lore Packs Development Map
-**Version Plan
+**Lore Packs Development Map Version Plan**
 
-RELEASED
+**RELEASED**
 
 0.1.0	Touring Tikonov 
 
-ACTIVE DEVELOPMENT
+**IN ACTIVE DEVELOPMENT**
 
 0.1.1	Ardan’s Meeting
 
-PRE-DEVELOPMENT
+**UNDERPRE-DEVELOPMENT**
 
 0.1.2	Screaming Eagles 
 
@@ -46,12 +45,12 @@ PRE-DEVELOPMENT
 0.1.8	Kathil Uhlans 
 
 
-SCOPED
+**SCOPED**
 
 0.1.9	Capellan Flashpoints
 
 
-PLANNED
+**PLANNED**
 
 0.2	Operation GOTTERDAMMERUNG - 
   3-5 Lyran regiments, plus the Tyr, similar for the DCMS
@@ -75,7 +74,7 @@ PLANNED
   Other battle not covered above as semi-Flashpoints (see Lore Pack Overview folder for details)
   
 
-POTENTIAL FUTURE DEVELOPMENT ORDER
+**POTENTIAL FUTURE DEVELOPMENT ORDER**
 
 2.0	Brush Wars - 
 	Andurien, Rasalhague, the invasion of the Confederation and the rumblings in Skye.
