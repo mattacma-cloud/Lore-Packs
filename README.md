@@ -18,12 +18,15 @@ Touring Tikonov was my first attempt at a Flashpoint and it will later be the ke
 **Version Plan
 
 RELEASED
+
 0.1.0	Touring Tikonov 
 
 ACTIVE DEVELOPMENT
+
 0.1.1	Ardan’s Meeting
 
 PRE-DEVELOPMENT
+
 0.1.2	Screaming Eagles 
 
 0.1.3	12th Vegan Rangers Delta Regiment
@@ -38,58 +41,65 @@ PRE-DEVELOPMENT
 
 0.1.8	Kathil Uhlans 
 
+
 SCOPED
+
 0.1.9	Capellan Flashpoints
+
 
 PLANNED
 
-0.2	Operation GOTTERDAMMERUNG
+0.2	Operation GOTTERDAMMERUNG - 
   3-5 Lyran regiments, plus the Tyr, similar for the DCMS
 
-0.3	The Dragon and the Wolf
+0.3	The Dragon and the Wolf - 
   Misery and the following campaigns. Fight alongside the Ryuken/Galedon Regulars or Wolf’s Dragoons
 
-0.4	Operation HAMMER
+0.4	Operation HAMMER - 
   FWLM attacks into the Lyran Commonwealth
 
-0.5	Operations RIPOSTE, HOLDUR and other DCMS offensives
+0.5	Operations RIPOSTE, HOLDUR and other DCMS offensives - 
   This would include lead ins like the Silver Eagle and the conflict between the Genyosha and Kell Hounds and the     DCMS and LCAF attacks, focusing on 1-2 units per side
 
-0.6	Tikonov Free Republic Offensives
+0.6	Tikonov Free Republic Offensives - 
   Short flashpoint series from the Tikonov/FWL conflict
 
-0.7	Mysteries of the Fourth Succession War
+0.7	Mysteries of the Fourth Succession War - 
   Sarna and New Avalon
 
-1.0	4th Succession War Semi-Flashpoints
+1.0	4th Succession War Semi-Flashpoints - 
   Other battle not covered above as semi-Flashpoints (see Lore Pack Overview folder for details)
+  
 
 POTENTIAL FUTURE DEVELOPMENT ORDER
-2.0	Brush Wars
+
+2.0	Brush Wars - 
 	Andurien, Rasalhague, the invasion of the Confederation and the rumblings in Skye.
 
-3.0 	Little Fires
+3.0 	Little Fires - 
 	The small battles and events through the 3040s.
 
-4.0 	Clan Invasion
+4.0 	Clan Invasion - 
 Operation REVIVAL and adapting Bloodright as a Clan Partnership Campaign and the Somerset Strikers
 
-5.0 	The Truce of Tukkayid
+5.0 	The Truce of Tukkayid - 
 	Red Corsair, Refusal War, the Falcon Incursion and other events in the Inner Sphere
 
-6.0 	End of the Clan Invasion
+6.0 	End of the Clan Invasion - 
 	Operations BIRD DOG and BULLDOG
 
-7.0 	The Fall of the Federated Commonwealth [FUTURE PACK]
+7.0 	The Fall of the Federated Commonwealth - 
 	The failure of the 2nd Star League and the start of the FedCom Civil War.
 
-8.0 	The Rise of Blake
+8.0 	The Rise of Blake - 
 	The end of the FedCom Civil War and the rise of the Word of Blake.
 
-9.0	Early Days 
+9.0	Early Days - 
   Pre-3028 Small Flashpoints – Left until near last, as the early period has many flashpoints for players.
-10.0 	Swords and Snords [FUTURE PACK]
+  
+10.0 	Swords and Snords - 
 	Following the wild exploits of Cranston and Rhonda Snord from 3025 onwards.
-11.0	The Buzz Killers [FUTURE PACK]
+	
+11.0	The Buzz Killers - 
 	A lore-adjacent tribute to my son and his love of the Wasp 
 
