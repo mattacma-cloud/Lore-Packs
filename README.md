@@ -17,50 +17,76 @@ Touring Tikonov was my first attempt at a Flashpoint and it will later be the ke
 **Lore Packs Development Map
 **Version Plan
 
-0.1.0	Touring Tikonov [Released]
+RELEASED
+0.1.0	Touring Tikonov 
 
-0.1.1	Ardan’s Meeting [Being worked on]
+ACTIVE DEVELOPMENT
+0.1.1	Ardan’s Meeting
 
-0.1.2	Screaming Eagles [On development list]
-0.1.3	12th Vegan Rangers Delta Regiment [On development list]
-0.1.4	4th Deneb Light Cavalry [On development list]
-0.1.5	33rd Avalon Hussars [On development list]
-0.1.6	3rd Davion Guards [On development list]
-0.1.7	7th Crucis Lancers [On development list]
-0.1.8	Kathil Uhlans [On development list]
+PRE-DEVELOPMENT
+0.1.2	Screaming Eagles 
 
-0.1.9	Capellan Flashpoints [Scoped]
+0.1.3	12th Vegan Rangers Delta Regiment
 
-0.2	Operation GOTTERDAMMERUNG [Unscoped]
+0.1.4	4th Deneb Light Cavalry 
+
+0.1.5	33rd Avalon Hussars 
+
+0.1.6	3rd Davion Guards 
+
+0.1.7	7th Crucis Lancers
+
+0.1.8	Kathil Uhlans 
+
+SCOPED
+0.1.9	Capellan Flashpoints
+
+PLANNED
+
+0.2	Operation GOTTERDAMMERUNG
   3-5 Lyran regiments, plus the Tyr, similar for the DCMS
-0.3	The Dragon and the Wolf [Unscoped]
+
+0.3	The Dragon and the Wolf
   Misery and the following campaigns. Fight alongside the Ryuken/Galedon Regulars or Wolf’s Dragoons
-0.4	Operation HAMMER [Unscoped]
+
+0.4	Operation HAMMER
   FWLM attacks into the Lyran Commonwealth
-0.6	Operations RIPOSTE, HOLDUR and other DCMS offensives [Unscoped]
+
+0.5	Operations RIPOSTE, HOLDUR and other DCMS offensives
   This would include lead ins like the Silver Eagle and the conflict between the Genyosha and Kell Hounds and the     DCMS and LCAF attacks, focusing on 1-2 units per side
-0.7	Tikonov Free Republic Offensives [Unscoped]
+
+0.6	Tikonov Free Republic Offensives
   Short flashpoint series from the Tikonov/FWL conflict
-0.9	Mysteries of the Fourth Succession War [Unscoped]
+
+0.7	Mysteries of the Fourth Succession War
   Sarna and New Avalon
-1.0	4th Succession War Semi-Flashpoints [Unscoped]
+
+1.0	4th Succession War Semi-Flashpoints
   Other battle not covered above as semi-Flashpoints (see Lore Pack Overview folder for details)
 
-2.0	Brush Wars [FUTURE PACK]
+POTENTIAL FUTURE DEVELOPMENT ORDER
+2.0	Brush Wars
 	Andurien, Rasalhague, the invasion of the Confederation and the rumblings in Skye.
-3.0 	Little Fires [FUTURE PACK]
+
+3.0 	Little Fires
 	The small battles and events through the 3040s.
-4.0 	Clan Invasion [FUTURE PACK]
+
+4.0 	Clan Invasion
 Operation REVIVAL and adapting Bloodright as a Clan Partnership Campaign and the Somerset Strikers
-5.0 	The Truce of Tukkayid [FUTURE PACK]
+
+5.0 	The Truce of Tukkayid
 	Red Corsair, Refusal War, the Falcon Incursion and other events in the Inner Sphere
-6.0 	End of the Clan Invasion [FUTURE PACK]
+
+6.0 	End of the Clan Invasion
 	Operations BIRD DOG and BULLDOG
+
 7.0 	The Fall of the Federated Commonwealth [FUTURE PACK]
 	The failure of the 2nd Star League and the start of the FedCom Civil War.
-8.0 	The Rise of Blake [FUTURE PACK]
+
+8.0 	The Rise of Blake
 	The end of the FedCom Civil War and the rise of the Word of Blake.
-9.0	Early Days [FUTURE PACK]
+
+9.0	Early Days 
   Pre-3028 Small Flashpoints – Left until near last, as the early period has many flashpoints for players.
 10.0 	Swords and Snords [FUTURE PACK]
 	Following the wild exploits of Cranston and Rhonda Snord from 3025 onwards.
