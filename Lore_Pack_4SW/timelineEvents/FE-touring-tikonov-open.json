@@ -1,0 +1,122 @@
+{
+    "Description":  {
+                        "Id":  "FE-touring-tikonov-open",
+                        "Name":  "MERCNET ADVISORY: Tikonov",
+                        "Details":  "MERCNET ADVISORY: The Armed Forces of the Federated Suns is seeking small mercanry units to support raids on key worlds. House Davion is looking to take advantage of the massing of troops during Operation GALAHAD and undertake Objective Raids agasint the Capellan Confederation and Draconis Combine. Mercenary Commands that wish to be considered for employent on this campaign should report their interest to the Department of Mercenary Relations representitive on [[DM.SystemDefs[starsystemdef_Tikonov],Tikonov]]: Lt. Colonel Marissa Travert.",
+                        "Icon":  "uixTxrTimeLine_ComStarNewsBureau.png"
+                    },
+    "Scope":  "Company",
+    "Weight":  0,
+    "Requirements":  {
+                         "Scope":  "Company",
+                         "RequirementTags":  {
+                                                 "items":  null,
+                                                 "tagSetSourceFile":  ""
+                                             },
+                         "ExclusionTags":  {
+                                               "items":  [
+                                                             "event_touring_tikonov_open_seen",
+                                                             "fp_finished_touring_tikonov"
+                                                         ],
+                                               "tagSetSourceFile":  "Tags/CompanyTags"
+                                           },
+                         "RequirementComparisons":  [
+
+                                                    ]
+                     },
+    "AdditionalRequirements":  [
+
+                               ],
+    "AdditionalObjects":  [
+
+                          ],
+    "Options":  [
+                    {
+                        "Description":  {
+                                            "Id":  "outcome_0",
+                                            "Name":  "Mercnet additional details",
+                                            "Details":  "Raiding campaigns of moderate duration for lighter forces are on offer, with standard renumeration and slavage rights available. OpFor expected to be moderate, as long as employed mercenaries remain within the bounds of the limited mission scope they will be engaged for.",
+                                            "Icon":  ""
+                                        },
+                        "RequirementList":  [
+
+                                            ],
+                        "ResultSets":  [
+                                           {
+                                               "Description":  {
+                                                                   "Id":  "outcome_0_0",
+                                                                   "Name":  "Rat Race flagged",
+                                                                   "Details":  "Mercnet additional details: Raiding campaigns of moderate duration for lighter forces are on offer, with standard renumeration and slavage rights available. OpFor expected to be moderate, as long as employed mercenaries remain within the bounds of the limited mission scope they will be engaged for.",
+                                                                   "Icon":  ""
+                                                               },
+                                               "Weight":  100,
+                                               "Results":  [
+                                                               {
+                                                                   "Scope":  "Company",
+                                                                   "Requirements":  null,
+                                                                   "AddedTags":  {
+                                                                                     "items":  [
+                                                                                                   "event_touring_tikonov_open_seen",
+                                                                                                   "touring_tikonov_available"
+                                                                                               ],
+                                                                                     "tagSetSourceFile":  "Tags/CompanyTags"
+                                                                                 },
+                                                                   "RemovedTags":  {
+                                                                                       "items":  null,
+                                                                                       "tagSetSourceFile":  ""
+                                                                                   },
+                                                                   "Stats":  null,
+                                                                   "Actions":  null,
+                                                                   "ForceEvents":  null,
+                                                                   "TemporaryResult":  false,
+                                                                   "ResultDuration":  0
+                                                               },
+                                                               {
+                                                                   "Scope":  "Company",
+                                                                   "Requirements":  null,
+                                                                   "AddedTags":  {
+                                                                                     "items":  null,
+                                                                                     "tagSetSourceFile":  ""
+                                                                                 },
+                                                                   "RemovedTags":  {
+                                                                                       "items":  null,
+                                                                                       "tagSetSourceFile":  ""
+                                                                                   },
+                                                                   "Stats":  null,
+                                                                   "Actions":  [
+                                                                                   {
+                                                                                       "Type":  "System_AddFlashpoint",
+                                                                                       "value":  "fp_touring_tikonov",
+                                                                                       "valueConstant":  null,
+                                                                                       "additionalValues":  [
+                                                                                                                "starsystemdef_Tikonov"
+                                                                                                            ]
+                                                                                   }
+                                                                               ],
+                                                                   "ForceEvents":  null,
+                                                                   "TemporaryResult":  false,
+                                                                   "ResultDuration":  0
+                                                               }
+                                                           ]
+                                           }
+                                       ],
+                        "Requirements":  {
+                                             "Scope":  "Company",
+                                             "RequirementTags":  {
+                                                                     "items":  null,
+                                                                     "tagSetSourceFile":  ""
+                                                                 },
+                                             "ExclusionTags":  {
+                                                                   "items":  null,
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                             "RequirementComparisons":  [
+
+                                                                        ]
+                                         }
+                    }
+                ],
+    "PublishState":  "PUBLISHED",
+    "ValidationState":  "UNTESTED",
+    "EventType":  "NORMAL"
+}

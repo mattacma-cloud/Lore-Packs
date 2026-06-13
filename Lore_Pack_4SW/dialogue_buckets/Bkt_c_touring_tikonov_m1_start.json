@@ -1,0 +1,21 @@
+{
+    "identifier":  "Bkt_c_touring_tikonov_m1_start",
+    "contents":  [
+                     {
+                         "cameraHeight":  "Default",
+                         "emote":  "Default",
+                         "wordsColor":  {
+                                            "g":  1,
+                                            "r":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "words":  "Do not expect this to be easy, Commander - Capellan forces on Tikonov are experienced in city fighting.",
+                         "cameraDistance":  "Far",
+                         "revealRadius":  -1,
+                         "cameraFocusGuid":  "",
+                         "selectedCastDefId":  "castDef_Travert",
+                         "audioName":  "NONE"
+                     }
+                 ]
+}

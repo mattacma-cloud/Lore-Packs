@@ -1,0 +1,39 @@
+{
+  "Name": "Lore_Pack_4SW",
+  "Enabled": true,
+  "Version": "0.1.0",
+  "Description": "BEXT Fourth Succession War Lore Pack (flat shared pools; fp stems group content).",
+  "Author": "Blacknova",
+  "DependsOn": [
+    "ModTek",
+    "BT_Extended",
+    "BT_Extended_Timeline",
+    "Timeline",
+    "ExtendedConversations",
+    "Mission Control",
+    "ColourfulFlashPoints"
+  ],
+  "DataAddendumEntries": [
+    { "name": "BattleTech.FactionEnumeration", "path": "enums/Faction.json" }
+  ],
+  "Manifest": [
+    { "Type": "FlashpointDef", "Path": "flashpoints", "AddToDB": true },
+    { "Type": "SimGameMilestoneSet", "Path": "milestoneSets" },
+    { "Type": "ContractOverride", "Path": "contracts", "AddToDB": true },
+    { "Type": "PilotDef", "Path": "pilot", "AddToDB": true },
+    { "Type": "SimGameConversations", "Path": "simGameConversations" },
+    { "Type": "CastDef", "Path": "cast" },
+    { "Type": "HeraldryDef", "Path": "heraldry" },
+    { "Type": "FactionDef", "Path": "factions" },
+    { "Type": "ItemCollectionDef", "Path": "itemCollections" },
+    { "Type": "DialogBucketDef", "Path": "conversationBuckets" },
+    { "Type": "ConversationContent", "Path": "dialogue_buckets" },
+    { "Type": "SimGameEventDef", "Path": "timelineEvents", "AddToDB": true },
+    { "Type": "ForcedTimelineEvent", "Path": "forcedEvents" },
+    { "Type": "Sprite", "Path": "portraits" },
+    { "Type": "Sprite", "Path": "sprites" },
+    { "Type": "Texture2D", "Path": "sprites" },
+    { "Type": "Texture2D", "Path": "textures", "AddToAddendum": "ConversationTexture" },
+    { "Type": "BaseDescriptionDef", "Path": "baseDescriptions", "AddToDB": true }
+  ]
+}

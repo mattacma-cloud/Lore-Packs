@@ -1,0 +1,10 @@
+{
+  "useHmAnimation": true,
+  "flashpointPrefix": "fp_touring_tikonov",
+  "swapColour": true,
+  "useOnlyInner": true,
+  "autoDetectContracts": true,
+  "useContractColourOverride": true,
+  "innerCircle": { "Colour": "#FFDC6B", "Alpha": 0.44 },
+  "contractColour": { "Colour": "#FFDC6B", "Alpha": 0.35 }
+}

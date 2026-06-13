@@ -1,0 +1,21 @@
+{
+    "identifier":  "Bkt_c_touring_tikonov_m4_start2",
+    "contents":  [
+                     {
+                         "cameraHeight":  "Default",
+                         "emote":  "Default",
+                         "wordsColor":  {
+                                            "g":  1,
+                                            "r":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "words":  "Colonel Travert? Can you hear me? Colonel Travert?",
+                         "cameraDistance":  "Far",
+                         "revealRadius":  -1,
+                         "cameraFocusGuid":  "",
+                         "selectedCastDefId":  "castDef_Shannahan",
+                         "audioName":  "NONE"
+                     }
+                 ]
+}
