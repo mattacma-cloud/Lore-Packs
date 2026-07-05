@@ -1,0 +1,21 @@
+{
+  "identifier": "bkt_AEWA_106_Mission1_3_homeguard",
+  "contents": [
+    {
+      "words": "Tanks on the flank, Commander...lots of them!",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_DariusDefault",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

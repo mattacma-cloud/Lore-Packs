@@ -1,0 +1,21 @@
+{
+  "identifier": "bkt_AEWA_104_Mission1_2_building_damaged",
+  "contents": [
+    {
+      "words": "That structure is coming apart a little too easily...",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_DariusDefault",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

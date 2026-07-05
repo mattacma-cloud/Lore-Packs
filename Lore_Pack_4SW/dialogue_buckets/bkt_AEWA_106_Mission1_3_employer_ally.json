@@ -1,0 +1,21 @@
+{
+  "identifier": "bkt_AEWA_106_Mission1_3_employer_ally",
+  "contents": [
+    {
+      "words": "Lieutenant Ellen has the other flank and will try and pin the enemy forces in place with me.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Ian_McKinnon",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

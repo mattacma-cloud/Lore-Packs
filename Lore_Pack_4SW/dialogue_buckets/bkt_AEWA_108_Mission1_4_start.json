@@ -1,0 +1,53 @@
+{
+  "identifier": "bkt_AEWA_108_Mission1_4_start",
+  "contents": [
+    {
+      "words": "Commander, the Seventh have thier hands full with Rizdik.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Ian_McKinnon",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "We need to take out this command node so they can have the advantage.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Ian_McKinnon",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "You have the lead, my lance is here as support for you.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Ian_McKinnon",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

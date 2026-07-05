@@ -1,0 +1,21 @@
+{
+  "identifier": "bkt_AEWA_104_Mission1_2_building_destroyed",
+  "contents": [
+    {
+      "words": "You really are quite gullible, aren't you, Commander. Twice the fool, and shame on you!",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Liao_Ina_Diaconu",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

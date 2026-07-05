@@ -1,0 +1,21 @@
+{
+  "identifier": "bkt_AEWA_104_Mission1_2_success",
+  "contents": [
+    {
+      "words": "Well fought under poor circumstances. We'll get these Maskirovka sneaks, but before then, we have eight RCT's to welcome to Tikonov.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Ian_McKinnon",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "identifier": "bkt_AEWA_102_Mission1_1_start",
+  "contents": [
+    {
+      "words": "Alright, Commander. The convoy's on its way towards you. Smash it and steal anything that's left...hold on, we're getting some hinky returns of the convoy...I hope those Exterminators are not on line.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Ian_McKinnon",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}
