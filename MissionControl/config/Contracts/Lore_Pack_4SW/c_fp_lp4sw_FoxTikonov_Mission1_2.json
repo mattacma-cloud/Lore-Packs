@@ -1,0 +1,33 @@
+{
+	"ID": "c_fp_lp4sw_FoxTikonov_Mission1_2",
+	"RandomSpawns": {
+		"Enable": false
+	},
+	"HotDropProtection": {
+		"Enable": false
+	},
+	"AdditionalLances": {
+		"Enable": false,
+		"EnemyLanceCount": 2,
+		"AllyLanceCount": 1
+	},
+	"ExtendedLances": {
+		"Enable": false,
+		"TargetLanceSize": 4,
+		"EmployerLanceSize": 4,
+		"TargetAllyLanceSize": 4,
+		"EmployerAllyLanceSize": 4,
+		"HostileToAllLanceSize": 4,
+		"NeutralToAllLanceSize": 4
+	},
+	"ExtendedBoundaries": {
+		"Enable": true,
+		"IncreaseBoundarySizeByPercentage": 0.6
+	},
+	"DynamicWithdraw": {
+		"Enable": false
+	},
+	"AdditionalPlayerMechs": {
+		"Enable": false
+	}
+}

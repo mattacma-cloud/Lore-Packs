@@ -1,0 +1,38 @@
+{
+	"ID": "c_fp_lp4sw_FoxTikonov_Mission1_4",
+	"RandomSpawns": {
+		"Enable": false
+	},
+	"HotDropProtection": {
+		"Enable": false
+	},
+	"AdditionalLances": {
+		"Enable": true,
+		"EnemyLanceCount": 0,
+		"AllyLanceCount": 1,
+		"AllyLances": [
+			"lp4sw_FoxTeeth_McKinnon_Raiders"
+		],
+		"UseDialogue": false
+	},
+	"ExtendedLances": {
+		"Enable": true,
+		"TargetLanceSize": 4,
+		"EmployerLanceSize": 0,
+		"TargetAllyLanceSize": 4,
+		"EmployerAllyLanceSize": 4,
+		"HostileToAllLanceSize": 4,
+		"NeutralToAllLanceSize": 4,
+		"Autofill": false
+	},
+	"ExtendedBoundaries": {
+		"Enable": false,
+		"IncreaseBoundarySizeByPercentage": 0.6
+	},
+	"DynamicWithdraw": {
+		"Enable": false
+	},
+	"AdditionalPlayerMechs": {
+		"Enable": false
+	}
+}
