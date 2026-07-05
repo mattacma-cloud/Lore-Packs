@@ -18,31 +18,44 @@ For those seeking more on the Lore Packs, a high level overview and approach is 
 
 Touring Tikonov was my first attempt at a Flashpoint and it will later be the key start point of the Operation Rat Campaign of the 4th Succession War Lore Pack.
 
+**NSTALLATION**
+Drag the Lore_Pack_4SW and MissionControl folders into your \BATTLETECH\Mods folder
+
+**GAME PLAY NOTES AS OF RELEASE 0.1.3**
+
+You must complete Touring Tikonov, or use the BattleTech Save Editor to give yourself the tag "Ardan_is_Interested", in order for An Evening with Ardan to spawn.
+
+**ONLY** choose the 7th Crucis Lancer's option at this time, as the other 4 Flashpoints are not yet delivered and you will get nothing more than a note from Darius if you choose the in An Evening with Ardan.
+
+Once you complte An Evening with Ardan, you must advance the timeline one day and then the Tikonov Flashpoint will spawn.
+
+**NOTE:** Foxes of Tikonov is not designed to be an easy Flashpoint. You are limited to a 200 ton lance and will fauce difficult missions agasint skilled, well equipped, and numerous foes. If you started a 3028 career, you'll get properly pasted. Until the other Davion flshpoints are ready (they will have lower difficulty settings), use a 3025 or post-Arano campaign, or the BattleTech Save Editor, so that you can have a fair chance at finshing the 7th Crucis Lancer Flashpoint.
+
 **Lore Packs Development Map Version Plan**
 
 **RELEASED**
 
 0.1.0	Touring Tikonov 
+0.1.1	An Evening with Ardan
+0.1.3	Foxes of Tikonov (7th Crucis Lancers)
+
 
 **IN ACTIVE DEVELOPMENT**
 
-0.1.1	Ardan’s Meeting
+0.1.4	3rd Davion Guards 
+
 
 **UNDERPRE-DEVELOPMENT**
 
-0.1.2	Screaming Eagles 
-
-0.1.3	12th Vegan Rangers Delta Regiment
-
-0.1.4	4th Deneb Light Cavalry 
-
 0.1.5	33rd Avalon Hussars 
 
-0.1.6	3rd Davion Guards 
+0.1.6	4th Deneb Light Cavalry 
 
-0.1.7	7th Crucis Lancers
+0.1.7	12th Vegan Rangers Delta Regiment
 
-0.1.8	Kathil Uhlans 
+0.1.8	Screaming Eagles 
+
+0.1.9	Kathil Uhlans 
 
 
 **SCOPED**
