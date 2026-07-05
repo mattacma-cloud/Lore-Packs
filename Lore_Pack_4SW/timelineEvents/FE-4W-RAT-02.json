@@ -1,0 +1,86 @@
+{
+  "Description": {
+    "Icon": "uixTxrSpot_fp_lp4sw_AEWA.png",
+    "Name": "MERC NET WAR ALERT CANCELLED",
+    "Id": "FE-4W-RAT-02",
+    "Details": "MERC NET WAR ALERT CANCELLED: Mercenary commands are advised of the ending of hostilities in the following systems: [[DM.SystemDefs[starsystemdef_Angol],Angol]]."
+  },
+  "Scope": "Company",
+  "Weight": 0,
+  "Requirements": {
+    "Scope": "Company",
+    "RequirementTags": {
+      "items": [
+        "AEWA_Active"
+      ],
+      "tagSetSourceFile": "Tags/CompanyTags"
+    },
+    "RequirementComparisons": [],
+    "ExclusionTags": {
+      "items": [
+        "fp_finished_AEWA"
+      ],
+      "tagSetSourceFile": "Tags/CompanyTags"
+    }
+  },
+  "AdditionalRequirements": [],
+  "AdditionalObjects": [],
+  "Options": [
+    {
+      "Description": {
+        "Icon": "",
+        "Name": "Understood.",
+        "Id": "outcome_0",
+        "Details": "Acknowledge."
+      },
+      "RequirementList": [],
+      "ResultSets": [
+        {
+          "Description": {
+            "Icon": "",
+            "Name": "Offer closed",
+            "Id": "outcome_0_0",
+            "Details": "The contract is no longer available."
+          },
+          "Weight": 100,
+          "Results": [
+            {
+              "Scope": "Company",
+              "Requirements": null,
+              "AddedTags": {
+                "items": [],
+                "tagSetSourceFile": "Tags/CompanyTags"
+              },
+              "RemovedTags": {
+                "items": [
+                  "AEWA_Active"
+                ],
+                "tagSetSourceFile": "Tags/CompanyTags"
+              },
+              "Stats": null,
+              "Actions": null,
+              "ForceEvents": null,
+              "TemporaryResult": false,
+              "ResultDuration": 0
+            }
+          ]
+        }
+      ],
+      "Requirements": {
+        "Scope": "Company",
+        "RequirementTags": {
+          "items": null,
+          "tagSetSourceFile": ""
+        },
+        "RequirementComparisons": [],
+        "ExclusionTags": {
+          "items": null,
+          "tagSetSourceFile": ""
+        }
+      }
+    }
+  ],
+  "PublishState": "PUBLISHED",
+  "ValidationState": "UNTESTED",
+  "EventType": "NORMAL"
+}
