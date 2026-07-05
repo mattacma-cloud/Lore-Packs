@@ -25,6 +25,17 @@ Touring Tikonov was my first attempt at a Flashpoint and it will later be the ke
 Drag the Lore_Pack_4SW and MissionControl folders into your \BATTLETECH\Mods folder
 
 
+**CURRENT DEPENDENCIES**
+
+- ModTek
+- BT_Extended
+- BT_Extended_Timeline
+- Timeline
+- ExtendedConversations
+- Mission Control
+- ColourfulFlashPoint
+
+
 **GAME PLAY NOTES AS OF RELEASE 0.1.3**
 
 You must complete Touring Tikonov, or use the BattleTech Save Editor to give yourself the tag "Ardan_is_Interested", in order for An Evening with Ardan to spawn.
