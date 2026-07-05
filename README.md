@@ -1,4 +1,5 @@
-<img width="899" height="440" alt="GitHub Title Image" src="https://github.com/user-attachments/assets/2bab22e5-ef65-4fd2-bee7-f9228c828e16" />
+<img width="750" height="300" alt="uixTxrSpot_fp_lp4sw_AEWA" src="https://github.com/user-attachments/assets/d85f2b71-cd30-4151-a507-2384ec993d92" />
+
 
 # Lore-Packs
 The Lore Packs are intended to be a large series of campaigns that bring the canon BattleTech timeline to life for BattleTech Extended - Tactics.
