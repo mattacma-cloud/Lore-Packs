@@ -1,0 +1,18 @@
+{
+    "Description" : {
+        "Cost" : 0,
+        "Rarity" : 1,
+        "Purchasable" : false,
+        "Manufacturer" : "null",
+        "Model" : "null",
+        "UIName" : "null",
+        "Id" : "heraldrydef_Liao_AEWA_CR_JG",
+        "Name" : "Justine's Grenadiers",
+        "Details" : "This is the heraldry def for Justine's Grenadiers",
+        "Icon" : ""
+    },
+    "textureLogoID" : "uixTxrLogo_AEWA_CapRes",
+    "primaryMechColorID" : "Red_02",
+    "secondaryMechColorID" : "Greyscale_05",
+    "tertiaryMechColorID" : "Metallic_Gold"
+}

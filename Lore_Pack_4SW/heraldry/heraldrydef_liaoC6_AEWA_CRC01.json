@@ -1,0 +1,18 @@
+{
+    "Description" : {
+        "Cost" : 0,
+        "Rarity" : 1,
+        "Purchasable" : false,
+        "Manufacturer" : "null",
+        "Model" : "null",
+        "UIName" : "null",
+        "Id" : "heraldrydef_liaoC6_AEWA_CRC01",
+        "Name" : "1st Confederation Reserve Cavalry",
+        "Details" : "This is the heraldry def for 1st Confederation Reserve Cavalry",
+        "Icon" : ""
+    },
+    "textureLogoID" : "uixTxrLogo_LiaoC6",
+    "primaryMechColorID" : "Green_04",
+    "secondaryMechColorID" : "Orange_02",
+    "tertiaryMechColorID" : "Yellow_02"
+}

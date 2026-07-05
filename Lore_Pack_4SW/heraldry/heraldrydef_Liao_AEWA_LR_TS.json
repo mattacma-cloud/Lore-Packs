@@ -1,0 +1,17 @@
+{
+    "Description" : {
+        "Cost" : 0,
+        "Rarity" : 1,
+        "Purchasable" : false,
+        "Manufacturer" : "null",
+        "Model" : "null",
+        "UIName" : "null",
+        "Id" : "heraldrydef_Liao_AEWA_LR_TS",
+        "Name" : "Trimaldi's Secutors",
+        "Details" : "This is the heraldry def for Trimaldi's Secutors",
+        "Icon" : ""
+    },
+    "textureLogoID" : "uixTxrLogo_AEWA_LiaRes",
+    "primaryMechColorID" : "BrightWhite_012",
+    "secondaryMechColorID" : "BrightWhite_01",
+    "tertiaryMechColorID" : "Greyscale_01"}

@@ -1,0 +1,18 @@
+{
+    "Description" : {
+        "Cost" : 0,
+        "Rarity" : 1,
+        "Purchasable" : false,
+        "Manufacturer" : "null",
+        "Model" : "null",
+        "UIName" : "null",
+        "Id" : "heraldrydef_DavionA7_AEWA_FT",
+        "Name" : "7th Crucis Lancers - McKinnon's Company",
+        "Details" : "This is the heraldry def for McKinnon's Company, 7th Crucis Lancers",
+        "Icon" : ""
+    },
+    "textureLogoID" : "uixTxrLogo_AEWA_7CL_FT",
+    "primaryMechColorID" : "Green_03",
+    "secondaryMechColorID" : "Yellow_04",
+    "tertiaryMechColorID" : "Blue_02"
+}
