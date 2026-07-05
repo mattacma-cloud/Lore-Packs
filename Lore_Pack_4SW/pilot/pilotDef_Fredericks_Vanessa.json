@@ -1,0 +1,42 @@
+{
+    "Description":  {
+                        "Id":  "pilotDef_Fredericks_Vanessa",
+                        "Name":  "Vanessa Fredericks",
+                        "FirstName":  "Vanessa",
+                        "LastName":  "Fredericks",
+                        "Callsign":  "",
+                        "Gender":  "Female",
+                        "factionID":  "Liao",
+                        "Age":  30,
+                        "Details":  "Major in Trimaldi's Secutors.",
+                        "Icon":  "guiTxrPort_Vanessa_Fredericks"
+                    },
+    "BaseGunnery":  "6",
+    "BonusGunnery":  0,
+    "BasePiloting":  "6",
+    "BonusPiloting":  0,
+    "BaseGuts":  "5",
+    "BonusGuts":  0,
+    "BaseTactics":  "5",
+    "BonusTactics":  0,
+    "ExperienceUnspent":  0,
+    "ExperienceSpent":  0,
+    "Injuries":  0,
+    "Health":  3,
+    "LethalInjury":  false,
+    "Incapacitated":  false,
+    "Morale":  0,
+    "Voice":  "m_pro07_allan",
+    "abilityDefNames":  [
+                       "AbilityDefG5",
+                       "AbilityDefP5"
+                        ],
+    "AIPersonality":  "Undefined",
+    "PilotTags":  {
+                      "items":  [                                    
+                                    "BLACKLISTED"
+                                ],
+                      "tagSetSourceFile":  ""
+                  },
+    "PilotCost":  0
+}

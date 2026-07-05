@@ -1,0 +1,42 @@
+{
+  "BaseGunnery": "6",
+  "BonusGunnery": 0,
+  "BasePiloting": "5",
+  "BonusPiloting": 0,
+  "BaseGuts": "5",
+  "BonusGuts": 0,
+  "BaseTactics": "6",
+  "BonusTactics": 0,
+  "ExperienceUnspent": 0,
+  "ExperienceSpent": 0,
+  "Injuries": 0,
+  "Health": 3,
+  "LethalInjury": false,
+  "Incapacitated": false,
+  "Morale": 0,
+  "Voice": "m_pro07_allan",
+  "abilityDefNames": [
+    "AbilityDefG5",
+    "AbilityDefP5"
+  ],
+  "AIPersonality": "Undefined",
+  "PilotTags": {
+    "items": [
+      "BLACKLISTED"
+    ],
+    "tagSetSourceFile": ""
+  },
+  "PilotCost": 0,
+  "Description": {
+    "Id": "pilotDef_Lytton_George",
+    "Name": "George Lytton",
+    "FirstName": "George",
+    "LastName": "Lytton",
+    "Callsign": "",
+    "Gender": "Male",
+    "factionID": "Davion",
+    "Age": 30,
+    "Details": "Fox's Teeth — McKinnon's Company",
+    "Icon": "guiTxrPort_TEMPLATE_NamedAlly"
+  }
+}
