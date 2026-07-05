@@ -42,9 +42,9 @@ You must complete Touring Tikonov, or use the BattleTech Save Editor to give you
 
 **ONLY** choose the 7th Crucis Lancer's option at this time, as the other 4 Flashpoints are not yet delivered and you will get nothing more than a note from Darius if you choose the in An Evening with Ardan.
 
-Once you complte An Evening with Ardan, you must advance the timeline one day and then the Tikonov Flashpoint will spawn.
+Once you complete An Evening with Ardan, you must advance the timeline one day and then the Tikonov Flashpoint will spawn.
 
-**NOTE:** Foxes of Tikonov is not designed to be an easy Flashpoint. You are limited to a 200 ton lance and will fauce difficult missions agasint skilled, well equipped, and numerous foes. If you started a 3028 career, you'll get properly pasted. Until the other Davion flshpoints are ready (they will have lower difficulty settings), use a 3025 or post-Arano campaign, or the BattleTech Save Editor, so that you can have a fair chance at finshing the 7th Crucis Lancer Flashpoint.
+**NOTE:** Foxes of Tikonov is not designed to be an easy Flashpoint. You are limited to a 200 ton lance and will face difficult missions against skilled, well equipped, and numerous foes. If you started a 3028 career, you'll get properly pasted. Until the other Davion flshpoints are ready (they will have lower difficulty settings), use a 3025 or post-Arano campaign, or the BattleTech Save Editor, so that you can have a fair chance at finshing the 7th Crucis Lancer Flashpoint.
 
 
 **Lore Packs Development Map Version Plan**
