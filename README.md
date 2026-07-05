@@ -19,8 +19,10 @@ For those seeking more on the Lore Packs, a high level overview and approach is 
 
 Touring Tikonov was my first attempt at a Flashpoint and it will later be the key start point of the Operation Rat Campaign of the 4th Succession War Lore Pack.
 
-**NSTALLATION**
+
+**INSTALLATION**
 Drag the Lore_Pack_4SW and MissionControl folders into your \BATTLETECH\Mods folder
+
 
 **GAME PLAY NOTES AS OF RELEASE 0.1.3**
 
@@ -31,6 +33,7 @@ You must complete Touring Tikonov, or use the BattleTech Save Editor to give you
 Once you complte An Evening with Ardan, you must advance the timeline one day and then the Tikonov Flashpoint will spawn.
 
 **NOTE:** Foxes of Tikonov is not designed to be an easy Flashpoint. You are limited to a 200 ton lance and will fauce difficult missions agasint skilled, well equipped, and numerous foes. If you started a 3028 career, you'll get properly pasted. Until the other Davion flshpoints are ready (they will have lower difficulty settings), use a 3025 or post-Arano campaign, or the BattleTech Save Editor, so that you can have a fair chance at finshing the 7th Crucis Lancer Flashpoint.
+
 
 **Lore Packs Development Map Version Plan**
 
