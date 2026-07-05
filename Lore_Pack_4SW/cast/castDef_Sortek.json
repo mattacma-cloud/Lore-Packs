@@ -1,0 +1,20 @@
+{
+  "defaultEmotePortrait": {
+    "emote": "Default",
+    "portraitAssetPath": "../../Mods/Lore_Pack_4SW/portraits/guiTxrPort_Sortek.png"
+  },
+  "id": "castDef_Sortek",
+  "showFirstName": true,
+  "factionID": "Davion",
+  "showLastName": true,
+  "firstName": "Ardan",
+  "showCallsign": false,
+  "emotePotraitList": [],
+  "rank": "Colonel",
+  "sgCharType": "UNSET",
+  "showRank": true,
+  "callsign": "Sortek",
+  "lastName": "Sortek",
+  "internalName": "Sortek",
+  "gender": "Male"
+}

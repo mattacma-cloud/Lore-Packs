@@ -1,0 +1,22 @@
+{
+    "id" : "castDef_Davion_Vernon_Fredricks",
+    "internalName" : "Davion_Vernon_Fredricks",
+    "firstName" : "Vernon",
+    "lastName" : "Fredricks",
+    "callsign" : "",
+    "rank" : "Marshall",
+    "gender" : "Male",
+    "factionID" : "Davion",
+    "sgCharType" : "UNSET",
+    "showRank" : true,
+    "showFirstName" : true,
+    "showCallsign" : false,
+    "showLastName" : true,
+    "defaultEmotePortrait" : {
+        "emote" : "Default",
+        "portraitAssetPath" : "Portraits/guiTxrPort_Fredricks.png"
+    },
+    "emotePotraitList" : [
+        
+    ]
+}

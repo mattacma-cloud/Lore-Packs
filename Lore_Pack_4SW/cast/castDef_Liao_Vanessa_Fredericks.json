@@ -1,0 +1,23 @@
+{
+    "id" : "castDef_Liao_Vanessa_Fredericks",
+    "internalName" : "Liao_Vanessa_Fredericks",
+    "firstName" : "Vanessa",
+    "lastName" : "Fredericks",
+    "callsign" : "",
+    "rank" : "Major",
+    "gender" : "Female",
+    "factionID" : "Liao",
+    "sgCharType" : "UNSET",
+    "showRank" : true,
+    "showFirstName" : true,
+    "showCallsign" : false,
+    "showLastName" : true,
+    "localizeName" : true,
+    "defaultEmotePortrait" : {
+        "emote" : "Default",
+        "portraitAssetPath" : "Portraits/guiTxrPort_Vanessa_Fredericks.png"
+    },
+    "emotePotraitList" : [
+        
+    ]
+}

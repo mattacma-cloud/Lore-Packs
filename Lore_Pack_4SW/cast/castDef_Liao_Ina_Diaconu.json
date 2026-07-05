@@ -1,0 +1,23 @@
+{
+    "id" : "castDef_Liao_Ina_Diaconu",
+    "internalName" : "Liao_Ina_Diaconu",
+    "firstName" : "Ina",
+    "lastName" : "Diaconu",
+    "callsign" : "",
+    "rank" : "Maskirovka Agent",
+    "gender" : "Female",
+    "factionID" : "Liao",
+    "sgCharType" : "UNSET",
+    "showRank" : true,
+    "showFirstName" : true,
+    "showCallsign" : false,
+    "showLastName" : true,
+    "localizeName" : true,
+    "defaultEmotePortrait" : {
+        "emote" : "Default",
+        "portraitAssetPath" : "../../Mods/Lore_Pack_4SW/portraits/guiTxrPort_Ina_Diaconu.png"
+    },
+    "emotePotraitList" : [
+        
+    ]
+}

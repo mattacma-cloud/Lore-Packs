@@ -1,0 +1,23 @@
+{
+    "id" : "castDef_Liao_Tormana_Liao",
+    "internalName" : "Liao_Tormana_Liao",
+    "firstName" : "Tormana",
+    "lastName" : "Liao",
+    "callsign" : "",
+    "rank" : "Major",
+    "gender" : "Male",
+    "factionID" : "Liao",
+    "sgCharType" : "UNSET",
+    "showRank" : true,
+    "showFirstName" : true,
+    "showCallsign" : false,
+    "showLastName" : true,
+    "localizeName" : true,
+    "defaultEmotePortrait" : {
+        "emote" : "Default",
+        "portraitAssetPath" : "Portraits/guiTxrPort_Tormana_Liao"
+    },
+    "emotePotraitList" : [
+        
+    ]
+}

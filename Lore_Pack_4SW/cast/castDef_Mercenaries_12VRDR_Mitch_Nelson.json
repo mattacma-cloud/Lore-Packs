@@ -1,0 +1,23 @@
+{
+    "id" : "castDef_Mercenaries_12VRDR_Mitch_Nelson",
+    "internalName" : "Mercenaries_12VRDR_Mitch_Nelson",
+    "firstName" : "Mitch",
+    "lastName" : "Nelson",
+    "callsign" : "",
+    "rank" : "Colonel",
+    "gender" : "Male",
+    "factionID" : "AuriganMercenaries",
+    "sgCharType" : "UNSET",
+    "showRank" : true,
+    "showFirstName" : true,
+    "showCallsign" : false,
+    "showLastName" : true,
+    "localizeName" : true,
+    "defaultEmotePortrait" : {
+        "emote" : "Default",
+        "portraitAssetPath" : "Portraits/guiTxrPort_Nelson.png"
+    },
+    "emotePotraitList" : [
+        
+    ]
+}
