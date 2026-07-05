@@ -21,6 +21,7 @@ Touring Tikonov was my first attempt at a Flashpoint and it will later be the ke
 
 
 **INSTALLATION**
+
 Drag the Lore_Pack_4SW and MissionControl folders into your \BATTLETECH\Mods folder
 
 
