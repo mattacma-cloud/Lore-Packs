@@ -1,0 +1,68 @@
+{
+  "AllowRefitTime": true,
+  "AvailableTimeout": 0,
+  "Description": {
+    "Icon": "uixTxrSpot_fp_lp4sw_AEWA.png",
+    "Name": "An Evening with Ardan",
+    "Id": "fp_lp4sw_AEWA",
+    "Details": "I am Colonel Ardan Sortek, and I wish to meet with you on Angol."
+  },
+  "InProgressTimeout": 0,
+  "UnitDropTonnageHint": "Mixed",
+  "Repeatable": false,
+  "FlashpointDescriberCastDefId": "castDef_Sortek",
+  "LocationRequirements": {
+    "Scope": "StarSystem",
+    "RequirementTags": {
+      "items": [],
+      "tagSetSourceFile": "Tags/PlanetNameTags"
+    },
+    "RequirementComparisons": [],
+    "ExclusionTags": {
+      "items": [],
+      "tagSetSourceFile": ""
+    }
+  },
+  "RewardCollectionID": "itemCollection_loot_none",
+  "TargetFaction": "Liao",
+  "PotentialEmployers": [
+    "Davion"
+  ],
+  "PublishState": "PUBLISHED",
+  "FlashpointShortDescription": "I am Colonel Ardan Sortek, and I wish to meet with you on Angol.",
+  "MilestoneSetID": "ms_fp_lp4sw_AEWA",
+  "Difficulty": 1,
+  "Tags": {
+    "items": [
+      "BLACKLISTED"
+    ],
+    "tagSetSourceFile": "tags/FlashpointTags"
+  },
+  "UseAvailableTimeoutOverride": false,
+  "UseInProgressTimeoutOverride": false,
+  "Requirements": [
+    {
+      "Scope": "Company",
+      "RequirementTags": {
+        "items": [
+          "Ardan_is_Interested",
+          "AEWA_Active"
+        ],
+        "tagSetSourceFile": "Tags/CompanyTags"
+      },
+      "RequirementComparisons": [],
+      "ExclusionTags": {
+        "items": [
+          "fp_finished_AEWA_failed",
+          "fp_finished_AEWA",
+          "fp_touring_tikonov_failed"
+        ],
+        "tagSetSourceFile": "Tags/CompanyTags"
+      }
+    }
+  ],
+  "LanceDropTonnageHint": "None",
+  "FlashpointLength": "SHORT",
+  "InternalName": "lp4sw_AEWA",
+  "Weight": 10
+}
