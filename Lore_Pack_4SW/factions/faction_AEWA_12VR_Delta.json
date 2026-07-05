@@ -1,0 +1,69 @@
+{
+    "ID" : "faction_AEWA_12VR_Delta",
+    "Name" : "12th Vegan Rangers - Delta Regiment",
+    "ShortName" : "Delta Regiment",
+    "Description" : "Federated Suns hired Mercenaries\r\n\r\nEquipment Rating: Poor\r\n\r\nFormed during the 1st Succession War, sometime prior to Summer 2829, by Lawrence Helmund Nelson, rightful Duke of Verde.\r\n\r\nNelson was inspired by the book \"Eleven Against the Stars\" written by Loran, a Ranger in the Vega System. Loran was one of eleven Rangers, men who plied the long lonely routes between the two inhabited planets within the system. Nelson, on the run from enemies of his family, named himself the 12th Vegan Ranger. In this guise he started to build a mercenary unit to support his struggle to reclaim his birthright. Hence the 12th Vegan Rangers were born.",
+    "Demonym" : "Davion",
+    "Government" : "Federation",
+    "Allies" : [
+        "ComStar",
+        "Steiner",
+		"MagistracyOfCanopus",
+		"Ives",
+		"Davion"
+    ],
+    "Enemies" : [
+        "Kurita",
+        "Liao",
+		"Rasalhague",
+        "AuriganPirates",
+        "Locals",
+        "TaurianConcordat",
+		"Outworld",
+		"Tortuga",
+		"Andurien",
+		"Wolf",
+		"GhostBear",
+		"JadeFalcon",
+		"SmokeJaguar",
+		"NovaCat", "DiamondShark",
+		"SteelViper"
+    ],
+    "Presence" : 1,
+    "ReputationStatements" : [
+        "We have a job for you, Mercenary scum. As distasteful as that is to us.",
+        "Mercenary though you may be, you seem effective enough. House Davion has need of your skills, Commander.",
+        "Greetings, Commander. House Davion requires aid from someone outside of our own forces. Hopefully you can help us.",
+        "House Davion requires mercenaries of skill, Commander, and you fit the bill nicely. With luck, we will both profit from this arrangement.",
+        "You have served us well in the past, Commander. We value this relationship, and would like to preserve it.",
+        "Greetings, Commander. Once again, House Davion requires your services. Should you be successful, we will both profit.",
+        "Honored friend! Your acts in service to House Davion have not been forgotten. In light of this, we present you with this choice contract."
+    ],
+    "MissionSuccessStatements" : [ 
+		"Excellent performance, Commander. The Federated Suns are pleased with what you have accomplished and the skill you've evidenced. Expect our payment in full!",
+    ], 
+	"GoodFaithFailureStatements" : [ 
+		"Well, let it never be said House Davion does not believe in charity. Obviously, your skills could not be equivalent to our own regular armies\u2014so we do not blame you for your inability to complete the contract.",
+    ],
+	"BadFaithFailureStatements" : [ 
+		"Come now, mercenary\u2014did you even try to complete the contract, or did you believe we'd pay you for your own inadequacies? Such a dismal performance cannot be rewarded, only reprimanded.",
+    ],
+	"DefaultCombatLeaderCastDefId" : "castDef_DavionDefaultCommander",
+    "DefaultRepresentativeCastDefId" : "castDef_DavionRepDefault",
+    "DataManager" : null,
+    "factionID" : "AEWA_12VR_Delta",
+  	"icon" : "uixTxrLogo_AEWA_12VR_Delta",
+    "heraldryDefId" : "heraldrydef_AEWA_12VR_Delta",
+    "storePanelImage" : null,
+    "factionStoreColor" : null,
+    "StartingReputationValues" : [
+        -5,
+        -10,
+        0
+    ],
+    "StartingReputationModes" : [
+        "KAMEA_CAMPAIGN",
+        "CAREER",
+        "NONE"
+    ]
+}

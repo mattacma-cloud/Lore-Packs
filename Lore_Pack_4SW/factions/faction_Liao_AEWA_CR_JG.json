@@ -1,0 +1,69 @@
+{
+    "ID" : "faction_Liao_AEWA_CR_JG",
+    "Name" : "Justine's Grenadiers",
+    "ShortName" : "Liao",
+    "Description" : "The unit was formed with volunteers from New Florence and House Liao during the Successions Wars. As a Capellan Reserves regiment, Justine's Grenadiers were principally used to defend the Confederation's borders from House Marik aggressions.",
+    "Demonym" : "Capellan",
+    "Government" : "Confederation",
+    "Allies" : [
+        "Kurita",
+        "ComStar"
+    ],
+    "Enemies" : [
+        "AuriganPirates",
+        "Marik",
+        "Davion",
+        "Steiner",
+        "TaurianConcordat",
+        "Locals",
+        "MagistracyOfCanopus",
+		"Wolf",
+		"GhostBear",
+		"JadeFalcon",
+		"SmokeJaguar",
+		"NovaCat", "DiamondShark",
+		"SteelViper",
+		"Ives",
+		"Andurien",
+		"Tikonov"
+    ],
+    "Presence" : 1.5,
+    "ReputationStatements" : [
+        "In desperate times, even the mighty must resort to hiring those such as you. This is a kindness we do to you, mercenary: you serve your betters.",
+        "We would not offer you this contract unless we had no other choice, mercenary. Circumstances have forced compromise.",
+        "The Ministry of Intelligence has identified several threats requiring immediate correction. We require decisive action and deniable assets.",
+        "The Capellan Confederation has need of your unit, mercenary. And you have need of our money, I assume. I think this will benefit both of us.",
+        "Reliable mercenary commands are uncommon. The Capellan Confederation values uncommon assets.",
+        "There are few mercenaries House Liao trusts with tasks like this, Commander. Make certain our faith is not misplaced.",
+        "I'm glad you're well, my friend. Once again, House Liao calls upon your prowess. The state has authorized payment of the highest possible rates. I assure you, this is not a contract for lesser warriors."
+    ],
+    "MissionSuccessStatements" : [ 
+		"House Liao has always believed in one thing, Commander: victory at any cost. It seems you also understand this vital lesson. You have served the state and the people well this day.",
+    ], 
+	"GoodFaithFailureStatements" : [ 
+		"Loss on the battlefield is not always failure. Losses teach us to improve and better ourselves. You fought well, Commander, even if you did not prevail. Learn from this lesson and do better.",
+    ],
+	"BadFaithFailureStatements" : [ 
+		"Your retreat created instability the state will now be forced to correct. Consider this a warning to perform better\u2014or be replaced.",
+    ],
+	"DefaultCombatLeaderCastDefId" : "castDef_LiaoDefaultCommander",
+    "DefaultRepresentativeCastDefId" : "castDef_LiaoRepDefault",
+    "DataManager" : null,
+    "factionID" : "Liao_AEWA_CR_JG",
+    "icon" : "uixTxrLogo_AEWA_CapRes",
+    "heraldryDefId" : "heraldrydef_Liao_AEWA_CR_JG",
+    "storePanelImage" : "uixTxrSpot_Store-Liao",
+	"factionStorePlanetTag" : "planet_other_factionhq_liao",
+    "factionStoreColor" : "rgba(30,39,27,1.0)",
+    "factionMapColor" : "rgba(208,255,144,1.0)",
+    "StartingReputationValues" : [
+        -10,
+        -10,
+        0
+    ],
+    "StartingReputationModes" : [
+        "KAMEA_CAMPAIGN",
+        "CAREER",
+        "NONE"
+    ]
+}
