@@ -40,11 +40,11 @@ Drag the Lore_Pack_4SW and MissionControl folders into your \BATTLETECH\Mods fol
 
 You must complete Touring Tikonov, or use the BattleTech Save Editor to give yourself the tag "Ardan_is_Interested", in order for An Evening with Ardan to spawn.
 
-**ONLY** choose the 7th Crucis Lancer's option at this time, as the other 4 Flashpoints are not yet delivered and you will get nothing more than a note from Darius if you choose the in An Evening with Ardan.
+**ONLY** choose the 7th Crucis Lancer's option at this time, as the other 4 Flashpoints are not yet delivered and you will get nothing more than a note from Darius if you choose any of the other flashpoints in An Evening with Ardan.
 
 Once you complete An Evening with Ardan, you must advance the timeline one day and then the Tikonov Flashpoint will spawn.
 
-**NOTE:** Foxes of Tikonov is not designed to be an easy Flashpoint. You are limited to a 200 ton lance and will face difficult missions against skilled, well equipped, and numerous foes. If you started a 3028 career, you'll get properly pasted. Until the other Davion flshpoints are ready (they will have lower difficulty settings), use a 3025 or post-Arano campaign, or the BattleTech Save Editor, so that you can have a fair chance at finshing the 7th Crucis Lancer Flashpoint.
+**NOTE:** Foxes of Tikonov is not designed to be an easy Flashpoint. You are limited to a 200 ton lance and will face difficult missions against skilled, well equipped, and numerous foes. If you started a 3028 career, you'll get properly pasted. Until the other Davion flashpoints are ready (they will have lower difficulty settings), use a 3025 or post-Arano campaign, or the BattleTech Save Editor, so that you can have a fair chance at fishing the 7th Crucis Lancer Flashpoint.
 
 
 **Lore Packs Development Map Version Plan**
