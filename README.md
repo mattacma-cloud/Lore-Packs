@@ -20,6 +20,9 @@ For those seeking more on the Lore Packs, a high level overview and approach is 
 Touring Tikonov was my first attempt at a Flashpoint and it will later be the key start point of the Operation Rat Campaign of the 4th Succession War Lore Pack.
 
 
+**SPECIAL THANKS**
+Thanks to the following folks for assisting with making these flashpoints work: Hounfor, Kierk and Victor Lapin.
+
 **INSTALLATION**
 
 Drag the Lore_Pack_4SW and MissionControl folders into your \BATTLETECH\Mods folder
