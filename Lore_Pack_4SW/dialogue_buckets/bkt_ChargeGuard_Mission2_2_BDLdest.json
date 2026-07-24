@@ -1,0 +1,21 @@
+{
+  "identifier": "bkt_ChargeGuard_Mission2_2_BDLdest",
+  "contents": [
+    {
+      "words": "We're in the fire now, Commander. Either drop those Home Guards or go for the base, you can't do both. I'll hold the back door here.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Otten_Coralie",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

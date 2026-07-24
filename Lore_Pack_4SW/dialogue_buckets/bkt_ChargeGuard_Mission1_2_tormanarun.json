@@ -1,0 +1,53 @@
+{
+  "identifier": "bkt_ChargeGuard_Mission1_2_tormanarun",
+  "contents": [
+    {
+      "words": "Liao is legging it, Commander, we need to pin him down. I can't fail in this mission.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Merc_Dean_Wagner",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "We see him moving, Captain, but we don't have the ground speed to keep with him. You're light Horse have to slow him down so we can bring our guns to bear!.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_DariusDefault",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "Understood, we'll do what we can while your people lay it on him.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Merc_Dean_Wagner",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

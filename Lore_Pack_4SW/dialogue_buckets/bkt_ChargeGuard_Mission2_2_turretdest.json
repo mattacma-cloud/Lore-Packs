@@ -1,0 +1,21 @@
+{
+  "identifier": "bkt_ChargeGuard_Mission2_2_turretdest",
+  "contents": [
+    {
+      "words": "Don't waste time over there Commander, it's rather uncomfortable over here already, and its going to start rainnig Highlanders soon.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Otten_Coralie",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "identifier": "bkt_ChargeGuard_Mission1_2_FLdam",
+  "contents": [
+    {
+      "words": "Fusilier lance taking damage.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_DariusDefault",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

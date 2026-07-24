@@ -1,0 +1,133 @@
+{
+  "identifier": "bkt_ChargeGuard_Mission1_1_start",
+  "contents": [
+    {
+      "words": "Alright Commander, your task is simple. Hammer the Ariana Fusilier Lance and keep our flank clear.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Herbert_Hobaugh",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "Ah, Commander, I don't think the Marshal is either quite across the tactical situation, or just does not care in that 3rd Davion Guards kind of way. Sumire, fill the Commander in.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_DariusDefault",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "Like the XO said, there's more here than meets the eye. I've got a read on the target lance, it's definitely an assault unit, but there are two other fuzzy returns coming in. One is manoeuvring like a fire support unit and the other is heavy weight but moving fast.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_SumireDefault",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "Marshal, would you care to comment?",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_DariusDefault",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "Yes, I would like you to do your job. Keep our flank clear. Take out the assault lance, and if anyone else turns up, take them out too.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Herbert_Hobaugh",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "That's three-to-one odds there Marshal, that's a rough contest no matter what we do.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_DariusDefault",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "Mr. Olivera, I am too busy trying to break the Ariana Fusiliers main line to continue this conversation. If more Mech turn up, you have more opportunities to earn glory for House Davion and yourself. If you can't, we'll make sure your burial is suitably martial. Hobaugh out.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Herbert_Hobaugh",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "It's days like these Commander when I wonder why we do what we do. There's no getting out of this now, we've got a million on line if we fail. Probably time for some of that battlefield magic your known for.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_DariusDefault",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "identifier": "bkt_ChargeGuard_Mission1_1_fail",
+  "contents": [
+    {
+      "words": "I see why you were so vocal earlier; you knew that you were not up to the task. Not that I am all that surprised.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Herbert_Hobaugh",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

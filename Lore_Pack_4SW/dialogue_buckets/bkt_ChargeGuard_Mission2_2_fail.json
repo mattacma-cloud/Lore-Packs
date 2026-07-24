@@ -1,0 +1,21 @@
+{
+  "identifier": "bkt_ChargeGuard_Mission2_2_fail",
+  "contents": [
+    {
+      "words": "The mission is coming apart, Commander. I had hoped the other Guard's officers were wrong about you, but I seem to have been made a fool of.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Otten_Coralie",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

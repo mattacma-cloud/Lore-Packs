@@ -1,0 +1,53 @@
+{
+  "identifier": "bkt_ChargeGuard_Mission1_2_sightHCL",
+  "contents": [
+    {
+      "words": "Ambushers on the flank - Fusilier Fire Lance trying to pin us. Cut them down before they unload.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Merc_Dean_Wagner",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "We see them Captain, and there are more than a Fire Lance. I'm registering everything from Light to Assault 'Mech signatures.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_DariusDefault",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "It's already hot enough here...Commander, move left and try and take on those Assault and Heavy Mechs coming along the ridge and up the gully, my Light Horse can't repel firepower of that magnitude.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Merc_Dean_Wagner",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

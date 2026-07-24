@@ -1,0 +1,21 @@
+{
+  "identifier": "bkt_ChargeGuard_Mission1_2_fail",
+  "contents": [
+    {
+      "words": "This is a grave failure, Commander. With Liao slipping away I need to find other resources to pin him down. Get back to base, now!",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Herbert_Hobaugh",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

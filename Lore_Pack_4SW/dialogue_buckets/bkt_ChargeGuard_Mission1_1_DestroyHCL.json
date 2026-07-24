@@ -1,0 +1,21 @@
+{
+  "identifier": "bkt_ChargeGuard_Mission1_1_DestroyHCL",
+  "contents": [
+    {
+      "words": "That's the cavalry dealt with.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_DariusDefault",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

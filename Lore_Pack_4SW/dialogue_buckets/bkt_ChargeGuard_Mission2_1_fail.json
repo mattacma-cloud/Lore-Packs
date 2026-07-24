@@ -1,0 +1,21 @@
+{
+  "identifier": "bkt_ChargeGuard_Mission2_1_fail",
+  "contents": [
+    {
+      "words": "Really? You found such a simple task beyond you? I confess myself unsurprised though. You are a mercenary after all.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Boyar_Christophoros",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

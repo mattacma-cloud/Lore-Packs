@@ -1,0 +1,21 @@
+{
+  "identifier": "bkt_ChargeGuard_Mission2_1_builddam",
+  "contents": [
+    {
+      "words": "That's not enough to destroy the base Merc, hit it harder.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Boyar_Christophoros",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "identifier": "bkt_ChargeGuard_Mission1_2_start",
+  "contents": [
+    {
+      "words": "Commander, the Eridani have Tormana Liao cornered and I need you to help them bring him down. We have the Ariana Fusiliers on the ropes and Liao's death or capture will not only impact morale here on Angol, but right across the Confederation. Get this job done and done properly.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Herbert_Hobaugh",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "Like the Marshal said, we need to get this done. My Company is going to harass the Fusiliers while you go for the throat. I need you to shield my people, as we can't go toe-to-toe with the Fusiliers in this terrain. Understood?",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Merc_Dean_Wagner",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "We hear you, Captain Wagnar, we'll take the centre while you do what the 71st is known for. Anthing else we need to know?",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_DariusDefault",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "The 11th Recon Company was in action agasint a pair of companies from the Ariana Fusiliers. Captain Macomber managed to take down a pair of lances but got beaten up pretty good for her efforts. Now it's our turn.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Merc_Dean_Wagner",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "There are four companies out there in the forest, two of them likley damaged from the efforts of the 11th, two other fresh and in there somewhere is Tormana Liao. You and I are are both expendable on this one Commander. We have to take Liao down and it does not matter how may 'Mechs we lose. He's worth a lot more than all of us combined.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Merc_Dean_Wagner",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "We understand Capatain, we'll have your back.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_DariusDefault",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

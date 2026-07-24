@@ -1,0 +1,37 @@
+{
+  "identifier": "bkt_ChargeGuard_Mission1_1_success",
+  "contents": [
+    {
+      "words": "See, Commander, absolutely nothing to it. I really don't know what all the whining was all about. Return to base at your earliest convenience.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Herbert_Hobaugh",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "Is the Marshal Lyran by any chance? He's certainly acting like one.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_DariusDefault",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },  
+  ]
+}
