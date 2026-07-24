@@ -1,0 +1,695 @@
+{
+    "StartingMilestoneID":  "ms_fp_lp4sw_ChargeGuard2_001_Start",
+    "Milestones":  [
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Start",
+                                               "Id":  "ms_fp_lp4sw_ChargeGuard2_001_Start",
+                                               "Details":  "Charge of the Guards II - tag cleanup -\u003e 101_Talk"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+                                                                                 "ChargeGuard_m4_done",
+                                                                                 "ChargeGuard_m5_done"
+                                                                             ],
+                                                                   "tagSetSourceFile":  "Tags/CompanyTags"
+                                                               },
+                                               "Stats":  [
+
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+
+                                                           ]
+                                           },
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  [
+
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "Type":  "Flashpoint_SetNextMilestone",
+                                                                   "value":  "ms_fp_lp4sw_ChargeGuard2_101_Talk",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  null
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Talk",
+                                               "Id":  "ms_fp_lp4sw_ChargeGuard2_101_Talk",
+                                               "Details":  "Charge of the Guards II: Ningpo arrival"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  [
+
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "Type":  "System_StartConversation",
+                                                                   "value":  "9368644974b54b97bb693baf",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "Charge of the Guards II: Ningpo Nightmare",
+                                                                                            "Ningpo",
+                                                                                            "Briefing",
+                                                                                            null
+                                                                                        ]
+                                                               },
+                                                               {
+                                                                   "Type":  "Flashpoint_SetNextMilestone",
+                                                                   "value":  "ms_fp_lp4sw_ChargeGuard2_102_Mission",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  null
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Talk",
+                                               "Id":  "ms_fp_lp4sw_ChargeGuard2_103_Talk",
+                                               "Details":  "Charge of the Guards II: Highland Jig"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  [
+
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "Type":  "System_StartConversation",
+                                                                   "value":  "13b748ee8178f59afd562e41",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "Charge of the Guards II: Highland Jig",
+                                                                                            "Ningpo",
+                                                                                            "Debrief",
+                                                                                            null
+                                                                                        ]
+                                                               },
+                                                               {
+                                                                   "Type":  "Flashpoint_SetNextMilestone",
+                                                                   "value":  "ms_fp_lp4sw_ChargeGuard2_104_Mission",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  null
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Talk",
+                                               "Id":  "ms_fp_lp4sw_ChargeGuard2_105_Talk",
+                                               "Details":  "Charge of the Guards II: Happy Hobaugh"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  [
+
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "Type":  "System_StartConversation",
+                                                                   "value":  "42ce2ff03214a216a6933b91",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "Charge of the Guards II: Happy Hobaugh",
+                                                                                            "Ningpo",
+                                                                                            "Debrief",
+                                                                                            null
+                                                                                        ]
+                                                               },
+                                                               {
+                                                                   "Type":  "Flashpoint_SetNextMilestone",
+                                                                   "value":  "ms_fp_lp4sw_ChargeGuard2_106_End",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  null
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Mission",
+                                               "Id":  "ms_fp_lp4sw_ChargeGuard2_102_Mission",
+                                               "Details":  "c_fp_lp4sw_ChargeGuard_Mission2_1"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  [
+
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "Type":  "Flashpoint_AddContract",
+                                                                   "value":  "mapGeneral_rockyCliffs_vHigh",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "",
+                                                                                            "a6edb15d-d488-48a2-83b6-b12c94b37745",
+                                                                                            "c_fp_lp4sw_ChargeGuard_Mission2_1",
+                                                                                            "Davion",
+                                                                                            "Liao",
+                                                                                            "8",
+                                                                                            "ms_fp_lp4sw_ChargeGuard2_103_Talk",
+                                                                                            null,
+                                                                                            null,
+                                                                                            "ms_fp_lp4sw_AEWA_900_Talk",
+                                                                                            null,
+                                                                                            null
+                                                                                        ]
+                                                               },
+                                                               {
+                                                                   "Type":  "System_ForceDropshipRoom",
+                                                                   "value":  "Contract",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "BaseFlashpoint"
+                                                                                        ]
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Mission",
+                                               "Id":  "ms_fp_lp4sw_ChargeGuard2_104_Mission",
+                                               "Details":  "c_fp_lp4sw_ChargeGuard_Mission2_2"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  [
+
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "Type":  "Flashpoint_AddContract",
+                                                                   "value":  "mapGeneral_escarpmentValley_vLow",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "",
+                                                                                            "65f01c56-027f-49bd-a8df-63b8ec032495",
+                                                                                            "c_fp_lp4sw_ChargeGuard_Mission2_2",
+                                                                                            "Davion",
+                                                                                            "Liao",
+                                                                                            "8",
+                                                                                            "ms_fp_lp4sw_ChargeGuard2_105_Talk",
+                                                                                            null,
+                                                                                            null,
+                                                                                            "ms_fp_lp4sw_AEWA_900_Talk",
+                                                                                            null,
+                                                                                            null
+                                                                                        ]
+                                                               },
+                                                               {
+                                                                   "Type":  "System_ForceDropshipRoom",
+                                                                   "value":  "Contract",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "BaseFlashpoint"
+                                                                                        ]
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Complete",
+                                               "Id":  "ms_fp_lp4sw_ChargeGuard2_106_End",
+                                               "Details":  "Charge of the Guards II loot step Ã¢â‚¬â€ itemCollection_AEWA_200b (Fox FIX-ARC-002 split)"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+                                                                               "fp_finished_ChargeGuard2_success"
+                                                                           ],
+                                                                 "tagSetSourceFile":  "Tags/CompanyTags"
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+                                                                                 "ChargeGuard2_Active",
+                                                                                 "ChargeGuard_m4_done",
+                                                                                 "ChargeGuard_m5_done"
+                                                                             ],
+                                                                   "tagSetSourceFile":  "Tags/CompanyTags"
+                                                               },
+                                               "Stats":  [
+
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "Type":  "System_ForceDropshipRoom",
+                                                                   "value":  "Ship",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  null
+                                                               },
+                                                               {
+                                                                   "Type":  "Flashpoint_CompleteFlashpoint",
+                                                                   "value":  "ms_fp_lp4sw_ChargeGuard2_106_Reward",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "itemCollection_AEWA_200b",
+                                                                                            null
+                                                                                        ]
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Reward",
+                                               "Id":  "ms_fp_lp4sw_ChargeGuard2_106_Reward",
+                                               "Details":  "Charge of the Guards II payout Ã¢â‚¬â€ $800k + Davion +3 (Stats off CompleteFlashpoint step)"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  [
+                                                             {
+                                                                 "typeString":  "System.Int32",
+                                                                 "name":  "Funds",
+                                                                 "value":  "800000",
+                                                                 "set":  false,
+                                                                 "valueConstant":  null
+                                                             },
+                                                             {
+                                                                 "typeString":  "System.Int32",
+                                                                 "name":  "Reputation.Davion",
+                                                                 "value":  "3",
+                                                                 "set":  false,
+                                                                 "valueConstant":  null
+                                                             }
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Talk",
+                                               "Id":  "ms_fp_lp4sw_AEWA_900_Talk",
+                                               "Details":  "Shared AEWA fail hub â€” Fox-identical Talk/Complete split (ChargeGuard I/II)"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  [
+
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "Type":  "System_StartConversation",
+                                                                   "value":  "3134e8810ee258758024ae2c",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "Charge of the Guards â€” Failure",
+                                                                                            "Capellan March",
+                                                                                            "Debrief",
+                                                                                            null
+                                                                                        ]
+                                                               },
+                                                               {
+                                                                   "Type":  "Flashpoint_SetNextMilestone",
+                                                                   "value":  "ms_fp_lp4sw_AEWA_900_Complete",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  null
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Complete",
+                                               "Id":  "ms_fp_lp4sw_AEWA_900_Complete",
+                                               "Details":  "Fail end — fp_finished_AEWA_failed; handoff to 900_Reward (FIX-ARC-002 split)"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+                                                                               "fp_finished_AEWA_failed"
+                                                                           ],
+                                                                 "tagSetSourceFile":  "Tags/CompanyTags"
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+                                                                                 "ChargeGuard_Active",
+                                                                                 "ChargeGuard2_Active"
+                                                                             ],
+                                                                   "tagSetSourceFile":  "Tags/CompanyTags"
+                                                               },
+                                               "Stats":  [
+
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "Type":  "System_ForceDropshipRoom",
+                                                                   "value":  "Ship",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  null
+                                                               },
+                                                               {
+                                                                   "Type":  "Flashpoint_CompleteFlashpoint",
+                                                                   "value":  "ms_fp_lp4sw_AEWA_900_Reward",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            null,
+                                                                                            null
+                                                                                        ]
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Reward",
+                                               "Id":  "ms_fp_lp4sw_AEWA_900_Reward",
+                                               "Details":  "Fail penalty — -,000,000 + Davion -50 (Stats off CompleteFlashpoint step; shared AEWA hub)"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  [
+                                                             {
+                                                                 "typeString":  "System.Int32",
+                                                                 "name":  "Funds",
+                                                                 "value":  "-1000000",
+                                                                 "set":  false,
+                                                                 "valueConstant":  null
+                                                             },
+                                                             {
+                                                                 "typeString":  "System.Int32",
+                                                                 "name":  "Reputation.Davion",
+                                                                 "value":  "-50",
+                                                                 "set":  false,
+                                                                 "valueConstant":  null
+                                                             }
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+
+                                                           ]
+                                           }
+                                       ]
+                       }
+                   ]
+}
