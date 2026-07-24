@@ -56,7 +56,9 @@ Once you complete An Evening with Ardan, you must advance the timeline one day a
 **RELEASED**
 
 0.1.0	Touring Tikonov 
+
 0.1.1	An Evening with Ardan
+
 0.1.3	Foxes of Tikonov (7th Crucis Lancers)
 
 
