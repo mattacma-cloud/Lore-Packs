@@ -1,0 +1,68 @@
+{
+  "AllowRefitTime": true,
+  "AvailableTimeout": 0,
+  "Description": {
+    "Icon": "uixTxrSpot_fp_lp4sw_AEWA.png",
+    "Name": "Charge of the Guards I",
+    "Id": "fp_lp4sw_ChargeGuard",
+    "Details": "My Third Davion Guards are waiting for your arrival at Algol for the commencement of Operation RAT."
+  },
+  "InProgressTimeout": 0,
+  "UnitDropTonnageHint": "Heavy",
+  "Repeatable": false,
+  "FlashpointDescriberCastDefId": "castDef_Davion_Herbert_Hobaugh",
+  "LocationRequirements": {
+    "Scope": "StarSystem",
+    "RequirementTags": {
+      "items": [
+        "planet_name_algol"
+      ],
+      "tagSetSourceFile": "Tags/PlanetNameTags"
+    },
+    "RequirementComparisons": [],
+    "ExclusionTags": {
+      "items": [],
+      "tagSetSourceFile": ""
+    }
+  },
+  "RewardCollectionID": "itemCollection_AEWA_200a",
+  "TargetFaction": "Liao",
+  "PotentialEmployers": [
+    "Davion"
+  ],
+  "PublishState": "PUBLISHED",
+  "FlashpointShortDescription": "My Third Davion Guards are waiting for your arrival at Algol for the commencement of Operation RAT.",
+  "MilestoneSetID": "ms_fp_lp4sw_ChargeGuard",
+  "Difficulty": 8,
+  "Tags": {
+    "items": [
+      "BLACKLISTED"
+    ],
+    "tagSetSourceFile": "tags/FlashpointTags"
+  },
+  "UseAvailableTimeoutOverride": false,
+  "UseInProgressTimeoutOverride": false,
+  "Requirements": [
+    {
+      "Scope": "Company",
+      "RequirementTags": {
+        "items": [
+          "fp_choice_OpRat3DG",
+          "ChargeGuard_Active"
+        ],
+        "tagSetSourceFile": "Tags/CompanyTags"
+      },
+      "RequirementComparisons": [],
+      "ExclusionTags": {
+        "items": [
+          "fp_finished_ChargeGuard_success"
+        ],
+        "tagSetSourceFile": "Tags/CompanyTags"
+      }
+    }
+  ],
+  "LanceDropTonnageHint": "Heavy",
+  "FlashpointLength": "MEDIUM",
+  "InternalName": "lp4sw_ChargeGuard",
+  "Weight": 10
+}

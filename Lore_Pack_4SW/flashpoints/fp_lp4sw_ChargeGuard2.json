@@ -1,0 +1,68 @@
+{
+  "AllowRefitTime": true,
+  "AvailableTimeout": 0,
+  "Description": {
+    "Icon": "uixTxrSpot_fp_lp4sw_AEWA.png",
+    "Name": "Charge of the Guards II",
+    "Id": "fp_lp4sw_ChargeGuard2",
+    "Details": "I need you on Ningpo Commander, there is little time before Wave 2 of Operation Rat commences."
+  },
+  "InProgressTimeout": 0,
+  "UnitDropTonnageHint": "Heavy",
+  "Repeatable": false,
+  "FlashpointDescriberCastDefId": "castDef_Davion_Herbert_Hobaugh",
+  "LocationRequirements": {
+    "Scope": "StarSystem",
+    "RequirementTags": {
+      "items": [
+        "planet_name_ningpo"
+      ],
+      "tagSetSourceFile": "Tags/PlanetNameTags"
+    },
+    "RequirementComparisons": [],
+    "ExclusionTags": {
+      "items": [],
+      "tagSetSourceFile": ""
+    }
+  },
+  "RewardCollectionID": "itemCollection_AEWA_200b",
+  "TargetFaction": "Liao",
+  "PotentialEmployers": [
+    "Davion"
+  ],
+  "PublishState": "PUBLISHED",
+  "FlashpointShortDescription": "I need you on Ningpo Commander, there is little time before Wave 2 of Operation Rat commences.",
+  "MilestoneSetID": "ms_fp_lp4sw_ChargeGuard2",
+  "Difficulty": 8,
+  "Tags": {
+    "items": [
+      "BLACKLISTED"
+    ],
+    "tagSetSourceFile": "tags/FlashpointTags"
+  },
+  "UseAvailableTimeoutOverride": false,
+  "UseInProgressTimeoutOverride": false,
+  "Requirements": [
+    {
+      "Scope": "Company",
+      "RequirementTags": {
+        "items": [
+          "fp_finished_ChargeGuard_success",
+          "ChargeGuard2_Active"
+        ],
+        "tagSetSourceFile": "Tags/CompanyTags"
+      },
+      "RequirementComparisons": [],
+      "ExclusionTags": {
+        "items": [
+          "fp_finished_ChargeGuard2_success"
+        ],
+        "tagSetSourceFile": "Tags/CompanyTags"
+      }
+    }
+  ],
+  "LanceDropTonnageHint": "Heavy",
+  "FlashpointLength": "SHORT",
+  "InternalName": "lp4sw_ChargeGuard2",
+  "Weight": 10
+}
