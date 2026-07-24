@@ -1,0 +1,22 @@
+{
+    "defaultEmotePortrait":  {
+                                 "emote":  "Default",
+                                 "portraitAssetPath":  "../../Mods/Lore_Pack_4SW/portraits/guiTxrPort_Jenkins_LR.png"
+                             },
+    "id":  "castDef_LR_Jenkins",
+    "showFirstName":  true,
+    "factionID":  "Davion",
+    "showLastName":  true,
+    "firstName":  "Lee",
+    "showCallsign":  true,
+    "emotePotraitList":  [
+
+                         ],
+    "rank":  "Lieutenant",
+    "sgCharType":  "UNSET",
+    "showRank":  true,
+    "callsign":  "Warcraft",
+    "lastName":  "Jenkins",
+    "internalName":  "LR_Jenkins",
+    "gender":  "Male"
+}
