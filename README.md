@@ -67,7 +67,7 @@ Once you complete An Evening with Ardan, you must advance the timeline one day a
 0.1.4	3rd Davion Guards 
 
 
-**UNDERPRE-DEVELOPMENT**
+**IN PRE-DEVELOPMENT**
 
 0.1.5	33rd Avalon Hussars 
 
