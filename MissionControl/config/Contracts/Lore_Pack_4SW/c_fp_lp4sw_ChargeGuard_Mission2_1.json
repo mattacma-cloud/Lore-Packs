@@ -1,0 +1,47 @@
+{
+  "ID": "c_fp_lp4sw_ChargeGuard_Mission2_1",
+  "RandomSpawns": {
+    "Enable": false
+  },
+  "HotDropProtection": {
+    "Enable": false
+  },
+  "AdditionalLances": {
+    "Enable": true,
+    "UseDialogue": false,
+    "EnemyLanceCount": 1,
+    "EnemyLances": [
+      "lp4sw_ChargeGuard_MLC_Heavy"
+    ],
+    "EnemyLanceObjectiveNames": [
+      "Destroy McCrimmon Heavy Lance"
+    ],
+    "HideObjective": true,
+    "ShowObjectiveOnLanceDetected": true,
+    "AlwaysDisplayHiddenObjectiveIfPrimary": false,
+    "AllyLanceCount": 1,
+    "AllyLances": [
+      "lp4sw_ChargeGuard_Guards_Boyer"
+    ]
+  },
+  "ExtendedLances": {
+    "Enable": true,
+    "TargetLanceSize": 4,
+    "EmployerLanceSize": 4,
+    "TargetAllyLanceSize": 4,
+    "EmployerAllyLanceSize": 4,
+    "HostileToAllLanceSize": 4,
+    "NeutralToAllLanceSize": 4,
+    "Autofill": false
+  },
+  "ExtendedBoundaries": {
+    "Enable": false,
+    "IncreaseBoundarySizeByPercentage": 0.6
+  },
+  "DynamicWithdraw": {
+    "Enable": false
+  },
+  "AdditionalPlayerMechs": {
+    "Enable": false
+  }
+}

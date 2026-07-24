@@ -1,0 +1,50 @@
+{
+  "ID": "c_fp_lp4sw_ChargeGuard_Mission1_2",
+  "RandomSpawns": {
+    "Enable": false
+  },
+  "HotDropProtection": {
+    "Enable": false
+  },
+  "AdditionalLances": {
+    "Enable": true,
+    "UseDialogue": false,
+    "EnemyLanceCount": 2,
+    "EnemyLances": [
+      "lp4sw_ChargeGuard_AF_GuardSupport",
+      "lp4sw_ChargeGuard_AF_FireSupport_M12"
+    ],
+    "EnemyLanceObjectiveNames": [
+      "Destroy Guard Support Lance",
+      "Destroy Fire Support Lance"
+    ],
+    "HideObjective": true,
+    "ShowObjectiveOnLanceDetected": true,
+    "AlwaysDisplayHiddenObjectiveIfPrimary": false,
+    "AllyLanceCount": 2,
+    "AllyLances": [
+      "lp4sw_ChargeGuard_ELH_Battle",
+      "lp4sw_ChargeGuard_ELH_Striker"
+    ]
+  },
+  "ExtendedLances": {
+    "Enable": true,
+    "TargetLanceSize": 4,
+    "EmployerLanceSize": 0,
+    "TargetAllyLanceSize": 4,
+    "EmployerAllyLanceSize": 4,
+    "HostileToAllLanceSize": 4,
+    "NeutralToAllLanceSize": 4,
+    "Autofill": false
+  },
+  "ExtendedBoundaries": {
+    "Enable": false,
+    "IncreaseBoundarySizeByPercentage": 0.6
+  },
+  "DynamicWithdraw": {
+    "Enable": false
+  },
+  "AdditionalPlayerMechs": {
+    "Enable": false
+  }
+}

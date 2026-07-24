@@ -1,0 +1,41 @@
+{
+  "ID": "c_fp_lp4sw_ChargeGuard_Mission1_1",
+  "RandomSpawns": {
+    "Enable": false
+  },
+  "HotDropProtection": {
+    "Enable": false
+  },
+  "AdditionalLances": {
+    "Enable": false,
+    "UseDialogue": false,
+    "EnemyLanceCount": 0,
+    "EnemyLances": [],
+    "EnemyLanceObjectiveNames": [],
+    "HideObjective": true,
+    "ShowObjectiveOnLanceDetected": true,
+    "AlwaysDisplayHiddenObjectiveIfPrimary": false,
+    "AllyLanceCount": 0,
+    "AllyLances": []
+  },
+  "ExtendedLances": {
+    "Enable": true,
+    "TargetLanceSize": 8,
+    "EmployerLanceSize": 0,
+    "TargetAllyLanceSize": 4,
+    "EmployerAllyLanceSize": 4,
+    "HostileToAllLanceSize": 4,
+    "NeutralToAllLanceSize": 4,
+    "Autofill": false
+  },
+  "ExtendedBoundaries": {
+    "Enable": false,
+    "IncreaseBoundarySizeByPercentage": 0.6
+  },
+  "DynamicWithdraw": {
+    "Enable": false
+  },
+  "AdditionalPlayerMechs": {
+    "Enable": true
+  }
+}
