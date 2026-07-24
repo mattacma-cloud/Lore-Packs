@@ -1,0 +1,21 @@
+{
+  "Name": "LorePack_Helpers",
+  "Enabled": true,
+  "Version": "1.3.4",
+  "Description": "Shared Lore Pack helpers: disk-scan authored maxUnits + flashpoint-limit clamp; force expanded CU layout as one lance (1..N partial); allow uneven/partial on all lore contracts; ignore empty-slot min-tonnage fails (CU); CU validate skips; Deploy enable; tonnage mirror; suppress MC AL rewards.",
+  "Author": "Blacknova",
+  "DLL": "LorePack_Helpers.dll",
+  "DLLEntryPoint": "LorePack_Helpers.Main.Init",
+  "DependsOn": [
+    "ModTek",
+    "Mission Control"
+  ],
+  "Settings": {
+    "ContractIdContains": [ "c_fp_lp", "touring_tikonov" ],
+    "MirrorSlotTonnage": true,
+    "AllowUnevenExpandedDrops": true,
+    "ForceContractDropSlots": true,
+    "OmniSlotDefId": "simgame_omni_slot",
+    "SuppressMcAlRewards": true
+  }
+}
