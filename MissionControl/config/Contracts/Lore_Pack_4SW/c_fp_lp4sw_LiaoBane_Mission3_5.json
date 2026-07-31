@@ -1,0 +1,55 @@
+{
+    "ID":  "c_fp_lp4sw_LiaoBane_Mission3_5",
+    "RandomSpawns":  {
+                         "Enable":  false
+                     },
+    "HotDropProtection":  {
+                              "Enable":  false
+                          },
+    "AdditionalLances":  {
+                             "Enable":  true,
+                             "UseDialogue":  true,
+                             "DialogueCastDefId":  "castDef_Davion_Holzmann_Kord",
+                             "Dialogue":  "Sit tight, Commander — I am almost there… the Thirty-third will be there to relieve you presently. Beta Combat Command are breaking into the city, as are the Redfield Renegades. You must retain hold of the firebase so those formations don't get pounded.",
+                             "ShowObjectiveOnLanceDetected":  true,
+                             "EnemyLanceObjectiveNames":  [
+                                                              "Destroy Warrior House Support Lance",
+                                                              "Destroy Firebase Long Tom Battery",
+                                                              "Destroy Firebase Long Tom Battery",
+                                                              "Destroy Warrior House Griffin Lance"
+                                                          ],
+                             "AllyLances":  [
+                                                "lp4sw_LiaoBane_33AH_Holzmann_Wing"
+                                            ],
+                             "AllyLanceCount":  1,
+                             "EnemyLances":  [
+                                                 "lp4sw_LiaoBane_M5_Mech1",
+                                                 "lp4sw_LiaoBane_M5_LongTomA",
+                                                 "lp4sw_LiaoBane_M5_LongTomB",
+                                                 "lp4sw_LiaoBane_M5_Griffin"
+                                             ],
+                             "EnemyLanceCount":  4,
+                             "AlwaysDisplayHiddenObjectiveIfPrimary":  false,
+                             "HideObjective":  true
+                         },
+    "ExtendedLances":  {
+                           "TargetAllyLanceSize":  4,
+                           "EmployerLanceSize":  0,
+                           "EmployerAllyLanceSize":  4,
+                           "NeutralToAllLanceSize":  4,
+                           "TargetLanceSize":  4,
+                           "HostileToAllLanceSize":  4,
+                           "Autofill":  false,
+                           "Enable":  false
+                       },
+    "ExtendedBoundaries":  {
+                               "Enable":  false,
+                               "IncreaseBoundarySizeByPercentage":  0.6
+                           },
+    "DynamicWithdraw":  {
+                            "Enable":  false
+                        },
+    "AdditionalPlayerMechs":  {
+                                  "Enable":  true
+                              }
+}
