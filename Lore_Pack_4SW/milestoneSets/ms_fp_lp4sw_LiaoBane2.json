@@ -1,0 +1,697 @@
+{
+    "StartingMilestoneID":  "ms_fp_lp4sw_LiaoBane2_001_Start",
+    "Milestones":  [
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Start",
+                                               "Id":  "ms_fp_lp4sw_LiaoBane2_001_Start",
+                                               "Details":  "Liao\u0027s Bane II - tag cleanup -\u003e 101_Talk"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+                                                                                 "LiaoBane_m6_done",
+                                                                                 "LiaoBane_m7_done"
+                                                                             ],
+                                                                   "tagSetSourceFile":  "Tags/CompanyTags"
+                                                               },
+                                               "Stats":  [
+
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+
+                                                           ]
+                                           },
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  [
+
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "Type":  "Flashpoint_SetNextMilestone",
+                                                                   "value":  "ms_fp_lp4sw_LiaoBane2_101_Talk",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  null
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Talk",
+                                               "Id":  "ms_fp_lp4sw_LiaoBane2_101_Talk",
+                                               "Details":  "Liao\u0027s Bane II: Genoan Holiday"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  [
+
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "Type":  "System_StartConversation",
+                                                                   "value":  "f5a3c5a8d2c1c5396c2d61f4",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "Liao\u0027s Bane II: Genoan Holiday",
+                                                                                            "Genoa",
+                                                                                            "Briefing",
+                                                                                            null
+                                                                                        ]
+                                                               },
+                                                               {
+                                                                   "Type":  "Flashpoint_SetNextMilestone",
+                                                                   "value":  "ms_fp_lp4sw_LiaoBane2_102_Mission",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  null
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Mission",
+                                               "Id":  "ms_fp_lp4sw_LiaoBane2_102_Mission",
+                                               "Details":  "c_fp_lp4sw_LiaoBane2_Mission3_6"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  [
+
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "Type":  "Flashpoint_AddContract",
+                                                                   "value":  "mapGeneral_craterField_bMars",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "",
+                                                                                            "c4d24b50-1a6a-486b-85f9-2d54137d0c5e",
+                                                                                            "c_fp_lp4sw_LiaoBane2_Mission3_6",
+                                                                                            "Davion",
+                                                                                            "Liao",
+                                                                                            "6",
+                                                                                            "ms_fp_lp4sw_LiaoBane2_103_Talk",
+                                                                                            null,
+                                                                                            null,
+                                                                                            "ms_fp_lp4sw_AEWA_900_Talk",
+                                                                                            null,
+                                                                                            null
+                                                                                        ]
+                                                               },
+                                                               {
+                                                                   "Type":  "System_ForceDropshipRoom",
+                                                                   "value":  "Contract",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "BaseFlashpoint"
+                                                                                        ]
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Talk",
+                                               "Id":  "ms_fp_lp4sw_LiaoBane2_103_Talk",
+                                               "Details":  "Liao\u0027s Bane II: Genoan Holiday II"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  [
+
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "Type":  "System_StartConversation",
+                                                                   "value":  "005ee5fae56f44ac0b4d0e5d",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "Liao\u0027s Bane II: Genoan Holiday II",
+                                                                                            "Genoa",
+                                                                                            "Debrief",
+                                                                                            null
+                                                                                        ]
+                                                               },
+                                                               {
+                                                                   "Type":  "Flashpoint_SetNextMilestone",
+                                                                   "value":  "ms_fp_lp4sw_LiaoBane2_104_Mission",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  null
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Mission",
+                                               "Id":  "ms_fp_lp4sw_LiaoBane2_104_Mission",
+                                               "Details":  "c_fp_lp4sw_LiaoBane2_Mission3_7"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  [
+
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "Type":  "Flashpoint_AddContract",
+                                                                   "value":  "mapGeneral_bleakRidge_aBad",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "",
+                                                                                            "05ffbc32-6c06-4130-822e-4c256dcc6ca2",
+                                                                                            "c_fp_lp4sw_LiaoBane2_Mission3_7",
+                                                                                            "Davion",
+                                                                                            "Liao",
+                                                                                            "6",
+                                                                                            "ms_fp_lp4sw_LiaoBane2_105_Talk",
+                                                                                            null,
+                                                                                            null,
+                                                                                            "ms_fp_lp4sw_AEWA_900_Talk",
+                                                                                            null,
+                                                                                            null
+                                                                                        ]
+                                                               },
+                                                               {
+                                                                   "Type":  "System_ForceDropshipRoom",
+                                                                   "value":  "Contract",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "BaseFlashpoint"
+                                                                                        ]
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Talk",
+                                               "Id":  "ms_fp_lp4sw_LiaoBane2_105_Talk",
+                                               "Details":  "Liao\u0027s Bane II: Genoan Holiday III"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  [
+
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "Type":  "System_StartConversation",
+                                                                   "value":  "1b2cf171054da67ef6ece351",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "Liao\u0027s Bane II: Genoan Holiday III",
+                                                                                            "Genoa",
+                                                                                            "Debrief",
+                                                                                            null
+                                                                                        ]
+                                                               },
+                                                               {
+                                                                   "Type":  "Flashpoint_SetNextMilestone",
+                                                                   "value":  "ms_fp_lp4sw_LiaoBane2_106_End",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  null
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Complete",
+                                               "Id":  "ms_fp_lp4sw_LiaoBane2_106_End",
+                                               "Details":  "Liao\u0027s Bane II loot â€” itemCollection_AEWA_300b; no late ForceEvents (no follow-on FP)."
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+                                                                               "fp_finished_LiaoBane2_success"
+                                                                           ],
+                                                                 "tagSetSourceFile":  "Tags/CompanyTags"
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+                                                                                 "LiaoBane2_Active",
+                                                                                 "LiaoBane_m6_done",
+                                                                                 "LiaoBane_m7_done"
+                                                                             ],
+                                                                   "tagSetSourceFile":  "Tags/CompanyTags"
+                                                               },
+                                               "Stats":  [
+
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "Type":  "System_ForceDropshipRoom",
+                                                                   "value":  "Ship",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  null
+                                                               },
+                                                               {
+                                                                   "Type":  "Flashpoint_CompleteFlashpoint",
+                                                                   "value":  "ms_fp_lp4sw_LiaoBane2_106_Reward",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "itemCollection_AEWA_300b",
+                                                                                            null
+                                                                                        ]
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Reward",
+                                               "Id":  "ms_fp_lp4sw_LiaoBane2_106_Reward",
+                                               "Details":  "Liao\u0027s Bane II payout â€” $0.6M + Davion +3 (Stats off CompleteFlashpoint step)"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  [
+                                                             {
+                                                                 "typeString":  "System.Int32",
+                                                                 "name":  "Funds",
+                                                                 "value":  "600000",
+                                                                 "set":  false,
+                                                                 "valueConstant":  null
+                                                             },
+                                                             {
+                                                                 "typeString":  "System.Int32",
+                                                                 "name":  "Reputation.Davion",
+                                                                 "value":  "3",
+                                                                 "set":  false,
+                                                                 "valueConstant":  null
+                                                             }
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Talk",
+                                               "Id":  "ms_fp_lp4sw_AEWA_900_Talk",
+                                               "Details":  "Shared AEWA fail hub — Fox-identical Talk/Complete split (ChargeGuard I/II + LiaoBane I/II)"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  [
+
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "Type":  "System_StartConversation",
+                                                                   "value":  "3134e8810ee258758024ae2c",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            "Charge of the Guards Ã¢â‚¬â€ Failure",
+                                                                                            "Capellan March",
+                                                                                            "Debrief",
+                                                                                            null
+                                                                                        ]
+                                                               },
+                                                               {
+                                                                   "Type":  "Flashpoint_SetNextMilestone",
+                                                                   "value":  "ms_fp_lp4sw_AEWA_900_Complete",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  null
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Complete",
+                                               "Id":  "ms_fp_lp4sw_AEWA_900_Complete",
+                                               "Details":  "Fail end â€” fp_finished_AEWA_failed; handoff to 900_Reward (FIX-ARC-002 split)"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+                                                                               "fp_finished_AEWA_failed"
+                                                                           ],
+                                                                 "tagSetSourceFile":  "Tags/CompanyTags"
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+                                                                                 "ChargeGuard_Active",
+                                                                                 "ChargeGuard2_Active",
+                                                                                 "LiaoBane_Active",
+                                                                                 "LiaoBane2_Active"
+                                                                             ],
+                                                                   "tagSetSourceFile":  "Tags/CompanyTags"
+                                                               },
+                                               "Stats":  [
+
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+                                                               {
+                                                                   "Type":  "System_ForceDropshipRoom",
+                                                                   "value":  "Ship",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  null
+                                                               },
+                                                               {
+                                                                   "Type":  "Flashpoint_CompleteFlashpoint",
+                                                                   "value":  "ms_fp_lp4sw_AEWA_900_Reward",
+                                                                   "valueConstant":  null,
+                                                                   "additionalValues":  [
+                                                                                            null,
+                                                                                            null
+                                                                                        ]
+                                                               }
+                                                           ]
+                                           }
+                                       ]
+                       },
+                       {
+                           "Description":  {
+                                               "Icon":  null,
+                                               "Name":  "Reward",
+                                               "Id":  "ms_fp_lp4sw_AEWA_900_Reward",
+                                               "Details":  "Fail penalty â€” -,000,000 + Davion -50 (Stats off CompleteFlashpoint step; shared AEWA hub)"
+                                           },
+                           "Scope":  "Company",
+                           "Requirements":  [
+
+                                            ],
+                           "Repeatable":  false,
+                           "UseRandomInvocation":  false,
+                           "InvokeChance":  0,
+                           "Results":  [
+                                           {
+                                               "Scope":  "Company",
+                                               "Requirements":  null,
+                                               "AddedTags":  {
+                                                                 "items":  [
+
+                                                                           ],
+                                                                 "tagSetSourceFile":  ""
+                                                             },
+                                               "RemovedTags":  {
+                                                                   "items":  [
+
+                                                                             ],
+                                                                   "tagSetSourceFile":  ""
+                                                               },
+                                               "Stats":  [
+                                                             {
+                                                                 "typeString":  "System.Int32",
+                                                                 "name":  "Funds",
+                                                                 "value":  "-1000000",
+                                                                 "set":  false,
+                                                                 "valueConstant":  null
+                                                             },
+                                                             {
+                                                                 "typeString":  "System.Int32",
+                                                                 "name":  "Reputation.Davion",
+                                                                 "value":  "-50",
+                                                                 "set":  false,
+                                                                 "valueConstant":  null
+                                                             }
+                                                         ],
+                                               "ForceEvents":  [
+
+                                                               ],
+                                               "TemporaryResult":  false,
+                                               "ResultDuration":  0,
+                                               "Actions":  [
+
+                                                           ]
+                                           }
+                                       ]
+                       }
+                   ]
+}
