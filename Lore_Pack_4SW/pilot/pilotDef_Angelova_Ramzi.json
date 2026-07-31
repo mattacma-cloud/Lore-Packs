@@ -1,41 +1,44 @@
 {
-    "Description": {
-        "Id": "pilotDef_Angelova_Ramzi",
-        "Name": "Ramzi Angelova",
-        "FirstName": "Ramzi",
-        "LastName": "Angelova",
-        "Callsign": "MW Ramzi Angelova",
-        "Gender": "Male",
-        "factionID": "Davion",
-        "Age": 22,
-        "Details": "NONE",
-        "Icon": "Wildfire"
-    },
-    "BaseGunnery": "2",
-    "BonusGunnery": 0,
-    "BasePiloting": "3",
-    "BonusPiloting": 0,
-    "BaseGuts": "2",
-    "BonusGuts": 0,
-    "BaseTactics": "2",
-    "BonusTactics": 0,
-    "ExperienceUnspent": 0,
-    "ExperienceSpent": 0,
-    "Injuries": 0,
-    "Health": 3,
-    "LethalInjury": false,
-    "Incapacitated": false,
-    "Morale": 0,
-    "Voice": "f_overload01",
-    "abilityDefNames": [],
-    "AIPersonality": "Undefined",
-    "PilotTags": {
-        "items": [
-            "pilot_npc_recruit",
-            "pilot_npc_dynamic",
-            "pilot_npc_d1"
-        ],
-        "tagSetSourceFile": ""
-    },
-    "PilotCost": 0
+    "Description":  {
+                        "Id":  "pilotDef_Angelova_Ramzi",
+                        "Name":  "Ramzi Angelova",
+                        "FirstName":  "Ramzi",
+                        "LastName":  "Angelova",
+                        "Callsign":  "MW Ramzi Angelova",
+                        "Gender":  "Male",
+                        "factionID":  "Davion",
+                        "Age":  22,
+                        "Details":  "NONE",
+                        "Icon":  "Wildfire"
+                    },
+    "BaseGunnery":  "2",
+    "BonusGunnery":  0,
+    "BasePiloting":  "3",
+    "BonusPiloting":  0,
+    "BaseGuts":  "2",
+    "BonusGuts":  0,
+    "BaseTactics":  "2",
+    "BonusTactics":  0,
+    "ExperienceUnspent":  0,
+    "ExperienceSpent":  0,
+    "Injuries":  0,
+    "Health":  3,
+    "LethalInjury":  false,
+    "Incapacitated":  false,
+    "Morale":  0,
+    "Voice":  "f_overload01",
+    "abilityDefNames":  [
+
+                        ],
+    "AIPersonality":  "Undefined",
+    "PilotTags":  {
+                      "items":  [
+                                    "pilot_npc_recruit",
+                                    "pilot_npc_dynamic",
+                                    "pilot_npc_d1",
+                                    "BLACKLISTED"
+                                ],
+                      "tagSetSourceFile":  "Tags/PilotTags"
+                  },
+    "PilotCost":  0
 }
