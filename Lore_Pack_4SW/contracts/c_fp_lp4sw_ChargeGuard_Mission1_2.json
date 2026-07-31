@@ -5,6 +5,7 @@
   "difficulty": 8,
   "difficultyUIModifier": 0,
   "weight": 1,
+  "excludedFromProceduralGeneration": true,
   "scope": "STANDARD",
   "finalDifficulty": 8,
   "shortDescription": "It is not every day you have the honour of going after a scion of a Great House, and alongside the Eridani Light Horse no less. You will be telling this story to your children and grandchildren. Good luck Commander, may the honour of House Davion go with you, and may you add to the glory of our victories over House Liao.",

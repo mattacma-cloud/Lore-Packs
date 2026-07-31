@@ -5,6 +5,7 @@
   "difficulty": 10,
   "difficultyUIModifier": 0,
   "weight": 1,
+  "excludedFromProceduralGeneration": true,
   "scope": "STANDARD",
   "finalDifficulty": 10,
   "shortDescription": "Commander, I need you on the ground in advance of the main AFFS invasion. If the Capellans have found an SLDF Exterminator, it means their Raven program could gain a huge boost, and we can't have that. Destroy that convoy, salvage anything that remains and then fall back to our staging post.",

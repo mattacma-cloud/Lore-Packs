@@ -4,6 +4,7 @@
   "contractDisplayStyle": "BaseFlashpoint",
   "difficulty": 9,
   "weight": 1,
+  "excludedFromProceduralGeneration": true,
   "scope": "STANDARD",
   "finalDifficulty": 9,
   "shortDescription": "Strap in, Commander, we're hot dropping on Tikograd and taking on Pavel Ridzik's personal guards. The Sixth and Eight Lancers have tried to distract him, but he's a clever bastard and is moving troops towards the Earthworks facility. I need you to clip Hamilton's Highlander's wings by taking out one of their command nodes.",

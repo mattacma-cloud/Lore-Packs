@@ -4,6 +4,7 @@
   "contractDisplayStyle": "BaseFlashpoint",
   "difficulty": 8,
   "weight": 1,
+  "excludedFromProceduralGeneration": true,
   "scope": "STANDARD",
   "finalDifficulty": 8,
   "shortDescription": "Commander, we have McCrimmon's Light Cavalry by the proverbial. Go in with the 3rd Guards Assault Lance and smash what is left of their Battalion.",

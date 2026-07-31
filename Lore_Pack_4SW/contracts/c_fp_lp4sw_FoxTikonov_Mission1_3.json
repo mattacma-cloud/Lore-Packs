@@ -2533,7 +2533,7 @@
   "expirationTimeOverride": -1,
   "negotiatedSalary": 0.5,
   "negotiatedSalvage": 0.5,
-  "excludedFromProceduralGeneration": false,
+  "excludedFromProceduralGeneration": true,
   "player1Team": {
     "encounterLayerData": {
       "EncounterObjectGuid": "2447f446-0b5f-497a-9fc7-c33ef9cabb6d"

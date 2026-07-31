@@ -1,0 +1,1971 @@
+{
+    "ID":  "c_fp_lp4sw_LiaoBane_Mission3_5",
+    "contractName":  "Forbidden Warriors",
+    "contractDisplayStyle":  "BaseFlashpoint",
+    "difficulty":  6,
+    "difficultyUIModifier":  0,
+    "weight":  1,
+  "excludedFromProceduralGeneration": true,
+    "scope":  "STANDARD",
+    "finalDifficulty":  6,
+    "shortDescription":  "Commander, we are at the gates of the Forbidden City. The Redfield Renegades are hitting the main lines along with my troops. I need you and Captain Holzmann to break one of the outer fire support locations to open a path for Beta combat Command of the Thirty-Third Hussars. You have to defeat the defenders so we can take control of the facility and turn its guns on Warrior House LuSaan.",
+    "longDescription":  "Tight terrain and artillery. I suggest fast, jump-capable 'Mechs commander, you'll need them.",
+    "salvagePotential":  16,
+    "requirementList":  [
+
+                        ],
+    "OnContractSuccessResults":  [
+
+                                 ],
+    "OnContractFailureResults":  [
+
+                                 ],
+    "contractType":  "Story_4_LiberationOfWeldry",
+    "encounterPlayStyle":  "SinglePlayer",
+    "maxNumberOfPlayerUnits":  8,
+    "mapMood":  "ArcticDayFrozen",
+    "startingFogOfWarVisibility":  "Surveyed",
+    "contractObjectiveList":  [
+                                  {
+                                      "contractObjective":  {
+                                                                "EncounterObjectGuid":  "dee3ebc7-d9df-4e5f-bfbb-0fb7dff587f8"
+                                                            },
+                                      "title":  "Breach the Firebase Gates",
+                                      "description":  "",
+                                      "isPrimary":  true,
+                                      "forPlayer":  "Player1",
+                                      "objectiveGuids":  [
+                                                             "caf2acf6-f7d4-43eb-8044-826b6180e2d6",
+                                                             "47edcd05-57cb-4f73-a7fb-30560b29519f",
+                                                             "64136f83-ae64-4c0a-ba7a-bc487dba5f7a"
+                                                         ]
+                                  },
+                                  {
+                                      "contractObjective":  {
+                                                                "EncounterObjectGuid":  "1202c8de-4dd7-4d15-ad2c-accf791b2486"
+                                                            },
+                                      "title":  "Destroy all Warrior House Forces",
+                                      "description":  "",
+                                      "isPrimary":  true,
+                                      "forPlayer":  "Player1",
+                                      "objectiveGuids":  [
+
+                                                         ]
+                                  },
+                                  {
+                                      "contractObjective":  {
+                                                                "EncounterObjectGuid":  "080b38e4-7c1b-43d7-a2a0-0d8fcdeefbe6"
+                                                            },
+                                      "title":  "Ensure Captain Holzmann\u0027s Lance Survives",
+                                      "description":  "",
+                                      "isPrimary":  true,
+                                      "forPlayer":  "Player1",
+                                      "objectiveGuids":  [
+
+                                                         ]
+                                  }
+                              ],
+    "objectiveList":  [
+                          {
+                              "objective":  {
+                                                "EncounterObjectGuid":  "3d0a8825-370b-4fee-ae2d-5adfcec557c6"
+                                            },
+                              "title":  "Destroy Turret Generators",
+                              "description":  "",
+                              "isPrimary":  false,
+                              "OnSuccessResults":  [
+
+                                                   ],
+                              "OnFailureResults":  [
+
+                                                   ]
+                          },
+                          {
+                              "objective":  {
+                                                "EncounterObjectGuid":  "493344ed-c792-4b3f-9e42-40802b633f88"
+                                            },
+                              "title":  "Destroy Enemy Units",
+                              "description":  "",
+                              "isPrimary":  false,
+                              "OnSuccessResults":  [
+
+                                                   ],
+                              "OnFailureResults":  [
+
+                                                   ]
+                          },
+                          {
+                              "objective":  {
+                                                "EncounterObjectGuid":  "26362f14-4c8d-4d93-a51f-e9476d893914"
+                                            },
+                              "title":  "HIDDEN Approaching Firebase",
+                              "description":  "",
+                              "isPrimary":  false,
+                              "OnSuccessResults":  [
+
+                                                   ],
+                              "OnFailureResults":  [
+
+                                                   ]
+                          },
+                          {
+                              "objective":  {
+                                                "EncounterObjectGuid":  "caf2acf6-f7d4-43eb-8044-826b6180e2d6"
+                                            },
+                              "title":  "Breach the Firebase Gates",
+                              "description":  "",
+                              "isPrimary":  true,
+                              "OnSuccessResults":  [
+
+                                                   ],
+                              "OnFailureResults":  [
+
+                                                   ]
+                          },
+                          {
+                              "objective":  {
+                                                "EncounterObjectGuid":  "c02cca7e-6e2c-4a3d-beb0-f9af713a466f"
+                                            },
+                              "title":  "Destroy the Firebase Turrets",
+                              "description":  "",
+                              "isPrimary":  false,
+                              "OnSuccessResults":  [
+
+                                                   ],
+                              "OnFailureResults":  [
+
+                                                   ]
+                          },
+                          {
+                              "objective":  {
+                                                "EncounterObjectGuid":  "47edcd05-57cb-4f73-a7fb-30560b29519f"
+                                            },
+                              "title":  "Destroy all Warrior House Forces",
+                              "description":  "",
+                              "isPrimary":  true,
+                              "OnSuccessResults":  [
+
+                                                   ],
+                              "OnFailureResults":  [
+
+                                                   ]
+                          },
+                          {
+                              "objective":  {
+                                                "EncounterObjectGuid":  "4fa1195b-16db-412a-a0bd-bd9a6001e470"
+                                            },
+                              "title":  "Time to Holzmann Arrival",
+                              "description":  "",
+                              "isPrimary":  false,
+                              "OnSuccessResults":  [
+
+                                                   ],
+                              "OnFailureResults":  [
+
+                                                   ]
+                          },
+                          {
+                              "objective":  {
+                                                "EncounterObjectGuid":  "7617cb28-c434-4a14-8698-a93ccfc3d750"
+                                            },
+                              "title":  "Destroy the Enemy Reinforcements",
+                              "description":  "",
+                              "isPrimary":  false,
+                              "OnSuccessResults":  [
+
+                                                   ],
+                              "OnFailureResults":  [
+
+                                                   ]
+                          },
+                          {
+                              "objective":  {
+                                                "EncounterObjectGuid":  "3a4192be-2a53-4383-94ac-19c08883ea5f"
+                                            },
+                              "title":  "Hold the Firebase until Captain Holzmann makes landfall",
+                              "description":  "",
+                              "isPrimary":  false,
+                              "OnSuccessResults":  [
+
+                                                   ],
+                              "OnFailureResults":  [
+
+                                                   ]
+                          },
+                          {
+                              "objective":  {
+                                                "EncounterObjectGuid":  "64136f83-ae64-4c0a-ba7a-bc487dba5f7a"
+                                            },
+                              "title":  "Ensure Holzmann Survives",
+                              "description":  "",
+                              "isPrimary":  true,
+                              "OnSuccessResults":  [
+
+                                                   ],
+                              "OnFailureResults":  [
+
+                                                   ]
+                          },
+                          {
+                              "objective":  {
+                                                "EncounterObjectGuid":  "2e9136c3-f269-44ac-99ec-5c8b0d3004f5"
+                                            },
+                              "title":  "HIIDEN Holzmann Occupy Region",
+                              "description":  "",
+                              "isPrimary":  false,
+                              "OnSuccessResults":  [
+
+                                                   ],
+                              "OnFailureResults":  [
+
+                                                   ]
+                          },
+                          {
+                              "objective":  {
+                                                "EncounterObjectGuid":  "0e9bd2d9-407c-4687-bc5b-147cf35248b5"
+                                            },
+                              "title":  "Artillery hits in ",
+                              "description":  "",
+                              "isPrimary":  false,
+                              "OnSuccessResults":  [
+
+                                                   ],
+                              "OnFailureResults":  [
+
+                                                   ]
+                          }
+                      ],
+    "buildingList":  [
+
+                     ],
+    "chunkList":  [
+
+                  ],
+    "cameraFocusHelperList":  [
+                                  {
+                                      "name":  "Spawner_PlayerLance",
+                                      "encounterObject":  {
+                                                              "EncounterObjectGuid":  "76b654a6-4f2c-4a6f-86e6-d4cf868335fe"
+                                                          }
+                                  },
+                                  {
+                                      "name":  "LanceSpawner",
+                                      "encounterObject":  {
+                                                              "EncounterObjectGuid":  "61699a08-1ed7-4ac3-b1f3-79b6b671c4ca"
+                                                          }
+                                  },
+                                  {
+                                      "name":  "LanceSpawner_Turrets_Alpha",
+                                      "encounterObject":  {
+                                                              "EncounterObjectGuid":  "c889b2a0-f46e-443e-9436-b0cd1d286b16"
+                                                          }
+                                  },
+                                  {
+                                      "name":  "LanceSpawner_Turrets_Bravo",
+                                      "encounterObject":  {
+                                                              "EncounterObjectGuid":  "ea34f78b-b583-4f47-ae98-8349c4e9a571"
+                                                          }
+                                  },
+                                  {
+                                      "name":  "LanceSpawner_Vehicles",
+                                      "encounterObject":  {
+                                                              "EncounterObjectGuid":  "4bcca0a6-1941-4033-bfde-175234a3de7f"
+                                                          }
+                                  },
+                                  {
+                                      "name":  "Spawner_InternalDefenseTurrets",
+                                      "encounterObject":  {
+                                                              "EncounterObjectGuid":  "03098774-4d71-41cd-92ee-b466f6390110"
+                                                          }
+                                  },
+                                  {
+                                      "name":  "DestroyLanceSpawner",
+                                      "encounterObject":  {
+                                                              "EncounterObjectGuid":  "8f5cd1f7-9e39-4d37-a6cb-398b5797ab7c"
+                                                          }
+                                  },
+                                  {
+                                      "name":  "Spawner_ReinforcementsLance",
+                                      "encounterObject":  {
+                                                              "EncounterObjectGuid":  "1ed1ecd2-449b-4df9-8ab5-29846b40c1ad"
+                                                          }
+                                  },
+                                  {
+                                      "name":  "LanceSpawner",
+                                      "encounterObject":  {
+                                                              "EncounterObjectGuid":  "7e140c41-dcc0-4e6a-92c5-3b9b1c562dd6"
+                                                          }
+                                  },
+                                  {
+                                      "name":  "Region_ApproachingPrison",
+                                      "encounterObject":  {
+                                                              "EncounterObjectGuid":  "8b193467-e642-4adc-ab49-9555e3c619d9"
+                                                          }
+                                  },
+                                  {
+                                      "name":  "Region_GoTo",
+                                      "encounterObject":  {
+                                                              "EncounterObjectGuid":  "181efcdf-0e34-477b-8a06-39b0ead2d69e"
+                                                          }
+                                  },
+                                  {
+                                      "name":  "Region_Occupy",
+                                      "encounterObject":  {
+                                                              "EncounterObjectGuid":  "a85da736-7a2e-4cc6-aff3-feb9d73fc7e1"
+                                                          }
+                                  },
+                                  {
+                                      "name":  "04_KameaOccupyRegion",
+                                      "encounterObject":  {
+                                                              "EncounterObjectGuid":  "cdf833ca-699a-4c06-9b5d-f5f93f0d49e7"
+                                                          }
+                                  },
+                                  {
+                                      "name":  "04_ArtilleryWallBlowRegion",
+                                      "encounterObject":  {
+                                                              "EncounterObjectGuid":  "d491ed3a-d63d-4fa1-aaf9-3471d5b6d91a"
+                                                          }
+                                  },
+                                  {
+                                      "name":  "WorldPoint_Doors",
+                                      "encounterObject":  {
+                                                              "EncounterObjectGuid":  "7ead3d46-492e-4aeb-a331-5c6bc1dc5432"
+                                                          }
+                                  },
+                                  {
+                                      "name":  "WorldPoint_Doors2",
+                                      "encounterObject":  {
+                                                              "EncounterObjectGuid":  "8e48d373-7f31-407a-b5ec-f3821f386e8b"
+                                                          }
+                                  }
+                              ],
+    "dialogueList":  [
+                         {
+                             "dialogue":  {
+                                              "EncounterObjectGuid":  "7fe51130-7759-4256-a3d4-fe78366c4c0e"
+                                          },
+                             "name":  "Async_IntruderAlert",
+                             "overrideDialogueBucketId":  "DialogBucketDef_bkt_LiaoBane_Mission3_5_intruder",
+                             "dialogueContent":  [
+
+                                                 ]
+                         },
+                         {
+                             "dialogue":  {
+                                              "EncounterObjectGuid":  "10b4f6db-64d8-4d3b-a2c2-ae3b73c1c132"
+                                          },
+                             "name":  "Inter_DestroyDoorsOrJumpWalls",
+                             "overrideDialogueBucketId":  "DialogBucketDef_bkt_LiaoBane_Mission3_5_breach",
+                             "dialogueContent":  [
+
+                                                 ]
+                         },
+                         {
+                             "dialogue":  {
+                                              "EncounterObjectGuid":  "9071057f-44c7-44ee-a23e-10bc7bab3e00"
+                                          },
+                             "name":  "Inter_GoToComplete_EnemiesRemain",
+                             "overrideDialogueBucketId":  "DialogBucketDef_bkt_LiaoBane_Mission3_5_goto_enemies",
+                             "dialogueContent":  [
+
+                                                 ]
+                         },
+                         {
+                             "dialogue":  {
+                                              "EncounterObjectGuid":  "105c7821-3426-46ef-af69-175ffeab6811"
+                                          },
+                             "name":  "Async_PostGoToComplete",
+                             "overrideDialogueBucketId":  "DialogBucketDef_bkt_LiaoBane_Mission3_5_post_goto",
+                             "dialogueContent":  [
+
+                                                 ]
+                         },
+                         {
+                             "dialogue":  {
+                                              "EncounterObjectGuid":  "051ec0e7-2c7d-435b-bcbc-ce7715f774a3"
+                                          },
+                             "name":  "Inter_KameaArrives",
+                             "overrideDialogueBucketId":  "DialogBucketDef_bkt_LiaoBane_Mission3_5_kamea_arrives",
+                             "dialogueContent":  [
+
+                                                 ]
+                         },
+                         {
+                             "dialogue":  {
+                                              "EncounterObjectGuid":  "d61f12a3-f820-4026-b7ca-9d263d1525fa"
+                                          },
+                             "name":  "Inter_DropshipLanding",
+                             "overrideDialogueBucketId":  "DialogBucketDef_bkt_LiaoBane_Mission3_5_dropship",
+                             "dialogueContent":  [
+
+                                                 ]
+                         },
+                         {
+                             "dialogue":  {
+                                              "EncounterObjectGuid":  "538e52fb-f8f3-4001-b3e2-1165adfa83dc"
+                                          },
+                             "name":  "Async_DefenderDown_Garrison",
+                             "overrideDialogueBucketId":  "DialogBucketDef_bkt_LiaoBane_Mission3_5_garrison_down",
+                             "dialogueContent":  [
+
+                                                 ]
+                         },
+                         {
+                             "dialogue":  {
+                                              "EncounterObjectGuid":  "73df8d9c-a274-48fd-98c9-2bd0d7860e83"
+                                          },
+                             "name":  "MissionStartDialogue",
+                             "overrideDialogueBucketId":  "DialogBucketDef_bkt_LiaoBane_Mission3_5_start",
+                             "dialogueContent":  [
+
+                                                 ]
+                         },
+                         {
+                             "dialogue":  {
+                                              "EncounterObjectGuid":  "4011a4c3-cba2-4d22-b2b3-3b19a3297ab9"
+                                          },
+                             "name":  "MissionSuccessDialogue",
+                             "overrideDialogueBucketId":  "DialogBucketDef_bkt_LiaoBane_Mission3_5_success",
+                             "dialogueContent":  [
+
+                                                 ]
+                         },
+                         {
+                             "dialogue":  {
+                                              "EncounterObjectGuid":  "d3d33d95-9ed7-4686-b9eb-954ebe51cc02"
+                                          },
+                             "name":  "MissionFailureDialogue",
+                             "overrideDialogueBucketId":  "DialogBucketDef_bkt_LiaoBane_Mission3_5_fail",
+                             "dialogueContent":  [
+
+                                                 ]
+                         }
+                     ],
+    "overrideAutoCompleteDialogueId":  "DialogBucketDef_bkt_LiaoBane_Mission3_5_success",
+    "disableNegotations":  true,
+    "disableLanceConfiguration":  false,
+    "disableCancelButton":  false,
+    "disableAfterAction":  false,
+    "contractRewardOverride":  600000,
+    "travelOnly":  false,
+    "useTravelCostPenalty":  false,
+    "usesExpiration":  false,
+    "expirationTimeOverride":  -1,
+    "negotiatedSalary":  0.5,
+    "negotiatedSalvage":  0.5,
+    "player1Team":  {
+                        "encounterLayerData":  {
+                                                   "EncounterObjectGuid":  "219798b5-9e35-4cbe-8a76-bd1634763e46"
+                                               },
+                        "teamGuid":  "bf40fd39-ccf9-47c4-94a6-061809681140",
+                        "teamName":  "Player 1",
+                        "faction":  "Player1sMercUnit",
+                        "teamLeaderCastDefId":  "castDef_TeamLeader_Current",
+                        "lanceOverrideList":  [
+                                                  {
+                                                      "lanceSpawner":  {
+                                                                           "EncounterObjectGuid":  "76b654a6-4f2c-4a6f-86e6-d4cf868335fe"
+                                                                       },
+                                                      "name":  "Spawner_PlayerLance",
+                                                      "lanceDefId":  "Manual",
+                                                      "lanceTagSet":  {
+                                                                          "items":  [
+
+                                                                                    ],
+                                                                          "tagSetSourceFile":  ""
+                                                                      },
+                                                      "lanceExcludedTagSet":  {
+                                                                                  "items":  [
+
+                                                                                            ],
+                                                                                  "tagSetSourceFile":  "Tags/LanceTags"
+                                                                              },
+                                                      "spawnEffectTags":  {
+                                                                              "items":  [
+
+                                                                                        ],
+                                                                              "tagSetSourceFile":  "Tags/SpawnEffectTags"
+                                                                          },
+                                                      "lanceDifficultyAdjustment":  0,
+                                                      "selectedLanceDefId":  null,
+                                                      "selectedLanceDifficulty":  0,
+                                                      "unitSpawnPointOverrideList":  [
+                                                                                         {
+                                                                                             "unitSpawnPoint":  {
+                                                                                                                    "EncounterObjectGuid":  "ec9d2280-ca9a-4d90-8a20-963d8a4c0a39"
+                                                                                                                },
+                                                                                             "customUnitName":  "",
+                                                                                             "customHeraldryDefId":  "",
+                                                                                             "unitType":  "Mech",
+                                                                                             "unitDefId":  "mechDef_None",
+                                                                                             "unitTagSet":  {
+                                                                                                                "items":  [
+
+                                                                                                                          ],
+                                                                                                                "tagSetSourceFile":  ""
+                                                                                                            },
+                                                                                             "unitExcludedTagSet":  {
+                                                                                                                        "items":  [
+
+                                                                                                                                  ],
+                                                                                                                        "tagSetSourceFile":  "Tags/UnitTags"
+                                                                                                                    },
+                                                                                             "spawnEffectTags":  {
+                                                                                                                     "items":  [
+
+                                                                                                                               ],
+                                                                                                                     "tagSetSourceFile":  "Tags/SpawnEffectTags"
+                                                                                                                 },
+                                                                                             "pilotDefId":  "pilot_default",
+                                                                                             "pilotTagSet":  {
+                                                                                                                 "items":  [
+
+                                                                                                                           ],
+                                                                                                                 "tagSetSourceFile":  ""
+                                                                                                             },
+                                                                                             "pilotExcludedTagSet":  {
+                                                                                                                         "items":  [
+
+                                                                                                                                   ],
+                                                                                                                         "tagSetSourceFile":  "Tags/PilotTags"
+                                                                                                                     },
+                                                                                             "selectedUnitType":  "UNDEFINED",
+                                                                                             "selectedUnitDefId":  null,
+                                                                                             "selectedPilotDefId":  null
+                                                                                         },
+                                                                                         {
+                                                                                             "unitSpawnPoint":  {
+                                                                                                                    "EncounterObjectGuid":  "ebc06b6a-c5a8-4165-95ce-480bcf335570"
+                                                                                                                },
+                                                                                             "customUnitName":  "",
+                                                                                             "customHeraldryDefId":  "",
+                                                                                             "unitType":  "Mech",
+                                                                                             "unitDefId":  "mechDef_None",
+                                                                                             "unitTagSet":  {
+                                                                                                                "items":  [
+
+                                                                                                                          ],
+                                                                                                                "tagSetSourceFile":  ""
+                                                                                                            },
+                                                                                             "unitExcludedTagSet":  {
+                                                                                                                        "items":  [
+
+                                                                                                                                  ],
+                                                                                                                        "tagSetSourceFile":  "Tags/UnitTags"
+                                                                                                                    },
+                                                                                             "spawnEffectTags":  {
+                                                                                                                     "items":  [
+
+                                                                                                                               ],
+                                                                                                                     "tagSetSourceFile":  "Tags/SpawnEffectTags"
+                                                                                                                 },
+                                                                                             "pilotDefId":  "pilot_default",
+                                                                                             "pilotTagSet":  {
+                                                                                                                 "items":  [
+
+                                                                                                                           ],
+                                                                                                                 "tagSetSourceFile":  ""
+                                                                                                             },
+                                                                                             "pilotExcludedTagSet":  {
+                                                                                                                         "items":  [
+
+                                                                                                                                   ],
+                                                                                                                         "tagSetSourceFile":  "Tags/PilotTags"
+                                                                                                                     },
+                                                                                             "selectedUnitType":  "UNDEFINED",
+                                                                                             "selectedUnitDefId":  null,
+                                                                                             "selectedPilotDefId":  null
+                                                                                         },
+                                                                                         {
+                                                                                             "unitSpawnPoint":  {
+                                                                                                                    "EncounterObjectGuid":  "d50f1e9d-0a0b-4dc8-9a06-a33233aaa8a1"
+                                                                                                                },
+                                                                                             "customUnitName":  "",
+                                                                                             "customHeraldryDefId":  "",
+                                                                                             "unitType":  "Mech",
+                                                                                             "unitDefId":  "mechDef_None",
+                                                                                             "unitTagSet":  {
+                                                                                                                "items":  [
+
+                                                                                                                          ],
+                                                                                                                "tagSetSourceFile":  ""
+                                                                                                            },
+                                                                                             "unitExcludedTagSet":  {
+                                                                                                                        "items":  [
+
+                                                                                                                                  ],
+                                                                                                                        "tagSetSourceFile":  "Tags/UnitTags"
+                                                                                                                    },
+                                                                                             "spawnEffectTags":  {
+                                                                                                                     "items":  [
+
+                                                                                                                               ],
+                                                                                                                     "tagSetSourceFile":  "Tags/SpawnEffectTags"
+                                                                                                                 },
+                                                                                             "pilotDefId":  "pilot_default",
+                                                                                             "pilotTagSet":  {
+                                                                                                                 "items":  [
+
+                                                                                                                           ],
+                                                                                                                 "tagSetSourceFile":  ""
+                                                                                                             },
+                                                                                             "pilotExcludedTagSet":  {
+                                                                                                                         "items":  [
+
+                                                                                                                                   ],
+                                                                                                                         "tagSetSourceFile":  "Tags/PilotTags"
+                                                                                                                     },
+                                                                                             "selectedUnitType":  "UNDEFINED",
+                                                                                             "selectedUnitDefId":  null,
+                                                                                             "selectedPilotDefId":  null
+                                                                                         },
+                                                                                         {
+                                                                                             "unitSpawnPoint":  {
+                                                                                                                    "EncounterObjectGuid":  "461141c2-f956-49a5-b2c6-6f951b957a94"
+                                                                                                                },
+                                                                                             "customUnitName":  "",
+                                                                                             "customHeraldryDefId":  "",
+                                                                                             "unitType":  "Mech",
+                                                                                             "unitDefId":  "mechDef_None",
+                                                                                             "unitTagSet":  {
+                                                                                                                "items":  [
+
+                                                                                                                          ],
+                                                                                                                "tagSetSourceFile":  ""
+                                                                                                            },
+                                                                                             "unitExcludedTagSet":  {
+                                                                                                                        "items":  [
+
+                                                                                                                                  ],
+                                                                                                                        "tagSetSourceFile":  "Tags/UnitTags"
+                                                                                                                    },
+                                                                                             "spawnEffectTags":  {
+                                                                                                                     "items":  [
+
+                                                                                                                               ],
+                                                                                                                     "tagSetSourceFile":  "Tags/SpawnEffectTags"
+                                                                                                                 },
+                                                                                             "pilotDefId":  "pilot_default",
+                                                                                             "pilotTagSet":  {
+                                                                                                                 "items":  [
+
+                                                                                                                           ],
+                                                                                                                 "tagSetSourceFile":  ""
+                                                                                                             },
+                                                                                             "pilotExcludedTagSet":  {
+                                                                                                                         "items":  [
+
+                                                                                                                                   ],
+                                                                                                                         "tagSetSourceFile":  "Tags/PilotTags"
+                                                                                                                     },
+                                                                                             "selectedUnitType":  "UNDEFINED",
+                                                                                             "selectedUnitDefId":  null,
+                                                                                             "selectedPilotDefId":  null
+                                                                                         }
+                                                                                     ]
+                                                  }
+                                              ]
+                    },
+    "player2Team":  {
+                        "encounterLayerData":  {
+                                                   "EncounterObjectGuid":  "219798b5-9e35-4cbe-8a76-bd1634763e46"
+                                               },
+                        "teamGuid":  "757173dd-b4e1-4bb5-9bee-d78e623cc867",
+                        "teamName":  "Player 2",
+                        "faction":  "Player2sMercUnit",
+                        "teamLeaderCastDefId":  "castDef_TeamLeader_Current",
+                        "lanceOverrideList":  [
+
+                                              ]
+                    },
+    "employerTeam":  {
+                         "encounterLayerData":  {
+                                                    "EncounterObjectGuid":  "219798b5-9e35-4cbe-8a76-bd1634763e46"
+                                                },
+                         "teamGuid":  "ecc8d4f2-74b4-465d-adf6-84445e5dfc230",
+                         "teamName":  "Employer",
+                         "faction":  "DavionA4",
+                         "teamLeaderCastDefId":  "castDef_TeamLeader_Current",
+                         "lanceOverrideList":  [
+                                                   {
+                                                       "lanceSpawner":  {
+                                                                            "EncounterObjectGuid":  "7e140c41-dcc0-4e6a-92c5-3b9b1c562dd6"
+                                                                        },
+                                                       "name":  "LanceSpawner",
+                                                       "lanceDefId":  "Manual",
+                                                       "lanceTagSet":  {
+                                                                           "items":  [
+
+                                                                                     ],
+                                                                           "tagSetSourceFile":  ""
+                                                                       },
+                                                       "lanceExcludedTagSet":  {
+                                                                                   "items":  [
+
+                                                                                             ],
+                                                                                   "tagSetSourceFile":  "Tags/LanceTags"
+                                                                               },
+                                                       "spawnEffectTags":  {
+                                                                               "items":  [
+
+                                                                                         ],
+                                                                               "tagSetSourceFile":  "Tags/SpawnEffectTags"
+                                                                           },
+                                                       "lanceDifficultyAdjustment":  0,
+                                                       "selectedLanceDefId":  null,
+                                                       "selectedLanceDifficulty":  0,
+                                                       "unitSpawnPointOverrideList":  [
+                                                                                          {
+                                                                                              "unitSpawnPoint":  {
+                                                                                                                     "EncounterObjectGuid":  "f6d42e6e-ee7b-49f2-90de-55541dd1bbcf"
+                                                                                                                 },
+                                                                                              "customUnitName":  "Captain Kord Holzmann",
+                                                                                              "customHeraldryDefId":  "heraldrydef_davionA4",
+                                                                                              "unitType":  "Mech",
+                                                                                              "unitDefId":  "mechdef_victor_VTR-9B",
+                                                                                              "unitTagSet":  {
+                                                                                                                 "items":  [
+
+                                                                                                                           ],
+                                                                                                                 "tagSetSourceFile":  ""
+                                                                                                             },
+                                                                                              "unitExcludedTagSet":  {
+                                                                                                                         "items":  [
+
+                                                                                                                                   ],
+                                                                                                                         "tagSetSourceFile":  "Tags/UnitTags"
+                                                                                                                     },
+                                                                                              "spawnEffectTags":  {
+                                                                                                                      "items":  [
+
+                                                                                                                                ],
+                                                                                                                      "tagSetSourceFile":  "Tags/SpawnEffectTags"
+                                                                                                                  },
+                                                                                              "pilotDefId":  "pilotDef_Holzmann_Kord",
+                                                                                              "pilotTagSet":  {
+                                                                                                                  "items":  [
+
+                                                                                                                            ],
+                                                                                                                  "tagSetSourceFile":  "Tags/PilotTags"
+                                                                                                              },
+                                                                                              "pilotExcludedTagSet":  {
+                                                                                                                          "items":  [
+
+                                                                                                                                    ],
+                                                                                                                          "tagSetSourceFile":  "Tags/PilotTags"
+                                                                                                                      },
+                                                                                              "selectedUnitType":  "UNDEFINED",
+                                                                                              "selectedUnitDefId":  null,
+                                                                                              "selectedPilotDefId":  null
+                                                                                          }
+                                                                                      ]
+                                                   }
+                                               ]
+                     },
+    "targetTeam":  {
+                       "encounterLayerData":  {
+                                                  "EncounterObjectGuid":  "219798b5-9e35-4cbe-8a76-bd1634763e46"
+                                              },
+                       "teamGuid":  "be77cadd-e245-4240-a93e-b99cc98902a5",
+                       "teamName":  "Target",
+                       "faction":  "LiaoA9",
+                       "teamLeaderCastDefId":  "castDef_TeamLeader_Current",
+                       "lanceOverrideList":  [
+                                                 {
+                                                     "lanceSpawner":  {
+                                                                          "EncounterObjectGuid":  "61699a08-1ed7-4ac3-b1f3-79b6b671c4ca"
+                                                                      },
+                                                     "name":  "LanceSpawner",
+                                                     "lanceDefId":  "Manual",
+                                                     "lanceTagSet":  {
+                                                                         "items":  [
+
+                                                                                   ],
+                                                                         "tagSetSourceFile":  ""
+                                                                     },
+                                                     "lanceExcludedTagSet":  {
+                                                                                 "items":  [
+
+                                                                                           ],
+                                                                                 "tagSetSourceFile":  "Tags/LanceTags"
+                                                                             },
+                                                     "spawnEffectTags":  {
+                                                                             "items":  [
+
+                                                                                       ],
+                                                                             "tagSetSourceFile":  "Tags/SpawnEffectTags"
+                                                                         },
+                                                     "lanceDifficultyAdjustment":  0,
+                                                     "selectedLanceDefId":  null,
+                                                     "selectedLanceDifficulty":  0,
+                                                     "unitSpawnPointOverrideList":  [
+                                                                                        {
+                                                                                            "unitSpawnPoint":  {
+                                                                                                                   "EncounterObjectGuid":  "7c30108d-c203-4240-a74f-76cc057ccae0"
+                                                                                                               },
+                                                                                            "customUnitName":  "",
+                                                                                            "customHeraldryDefId":  "heraldrydef_liaoA9",
+                                                                                            "unitType":  "Turret",
+                                                                                            "unitDefId":  "turretdef_Lostech_LongTom",
+                                                                                            "unitTagSet":  {
+                                                                                                               "items":  [
+
+                                                                                                                         ],
+                                                                                                               "tagSetSourceFile":  "Tags/EncounterTags"
+                                                                                                           },
+                                                                                            "unitExcludedTagSet":  {
+                                                                                                                       "items":  [
+
+                                                                                                                                 ],
+                                                                                                                       "tagSetSourceFile":  "Tags/UnitTags"
+                                                                                                                   },
+                                                                                            "spawnEffectTags":  {
+                                                                                                                    "items":  [
+
+                                                                                                                              ],
+                                                                                                                    "tagSetSourceFile":  "Tags/SpawnEffectTags"
+                                                                                                                },
+                                                                                            "pilotDefId":  "pilot_d5_turret",
+                                                                                            "pilotTagSet":  {
+                                                                                                                "items":  [
+
+                                                                                                                          ],
+                                                                                                                "tagSetSourceFile":  ""
+                                                                                                            },
+                                                                                            "pilotExcludedTagSet":  {
+                                                                                                                        "items":  [
+
+                                                                                                                                  ],
+                                                                                                                        "tagSetSourceFile":  "Tags/PilotTags"
+                                                                                                                    },
+                                                                                            "selectedUnitType":  "UNDEFINED",
+                                                                                            "selectedUnitDefId":  null,
+                                                                                            "selectedPilotDefId":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "unitSpawnPoint":  {
+                                                                                                                   "EncounterObjectGuid":  "8021f2fc-1990-4f9c-9362-adc183d5fba9"
+                                                                                                               },
+                                                                                            "customUnitName":  "",
+                                                                                            "customHeraldryDefId":  "heraldrydef_liaoA9",
+                                                                                            "unitType":  "Turret",
+                                                                                            "unitDefId":  "turretdef_Lostech_LongTom",
+                                                                                            "unitTagSet":  {
+                                                                                                               "items":  [
+
+                                                                                                                         ],
+                                                                                                               "tagSetSourceFile":  "Tags/EncounterTags"
+                                                                                                           },
+                                                                                            "unitExcludedTagSet":  {
+                                                                                                                       "items":  [
+
+                                                                                                                                 ],
+                                                                                                                       "tagSetSourceFile":  "Tags/UnitTags"
+                                                                                                                   },
+                                                                                            "spawnEffectTags":  {
+                                                                                                                    "items":  [
+
+                                                                                                                              ],
+                                                                                                                    "tagSetSourceFile":  "Tags/SpawnEffectTags"
+                                                                                                                },
+                                                                                            "pilotDefId":  "pilot_d5_turret",
+                                                                                            "pilotTagSet":  {
+                                                                                                                "items":  [
+
+                                                                                                                          ],
+                                                                                                                "tagSetSourceFile":  ""
+                                                                                                            },
+                                                                                            "pilotExcludedTagSet":  {
+                                                                                                                        "items":  [
+
+                                                                                                                                  ],
+                                                                                                                        "tagSetSourceFile":  "Tags/PilotTags"
+                                                                                                                    },
+                                                                                            "selectedUnitType":  "UNDEFINED",
+                                                                                            "selectedUnitDefId":  null,
+                                                                                            "selectedPilotDefId":  null
+                                                                                        }
+                                                                                    ]
+                                                 },
+                                                 {
+                                                     "lanceSpawner":  {
+                                                                          "EncounterObjectGuid":  "c889b2a0-f46e-443e-9436-b0cd1d286b16"
+                                                                      },
+                                                     "name":  "LanceSpawner_Turrets_Alpha",
+                                                     "lanceDefId":  "Manual",
+                                                     "lanceTagSet":  {
+                                                                         "items":  [
+
+                                                                                   ],
+                                                                         "tagSetSourceFile":  "Tags/LanceTags"
+                                                                     },
+                                                     "lanceExcludedTagSet":  {
+                                                                                 "items":  [
+
+                                                                                           ],
+                                                                                 "tagSetSourceFile":  "Tags/LanceTags"
+                                                                             },
+                                                     "spawnEffectTags":  {
+                                                                             "items":  [
+
+                                                                                       ],
+                                                                             "tagSetSourceFile":  "Tags/SpawnEffectTags"
+                                                                         },
+                                                     "lanceDifficultyAdjustment":  0,
+                                                     "selectedLanceDefId":  null,
+                                                     "selectedLanceDifficulty":  0,
+                                                     "unitSpawnPointOverrideList":  [
+                                                                                        {
+                                                                                            "unitSpawnPoint":  {
+                                                                                                                   "EncounterObjectGuid":  "d49a3920-b0f8-4d61-8d8d-0522c81b2544"
+                                                                                                               },
+                                                                                            "customUnitName":  "",
+                                                                                            "customHeraldryDefId":  "heraldrydef_liaoA9",
+                                                                                            "unitType":  "Mech",
+                                                                                            "unitDefId":  "mechdef_ostroc_OSR-2C",
+                                                                                            "unitTagSet":  {
+                                                                                                               "items":  [
+
+                                                                                                                         ],
+                                                                                                               "tagSetSourceFile":  "Tags/EncounterTags"
+                                                                                                           },
+                                                                                            "unitExcludedTagSet":  {
+                                                                                                                       "items":  [
+
+                                                                                                                                 ],
+                                                                                                                       "tagSetSourceFile":  "Tags/UnitTags"
+                                                                                                                   },
+                                                                                            "spawnEffectTags":  {
+                                                                                                                    "items":  [
+
+                                                                                                                              ],
+                                                                                                                    "tagSetSourceFile":  "Tags/SpawnEffectTags"
+                                                                                                                },
+                                                                                            "pilotDefId":  "pilot_d6_outrider",
+                                                                                            "pilotTagSet":  {
+                                                                                                                "items":  [
+
+                                                                                                                          ],
+                                                                                                                "tagSetSourceFile":  ""
+                                                                                                            },
+                                                                                            "pilotExcludedTagSet":  {
+                                                                                                                        "items":  [
+
+                                                                                                                                  ],
+                                                                                                                        "tagSetSourceFile":  "Tags/PilotTags"
+                                                                                                                    },
+                                                                                            "selectedUnitType":  "UNDEFINED",
+                                                                                            "selectedUnitDefId":  null,
+                                                                                            "selectedPilotDefId":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "unitSpawnPoint":  {
+                                                                                                                   "EncounterObjectGuid":  "53b22db1-42d2-4851-ac51-05b4fe82ac15"
+                                                                                                               },
+                                                                                            "customUnitName":  "",
+                                                                                            "customHeraldryDefId":  "heraldrydef_liaoA9",
+                                                                                            "unitType":  "Mech",
+                                                                                            "unitDefId":  "mechdef_ostsol_OTL-4D",
+                                                                                            "unitTagSet":  {
+                                                                                                               "items":  [
+
+                                                                                                                         ],
+                                                                                                               "tagSetSourceFile":  "Tags/EncounterTags"
+                                                                                                           },
+                                                                                            "unitExcludedTagSet":  {
+                                                                                                                       "items":  [
+
+                                                                                                                                 ],
+                                                                                                                       "tagSetSourceFile":  "Tags/UnitTags"
+                                                                                                                   },
+                                                                                            "spawnEffectTags":  {
+                                                                                                                    "items":  [
+
+                                                                                                                              ],
+                                                                                                                    "tagSetSourceFile":  "Tags/SpawnEffectTags"
+                                                                                                                },
+                                                                                            "pilotDefId":  "pilot_d5_pilot",
+                                                                                            "pilotTagSet":  {
+                                                                                                                "items":  [
+
+                                                                                                                          ],
+                                                                                                                "tagSetSourceFile":  ""
+                                                                                                            },
+                                                                                            "pilotExcludedTagSet":  {
+                                                                                                                        "items":  [
+
+                                                                                                                                  ],
+                                                                                                                        "tagSetSourceFile":  "Tags/PilotTags"
+                                                                                                                    },
+                                                                                            "selectedUnitType":  "UNDEFINED",
+                                                                                            "selectedUnitDefId":  null,
+                                                                                            "selectedPilotDefId":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "unitSpawnPoint":  {
+                                                                                                                   "EncounterObjectGuid":  "cdb7f88b-e605-45e9-8c2b-d4b621f24318"
+                                                                                                               },
+                                                                                            "customUnitName":  "",
+                                                                                            "customHeraldryDefId":  "heraldrydef_liaoA9",
+                                                                                            "unitType":  "Turret",
+                                                                                            "unitDefId":  "turretdef_Lostech_LongTom",
+                                                                                            "unitTagSet":  {
+                                                                                                               "items":  [
+
+                                                                                                                         ],
+                                                                                                               "tagSetSourceFile":  "Tags/EncounterTags"
+                                                                                                           },
+                                                                                            "unitExcludedTagSet":  {
+                                                                                                                       "items":  [
+
+                                                                                                                                 ],
+                                                                                                                       "tagSetSourceFile":  "Tags/UnitTags"
+                                                                                                                   },
+                                                                                            "spawnEffectTags":  {
+                                                                                                                    "items":  [
+
+                                                                                                                              ],
+                                                                                                                    "tagSetSourceFile":  "Tags/SpawnEffectTags"
+                                                                                                                },
+                                                                                            "pilotDefId":  "pilot_d5_turret",
+                                                                                            "pilotTagSet":  {
+                                                                                                                "items":  [
+
+                                                                                                                          ],
+                                                                                                                "tagSetSourceFile":  ""
+                                                                                                            },
+                                                                                            "pilotExcludedTagSet":  {
+                                                                                                                        "items":  [
+
+                                                                                                                                  ],
+                                                                                                                        "tagSetSourceFile":  "Tags/PilotTags"
+                                                                                                                    },
+                                                                                            "selectedUnitType":  "UNDEFINED",
+                                                                                            "selectedUnitDefId":  null,
+                                                                                            "selectedPilotDefId":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "unitSpawnPoint":  {
+                                                                                                                   "EncounterObjectGuid":  "8d88b290-3372-4df9-9b9f-a1124e6b4f29"
+                                                                                                               },
+                                                                                            "customUnitName":  "",
+                                                                                            "customHeraldryDefId":  "heraldrydef_liaoA9",
+                                                                                            "unitType":  "Turret",
+                                                                                            "unitDefId":  "turretdef_Lostech_LongTom",
+                                                                                            "unitTagSet":  {
+                                                                                                               "items":  [
+
+                                                                                                                         ],
+                                                                                                               "tagSetSourceFile":  "Tags/EncounterTags"
+                                                                                                           },
+                                                                                            "unitExcludedTagSet":  {
+                                                                                                                       "items":  [
+
+                                                                                                                                 ],
+                                                                                                                       "tagSetSourceFile":  "Tags/UnitTags"
+                                                                                                                   },
+                                                                                            "spawnEffectTags":  {
+                                                                                                                    "items":  [
+
+                                                                                                                              ],
+                                                                                                                    "tagSetSourceFile":  "Tags/SpawnEffectTags"
+                                                                                                                },
+                                                                                            "pilotDefId":  "pilot_d5_turret",
+                                                                                            "pilotTagSet":  {
+                                                                                                                "items":  [
+
+                                                                                                                          ],
+                                                                                                                "tagSetSourceFile":  ""
+                                                                                                            },
+                                                                                            "pilotExcludedTagSet":  {
+                                                                                                                        "items":  [
+
+                                                                                                                                  ],
+                                                                                                                        "tagSetSourceFile":  "Tags/PilotTags"
+                                                                                                                    },
+                                                                                            "selectedUnitType":  "UNDEFINED",
+                                                                                            "selectedUnitDefId":  null,
+                                                                                            "selectedPilotDefId":  null
+                                                                                        }
+                                                                                    ]
+                                                 },
+                                                 {
+                                                     "lanceSpawner":  {
+                                                                          "EncounterObjectGuid":  "ea34f78b-b583-4f47-ae98-8349c4e9a571"
+                                                                      },
+                                                     "name":  "LanceSpawner_Turrets_Bravo",
+                                                     "lanceDefId":  "Manual",
+                                                     "lanceTagSet":  {
+                                                                         "items":  [
+
+                                                                                   ],
+                                                                         "tagSetSourceFile":  "Tags/LanceTags"
+                                                                     },
+                                                     "lanceExcludedTagSet":  {
+                                                                                 "items":  [
+
+                                                                                           ],
+                                                                                 "tagSetSourceFile":  "Tags/LanceTags"
+                                                                             },
+                                                     "spawnEffectTags":  {
+                                                                             "items":  [
+
+                                                                                       ],
+                                                                             "tagSetSourceFile":  "Tags/SpawnEffectTags"
+                                                                         },
+                                                     "lanceDifficultyAdjustment":  0,
+                                                     "selectedLanceDefId":  null,
+                                                     "selectedLanceDifficulty":  0,
+                                                     "unitSpawnPointOverrideList":  [
+                                                                                        {
+                                                                                            "unitSpawnPoint":  {
+                                                                                                                   "EncounterObjectGuid":  "af9b9b76-87be-40bc-82b1-62448177262c"
+                                                                                                               },
+                                                                                            "customUnitName":  "",
+                                                                                            "customHeraldryDefId":  "heraldrydef_liaoA9",
+                                                                                            "unitType":  "Mech",
+                                                                                            "unitDefId":  "mechdef_warhammer_WHM-6L",
+                                                                                            "unitTagSet":  {
+                                                                                                               "items":  [
+
+                                                                                                                         ],
+                                                                                                               "tagSetSourceFile":  "Tags/EncounterTags"
+                                                                                                           },
+                                                                                            "unitExcludedTagSet":  {
+                                                                                                                       "items":  [
+
+                                                                                                                                 ],
+                                                                                                                       "tagSetSourceFile":  "Tags/UnitTags"
+                                                                                                                   },
+                                                                                            "spawnEffectTags":  {
+                                                                                                                    "items":  [
+
+                                                                                                                              ],
+                                                                                                                    "tagSetSourceFile":  "Tags/SpawnEffectTags"
+                                                                                                                },
+                                                                                            "pilotDefId":  "pilot_d6_recon",
+                                                                                            "pilotTagSet":  {
+                                                                                                                "items":  [
+
+                                                                                                                          ],
+                                                                                                                "tagSetSourceFile":  ""
+                                                                                                            },
+                                                                                            "pilotExcludedTagSet":  {
+                                                                                                                        "items":  [
+
+                                                                                                                                  ],
+                                                                                                                        "tagSetSourceFile":  "Tags/PilotTags"
+                                                                                                                    },
+                                                                                            "selectedUnitType":  "UNDEFINED",
+                                                                                            "selectedUnitDefId":  null,
+                                                                                            "selectedPilotDefId":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "unitSpawnPoint":  {
+                                                                                                                   "EncounterObjectGuid":  "4236802b-483c-4a5b-86ff-c2d3fbf09f17"
+                                                                                                               },
+                                                                                            "customUnitName":  "",
+                                                                                            "customHeraldryDefId":  "heraldrydef_liaoA9",
+                                                                                            "unitType":  "Mech",
+                                                                                            "unitDefId":  "mechdef_ostroc_OSR-2C",
+                                                                                            "unitTagSet":  {
+                                                                                                               "items":  [
+
+                                                                                                                         ],
+                                                                                                               "tagSetSourceFile":  "Tags/EncounterTags"
+                                                                                                           },
+                                                                                            "unitExcludedTagSet":  {
+                                                                                                                       "items":  [
+
+                                                                                                                                 ],
+                                                                                                                       "tagSetSourceFile":  "Tags/UnitTags"
+                                                                                                                   },
+                                                                                            "spawnEffectTags":  {
+                                                                                                                    "items":  [
+
+                                                                                                                              ],
+                                                                                                                    "tagSetSourceFile":  "Tags/SpawnEffectTags"
+                                                                                                                },
+                                                                                            "pilotDefId":  "pilot_d5_pilot",
+                                                                                            "pilotTagSet":  {
+                                                                                                                "items":  [
+
+                                                                                                                          ],
+                                                                                                                "tagSetSourceFile":  ""
+                                                                                                            },
+                                                                                            "pilotExcludedTagSet":  {
+                                                                                                                        "items":  [
+
+                                                                                                                                  ],
+                                                                                                                        "tagSetSourceFile":  "Tags/PilotTags"
+                                                                                                                    },
+                                                                                            "selectedUnitType":  "UNDEFINED",
+                                                                                            "selectedUnitDefId":  null,
+                                                                                            "selectedPilotDefId":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "unitSpawnPoint":  {
+                                                                                                                   "EncounterObjectGuid":  "5f182e02-7645-482f-8e32-3edf8060f4a6"
+                                                                                                               },
+                                                                                            "customUnitName":  "",
+                                                                                            "customHeraldryDefId":  "heraldrydef_liaoA9",
+                                                                                            "unitType":  "Turret",
+                                                                                            "unitDefId":  "turretdef_Lostech_LongTom",
+                                                                                            "unitTagSet":  {
+                                                                                                               "items":  [
+
+                                                                                                                         ],
+                                                                                                               "tagSetSourceFile":  "Tags/EncounterTags"
+                                                                                                           },
+                                                                                            "unitExcludedTagSet":  {
+                                                                                                                       "items":  [
+
+                                                                                                                                 ],
+                                                                                                                       "tagSetSourceFile":  "Tags/UnitTags"
+                                                                                                                   },
+                                                                                            "spawnEffectTags":  {
+                                                                                                                    "items":  [
+
+                                                                                                                              ],
+                                                                                                                    "tagSetSourceFile":  "Tags/SpawnEffectTags"
+                                                                                                                },
+                                                                                            "pilotDefId":  "pilot_d5_turret",
+                                                                                            "pilotTagSet":  {
+                                                                                                                "items":  [
+
+                                                                                                                          ],
+                                                                                                                "tagSetSourceFile":  ""
+                                                                                                            },
+                                                                                            "pilotExcludedTagSet":  {
+                                                                                                                        "items":  [
+
+                                                                                                                                  ],
+                                                                                                                        "tagSetSourceFile":  "Tags/PilotTags"
+                                                                                                                    },
+                                                                                            "selectedUnitType":  "UNDEFINED",
+                                                                                            "selectedUnitDefId":  null,
+                                                                                            "selectedPilotDefId":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "unitSpawnPoint":  {
+                                                                                                                   "EncounterObjectGuid":  "ae8a9959-56f7-4a3c-8c54-78539c052562"
+                                                                                                               },
+                                                                                            "customUnitName":  "",
+                                                                                            "customHeraldryDefId":  "heraldrydef_liaoA9",
+                                                                                            "unitType":  "Turret",
+                                                                                            "unitDefId":  "turretdef_Lostech_LongTom",
+                                                                                            "unitTagSet":  {
+                                                                                                               "items":  [
+
+                                                                                                                         ],
+                                                                                                               "tagSetSourceFile":  "Tags/EncounterTags"
+                                                                                                           },
+                                                                                            "unitExcludedTagSet":  {
+                                                                                                                       "items":  [
+
+                                                                                                                                 ],
+                                                                                                                       "tagSetSourceFile":  "Tags/UnitTags"
+                                                                                                                   },
+                                                                                            "spawnEffectTags":  {
+                                                                                                                    "items":  [
+
+                                                                                                                              ],
+                                                                                                                    "tagSetSourceFile":  "Tags/SpawnEffectTags"
+                                                                                                                },
+                                                                                            "pilotDefId":  "pilot_d5_turret",
+                                                                                            "pilotTagSet":  {
+                                                                                                                "items":  [
+
+                                                                                                                          ],
+                                                                                                                "tagSetSourceFile":  ""
+                                                                                                            },
+                                                                                            "pilotExcludedTagSet":  {
+                                                                                                                        "items":  [
+
+                                                                                                                                  ],
+                                                                                                                        "tagSetSourceFile":  "Tags/PilotTags"
+                                                                                                                    },
+                                                                                            "selectedUnitType":  "UNDEFINED",
+                                                                                            "selectedUnitDefId":  null,
+                                                                                            "selectedPilotDefId":  null
+                                                                                        }
+                                                                                    ]
+                                                 },
+                                                 {
+                                                     "lanceSpawner":  {
+                                                                          "EncounterObjectGuid":  "4bcca0a6-1941-4033-bfde-175234a3de7f"
+                                                                      },
+                                                     "name":  "LanceSpawner_Vehicles",
+                                                     "lanceDefId":  "Manual",
+                                                     "lanceTagSet":  {
+                                                                         "items":  [
+
+                                                                                   ],
+                                                                         "tagSetSourceFile":  ""
+                                                                     },
+                                                     "lanceExcludedTagSet":  {
+                                                                                 "items":  [
+
+                                                                                           ],
+                                                                                 "tagSetSourceFile":  "Tags/LanceTags"
+                                                                             },
+                                                     "spawnEffectTags":  {
+                                                                             "items":  [
+
+                                                                                       ],
+                                                                             "tagSetSourceFile":  "Tags/SpawnEffectTags"
+                                                                         },
+                                                     "lanceDifficultyAdjustment":  0,
+                                                     "selectedLanceDefId":  null,
+                                                     "selectedLanceDifficulty":  0,
+                                                     "unitSpawnPointOverrideList":  [
+                                                                                        {
+                                                                                            "unitSpawnPoint":  {
+                                                                                                                   "EncounterObjectGuid":  "8679983b-56aa-4bb2-aea5-e37fbd07fc01"
+                                                                                                               },
+                                                                                            "customUnitName":  "",
+                                                                                            "customHeraldryDefId":  "",
+                                                                                            "unitDefId":  "mechDef_None",
+                                                                                            "unitType":  "Mech",
+                                                                                            "unitTagSet":  {
+                                                                                                               "items":  [
+
+                                                                                                                         ]
+                                                                                                           },
+                                                                                            "unitExcludedTagSet":  {
+                                                                                                                       "items":  [
+
+                                                                                                                                 ]
+                                                                                                                   },
+                                                                                            "spawnEffectTags":  {
+                                                                                                                    "items":  [
+
+                                                                                                                              ]
+                                                                                                                },
+                                                                                            "pilotDefId":  "pilot_default",
+                                                                                            "pilotTagSet":  {
+                                                                                                                "items":  [
+
+                                                                                                                          ]
+                                                                                                            },
+                                                                                            "pilotExcludedTagSet":  {
+                                                                                                                        "items":  [
+
+                                                                                                                                  ]
+                                                                                                                    }
+                                                                                        }
+                                                                                    ]
+                                                 },
+                                                 {
+                                                     "lanceSpawner":  {
+                                                                          "EncounterObjectGuid":  "03098774-4d71-41cd-92ee-b466f6390110"
+                                                                      },
+                                                     "name":  "Spawner_InternalDefenseTurrets",
+                                                     "lanceDefId":  "Manual",
+                                                     "lanceTagSet":  {
+                                                                         "items":  [
+
+                                                                                   ],
+                                                                         "tagSetSourceFile":  ""
+                                                                     },
+                                                     "lanceExcludedTagSet":  {
+                                                                                 "items":  [
+
+                                                                                           ],
+                                                                                 "tagSetSourceFile":  "Tags/LanceTags"
+                                                                             },
+                                                     "spawnEffectTags":  {
+                                                                             "items":  [
+
+                                                                                       ],
+                                                                             "tagSetSourceFile":  "Tags/SpawnEffectTags"
+                                                                         },
+                                                     "lanceDifficultyAdjustment":  0,
+                                                     "selectedLanceDefId":  null,
+                                                     "selectedLanceDifficulty":  0,
+                                                     "unitSpawnPointOverrideList":  [
+                                                                                        {
+                                                                                            "unitSpawnPoint":  {
+                                                                                                                   "EncounterObjectGuid":  "b749f17a-a9fa-4562-9fe5-66396608cd0a"
+                                                                                                               },
+                                                                                            "customUnitName":  "",
+                                                                                            "customHeraldryDefId":  "",
+                                                                                            "unitDefId":  "turretDef_None",
+                                                                                            "unitType":  "Turret",
+                                                                                            "unitTagSet":  {
+                                                                                                               "items":  [
+
+                                                                                                                         ]
+                                                                                                           },
+                                                                                            "unitExcludedTagSet":  {
+                                                                                                                       "items":  [
+
+                                                                                                                                 ]
+                                                                                                                   },
+                                                                                            "spawnEffectTags":  {
+                                                                                                                    "items":  [
+
+                                                                                                                              ]
+                                                                                                                },
+                                                                                            "pilotDefId":  "pilot_default",
+                                                                                            "pilotTagSet":  {
+                                                                                                                "items":  [
+
+                                                                                                                          ]
+                                                                                                            },
+                                                                                            "pilotExcludedTagSet":  {
+                                                                                                                        "items":  [
+
+                                                                                                                                  ]
+                                                                                                                    }
+                                                                                        },
+                                                                                        {
+                                                                                            "unitSpawnPoint":  {
+                                                                                                                   "EncounterObjectGuid":  "4c7a03f7-5842-4798-88af-1d44922c9d92"
+                                                                                                               },
+                                                                                            "customUnitName":  "",
+                                                                                            "customHeraldryDefId":  "",
+                                                                                            "unitDefId":  "turretDef_None",
+                                                                                            "unitType":  "Turret",
+                                                                                            "unitTagSet":  {
+                                                                                                               "items":  [
+
+                                                                                                                         ]
+                                                                                                           },
+                                                                                            "unitExcludedTagSet":  {
+                                                                                                                       "items":  [
+
+                                                                                                                                 ]
+                                                                                                                   },
+                                                                                            "spawnEffectTags":  {
+                                                                                                                    "items":  [
+
+                                                                                                                              ]
+                                                                                                                },
+                                                                                            "pilotDefId":  "pilot_default",
+                                                                                            "pilotTagSet":  {
+                                                                                                                "items":  [
+
+                                                                                                                          ]
+                                                                                                            },
+                                                                                            "pilotExcludedTagSet":  {
+                                                                                                                        "items":  [
+
+                                                                                                                                  ]
+                                                                                                                    }
+                                                                                        },
+                                                                                        {
+                                                                                            "unitSpawnPoint":  {
+                                                                                                                   "EncounterObjectGuid":  "2c509246-3a91-4ae0-a640-91607bd4f772"
+                                                                                                               },
+                                                                                            "customUnitName":  "",
+                                                                                            "customHeraldryDefId":  "",
+                                                                                            "unitDefId":  "turretDef_None",
+                                                                                            "unitType":  "Turret",
+                                                                                            "unitTagSet":  {
+                                                                                                               "items":  [
+
+                                                                                                                         ]
+                                                                                                           },
+                                                                                            "unitExcludedTagSet":  {
+                                                                                                                       "items":  [
+
+                                                                                                                                 ]
+                                                                                                                   },
+                                                                                            "spawnEffectTags":  {
+                                                                                                                    "items":  [
+
+                                                                                                                              ]
+                                                                                                                },
+                                                                                            "pilotDefId":  "pilot_default",
+                                                                                            "pilotTagSet":  {
+                                                                                                                "items":  [
+
+                                                                                                                          ]
+                                                                                                            },
+                                                                                            "pilotExcludedTagSet":  {
+                                                                                                                        "items":  [
+
+                                                                                                                                  ]
+                                                                                                                    }
+                                                                                        },
+                                                                                        {
+                                                                                            "unitSpawnPoint":  {
+                                                                                                                   "EncounterObjectGuid":  "17e8879d-d6f3-4ef5-9fba-8a686fb381d3"
+                                                                                                               },
+                                                                                            "customUnitName":  "",
+                                                                                            "customHeraldryDefId":  "",
+                                                                                            "unitDefId":  "turretDef_None",
+                                                                                            "unitType":  "Turret",
+                                                                                            "unitTagSet":  {
+                                                                                                               "items":  [
+
+                                                                                                                         ]
+                                                                                                           },
+                                                                                            "unitExcludedTagSet":  {
+                                                                                                                       "items":  [
+
+                                                                                                                                 ]
+                                                                                                                   },
+                                                                                            "spawnEffectTags":  {
+                                                                                                                    "items":  [
+
+                                                                                                                              ]
+                                                                                                                },
+                                                                                            "pilotDefId":  "pilot_default",
+                                                                                            "pilotTagSet":  {
+                                                                                                                "items":  [
+
+                                                                                                                          ]
+                                                                                                            },
+                                                                                            "pilotExcludedTagSet":  {
+                                                                                                                        "items":  [
+
+                                                                                                                                  ]
+                                                                                                                    }
+                                                                                        },
+                                                                                        {
+                                                                                            "unitSpawnPoint":  {
+                                                                                                                   "EncounterObjectGuid":  "975684d3-8fac-40a8-99a6-953a655b04bc"
+                                                                                                               },
+                                                                                            "customUnitName":  "",
+                                                                                            "customHeraldryDefId":  "",
+                                                                                            "unitDefId":  "turretDef_None",
+                                                                                            "unitType":  "Turret",
+                                                                                            "unitTagSet":  {
+                                                                                                               "items":  [
+
+                                                                                                                         ]
+                                                                                                           },
+                                                                                            "unitExcludedTagSet":  {
+                                                                                                                       "items":  [
+
+                                                                                                                                 ]
+                                                                                                                   },
+                                                                                            "spawnEffectTags":  {
+                                                                                                                    "items":  [
+
+                                                                                                                              ]
+                                                                                                                },
+                                                                                            "pilotDefId":  "pilot_default",
+                                                                                            "pilotTagSet":  {
+                                                                                                                "items":  [
+
+                                                                                                                          ]
+                                                                                                            },
+                                                                                            "pilotExcludedTagSet":  {
+                                                                                                                        "items":  [
+
+                                                                                                                                  ]
+                                                                                                                    }
+                                                                                        },
+                                                                                        {
+                                                                                            "unitSpawnPoint":  {
+                                                                                                                   "EncounterObjectGuid":  "2cee7ba8-d91d-4dbe-a073-15f77e0d1f2d"
+                                                                                                               },
+                                                                                            "customUnitName":  "",
+                                                                                            "customHeraldryDefId":  "",
+                                                                                            "unitDefId":  "turretDef_None",
+                                                                                            "unitType":  "Turret",
+                                                                                            "unitTagSet":  {
+                                                                                                               "items":  [
+
+                                                                                                                         ]
+                                                                                                           },
+                                                                                            "unitExcludedTagSet":  {
+                                                                                                                       "items":  [
+
+                                                                                                                                 ]
+                                                                                                                   },
+                                                                                            "spawnEffectTags":  {
+                                                                                                                    "items":  [
+
+                                                                                                                              ]
+                                                                                                                },
+                                                                                            "pilotDefId":  "pilot_default",
+                                                                                            "pilotTagSet":  {
+                                                                                                                "items":  [
+
+                                                                                                                          ]
+                                                                                                            },
+                                                                                            "pilotExcludedTagSet":  {
+                                                                                                                        "items":  [
+
+                                                                                                                                  ]
+                                                                                                                    }
+                                                                                        }
+                                                                                    ]
+                                                 },
+                                                 {
+                                                     "lanceSpawner":  {
+                                                                          "EncounterObjectGuid":  "8f5cd1f7-9e39-4d37-a6cb-398b5797ab7c"
+                                                                      },
+                                                     "name":  "DestroyLanceSpawner",
+                                                     "lanceDefId":  "Manual",
+                                                     "lanceTagSet":  {
+                                                                         "items":  [
+
+                                                                                   ],
+                                                                         "tagSetSourceFile":  ""
+                                                                     },
+                                                     "lanceExcludedTagSet":  {
+                                                                                 "items":  [
+
+                                                                                           ],
+                                                                                 "tagSetSourceFile":  "Tags/LanceTags"
+                                                                             },
+                                                     "spawnEffectTags":  {
+                                                                             "items":  [
+
+                                                                                       ],
+                                                                             "tagSetSourceFile":  "Tags/SpawnEffectTags"
+                                                                         },
+                                                     "lanceDifficultyAdjustment":  0,
+                                                     "selectedLanceDefId":  null,
+                                                     "selectedLanceDifficulty":  0,
+                                                     "unitSpawnPointOverrideList":  [
+                                                                                        {
+                                                                                            "unitSpawnPoint":  {
+                                                                                                                   "EncounterObjectGuid":  "3d549207-a653-4c23-8b9a-0b47a2e61451"
+                                                                                                               },
+                                                                                            "customUnitName":  "",
+                                                                                            "customHeraldryDefId":  "heraldrydef_liaoA9",
+                                                                                            "unitType":  "Mech",
+                                                                                            "unitDefId":  "mechdef_striker_STC-2C",
+                                                                                            "unitTagSet":  {
+                                                                                                               "items":  [
+
+                                                                                                                         ],
+                                                                                                               "tagSetSourceFile":  "Tags/EncounterTags"
+                                                                                                           },
+                                                                                            "unitExcludedTagSet":  {
+                                                                                                                       "items":  [
+
+                                                                                                                                 ],
+                                                                                                                       "tagSetSourceFile":  "Tags/UnitTags"
+                                                                                                                   },
+                                                                                            "spawnEffectTags":  {
+                                                                                                                    "items":  [
+
+                                                                                                                              ],
+                                                                                                                    "tagSetSourceFile":  "Tags/SpawnEffectTags"
+                                                                                                                },
+                                                                                            "pilotDefId":  "pilot_d5_defender",
+                                                                                            "pilotTagSet":  {
+                                                                                                                "items":  [
+
+                                                                                                                          ],
+                                                                                                                "tagSetSourceFile":  ""
+                                                                                                            },
+                                                                                            "pilotExcludedTagSet":  {
+                                                                                                                        "items":  [
+
+                                                                                                                                  ],
+                                                                                                                        "tagSetSourceFile":  "Tags/PilotTags"
+                                                                                                                    },
+                                                                                            "selectedUnitType":  "UNDEFINED",
+                                                                                            "selectedUnitDefId":  null,
+                                                                                            "selectedPilotDefId":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "unitSpawnPoint":  {
+                                                                                                                   "EncounterObjectGuid":  "e80c9758-7e66-44d6-9205-c038cbb5ccc8"
+                                                                                                               },
+                                                                                            "customUnitName":  "",
+                                                                                            "customHeraldryDefId":  "heraldrydef_liaoA9",
+                                                                                            "unitType":  "Mech",
+                                                                                            "unitDefId":  "mechdef_victor_VTR-9B",
+                                                                                            "unitTagSet":  {
+                                                                                                               "items":  [
+
+                                                                                                                         ],
+                                                                                                               "tagSetSourceFile":  "Tags/EncounterTags"
+                                                                                                           },
+                                                                                            "unitExcludedTagSet":  {
+                                                                                                                       "items":  [
+
+                                                                                                                                 ],
+                                                                                                                       "tagSetSourceFile":  "Tags/UnitTags"
+                                                                                                                   },
+                                                                                            "spawnEffectTags":  {
+                                                                                                                    "items":  [
+
+                                                                                                                              ],
+                                                                                                                    "tagSetSourceFile":  "Tags/SpawnEffectTags"
+                                                                                                                },
+                                                                                            "pilotDefId":  "pilot_d6_brawler",
+                                                                                            "pilotTagSet":  {
+                                                                                                                "items":  [
+
+                                                                                                                          ],
+                                                                                                                "tagSetSourceFile":  ""
+                                                                                                            },
+                                                                                            "pilotExcludedTagSet":  {
+                                                                                                                        "items":  [
+
+                                                                                                                                  ],
+                                                                                                                        "tagSetSourceFile":  "Tags/PilotTags"
+                                                                                                                    },
+                                                                                            "selectedUnitType":  "UNDEFINED",
+                                                                                            "selectedUnitDefId":  null,
+                                                                                            "selectedPilotDefId":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "unitSpawnPoint":  {
+                                                                                                                   "EncounterObjectGuid":  "2d28a934-86f5-4413-858c-3818faf3100b"
+                                                                                                               },
+                                                                                            "customUnitName":  "",
+                                                                                            "customHeraldryDefId":  "heraldrydef_liaoA9",
+                                                                                            "unitType":  "Mech",
+                                                                                            "unitDefId":  "mechdef_highlander_HGN-733",
+                                                                                            "unitTagSet":  {
+                                                                                                               "items":  [
+
+                                                                                                                         ],
+                                                                                                               "tagSetSourceFile":  "Tags/EncounterTags"
+                                                                                                           },
+                                                                                            "unitExcludedTagSet":  {
+                                                                                                                       "items":  [
+
+                                                                                                                                 ],
+                                                                                                                       "tagSetSourceFile":  "Tags/UnitTags"
+                                                                                                                   },
+                                                                                            "spawnEffectTags":  {
+                                                                                                                    "items":  [
+
+                                                                                                                              ],
+                                                                                                                    "tagSetSourceFile":  "Tags/SpawnEffectTags"
+                                                                                                                },
+                                                                                            "pilotDefId":  "pilot_d6_striker",
+                                                                                            "pilotTagSet":  {
+                                                                                                                "items":  [
+
+                                                                                                                          ],
+                                                                                                                "tagSetSourceFile":  ""
+                                                                                                            },
+                                                                                            "pilotExcludedTagSet":  {
+                                                                                                                        "items":  [
+
+                                                                                                                                  ],
+                                                                                                                        "tagSetSourceFile":  "Tags/PilotTags"
+                                                                                                                    },
+                                                                                            "selectedUnitType":  "UNDEFINED",
+                                                                                            "selectedUnitDefId":  null,
+                                                                                            "selectedPilotDefId":  null
+                                                                                        },
+                                                                                        {
+                                                                                            "unitSpawnPoint":  {
+                                                                                                                   "EncounterObjectGuid":  "de1a56b1-7916-4a69-8316-2955ec33d38d"
+                                                                                                               },
+                                                                                            "customUnitName":  "",
+                                                                                            "customHeraldryDefId":  "heraldrydef_liaoA9",
+                                                                                            "unitType":  "Mech",
+                                                                                            "unitDefId":  "mechdef_stalker_STK-3F",
+                                                                                            "unitTagSet":  {
+                                                                                                               "items":  [
+
+                                                                                                                         ],
+                                                                                                               "tagSetSourceFile":  "Tags/EncounterTags"
+                                                                                                           },
+                                                                                            "unitExcludedTagSet":  {
+                                                                                                                       "items":  [
+
+                                                                                                                                 ],
+                                                                                                                       "tagSetSourceFile":  "Tags/UnitTags"
+                                                                                                                   },
+                                                                                            "spawnEffectTags":  {
+                                                                                                                    "items":  [
+
+                                                                                                                              ],
+                                                                                                                    "tagSetSourceFile":  "Tags/SpawnEffectTags"
+                                                                                                                },
+                                                                                            "pilotDefId":  "pilot_d6_tactician",
+                                                                                            "pilotTagSet":  {
+                                                                                                                "items":  [
+
+                                                                                                                          ],
+                                                                                                                "tagSetSourceFile":  ""
+                                                                                                            },
+                                                                                            "pilotExcludedTagSet":  {
+                                                                                                                        "items":  [
+
+                                                                                                                                  ],
+                                                                                                                        "tagSetSourceFile":  "Tags/PilotTags"
+                                                                                                                    },
+                                                                                            "selectedUnitType":  "UNDEFINED",
+                                                                                            "selectedUnitDefId":  null,
+                                                                                            "selectedPilotDefId":  null
+                                                                                        }
+                                                                                    ]
+                                                 },
+                                                 {
+                                                     "lanceSpawner":  {
+                                                                          "EncounterObjectGuid":  "1ed1ecd2-449b-4df9-8ab5-29846b40c1ad"
+                                                                      },
+                                                     "name":  "Spawner_ReinforcementsLance",
+                                                     "lanceDefId":  "Manual",
+                                                     "lanceTagSet":  {
+                                                                         "items":  [
+
+                                                                                   ],
+                                                                         "tagSetSourceFile":  ""
+                                                                     },
+                                                     "lanceExcludedTagSet":  {
+                                                                                 "items":  [
+
+                                                                                           ],
+                                                                                 "tagSetSourceFile":  "Tags/LanceTags"
+                                                                             },
+                                                     "spawnEffectTags":  {
+                                                                             "items":  [
+
+                                                                                       ],
+                                                                             "tagSetSourceFile":  "Tags/SpawnEffectTags"
+                                                                         },
+                                                     "lanceDifficultyAdjustment":  0,
+                                                     "selectedLanceDefId":  null,
+                                                     "selectedLanceDifficulty":  0,
+                                                     "unitSpawnPointOverrideList":  [
+                                                                                        {
+                                                                                            "unitSpawnPoint":  {
+                                                                                                                   "EncounterObjectGuid":  "2d8b623b-049d-4dd1-b50f-742b47844399"
+                                                                                                               },
+                                                                                            "customUnitName":  "",
+                                                                                            "customHeraldryDefId":  "",
+                                                                                            "unitDefId":  "mechDef_None",
+                                                                                            "unitType":  "Mech",
+                                                                                            "unitTagSet":  {
+                                                                                                               "items":  [
+
+                                                                                                                         ]
+                                                                                                           },
+                                                                                            "unitExcludedTagSet":  {
+                                                                                                                       "items":  [
+
+                                                                                                                                 ]
+                                                                                                                   },
+                                                                                            "spawnEffectTags":  {
+                                                                                                                    "items":  [
+
+                                                                                                                              ]
+                                                                                                                },
+                                                                                            "pilotDefId":  "pilot_default",
+                                                                                            "pilotTagSet":  {
+                                                                                                                "items":  [
+
+                                                                                                                          ]
+                                                                                                            },
+                                                                                            "pilotExcludedTagSet":  {
+                                                                                                                        "items":  [
+
+                                                                                                                                  ]
+                                                                                                                    }
+                                                                                        },
+                                                                                        {
+                                                                                            "unitSpawnPoint":  {
+                                                                                                                   "EncounterObjectGuid":  "08f8295b-f403-498f-adad-bc52b180df92"
+                                                                                                               },
+                                                                                            "customUnitName":  "",
+                                                                                            "customHeraldryDefId":  "",
+                                                                                            "unitDefId":  "mechDef_None",
+                                                                                            "unitType":  "Mech",
+                                                                                            "unitTagSet":  {
+                                                                                                               "items":  [
+
+                                                                                                                         ]
+                                                                                                           },
+                                                                                            "unitExcludedTagSet":  {
+                                                                                                                       "items":  [
+
+                                                                                                                                 ]
+                                                                                                                   },
+                                                                                            "spawnEffectTags":  {
+                                                                                                                    "items":  [
+
+                                                                                                                              ]
+                                                                                                                },
+                                                                                            "pilotDefId":  "pilot_default",
+                                                                                            "pilotTagSet":  {
+                                                                                                                "items":  [
+
+                                                                                                                          ]
+                                                                                                            },
+                                                                                            "pilotExcludedTagSet":  {
+                                                                                                                        "items":  [
+
+                                                                                                                                  ]
+                                                                                                                    }
+                                                                                        }
+                                                                                    ]
+                                                 }
+                                             ]
+                   },
+    "targetsAllyTeam":  {
+                            "encounterLayerData":  {
+                                                       "EncounterObjectGuid":  "219798b5-9e35-4cbe-8a76-bd1634763e46"
+                                                   },
+                            "teamGuid":  "31151ed6-cfc2-467e-98c4-9ae5bea784cf",
+                            "teamName":  "Target\u0027s Ally",
+                            "faction":  "INVALID_UNSET",
+                            "teamLeaderCastDefId":  "castDef_TeamLeader_Current",
+                            "lanceOverrideList":  [
+
+                                                  ]
+                        },
+    "neutralToAllTeam":  {
+                             "encounterLayerData":  {
+                                                        "EncounterObjectGuid":  "219798b5-9e35-4cbe-8a76-bd1634763e46"
+                                                    },
+                             "teamGuid":  "61612bb3-abf9-4586-952a-0559fa9dcd75",
+                             "teamName":  "Neutral to All",
+                             "faction":  "INVALID_UNSET",
+                             "teamLeaderCastDefId":  "castDef_TeamLeader_Current",
+                             "lanceOverrideList":  [
+
+                                                   ]
+                         },
+    "hostileToAllTeam":  {
+                             "encounterLayerData":  {
+                                                        "EncounterObjectGuid":  "219798b5-9e35-4cbe-8a76-bd1634763e46"
+                                                    },
+                             "teamGuid":  "3c9f3a20-ab03-4bcb-8ab6-b1ef0442bbf0",
+                             "teamName":  "Hostile to All",
+                             "faction":  "INVALID_UNSET",
+                             "teamLeaderCastDefId":  "castDef_TeamLeader_Current",
+                             "lanceOverrideList":  [
+
+                                                   ]
+                         },
+    "representativeCastDefIDOverride":  "castDef_Davion_Wilson_Mandella",
+    "missionSuccessStatementOverride":  "You were instrumental in our successes, Commander, well done.",
+    "badFaithStatementOverride":  "We took severe losses due to you not carrying out your mission.",
+    "goodFaithStatementOverride":  "You made the effort, Commander, but my Hussars paid the price for your lack of ability.",
+    "limitFlashpointDrop":  false,
+    "respectFourDropLimit":  false,
+    "lanceMinTonnage":  240,
+    "lanceMaxTonnage":  800,
+    "mechMinTonnages":  [
+                            50,
+                            55,
+                            60,
+                            65
+                        ],
+    "mechMaxTonnages":  [
+                            65,
+                            70,
+                            75,
+                            80
+                        ],
+    "employersAllyTeam":  {
+                              "encounterLayerData":  {
+                                                         "EncounterObjectGuid":  "219798b5-9e35-4cbe-8a76-bd1634763e46"
+                                                     },
+                              "teamGuid":  "70af7e7f-39a8-4e81-87c2-bd01dcb01b5e",
+                              "teamName":  "Employers Ally",
+                              "faction":  "DavionA4",
+                              "teamLeaderCastDefId":  "castDef_TeamLeader_Current",
+                              "lanceOverrideList":  [
+
+                                                    ]
+                          }
+}
