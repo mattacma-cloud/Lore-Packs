@@ -1,0 +1,135 @@
+{
+    "lanceKey":  "lp4sw_LiaoBane_M5_Mech1",
+    "lanceDefId":  "Manual",
+    "lanceDifficultyAdjustment":  0,
+    "unitSpawnPointOverrideList":  [
+                                       {
+                                           "unitType":  "Mech",
+                                           "customHeraldryDefId":  "heraldrydef_liaoA9",
+                                           "customUnitName":  "",
+                                           "unitDefId":  "mechdef_vindicator_VND-1R",
+                                           "unitTagSet":  {
+                                                              "items":  [
+
+                                                                        ]
+                                                          },
+                                           "unitExcludedTagSet":  {
+                                                                      "items":  [
+
+                                                                                ]
+                                                                  },
+                                           "spawnEffectTags":  {
+                                                                   "items":  [
+
+                                                                             ]
+                                                               },
+                                           "pilotDefId":  "pilot_d6_skirmisher",
+                                           "pilotTagSet":  {
+                                                               "items":  [
+
+                                                                         ]
+                                                           },
+                                           "pilotExcludedTagSet":  {
+                                                                       "items":  [
+
+                                                                                 ]
+                                                                   }
+                                       },
+                                       {
+                                           "unitType":  "Mech",
+                                           "customHeraldryDefId":  "heraldrydef_liaoA9",
+                                           "customUnitName":  "",
+                                           "unitDefId":  "mechdef_phoenixhawk_PXH-1",
+                                           "unitTagSet":  {
+                                                              "items":  [
+
+                                                                        ]
+                                                          },
+                                           "unitExcludedTagSet":  {
+                                                                      "items":  [
+
+                                                                                ]
+                                                                  },
+                                           "spawnEffectTags":  {
+                                                                   "items":  [
+
+                                                                             ]
+                                                               },
+                                           "pilotDefId":  "pilot_d6_defender",
+                                           "pilotTagSet":  {
+                                                               "items":  [
+
+                                                                         ]
+                                                           },
+                                           "pilotExcludedTagSet":  {
+                                                                       "items":  [
+
+                                                                                 ]
+                                                                   }
+                                       },
+                                       {
+                                           "unitType":  "Mech",
+                                           "customHeraldryDefId":  "heraldrydef_liaoA9",
+                                           "customUnitName":  "",
+                                           "unitDefId":  "mechdef_wolverine_WVR-6R",
+                                           "unitTagSet":  {
+                                                              "items":  [
+
+                                                                        ]
+                                                          },
+                                           "unitExcludedTagSet":  {
+                                                                      "items":  [
+
+                                                                                ]
+                                                                  },
+                                           "spawnEffectTags":  {
+                                                                   "items":  [
+
+                                                                             ]
+                                                               },
+                                           "pilotDefId":  "pilot_d6_tactician",
+                                           "pilotTagSet":  {
+                                                               "items":  [
+
+                                                                         ]
+                                                           },
+                                           "pilotExcludedTagSet":  {
+                                                                       "items":  [
+
+                                                                                 ]
+                                                                   }
+                                       },
+                                       {
+                                           "unitType":  "Mech",
+                                           "customHeraldryDefId":  "heraldrydef_liaoA9",
+                                           "customUnitName":  "",
+                                           "unitDefId":  "mechdef_hunchback_HBK-4G",
+                                           "unitTagSet":  {
+                                                              "items":  [
+
+                                                                        ]
+                                                          },
+                                           "unitExcludedTagSet":  {
+                                                                      "items":  [
+
+                                                                                ]
+                                                                  },
+                                           "spawnEffectTags":  {
+                                                                   "items":  [
+
+                                                                             ]
+                                                               },
+                                           "pilotDefId":  "pilot_d6_recon",
+                                           "pilotTagSet":  {
+                                                               "items":  [
+
+                                                                         ]
+                                                           },
+                                           "pilotExcludedTagSet":  {
+                                                                       "items":  [
+
+                                                                                 ]
+                                                                   }
+                                       }
+                                   ]
+}

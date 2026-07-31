@@ -1,0 +1,95 @@
+{
+  "lanceKey": "lp4sw_ChargeGuard_HomeGuard_Wave2",
+  "lanceDefId": "Manual",
+  "lanceDifficultyAdjustment": 0,
+  "unitSpawnPointOverrideList": [
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "heraldrydef_LiaoHomeGuard",
+      "customUnitName": null,
+      "unitDefId": "mechdef_guillotine_GLT-4L",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": []
+      },
+      "pilotDefId": "pilot_d6_striker",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    },
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "heraldrydef_LiaoHomeGuard",
+      "customUnitName": null,
+      "unitDefId": "mechdef_phoenixhawk_PXH-1",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": []
+      },
+      "pilotDefId": "pilot_d8_lancer",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    },
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "heraldrydef_LiaoHomeGuard",
+      "customUnitName": null,
+      "unitDefId": "mechdef_hermes_HER-1A",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": []
+      },
+      "pilotDefId": "pilot_d8_brawler",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    },
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "heraldrydef_LiaoHomeGuard",
+      "customUnitName": null,
+      "unitDefId": "mechdef_wasplam_WSP-105",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": []
+      },
+      "pilotDefId": "pilot_d6_gunner",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+    "lanceKey":  "lp4sw_LiaoBane_BSI_Troy",
+    "lanceDefId":  "Manual",
+    "lanceDifficultyAdjustment":  0,
+    "unitSpawnPointOverrideList":  [
+                                       {
+                                           "unitType":  "Mech",
+                                           "customHeraldryDefId":  "heraldrydef_merc7a",
+                                           "customUnitName":  "General Mona Troy",
+                                           "unitDefId":  "mechdef_zeus_ZEU-6S",
+                                           "unitTagSet":  {
+                                                              "items":  [
+
+                                                                        ]
+                                                          },
+                                           "unitExcludedTagSet":  {
+                                                                      "items":  [
+
+                                                                                ]
+                                                                  },
+                                           "spawnEffectTags":  {
+                                                                   "items":  [
+
+                                                                             ]
+                                                               },
+                                           "pilotDefId":  "pilotDef_Troy_Mona",
+                                           "pilotTagSet":  {
+                                                               "items":  [
+
+                                                                         ]
+                                                           },
+                                           "pilotExcludedTagSet":  {
+                                                                       "items":  [
+
+                                                                                 ]
+                                                                   }
+                                       },
+                                       {
+                                           "unitType":  "Mech",
+                                           "customHeraldryDefId":  "heraldrydef_merc7a",
+                                           "customUnitName":  "",
+                                           "unitDefId":  "mechdef_hunchback_HBK-4J",
+                                           "unitTagSet":  {
+                                                              "items":  [
+
+                                                                        ]
+                                                          },
+                                           "unitExcludedTagSet":  {
+                                                                      "items":  [
+
+                                                                                ]
+                                                                  },
+                                           "spawnEffectTags":  {
+                                                                   "items":  [
+
+                                                                             ]
+                                                               },
+                                           "pilotDefId":  "pilotDef_Angelova_Ramzi",
+                                           "pilotTagSet":  {
+                                                               "items":  [
+
+                                                                         ]
+                                                           },
+                                           "pilotExcludedTagSet":  {
+                                                                       "items":  [
+
+                                                                                 ]
+                                                                   }
+                                       },
+                                       {
+                                           "unitType":  "Mech",
+                                           "customHeraldryDefId":  "heraldrydef_merc7a",
+                                           "customUnitName":  "",
+                                           "unitDefId":  "mechdef_grasshopper_GHR-5H",
+                                           "unitTagSet":  {
+                                                              "items":  [
+
+                                                                        ]
+                                                          },
+                                           "unitExcludedTagSet":  {
+                                                                      "items":  [
+
+                                                                                ]
+                                                                  },
+                                           "spawnEffectTags":  {
+                                                                   "items":  [
+
+                                                                             ]
+                                                               },
+                                           "pilotDefId":  "pilotDef_Petran_Radojka",
+                                           "pilotTagSet":  {
+                                                               "items":  [
+
+                                                                         ]
+                                                           },
+                                           "pilotExcludedTagSet":  {
+                                                                       "items":  [
+
+                                                                                 ]
+                                                                   }
+                                       },
+                                       {
+                                           "unitType":  "Mech",
+                                           "customHeraldryDefId":  "heraldrydef_merc7a",
+                                           "customUnitName":  "",
+                                           "unitDefId":  "mechdef_rifleman_RFL-3N",
+                                           "unitTagSet":  {
+                                                              "items":  [
+
+                                                                        ]
+                                                          },
+                                           "unitExcludedTagSet":  {
+                                                                      "items":  [
+
+                                                                                ]
+                                                                  },
+                                           "spawnEffectTags":  {
+                                                                   "items":  [
+
+                                                                             ]
+                                                               },
+                                           "pilotDefId":  "pilotDef_Ibrohimov_Fahima",
+                                           "pilotTagSet":  {
+                                                               "items":  [
+
+                                                                         ]
+                                                           },
+                                           "pilotExcludedTagSet":  {
+                                                                       "items":  [
+
+                                                                                 ]
+                                                                   }
+                                       }
+                                   ]
+}

@@ -1,0 +1,95 @@
+{
+  "lanceKey": "lp4sw_ChargeGuard_AF_GuardSupport",
+  "lanceDefId": "Manual",
+  "lanceDifficultyAdjustment": 0,
+  "unitSpawnPointOverrideList": [
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "heraldrydef_liaoC4_AEWA_AraFus01",
+      "customUnitName": null,
+      "unitDefId": "mechdef_highlander_HGN-733",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": ["spawn_poorly_maintained_25"],
+      },
+      "pilotDefId": "pilot_d9_brawler",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    },
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "heraldrydef_liaoC4_AEWA_AraFus01",
+      "customUnitName": null,
+      "unitDefId": "mechdef_ostroc_OSR-2C",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": ["spawn_poorly_maintained_25"],
+      },
+      "pilotDefId": "pilot_d8_flanker",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    },
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "heraldrydef_liaoC4_AEWA_AraFus01",
+      "customUnitName": null,
+      "unitDefId": "mechdef_thunderbolt_TDR-5S",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": ["spawn_poorly_maintained_25"],
+      },
+      "pilotDefId": "pilot_d8_sentinel",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    },
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "heraldrydef_liaoC4_AEWA_AraFus01",
+      "customUnitName": null,
+      "unitDefId": "mechdef_phoenixhawk_PXH-1",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": ["spawn_poorly_maintained_25"],
+      },
+      "pilotDefId": "pilot_d8_sharpshooter",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    }
+  ]
+}

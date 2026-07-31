@@ -1,0 +1,43 @@
+{
+  "lanceKey": "lp4sw_LiaoBane_M5_LongTomB",
+  "lanceDefId": "Manual",
+  "lanceDifficultyAdjustment": 0,
+  "unitSpawnPointOverrideList": [
+    {
+      "unitType": "Vehicle",
+      "customHeraldryDefId": "heraldrydef_liaoA9",
+      "customUnitName": "Firebase Long Tom Battery",
+      "unitDefId": "vehicledef_LONGTOM-LT-MOB-25",
+      "unitTagSet": { "items": [] },
+      "unitExcludedTagSet": { "items": [] },
+      "spawnEffectTags": { "items": [] },
+      "pilotDefId": "pilot_d5_pilot",
+      "pilotTagSet": { "items": [] },
+      "pilotExcludedTagSet": { "items": [] }
+    },
+    {
+      "unitType": "Vehicle",
+      "customHeraldryDefId": "heraldrydef_liaoA9",
+      "customUnitName": "Firebase Long Tom Battery",
+      "unitDefId": "vehicledef_LONGTOM-LT-MOB-25",
+      "unitTagSet": { "items": [] },
+      "unitExcludedTagSet": { "items": [] },
+      "spawnEffectTags": { "items": [] },
+      "pilotDefId": "pilot_d5_pilot",
+      "pilotTagSet": { "items": [] },
+      "pilotExcludedTagSet": { "items": [] }
+    },
+    {
+      "unitType": "Vehicle",
+      "customHeraldryDefId": "heraldrydef_liaoA9",
+      "customUnitName": "Firebase Long Tom Battery",
+      "unitDefId": "vehicledef_LONGTOM-LT-MOB-25",
+      "unitTagSet": { "items": [] },
+      "unitExcludedTagSet": { "items": [] },
+      "spawnEffectTags": { "items": [] },
+      "pilotDefId": "pilot_d5_pilot",
+      "pilotTagSet": { "items": [] },
+      "pilotExcludedTagSet": { "items": [] }
+    }
+  ]
+}

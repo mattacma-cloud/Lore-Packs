@@ -1,0 +1,95 @@
+{
+  "lanceKey": "lp4sw_ChargeGuard_Guards_Boyer",
+  "lanceDefId": "Manual",
+  "lanceDifficultyAdjustment": 0,
+  "unitSpawnPointOverrideList": [
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "",
+      "customUnitName": "Lt. Christophoros Boyer",
+      "unitDefId": "mechdef_awesome_AWS-8Q",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": []
+      },
+      "pilotDefId": "pilotDef_Boyer_Christophoros",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    },
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "",
+      "customUnitName": "Nahid Hellmoon",
+      "unitDefId": "mechdef_atlas_AS7-D",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": []
+      },
+      "pilotDefId": "pilotDef_Hellmoon_Nahid",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    },
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "",
+      "customUnitName": "Eirene Curry",
+      "unitDefId": "mechdef_kingcrab_KGC-0000",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": []
+      },
+      "pilotDefId": "pilotDef_Curry_Eirene",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    },
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "",
+      "customUnitName": "Andrey Polzin",
+      "unitDefId": "mechdef_atlas_AS7-A",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": []
+      },
+      "pilotDefId": "pilotDef_Polzin_Andrey",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    }
+  ]
+}

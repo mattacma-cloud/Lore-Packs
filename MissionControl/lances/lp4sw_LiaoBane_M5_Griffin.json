@@ -1,0 +1,31 @@
+{
+  "lanceKey": "lp4sw_LiaoBane_M5_Griffin",
+  "lanceDefId": "Manual",
+  "lanceDifficultyAdjustment": 0,
+  "unitSpawnPointOverrideList": [
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "heraldrydef_liaoA9",
+      "customUnitName": "",
+      "unitDefId": "mechdef_griffin_GRF-1N",
+      "unitTagSet": { "items": [] },
+      "unitExcludedTagSet": { "items": [] },
+      "spawnEffectTags": { "items": [] },
+      "pilotDefId": "pilot_d6_gladiator",
+      "pilotTagSet": { "items": [] },
+      "pilotExcludedTagSet": { "items": [] }
+    },
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "heraldrydef_liaoA9",
+      "customUnitName": "",
+      "unitDefId": "mechdef_griffin_GRF-1N",
+      "unitTagSet": { "items": [] },
+      "unitExcludedTagSet": { "items": [] },
+      "spawnEffectTags": { "items": [] },
+      "pilotDefId": "pilot_d6_gladiator",
+      "pilotTagSet": { "items": [] },
+      "pilotExcludedTagSet": { "items": [] }
+    }
+  ]
+}

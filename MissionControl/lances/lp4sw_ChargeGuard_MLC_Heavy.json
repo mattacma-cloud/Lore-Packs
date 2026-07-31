@@ -1,0 +1,95 @@
+{
+  "lanceKey": "lp4sw_ChargeGuard_MLC_Heavy",
+  "lanceDefId": "Manual",
+  "lanceDifficultyAdjustment": 0,
+  "unitSpawnPointOverrideList": [
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "",
+      "customUnitName": null,
+      "unitDefId": "mechdef_ostsol_OTL-4D",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": []
+      },
+      "pilotDefId": "pilot_d10_lancer",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    },
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "",
+      "customUnitName": null,
+      "unitDefId": "mechdef_warhammer_WHM-6R",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": []
+      },
+      "pilotDefId": "pilot_d9_sentinel",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    },
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "",
+      "customUnitName": null,
+      "unitDefId": "mechdef_archer_ARC-2R",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": []
+      },
+      "pilotDefId": "pilot_d8_flanker",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    },
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "",
+      "customUnitName": null,
+      "unitDefId": "mechdef_archer_ARC-2R",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": []
+      },
+      "pilotDefId": "pilot_d8_striker",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    }
+  ]
+}

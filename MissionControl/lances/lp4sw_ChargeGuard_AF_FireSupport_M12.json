@@ -1,0 +1,95 @@
+{
+  "lanceKey": "lp4sw_ChargeGuard_AF_FireSupport_M12",
+  "lanceDefId": "Manual",
+  "lanceDifficultyAdjustment": 0,
+  "unitSpawnPointOverrideList": [
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "heraldrydef_liaoC4_AEWA_AraFus01",
+      "customUnitName": null,
+      "unitDefId": "mechdef_archer_ARC-2R",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": ["spawn_poorly_maintained_50"],
+      },
+      "pilotDefId": "pilot_d10_flanker",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    },
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "heraldrydef_liaoC4_AEWA_AraFus01",
+      "customUnitName": null,
+      "unitDefId": "mechdef_clint_CLNT-2-3T",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": ["spawn_poorly_maintained_50"],
+      },
+      "pilotDefId": "pilot_d9_sharpshooter",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    },
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "heraldrydef_liaoC4_AEWA_AraFus01",
+      "customUnitName": null,
+      "unitDefId": "mechdef_cicada_CDA-2A",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": ["spawn_poorly_maintained_50"],
+      },
+      "pilotDefId": "pilot_d9_outrider",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    },
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "heraldrydef_liaoC4_AEWA_AraFus01",
+      "customUnitName": null,
+      "unitDefId": "mechdef_spider_SDR-5V",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": ["spawn_poorly_maintained_50"],
+      },
+      "pilotDefId": "pilot_d8_sentinel",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    }
+  ]
+}
