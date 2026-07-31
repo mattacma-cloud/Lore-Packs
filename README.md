@@ -61,9 +61,9 @@ Once you complete An Evening with Ardan, you must advance the timeline one day a
 
 0.1.3	Foxes of Tikonov (7th Crucis Lancers)
 
-0.1.4	3rd Davion Guards 
+0.1.4	Charge of the Guards (3rd Davion Guards) 
 
-0.1.5	33rd Avalon Hussars 
+0.1.5	Liao's Bane (33rd Avalon Hussars) 
 
 **IN ACTIVE DEVELOPMENT**
 
