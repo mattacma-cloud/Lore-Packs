@@ -1,0 +1,117 @@
+{
+    "identifier":  "bkt_LiaoBane_Mission3_5_start",
+    "contents":  [
+                     {
+                         "words":  "Commander, this is a fairly typical Capellan heavy artillery position. There are two entrances into the complex, you can break into the complex via either one, though to be honest, that\u0027s the easy part.",
+                         "wordsColor":  {
+                                            "r":  1,
+                                            "g":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "selectedCastDefId":  "castDef_Davion_Wilson_Mandella",
+                         "emote":  "Default",
+                         "audioName":  "NONE",
+                         "cameraFocusGuid":  "",
+                         "cameraDistance":  "Far",
+                         "cameraHeight":  "Default",
+                         "revealRadius":  -1
+                     },
+                     {
+                         "words":  "And the hard part, General?",
+                         "wordsColor":  {
+                                            "r":  1,
+                                            "g":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "selectedCastDefId":  "castDef_DariusDefault",
+                         "emote":  "Default",
+                         "audioName":  "NONE",
+                         "cameraFocusGuid":  "",
+                         "cameraDistance":  "Far",
+                         "cameraHeight":  "Default",
+                         "revealRadius":  -1
+                     },
+                     {
+                         "words":  "Well, that would be the turrets... there is a full strength Capellan artillery battery in place, which includes twelve guns and you can be absolutely certain that those guns will be turned on you.",
+                         "wordsColor":  {
+                                            "r":  1,
+                                            "g":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "selectedCastDefId":  "castDef_Davion_Wilson_Mandella",
+                         "emote":  "Default",
+                         "audioName":  "NONE",
+                         "cameraFocusGuid":  "",
+                         "cameraDistance":  "Far",
+                         "cameraHeight":  "Default",
+                         "revealRadius":  -1
+                     },
+                     {
+                         "words":  "What about Captain Holzmann? Where is the Captain?",
+                         "wordsColor":  {
+                                            "r":  1,
+                                            "g":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "selectedCastDefId":  "castDef_DariusDefault",
+                         "emote":  "Default",
+                         "audioName":  "NONE",
+                         "cameraFocusGuid":  "",
+                         "cameraDistance":  "Far",
+                         "cameraHeight":  "Default",
+                         "revealRadius":  -1
+                     },
+                     {
+                         "words":  "Captain Holzmann has been separated from his unit during the approach, which means you will be starting the assault on your own with the rest of his lance. We can\u0027t wait, as the main Beta Combat Command attack is about to jump off, so I need those guns taken.",
+                         "wordsColor":  {
+                                            "r":  1,
+                                            "g":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "selectedCastDefId":  "castDef_Davion_Wilson_Mandella",
+                         "emote":  "Default",
+                         "audioName":  "NONE",
+                         "cameraFocusGuid":  "",
+                         "cameraDistance":  "Far",
+                         "cameraHeight":  "Default",
+                         "revealRadius":  -1
+                     },
+                     {
+                         "words":  "Any more word on the opposition?",
+                         "wordsColor":  {
+                                            "r":  1,
+                                            "g":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "selectedCastDefId":  "castDef_DariusDefault",
+                         "emote":  "Default",
+                         "audioName":  "NONE",
+                         "cameraFocusGuid":  "",
+                         "cameraDistance":  "Far",
+                         "cameraHeight":  "Default",
+                         "revealRadius":  -1
+                     },
+                     {
+                         "words":  "To capture the Firebase, you\u0027ll need to deal with a reinforced Warrior House LuSaan Company. With Captain Holzmann\u0027s delay, I am now planning for the Captain to break into the Firebase with you when you kick in the front door. After that, we can turn these gun positions on the defenders of the Forbidden City. The garrison has seen you coming and they are advancing to block the pass you are moving through. Good luck",
+                         "wordsColor":  {
+                                            "r":  1,
+                                            "g":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "selectedCastDefId":  "castDef_Davion_Wilson_Mandella",
+                         "emote":  "Default",
+                         "audioName":  "NONE",
+                         "cameraFocusGuid":  "",
+                         "cameraDistance":  "Far",
+                         "cameraHeight":  "Default",
+                         "revealRadius":  -1
+                     }
+                 ]
+}

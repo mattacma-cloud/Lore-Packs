@@ -1,0 +1,53 @@
+{
+    "identifier":  "bkt_LiaoBane_Mission3_3_start",
+    "contents":  [
+                     {
+                         "words":  "Commander, with the arrival of the Capellan Hussars, my cadets are in the line of fire. You and I must cover them until we can arrange transport and get them to the evac.",
+                         "wordsColor":  {
+                                            "r":  1,
+                                            "g":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "selectedCastDefId":  "castDef_Merc_Mona_Troy",
+                         "emote":  "Default",
+                         "audioName":  "NONE",
+                         "cameraFocusGuid":  "",
+                         "cameraDistance":  "Far",
+                         "cameraHeight":  "Default",
+                         "revealRadius":  -1
+                     },
+                     {
+                         "words":  "We understand General, the cadets are first priority, we\u0027ll make sure you get out as well.",
+                         "wordsColor":  {
+                                            "r":  1,
+                                            "g":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "selectedCastDefId":  "castDef_DariusDefault",
+                         "emote":  "Default",
+                         "audioName":  "NONE",
+                         "cameraFocusGuid":  "",
+                         "cameraDistance":  "Far",
+                         "cameraHeight":  "Default",
+                         "revealRadius":  -1
+                     },
+                     {
+                         "words":  "My survival is immaterial; my troops are your priority.",
+                         "wordsColor":  {
+                                            "r":  1,
+                                            "g":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "selectedCastDefId":  "castDef_Merc_Mona_Troy",
+                         "emote":  "Default",
+                         "audioName":  "NONE",
+                         "cameraFocusGuid":  "",
+                         "cameraDistance":  "Far",
+                         "cameraHeight":  "Default",
+                         "revealRadius":  -1
+                     }
+                 ]
+}

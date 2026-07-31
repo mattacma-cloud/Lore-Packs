@@ -1,0 +1,37 @@
+{
+    "identifier":  "bkt_LiaoBane_Mission3_3_mona_casualty",
+    "contents":  [
+                     {
+                         "words":  "My 'Mech is coming apart, Commander, I have no choice but to bail out. Protect my people.",
+                         "wordsColor":  {
+                                            "r":  1,
+                                            "g":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "selectedCastDefId":  "castDef_Merc_Mona_Troy",
+                         "emote":  "Default",
+                         "audioName":  "NONE",
+                         "cameraFocusGuid":  "",
+                         "cameraDistance":  "Far",
+                         "cameraHeight":  "Default",
+                         "revealRadius":  -1
+                     },
+                     {
+                         "words":  "We gave our word, General, we'll get them to safety.",
+                         "wordsColor":  {
+                                            "r":  1,
+                                            "g":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "selectedCastDefId":  "castDef_DariusDefault",
+                         "emote":  "Default",
+                         "audioName":  "NONE",
+                         "cameraFocusGuid":  "",
+                         "cameraDistance":  "Far",
+                         "cameraHeight":  "Default",
+                         "revealRadius":  -1
+                     }
+                 ]
+}

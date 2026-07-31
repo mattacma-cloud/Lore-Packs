@@ -1,0 +1,53 @@
+{
+    "identifier":  "bkt_LiaoBane_Mission3_3_cadets_advisory",
+    "contents":  [
+                     {
+                         "words":  "Cadet lance reporting - we are holding as ordered, Commander!",
+                         "wordsColor":  {
+                                            "r":  1,
+                                            "g":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "selectedCastDefId":  "castDef_Contract_TrainingDay_1",
+                         "emote":  "Default",
+                         "audioName":  "NONE",
+                         "cameraFocusGuid":  "",
+                         "cameraDistance":  "Far",
+                         "cameraHeight":  "Default",
+                         "revealRadius":  -1
+                     },
+                     {
+                         "words":  "Keep close to the other mercs, Irregulars. No heroics!",
+                         "wordsColor":  {
+                                            "r":  1,
+                                            "g":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "selectedCastDefId":  "castDef_Merc_Mona_Troy",
+                         "emote":  "Default",
+                         "audioName":  "NONE",
+                         "cameraFocusGuid":  "",
+                         "cameraDistance":  "Far",
+                         "cameraHeight":  "Default",
+                         "revealRadius":  -1
+                     },
+                     {
+                         "words":  "You heard the General, cadets, keep close and don\u0027t do anything stupid.",
+                         "wordsColor":  {
+                                            "r":  1,
+                                            "g":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "selectedCastDefId":  "castDef_DariusDefault",
+                         "emote":  "Default",
+                         "audioName":  "NONE",
+                         "cameraFocusGuid":  "",
+                         "cameraDistance":  "Far",
+                         "cameraHeight":  "Default",
+                         "revealRadius":  -1
+                     }
+                 ]
+}

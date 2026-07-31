@@ -1,0 +1,21 @@
+{
+    "identifier":  "bkt_LiaoBane2_Mission3_7_start",
+    "contents":  [
+                     {
+                         "words":  "Another sweep for you Commander. See what the Home Guard still has left in this part of Genoa.",
+                         "wordsColor":  {
+                                            "r":  1,
+                                            "g":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "selectedCastDefId":  "castDef_Davion_Wilson_Mandella",
+                         "emote":  "Default",
+                         "audioName":  "NONE",
+                         "cameraFocusGuid":  "",
+                         "cameraDistance":  "Far",
+                         "cameraHeight":  "Default",
+                         "revealRadius":  -1
+                     }
+                 ]
+}

@@ -1,0 +1,21 @@
+{
+    "identifier":  "bkt_LiaoBane_Mission3_2_fail",
+    "contents":  [
+                     {
+                         "words":  "You were supposed to rescue my people - not leave them to die. Get back to base immediately.",
+                         "wordsColor":  {
+                                            "r":  1,
+                                            "g":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "selectedCastDefId":  "castDef_Davion_Wilson_Mandella",
+                         "emote":  "Default",
+                         "audioName":  "NONE",
+                         "cameraFocusGuid":  "",
+                         "cameraDistance":  "Far",
+                         "cameraHeight":  "Default",
+                         "revealRadius":  -1
+                     }
+                 ]
+}

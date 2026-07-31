@@ -1,0 +1,21 @@
+{
+    "identifier":  "bkt_LiaoBane_Mission3_1_allydead",
+    "contents":  [
+                     {
+                         "words":  "Blue Star is down! Commander, we have to finish this without them and then support search and rescue!",
+                         "wordsColor":  {
+                                            "r":  1,
+                                            "g":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "selectedCastDefId":  "castDef_DariusDefault",
+                         "emote":  "Default",
+                         "audioName":  "NONE",
+                         "cameraFocusGuid":  "",
+                         "cameraDistance":  "Far",
+                         "cameraHeight":  "Default",
+                         "revealRadius":  -1
+                     }
+                 ]
+}

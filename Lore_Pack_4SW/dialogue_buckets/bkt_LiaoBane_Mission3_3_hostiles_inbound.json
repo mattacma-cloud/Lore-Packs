@@ -1,0 +1,21 @@
+{
+    "identifier":  "bkt_LiaoBane_Mission3_3_hostiles_inbound",
+    "contents":  [
+                     {
+                         "words":  "Commander, we are picking up a new group of singnals. Enemy forces, heading your way.",
+                         "wordsColor":  {
+                                            "r":  1,
+                                            "g":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "selectedCastDefId":  "castDef_DariusDefault",
+                         "emote":  "Default",
+                         "audioName":  "NONE",
+                         "cameraFocusGuid":  "",
+                         "cameraDistance":  "Far",
+                         "cameraHeight":  "Default",
+                         "revealRadius":  -1
+                     }
+                 ]
+}

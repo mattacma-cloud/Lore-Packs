@@ -1,0 +1,21 @@
+{
+    "identifier":  "bkt_LiaoBane_Mission3_3_sumire_evac",
+    "contents":  [
+                     {
+                         "words":  "The Blue Stars are away, Commander. I get pick you up at the LZ as soon as you are ready.",
+                         "wordsColor":  {
+                                            "r":  1,
+                                            "g":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "selectedCastDefId":  "castDef_SumireDefault",
+                         "emote":  "Default",
+                         "audioName":  "NONE",
+                         "cameraFocusGuid":  "",
+                         "cameraDistance":  "Far",
+                         "cameraHeight":  "Default",
+                         "revealRadius":  -1
+                     }
+                 ]
+}

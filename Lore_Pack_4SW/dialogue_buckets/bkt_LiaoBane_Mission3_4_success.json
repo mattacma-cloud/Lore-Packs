@@ -1,0 +1,21 @@
+{
+    "identifier":  "bkt_LiaoBane_Mission3_4_success",
+    "contents":  [
+                     {
+                         "words":  "Good work, Commander, we have the materials we need for the assault on the Forbidden City.",
+                         "wordsColor":  {
+                                            "r":  1,
+                                            "g":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "selectedCastDefId":  "castDef_Davion_Wilson_Mandella",
+                         "emote":  "Default",
+                         "audioName":  "NONE",
+                         "cameraFocusGuid":  "",
+                         "cameraDistance":  "Far",
+                         "cameraHeight":  "Default",
+                         "revealRadius":  -1
+                     }
+                 ]
+}

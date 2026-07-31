@@ -1,0 +1,21 @@
+{
+    "identifier":  "bkt_LiaoBane2_Mission3_6_fail",
+    "contents":  [
+                     {
+                         "words":  "Liao took more out of you than we realised. That was not good enough Commander.",
+                         "wordsColor":  {
+                                            "r":  1,
+                                            "g":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "selectedCastDefId":  "castDef_Davion_Wilson_Mandella",
+                         "emote":  "Default",
+                         "audioName":  "NONE",
+                         "cameraFocusGuid":  "",
+                         "cameraDistance":  "Far",
+                         "cameraHeight":  "Default",
+                         "revealRadius":  -1
+                     }
+                 ]
+}

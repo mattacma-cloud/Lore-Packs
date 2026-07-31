@@ -1,0 +1,21 @@
+{
+    "identifier":  "bkt_LiaoBane2_Mission3_6_ambush",
+    "contents":  [
+                     {
+                         "words":  "Ambush contacts! Cut them down and finish the sweep.",
+                         "wordsColor":  {
+                                            "r":  1,
+                                            "g":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "selectedCastDefId":  "castDef_Davion_Wilson_Mandella",
+                         "emote":  "Default",
+                         "audioName":  "NONE",
+                         "cameraFocusGuid":  "",
+                         "cameraDistance":  "Far",
+                         "cameraHeight":  "Default",
+                         "revealRadius":  -1
+                     }
+                 ]
+}

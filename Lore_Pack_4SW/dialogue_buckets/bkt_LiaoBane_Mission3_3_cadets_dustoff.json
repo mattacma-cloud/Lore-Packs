@@ -1,0 +1,21 @@
+{
+    "identifier":  "bkt_LiaoBane_Mission3_3_cadets_dustoff",
+    "contents":  [
+                     {
+                         "words":  "We are airborn. Thnks for the cover, we'll owe you some beers back at base.",
+                         "wordsColor":  {
+                                            "g":  1,
+                                            "r":  1,
+                                            "b":  1,
+                                            "a":  1
+                                        },
+                         "selectedCastDefId":  "castDef_Contract_TrainingDay_1",
+                         "emote":  "Default",
+                         "audioName":  "NONE",
+                         "cameraFocusGuid":  "",
+                         "cameraDistance":  "Far",
+                         "cameraHeight":  "Default",
+                         "revealRadius":  -1
+                     }
+                 ]
+}
