@@ -1,0 +1,68 @@
+{
+  "AllowRefitTime": true,
+  "AvailableTimeout": 0,
+  "Description": {
+    "Icon": "uixTxrSpot_fp_lp4sw_AEWA.png",
+    "Name": "Liao's Bane I",
+    "Id": "fp_lp4sw_LiaoBane",
+    "Details": "Commander, General Mandella is awaiting our presence on Liao. The 33rd Avalon Hussars and the Blue Star Irregulars are preparing to assault the world and require our presence there promptly."
+  },
+  "InProgressTimeout": 0,
+  "UnitDropTonnageHint": "Heavy",
+  "Repeatable": false,
+  "FlashpointDescriberCastDefId": "castDef_Davion_Wilson_Mandella",
+  "LocationRequirements": {
+    "Scope": "StarSystem",
+    "RequirementTags": {
+      "items": [
+        "planet_name_liao"
+      ],
+      "tagSetSourceFile": "Tags/PlanetNameTags"
+    },
+    "RequirementComparisons": [],
+    "ExclusionTags": {
+      "items": [],
+      "tagSetSourceFile": ""
+    }
+  },
+  "RewardCollectionID": "itemCollection_AEWA_300a",
+  "TargetFaction": "Liao",
+  "PotentialEmployers": [
+    "Davion"
+  ],
+  "PublishState": "PUBLISHED",
+  "FlashpointShortDescription": "Commander, General Mandella is awaiting our presence on Liao. The 33rd Avalon Hussars and the Blue Star Irregulars are preparing to assault the world and require our presence there promptly",
+  "MilestoneSetID": "ms_fp_lp4sw_LiaoBane",
+  "Difficulty": 6,
+  "Tags": {
+    "items": [
+      "BLACKLISTED"
+    ],
+    "tagSetSourceFile": "tags/FlashpointTags"
+  },
+  "UseAvailableTimeoutOverride": false,
+  "UseInProgressTimeoutOverride": false,
+  "Requirements": [
+    {
+      "Scope": "Company",
+      "RequirementTags": {
+        "items": [
+          "fp_choice_OpRat33AH",
+          "LiaoBane_Active"
+        ],
+        "tagSetSourceFile": "Tags/CompanyTags"
+      },
+      "RequirementComparisons": [],
+      "ExclusionTags": {
+        "items": [
+          "fp_finished_LiaoBane_success"
+        ],
+        "tagSetSourceFile": "Tags/CompanyTags"
+      }
+    }
+  ],
+  "LanceDropTonnageHint": "Heavy",
+  "FlashpointLength": "MEDIUM",
+  "InternalName": "lp4sw_LiaoBane",
+  "Weight": 10
+}
