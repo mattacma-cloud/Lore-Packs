@@ -11,7 +11,8 @@
     "Timeline",
     "ExtendedConversations",
     "Mission Control",
-    "ColourfulFlashPoints"
+    "ColourfulFlashPoints",
+    "LorePack_Helpers"
   ],
   "DataAddendumEntries": [
     { "name": "BattleTech.FactionEnumeration", "path": "enums/Faction.json" }
