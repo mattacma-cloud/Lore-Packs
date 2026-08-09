@@ -1,0 +1,47 @@
+{
+    "ID": "c_fp_lp4sw_FamilyMatters_Mission4_1",
+    "RandomSpawns": {
+        "Enable": false
+    },
+    "HotDropProtection": {
+        "Enable": false
+    },
+    "AdditionalLances": {
+        "Enable": true,
+        "UseDialogue": true,
+        "ShowObjectiveOnLanceDetected": true,
+        "EnemyLanceObjectiveNames": [],
+        "AllyLances": [
+            "lp4sw_FamilyMatters_M1_Stewart_Condor",
+            "lp4sw_FamilyMatters_M1_Stewart_Maxim",
+            "lp4sw_FamilyMatters_M1_Stewart_Pegasus"
+        ],
+        "AllyLanceCount": 3,
+        "EnemyLances": [],
+        "EnemyLanceCount": 0,
+        "AlwaysDisplayHiddenObjectiveIfPrimary": false,
+        "HideObjective": true,
+        "DialogueCastDefId": "castDef_Davion_Craig_Stewart",
+        "Dialogue": "Major Stewart on station, Commander. First Hover Company is rolling with you - keep the Ijori off my flanks."
+    },
+    "ExtendedLances": {
+        "TargetAllyLanceSize": 4,
+        "EmployerLanceSize": 0,
+        "EmployerAllyLanceSize": 4,
+        "NeutralToAllLanceSize": 4,
+        "TargetLanceSize": 8,
+        "HostileToAllLanceSize": 4,
+        "Autofill": false,
+        "Enable": true
+    },
+    "ExtendedBoundaries": {
+        "Enable": false,
+        "IncreaseBoundarySizeByPercentage": 0.6
+    },
+    "DynamicWithdraw": {
+        "Enable": false
+    },
+    "AdditionalPlayerMechs": {
+        "Enable": false
+    }
+}

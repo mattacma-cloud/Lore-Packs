@@ -1,0 +1,41 @@
+{
+    "ID": "c_fp_lp4sw_FamilyMatters2_Mission4_5",
+    "RandomSpawns": {
+        "Enable": false
+    },
+    "HotDropProtection": {
+        "Enable": false
+    },
+    "AdditionalLances": {
+        "Enable": false,
+        "UseDialogue": false,
+        "ShowObjectiveOnLanceDetected": true,
+        "EnemyLanceObjectiveNames": [],
+        "AllyLances": [],
+        "AllyLanceCount": 0,
+        "EnemyLances": [],
+        "EnemyLanceCount": 0,
+        "AlwaysDisplayHiddenObjectiveIfPrimary": false,
+        "HideObjective": true
+    },
+    "ExtendedLances": {
+        "TargetAllyLanceSize": 4,
+        "EmployerLanceSize": 0,
+        "EmployerAllyLanceSize": 4,
+        "NeutralToAllLanceSize": 4,
+        "TargetLanceSize": 4,
+        "HostileToAllLanceSize": 4,
+        "Autofill": false,
+        "Enable": false
+    },
+    "ExtendedBoundaries": {
+        "Enable": false,
+        "IncreaseBoundarySizeByPercentage": 0.6
+    },
+    "DynamicWithdraw": {
+        "Enable": false
+    },
+    "AdditionalPlayerMechs": {
+        "Enable": false
+    }
+}

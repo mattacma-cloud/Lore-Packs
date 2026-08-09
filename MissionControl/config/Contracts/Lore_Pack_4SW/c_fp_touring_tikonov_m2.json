@@ -1,0 +1,41 @@
+{
+  "ID": "c_fp_touring_tikonov_m2",
+  "RandomSpawns": {
+    "Enable": false
+  },
+  "HotDropProtection": {
+    "Enable": false
+  },
+  "AdditionalLances": {
+    "Enable": false,
+    "UseDialogue": false,
+    "EnemyLanceCount": 0,
+    "EnemyLances": [],
+    "EnemyLanceObjectiveNames": [],
+    "HideObjective": true,
+    "ShowObjectiveOnLanceDetected": true,
+    "AlwaysDisplayHiddenObjectiveIfPrimary": false,
+    "AllyLanceCount": 0,
+    "AllyLances": []
+  },
+  "ExtendedLances": {
+    "Enable": true,
+    "TargetLanceSize": 1,
+    "EmployerLanceSize": 1,
+    "TargetAllyLanceSize": 1,
+    "EmployerAllyLanceSize": 1,
+    "HostileToAllLanceSize": 1,
+    "NeutralToAllLanceSize": 1,
+    "Autofill": false
+  },
+  "ExtendedBoundaries": {
+    "Enable": false,
+    "IncreaseBoundarySizeByPercentage": 0.6
+  },
+  "DynamicWithdraw": {
+    "Enable": false
+  },
+  "AdditionalPlayerMechs": {
+    "Enable": false
+  }
+}

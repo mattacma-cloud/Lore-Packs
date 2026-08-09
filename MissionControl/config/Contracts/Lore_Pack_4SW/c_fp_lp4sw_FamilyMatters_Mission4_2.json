@@ -1,0 +1,47 @@
+{
+    "ID": "c_fp_lp4sw_FamilyMatters_Mission4_2",
+    "RandomSpawns": {
+        "Enable": false
+    },
+    "HotDropProtection": {
+        "Enable": false
+    },
+    "AdditionalLances": {
+        "Enable": true,
+        "UseDialogue": true,
+        "ShowObjectiveOnLanceDetected": true,
+        "EnemyLanceObjectiveNames": [],
+        "AllyLances": [
+            "lp4sw_FamilyMatters_M2_Stewart_Condor",
+            "lp4sw_FamilyMatters_M2_Stewart_Maxim",
+            "lp4sw_FamilyMatters_M2_Stewart_Pegasus"
+        ],
+        "AllyLanceCount": 3,
+        "EnemyLances": [],
+        "EnemyLanceCount": 0,
+        "AlwaysDisplayHiddenObjectiveIfPrimary": false,
+        "HideObjective": true,
+        "DialogueCastDefId": "castDef_Davion_Craig_Stewart",
+        "Dialogue": "Stewart again, Commander. What's left of my company is with you - these tanks are held together with wire and hope."
+    },
+    "ExtendedLances": {
+        "TargetAllyLanceSize": 4,
+        "EmployerLanceSize": 0,
+        "EmployerAllyLanceSize": 4,
+        "NeutralToAllLanceSize": 4,
+        "TargetLanceSize": 8,
+        "HostileToAllLanceSize": 4,
+        "Autofill": false,
+        "Enable": true
+    },
+    "ExtendedBoundaries": {
+        "Enable": false,
+        "IncreaseBoundarySizeByPercentage": 0.6
+    },
+    "DynamicWithdraw": {
+        "Enable": false
+    },
+    "AdditionalPlayerMechs": {
+        "Enable": false
+    }
+}
