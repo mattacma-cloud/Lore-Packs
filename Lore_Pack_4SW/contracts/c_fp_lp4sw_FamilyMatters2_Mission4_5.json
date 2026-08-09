@@ -1,0 +1,407 @@
+{
+  "ID": "c_fp_lp4sw_FamilyMatters2_Mission4_5",
+  "contractName": "Filial Fire",
+  "contractDisplayStyle": "BaseFlashpoint",
+  "difficulty": 4,
+  "difficultyUIModifier": 0,
+  "weight": 1,
+  "excludedFromProceduralGeneration": true,
+  "scope": "STANDARD",
+  "finalDifficulty": 4,
+  "representativeCastDefIDOverride": "castDef_Davion_Vernon_Fredricks",
+  "shortDescription": "Commander, Vanessa has found another 'Mech and wishes to set up duel to determine the fate of her people. I need you to take your two best MechWarriors and defeat her. I wish you to take her alive though, as I have no wish to see her dead.",
+  "longDescription": "Duelling for the General's daughter. That could be interesting under other circumstances.",
+  "missionSuccessStatementOverride": "You fought courageously, Commander, but Vanessa slipped our net again.",
+  "badFaithStatementOverride": "You ran in fear, and now Vanessa has escaped.",
+  "goodFaithStatementOverride": "You faced a ferocious duellist and lost, there is no dishonour in that.",
+  "salvagePotential": 8,
+  "requirementList": [],
+  "OnContractSuccessResults": [],
+  "OnContractFailureResults": [],
+  "contractTypeID": "DuoDuel",
+  "encounterPlayStyle": "SinglePlayer",
+  "maxNumberOfPlayerUnits": 2,
+  "mapMood": "JungleSunsetClear",
+  "startingFogOfWarVisibility": "Surveyed",
+  "buildingList": [],
+  "artilleryObjectiveList": [],
+  "extractionOverrideList": [],
+  "disableNegotations": true,
+  "disableLanceConfiguration": false,
+  "disableCancelButton": false,
+  "disableAfterAction": false,
+  "contractRewardOverride": 400000,
+  "travelOnly": false,
+  "useTravelCostPenalty": false,
+  "usesExpiration": false,
+  "expirationTimeOverride": -1,
+  "negotiatedSalary": 0.5,
+  "negotiatedSalvage": 0.5,
+  "limitFlashpointDrop": true,
+  "respectFourDropLimit": true,
+  "lanceMinTonnage": -1,
+  "lanceMaxTonnage": -1,
+  "mechMinTonnages": [
+    45,
+    40,
+    -1,
+    -1
+  ],
+  "mechMaxTonnages": [
+    60,
+    55,
+    -1,
+    -1
+  ],
+  "contractObjectiveList": [
+    {
+      "contractObjective": {
+        "EncounterObjectGuid": "73275787-720a-4c33-9f20-953b1bbf48bd"
+      },
+      "title": "Win the duel",
+      "description": "",
+      "isPrimary": true,
+      "forPlayer": "Player1",
+      "objectiveGuids": [
+        "a0b9c5b2-c594-4c5a-be1d-028a51c51519"
+      ]
+    }
+  ],
+  "objectiveList": [
+    {
+      "objective": {
+        "EncounterObjectGuid": "a0b9c5b2-c594-4c5a-be1d-028a51c51519"
+      },
+      "title": "Defeat Vanessa Fredericks and her wingman",
+      "description": "Defeat the Trimaldi's Secutors duellists.",
+      "isPrimary": true,
+      "OnSuccessResults": [],
+      "OnFailureResults": []
+    }
+  ],
+  "chunkList": [
+    {
+      "name": "Chunk_SwapSpawnerPlacement",
+      "encounterChunk": {
+        "EncounterObjectGuid": "ed007c52-f4cb-4bfc-842a-a50454d8a82a"
+      },
+      "enableChunkFromContract": false
+    }
+  ],
+  "cameraFocusHelperList": [
+    {
+      "name": "Spawner_PlayerLance",
+      "encounterObject": {
+        "EncounterObjectGuid": "76b654a6-4f2c-4a6f-86e6-d4cf868335fe"
+      }
+    },
+    {
+      "name": "Lance_Enemy_Combatant",
+      "encounterObject": {
+        "EncounterObjectGuid": "f426f0dc-969d-477d-81a9-d02f9e1eff79"
+      }
+    }
+  ],
+  "dialogueList": [
+    {
+      "dialogue": {
+        "EncounterObjectGuid": "73df8d9c-a274-48fd-98c9-2bd0d7860e83"
+      },
+      "name": "Dialogue_MissionStart",
+      "overrideDialogueBucketId": "DialogBucketDef_bkt_FamilyMatters2_Mission4_5_Dialogue_MissionStart",
+      "dialogueContent": []
+    },
+    {
+      "dialogue": {
+        "EncounterObjectGuid": "4011a4c3-cba2-4d22-b2b3-3b19a3297ab9"
+      },
+      "name": "Dialogue_MissionSuccess",
+      "overrideDialogueBucketId": "DialogBucketDef_bkt_FamilyMatters2_Mission4_5_Dialogue_MissionSuccess",
+      "dialogueContent": []
+    },
+    {
+      "dialogue": {
+        "EncounterObjectGuid": "d3d33d95-9ed7-4686-b9eb-954ebe51cc02"
+      },
+      "name": "Dialogue_MissionFailure",
+      "overrideDialogueBucketId": "DialogBucketDef_bkt_FamilyMatters2_Mission4_5_Dialogue_MissionFailure",
+      "dialogueContent": []
+    },
+    {
+      "dialogue": {
+        "EncounterObjectGuid": "8971ddc6-a882-4066-923f-f8be03450ce2"
+      },
+      "name": "Dialogue_DuelTaunt",
+      "overrideDialogueBucketId": "DialogBucketDef_bkt_FamilyMatters2_Mission4_5_Dialogue_DuelTaunt",
+      "dialogueContent": []
+    }
+  ],
+  "overrideAutoCompleteDialogueId": "DialogBucketDef_bkt_FamilyMatters2_Mission4_5_Dialogue_MissionSuccess",
+  "overwriteMissionCompleteWhenAutoComplete": true,
+  "player1Team": {
+    "encounterLayerData": {
+      "EncounterObjectGuid": "ea6e3f91-4c87-4766-843c-f9fad2cbf0ff"
+    },
+    "teamGuid": "bf40fd39-ccf9-47c4-94a6-061809681140",
+    "teamName": "Player 1",
+    "faction": "Player1sMercUnit",
+    "teamLeaderCastDefId": "castDef_TeamLeader_Current",
+    "lanceOverrideList": [
+      {
+        "lanceSpawner": {
+          "EncounterObjectGuid": "76b654a6-4f2c-4a6f-86e6-d4cf868335fe"
+        },
+        "name": "Spawner_PlayerLance",
+        "lanceDefId": "Manual",
+        "lanceTagSet": {
+          "items": [],
+          "tagSetSourceFile": "Tags/LanceTags"
+        },
+        "lanceExcludedTagSet": {
+          "items": [],
+          "tagSetSourceFile": "Tags/LanceTags"
+        },
+        "spawnEffectTags": {
+          "items": [],
+          "tagSetSourceFile": "Tags/SpawnEffectTags"
+        },
+        "lanceDifficultyAdjustment": 0,
+        "selectedLanceDefId": null,
+        "selectedLanceDifficulty": 0,
+        "unitSpawnPointOverrideList": [
+          {
+            "unitSpawnPoint": {
+              "EncounterObjectGuid": "ec9d2280-ca9a-4d90-8a20-963d8a4c0a39"
+            },
+            "customUnitName": null,
+            "customHeraldryDefId": null,
+            "unitType": "Mech",
+            "unitDefId": "mechDef_None",
+            "unitTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/EncounterTags"
+            },
+            "unitExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/UnitTags"
+            },
+            "spawnEffectTags": {
+              "items": [],
+              "tagSetSourceFile": "Tags/SpawnEffectTags"
+            },
+            "pilotDefId": "pilot_default",
+            "pilotTagSet": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "pilotExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/PilotTags"
+            },
+            "selectedUnitType": "UNDEFINED",
+            "selectedUnitDefId": null,
+            "selectedPilotDefId": null
+          },
+          {
+            "unitSpawnPoint": {
+              "EncounterObjectGuid": "5df48a48-1840-49b0-84e9-126847053afa"
+            },
+            "customUnitName": null,
+            "customHeraldryDefId": null,
+            "unitType": "Mech",
+            "unitDefId": "mechDef_None",
+            "unitTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/EncounterTags"
+            },
+            "unitExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/UnitTags"
+            },
+            "spawnEffectTags": {
+              "items": [],
+              "tagSetSourceFile": "Tags/SpawnEffectTags"
+            },
+            "pilotDefId": "pilot_default",
+            "pilotTagSet": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "pilotExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/PilotTags"
+            },
+            "selectedUnitType": "UNDEFINED",
+            "selectedUnitDefId": null,
+            "selectedPilotDefId": null
+          }
+        ]
+      }
+    ]
+  },
+  "player2Team": {
+    "encounterLayerData": {
+      "EncounterObjectGuid": "ea6e3f91-4c87-4766-843c-f9fad2cbf0ff"
+    },
+    "teamGuid": "757173dd-b4e1-4bb5-9bee-d78e623cc867",
+    "teamName": "Player 2",
+    "faction": "Player2sMercUnit",
+    "teamLeaderCastDefId": "castDef_TeamLeader_Current",
+    "lanceOverrideList": []
+  },
+  "employerTeam": {
+    "encounterLayerData": {
+      "EncounterObjectGuid": "ea6e3f91-4c87-4766-843c-f9fad2cbf0ff"
+    },
+    "teamGuid": "ecc8d4f2-74b4-465d-adf6-84445e5dfc230",
+    "teamName": "Employer",
+    "faction": "DavionC16",
+    "teamLeaderCastDefId": "castDef_TeamLeader_Current",
+    "lanceOverrideList": [],
+    "customUnitName": "4th Deneb Light Cavalry",
+    "customHeraldryDefId": "heraldrydef_davionC16"
+  },
+  "targetTeam": {
+    "encounterLayerData": {
+      "EncounterObjectGuid": "ea6e3f91-4c87-4766-843c-f9fad2cbf0ff"
+    },
+    "teamGuid": "be77cadd-e245-4240-a93e-b99cc98902a5",
+    "teamName": "Target",
+    "faction": "Liao_AEWA_LR_TS",
+    "teamLeaderCastDefId": "castDef_TeamLeader_Current",
+    "lanceOverrideList": [
+      {
+        "lanceSpawner": {
+          "EncounterObjectGuid": "f426f0dc-969d-477d-81a9-d02f9e1eff79"
+        },
+        "name": "Lance_Enemy",
+        "lanceDefId": "Manual",
+        "lanceTagSet": {
+          "items": [],
+          "tagSetSourceFile": "Tags/LanceTags"
+        },
+        "lanceExcludedTagSet": {
+          "items": [],
+          "tagSetSourceFile": "Tags/LanceTags"
+        },
+        "spawnEffectTags": {
+          "items": [],
+          "tagSetSourceFile": "Tags/SpawnEffectTags"
+        },
+        "lanceDifficultyAdjustment": 0,
+        "selectedLanceDefId": null,
+        "selectedLanceDifficulty": 0,
+        "unitSpawnPointOverrideList": [
+          {
+            "unitSpawnPoint": {
+              "EncounterObjectGuid": "6cd3107e-0f9d-4809-ab8c-fb30faf4cd80"
+            },
+            "customUnitName": "Vanessa Fredericks",
+            "customHeraldryDefId": "heraldrydef_Liao_AEWA_LR_TS",
+            "unitType": "Mech",
+            "unitDefId": "mechdef_thunderbolt_TDR-5S",
+            "unitTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/EncounterTags"
+            },
+            "unitExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/UnitTags"
+            },
+            "spawnEffectTags": {
+              "items": [],
+              "tagSetSourceFile": "Tags/SpawnEffectTags"
+            },
+            "pilotDefId": "pilotDef_Fredericks_Vanessa",
+            "pilotTagSet": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "pilotExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/PilotTags"
+            },
+            "selectedUnitType": "UNDEFINED",
+            "selectedUnitDefId": null,
+            "selectedPilotDefId": null
+          },
+          {
+            "unitSpawnPoint": {
+              "EncounterObjectGuid": "14c58a13-96a6-4f91-a1e5-47b5d02b81d1"
+            },
+            "customUnitName": "",
+            "customHeraldryDefId": "heraldrydef_Liao_AEWA_LR_TS",
+            "unitType": "Mech",
+            "unitDefId": "mechdef_griffin_GRF-1N",
+            "unitTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/EncounterTags"
+            },
+            "unitExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/UnitTags"
+            },
+            "spawnEffectTags": {
+              "items": [],
+              "tagSetSourceFile": "Tags/SpawnEffectTags"
+            },
+            "pilotDefId": "pilot_d6_tactician",
+            "pilotTagSet": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "pilotExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/PilotTags"
+            },
+            "selectedUnitType": "UNDEFINED",
+            "selectedUnitDefId": null,
+            "selectedPilotDefId": null
+          }
+        ]
+      }
+    ],
+    "customUnitName": "Trimaldi's Secutors",
+    "customHeraldryDefId": "heraldrydef_Liao_AEWA_LR_TS"
+  },
+  "targetsAllyTeam": {
+    "encounterLayerData": {
+      "EncounterObjectGuid": "ea6e3f91-4c87-4766-843c-f9fad2cbf0ff"
+    },
+    "teamGuid": "31151ed6-cfc2-467e-98c4-9ae5bea784cf",
+    "teamName": "Target's Ally",
+    "faction": "INVALID_UNSET",
+    "teamLeaderCastDefId": "castDef_TeamLeader_Current",
+    "lanceOverrideList": []
+  },
+  "neutralToAllTeam": {
+    "encounterLayerData": {
+      "EncounterObjectGuid": "ea6e3f91-4c87-4766-843c-f9fad2cbf0ff"
+    },
+    "teamGuid": "61612bb3-abf9-4586-952a-0559fa9dcd75",
+    "teamName": "Neutral to All",
+    "faction": "INVALID_UNSET",
+    "teamLeaderCastDefId": "castDef_TeamLeader_Current",
+    "lanceOverrideList": []
+  },
+  "hostileToAllTeam": {
+    "encounterLayerData": {
+      "EncounterObjectGuid": "ea6e3f91-4c87-4766-843c-f9fad2cbf0ff"
+    },
+    "teamGuid": "3c9f3a20-ab03-4bcb-8ab6-b1ef0442bbf0",
+    "teamName": "Hostile to All",
+    "faction": "INVALID_UNSET",
+    "teamLeaderCastDefId": "castDef_TeamLeader_Current",
+    "lanceOverrideList": []
+  },
+  "employersAllyTeam": {
+    "encounterLayerData": {
+      "EncounterObjectGuid": "ea6e3f91-4c87-4766-843c-f9fad2cbf0ff"
+    },
+    "teamGuid": "70af7e7f-39a8-4e81-87c2-bd01dcb01b5e",
+    "teamName": "Employers Ally",
+    "faction": "INVALID_UNSET",
+    "teamLeaderCastDefId": "castDef_TeamLeader_Current",
+    "lanceOverrideList": []
+  }
+}
