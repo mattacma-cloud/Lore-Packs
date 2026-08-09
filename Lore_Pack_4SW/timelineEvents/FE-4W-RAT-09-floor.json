@@ -1,0 +1,88 @@
+{
+  "Description": {
+    "Id": "FE-4W-RAT-09-floor",
+    "Name": "MERC NET - Operation RAT Fourth Deneb Light Cavalry Wave 2 Advisory",
+    "Details": "MERCNET Operations Calendar: Capellan March theatre contracts for the Zurich follow-on of the Fourth Deneb Light Cavalry branch of Operation RAT have been cleared for posting by Marshal Vernon Fredricks (from 18 September 3028).",
+    "Icon": "uixTxrTimeLine_ComStarNewsBureau.png"
+  },
+  "Scope": "Company",
+  "Weight": 0,
+  "Requirements": {
+    "Scope": "Company",
+    "RequirementTags": {
+      "items": [
+        "fp_choice_OpRat4DLC"
+      ],
+      "tagSetSourceFile": "Tags/CompanyTags"
+    },
+    "ExclusionTags": {
+      "items": [
+        "FamilyMatters2_DateOk",
+        "event_FamilyMatters2_open_seen",
+        "fp_finished_FamilyMatters2_success"
+      ],
+      "tagSetSourceFile": "Tags/CompanyTags"
+    },
+    "RequirementComparisons": []
+  },
+  "AdditionalRequirements": [],
+  "AdditionalObjects": [],
+  "Options": [
+    {
+      "Description": {
+        "Id": "outcome_0",
+        "Name": "Acknowledge",
+        "Details": "There has been a priority contract to serve alongside the Fourth Deneb Light Cavalry posted on Zurich.",
+        "Icon": ""
+      },
+      "RequirementList": [],
+      "ResultSets": [
+        {
+          "Description": {
+            "Id": "outcome_0_0",
+            "Name": "Zurich floor unlocked",
+            "Details": "There has been a priority contract to serve alongside the Fourth Deneb Light Cavalry posted on Zurich.",
+            "Icon": ""
+          },
+          "Weight": 100,
+          "Results": [
+            {
+              "Scope": "Company",
+              "Requirements": null,
+              "AddedTags": {
+                "items": [
+                  "FamilyMatters2_DateOk"
+                ],
+                "tagSetSourceFile": "Tags/CompanyTags"
+              },
+              "RemovedTags": {
+                "items": null,
+                "tagSetSourceFile": ""
+              },
+              "Stats": null,
+              "Actions": null,
+              "ForceEvents": null,
+              "TemporaryResult": false,
+              "ResultDuration": 0
+            }
+          ]
+        }
+      ],
+      "Requirements": {
+        "Scope": "Company",
+        "RequirementTags": {
+          "items": null,
+          "tagSetSourceFile": ""
+        },
+        "ExclusionTags": {
+          "items": null,
+          "tagSetSourceFile": ""
+        },
+        "RequirementComparisons": []
+      }
+    }
+  ],
+  "PublishState": "PUBLISHED",
+  "ValidationState": "UNTESTED",
+  "EventType": "NORMAL"
+}

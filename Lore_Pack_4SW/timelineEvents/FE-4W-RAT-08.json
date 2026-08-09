@@ -1,0 +1,116 @@
+{
+  "Description": {
+    "Id": "FE-4W-RAT-08",
+    "Name": "MERC NET - ALDEBARAN DEPLOYMENT",
+    "Details": "MERC NET ADVISORY: Priority contract activity reported on [[DM.SystemDefs[starsystemdef_Aldebaran],Aldebaran]].\r\n\r\nMarshal Vernon Fredricks has posted priority contracts for the Fourth Deneb Light Cavalry branch of Operation RAT. The Fourth Deneb require mercenary support on Aldebaran immediately.",
+    "Icon": "uixTxrTimeLine_ComStarNewsBureau.png"
+  },
+  "Scope": "Company",
+  "Weight": 0,
+  "Requirements": {
+    "Scope": "Company",
+    "RequirementTags": {
+      "items": [
+        "fp_choice_OpRat4DLC",
+        "fp_finished_AEWA",
+        "FamilyMatters_DateOk"
+      ],
+      "tagSetSourceFile": "Tags/CompanyTags"
+    },
+    "ExclusionTags": {
+      "items": [
+        "event_FamilyMatters_open_seen",
+        "fp_finished_FamilyMatters_success"
+      ],
+      "tagSetSourceFile": "Tags/CompanyTags"
+    },
+    "RequirementComparisons": []
+  },
+  "AdditionalRequirements": [],
+  "AdditionalObjects": [],
+  "Options": [
+    {
+      "Description": {
+        "Id": "outcome_0",
+        "Name": "Acknowledge",
+        "Details": "Report to Aldebaran to review Marshal Fredricks' contract in the Command Center.",
+        "Icon": ""
+      },
+      "RequirementList": [],
+      "ResultSets": [
+        {
+          "Description": {
+            "Id": "outcome_0_0",
+            "Name": "Family Matters I flagged",
+            "Details": "Report to Aldebaran to review Marshal Fredricks' contract in the Command Center.",
+            "Icon": ""
+          },
+          "Weight": 100,
+          "Results": [
+            {
+              "Scope": "Company",
+              "Requirements": null,
+              "AddedTags": {
+                "items": [
+                  "event_FamilyMatters_open_seen",
+                  "FamilyMatters_Active"
+                ],
+                "tagSetSourceFile": "Tags/CompanyTags"
+              },
+              "RemovedTags": {
+                "items": null,
+                "tagSetSourceFile": ""
+              },
+              "Stats": null,
+              "Actions": null,
+              "ForceEvents": null,
+              "TemporaryResult": false,
+              "ResultDuration": 0
+            },
+            {
+              "Scope": "Company",
+              "Requirements": null,
+              "AddedTags": {
+                "items": null,
+                "tagSetSourceFile": ""
+              },
+              "RemovedTags": {
+                "items": null,
+                "tagSetSourceFile": ""
+              },
+              "Stats": null,
+              "Actions": [
+                {
+                  "Type": "System_AddFlashpoint",
+                  "value": "fp_lp4sw_FamilyMatters",
+                  "valueConstant": null,
+                  "additionalValues": [
+                    "starsystemdef_Aldebaran"
+                  ]
+                }
+              ],
+              "ForceEvents": null,
+              "TemporaryResult": false,
+              "ResultDuration": 0
+            }
+          ]
+        }
+      ],
+      "Requirements": {
+        "Scope": "Company",
+        "RequirementTags": {
+          "items": null,
+          "tagSetSourceFile": ""
+        },
+        "ExclusionTags": {
+          "items": null,
+          "tagSetSourceFile": ""
+        },
+        "RequirementComparisons": []
+      }
+    }
+  ],
+  "PublishState": "PUBLISHED",
+  "ValidationState": "UNTESTED",
+  "EventType": "NORMAL"
+}
