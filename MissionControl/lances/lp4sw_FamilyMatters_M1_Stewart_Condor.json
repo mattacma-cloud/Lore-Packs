@@ -1,0 +1,95 @@
+{
+    "lanceKey": "lp4sw_FamilyMatters_M1_Stewart_Condor",
+    "lanceDefId": "Manual",
+    "lanceDifficultyAdjustment": 0,
+    "unitSpawnPointOverrideList": [
+        {
+            "unitType": "Vehicle",
+            "customHeraldryDefId": "heraldrydef_davionC16",
+            "customUnitName": "Major Craig Stewart",
+            "unitDefId": "vehicledef_CONDOR",
+            "unitTagSet": {
+                "items": []
+            },
+            "unitExcludedTagSet": {
+                "items": []
+            },
+            "spawnEffectTags": {
+                "items": []
+            },
+            "pilotDefId": "pilotDef_Stewart_Craig",
+            "pilotTagSet": {
+                "items": []
+            },
+            "pilotExcludedTagSet": {
+                "items": []
+            }
+        },
+        {
+            "unitType": "Vehicle",
+            "customHeraldryDefId": "heraldrydef_davionC16",
+            "customUnitName": "",
+            "unitDefId": "vehicledef_CONDOR",
+            "unitTagSet": {
+                "items": []
+            },
+            "unitExcludedTagSet": {
+                "items": []
+            },
+            "spawnEffectTags": {
+                "items": []
+            },
+            "pilotDefId": "pilot_d4_pilot",
+            "pilotTagSet": {
+                "items": []
+            },
+            "pilotExcludedTagSet": {
+                "items": []
+            }
+        },
+        {
+            "unitType": "Vehicle",
+            "customHeraldryDefId": "heraldrydef_davionC16",
+            "customUnitName": "",
+            "unitDefId": "vehicledef_CONDOR",
+            "unitTagSet": {
+                "items": []
+            },
+            "unitExcludedTagSet": {
+                "items": []
+            },
+            "spawnEffectTags": {
+                "items": []
+            },
+            "pilotDefId": "pilot_d3_defender",
+            "pilotTagSet": {
+                "items": []
+            },
+            "pilotExcludedTagSet": {
+                "items": []
+            }
+        },
+        {
+            "unitType": "Vehicle",
+            "customHeraldryDefId": "heraldrydef_davionC16",
+            "customUnitName": "",
+            "unitDefId": "vehicledef_CONDOR",
+            "unitTagSet": {
+                "items": []
+            },
+            "unitExcludedTagSet": {
+                "items": []
+            },
+            "spawnEffectTags": {
+                "items": []
+            },
+            "pilotDefId": "pilot_d4_pilot",
+            "pilotTagSet": {
+                "items": []
+            },
+            "pilotExcludedTagSet": {
+                "items": []
+            }
+        }
+    ]
+}

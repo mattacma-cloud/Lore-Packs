@@ -1,0 +1,77 @@
+{
+    "lanceKey": "lp4sw_FamilyMatters_M2_Stewart_Pegasus",
+    "lanceDefId": "Manual",
+    "lanceDifficultyAdjustment": 0,
+    "unitSpawnPointOverrideList": [
+        {
+            "unitType": "Vehicle",
+            "customHeraldryDefId": "heraldrydef_davionC16",
+            "customUnitName": "",
+            "unitDefId": "vehicledef_PEGASUS",
+            "unitTagSet": {
+                "items": []
+            },
+            "unitExcludedTagSet": {
+                "items": []
+            },
+            "spawnEffectTags": {
+                "items": []
+            },
+            "pilotDefId": "pilot_d4_defender",
+            "pilotTagSet": {
+                "items": []
+            },
+            "pilotExcludedTagSet": {
+                "items": []
+            }
+        },
+        {
+            "unitType": "Vehicle",
+            "customHeraldryDefId": "heraldrydef_davionC16",
+            "customUnitName": "",
+            "unitDefId": "vehicledef_PEGASUS",
+            "unitTagSet": {
+                "items": []
+            },
+            "unitExcludedTagSet": {
+                "items": []
+            },
+            "spawnEffectTags": {
+                "items": [
+                    "spawn_poorly_maintained_75"
+                ]
+            },
+            "pilotDefId": "pilot_d4_defender",
+            "pilotTagSet": {
+                "items": []
+            },
+            "pilotExcludedTagSet": {
+                "items": []
+            }
+        },
+        {
+            "unitType": "Vehicle",
+            "customHeraldryDefId": "heraldrydef_davionC16",
+            "customUnitName": "",
+            "unitDefId": "vehicledef_PEGASUS",
+            "unitTagSet": {
+                "items": []
+            },
+            "unitExcludedTagSet": {
+                "items": []
+            },
+            "spawnEffectTags": {
+                "items": [
+                    "spawn_poorly_maintained_50"
+                ]
+            },
+            "pilotDefId": "pilot_d6_brawler",
+            "pilotTagSet": {
+                "items": []
+            },
+            "pilotExcludedTagSet": {
+                "items": []
+            }
+        }
+    ]
+}
