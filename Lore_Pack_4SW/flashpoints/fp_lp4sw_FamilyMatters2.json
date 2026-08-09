@@ -1,0 +1,68 @@
+{
+  "AllowRefitTime": true,
+  "AvailableTimeout": 0,
+  "Description": {
+    "Icon": "uixTxrSpot_fp_lp4sw_AEWA.png",
+    "Name": "Family Matters II",
+    "Id": "fp_lp4sw_FamilyMatters2",
+    "Details": "Aldebaran is secure, and Marshal Fredricks has orders for our unit on Zurich. He needs us there to provide further assistance to the Fourth Deneb Light Cavalry."
+  },
+  "InProgressTimeout": 0,
+  "UnitDropTonnageHint": "Mixed",
+  "Repeatable": false,
+  "FlashpointDescriberCastDefId": "castDef_Davion_Vernon_Fredricks",
+  "LocationRequirements": {
+    "Scope": "StarSystem",
+    "RequirementTags": {
+      "items": [
+        "planet_name_zurich"
+      ],
+      "tagSetSourceFile": "Tags/PlanetNameTags"
+    },
+    "RequirementComparisons": [],
+    "ExclusionTags": {
+      "items": [],
+      "tagSetSourceFile": ""
+    }
+  },
+  "RewardCollectionID": "itemCollection_AEWA_400b",
+  "TargetFaction": "Liao",
+  "PotentialEmployers": [
+    "Davion"
+  ],
+  "PublishState": "PUBLISHED",
+  "FlashpointShortDescription": "Aldebaran is secure, and Marshal Fredricks has orders for our unit on Zurich. He needs us there to provide further assistance to the Fourth Deneb Light Cavalry.",
+  "MilestoneSetID": "ms_fp_lp4sw_FamilyMatters2",
+  "Difficulty": 4,
+  "Tags": {
+    "items": [
+      "BLACKLISTED"
+    ],
+    "tagSetSourceFile": "tags/FlashpointTags"
+  },
+  "UseAvailableTimeoutOverride": false,
+  "UseInProgressTimeoutOverride": false,
+  "Requirements": [
+    {
+      "Scope": "Company",
+      "RequirementTags": {
+        "items": [
+          "fp_finished_FamilyMatters_success",
+          "FamilyMatters2_Active"
+        ],
+        "tagSetSourceFile": "Tags/CompanyTags"
+      },
+      "RequirementComparisons": [],
+      "ExclusionTags": {
+        "items": [
+          "fp_finished_FamilyMatters2_success"
+        ],
+        "tagSetSourceFile": "Tags/CompanyTags"
+      }
+    }
+  ],
+  "LanceDropTonnageHint": "None",
+  "FlashpointLength": "SHORT",
+  "InternalName": "lp4sw_FamilyMatters2",
+  "Weight": 10
+}
