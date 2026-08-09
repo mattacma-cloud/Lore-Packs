@@ -1,0 +1,22 @@
+{
+    "id" : "castDef_Davion_Craig_Stewart",
+    "internalName" : "Davion_Craig_Stewart",
+    "firstName" : "Craig",
+    "lastName" : "Stewart",
+    "callsign" : "Skimmer",
+    "rank" : "Major",
+    "gender" : "Male",
+    "factionID" : "Davion",
+    "sgCharType" : "UNSET",
+    "showRank" : true,
+    "showFirstName" : true,
+    "showCallsign" : false,
+    "showLastName" : true,
+    "defaultEmotePortrait" : {
+        "emote" : "Default",
+        "portraitAssetPath" : "../../Mods/Lore_Pack_4SW/portraits/guiTxrPort_Stewart_Craig.png"
+    },
+    "emotePotraitList" : [
+        
+    ]
+}
