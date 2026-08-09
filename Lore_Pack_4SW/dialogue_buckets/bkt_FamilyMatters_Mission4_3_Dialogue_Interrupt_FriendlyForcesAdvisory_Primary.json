@@ -1,0 +1,53 @@
+{
+    "identifier": "bkt_FamilyMatters_Mission4_3_Dialogue_Interrupt_FriendlyForcesAdvisory_Primary",
+    "contents": [
+        {
+            "words": "There's the main armour lance, Commander, that should help a little.",
+            "wordsColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+            },
+            "selectedCastDefId": "castDef_DariusDefault",
+            "emote": "Default",
+            "audioName": "NONE",
+            "cameraFocusGuid": "",
+            "cameraDistance": "Far",
+            "cameraHeight": "Default",
+            "revealRadius": -1
+        },
+        {
+            "words": "Stewart here, we are on station. We fight until Ijori breaks; then we pull for evac if ordered.",
+            "wordsColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+            },
+            "selectedCastDefId": "castDef_Davion_Craig_Stewart",
+            "emote": "Default",
+            "audioName": "NONE",
+            "cameraFocusGuid": "",
+            "cameraDistance": "Far",
+            "cameraHeight": "Default",
+            "revealRadius": -1
+        },
+        {
+            "words": "Glad to have you, Major.",
+            "wordsColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+            },
+            "selectedCastDefId": "castDef_DariusDefault",
+            "emote": "Default",
+            "audioName": "NONE",
+            "cameraFocusGuid": "",
+            "cameraDistance": "Far",
+            "cameraHeight": "Default",
+            "revealRadius": -1
+        }
+    ]
+}

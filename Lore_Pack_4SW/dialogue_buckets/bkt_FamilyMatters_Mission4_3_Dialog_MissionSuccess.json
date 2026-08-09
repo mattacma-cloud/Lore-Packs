@@ -1,0 +1,21 @@
+{
+    "identifier": "bkt_FamilyMatters_Mission4_3_Dialog_MissionSuccess",
+    "contents": [
+        {
+            "words": "Ijori's broken. My company's still breathing  -  that's a win. Let's go home.",
+            "wordsColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+            },
+            "selectedCastDefId": "castDef_Davion_Craig_Stewart",
+            "emote": "Default",
+            "audioName": "NONE",
+            "cameraFocusGuid": "",
+            "cameraDistance": "Far",
+            "cameraHeight": "Default",
+            "revealRadius": -1
+        }
+    ]
+}

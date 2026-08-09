@@ -1,0 +1,53 @@
+{
+    "identifier": "bkt_FamilyMatters_Mission4_3_Dialog_MissionStart",
+    "contents": [
+        {
+            "words": "Lagoon's hot  -  Ijori is swarming the defences. I have no idea where they came from! Get your 'Mechs up and firing. My tanks are beside you and we'll do what we can, but we're down to two lances and there's multiple lances out there.",
+            "wordsColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+            },
+            "selectedCastDefId": "castDef_Davion_Craig_Stewart",
+            "emote": "Default",
+            "audioName": "NONE",
+            "cameraFocusGuid": "",
+            "cameraDistance": "Far",
+            "cameraHeight": "Default",
+            "revealRadius": -1
+        },
+        {
+            "words": "Understood, Major. We'll keep your people alive, and ours for that matter, though I'll be having words with the Deneb pickets.",
+            "wordsColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+            },
+            "selectedCastDefId": "castDef_DariusDefault",
+            "emote": "Default",
+            "audioName": "NONE",
+            "cameraFocusGuid": "",
+            "cameraDistance": "Far",
+            "cameraHeight": "Default",
+            "revealRadius": -1
+        },
+        {
+            "words": "Get in line  -  I'll be having 'words' with them myself.",
+            "wordsColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+            },
+            "selectedCastDefId": "castDef_Davion_Craig_Stewart",
+            "emote": "Default",
+            "audioName": "NONE",
+            "cameraFocusGuid": "",
+            "cameraDistance": "Far",
+            "cameraHeight": "Default",
+            "revealRadius": -1
+        }
+    ]
+}

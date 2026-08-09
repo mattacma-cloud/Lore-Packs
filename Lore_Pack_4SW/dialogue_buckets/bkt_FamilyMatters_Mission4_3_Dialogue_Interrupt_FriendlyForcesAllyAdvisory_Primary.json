@@ -1,0 +1,53 @@
+{
+    "identifier": "bkt_FamilyMatters_Mission4_3_Dialogue_Interrupt_FriendlyForcesAllyAdvisory_Primary",
+    "contents": [
+        {
+            "words": "Ally Maxims and Pegasi joining the fight as part of the Fourth Deneb hover support.",
+            "wordsColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+            },
+            "selectedCastDefId": "castDef_DariusDefault",
+            "emote": "Default",
+            "audioName": "NONE",
+            "cameraFocusGuid": "",
+            "cameraDistance": "Far",
+            "cameraHeight": "Default",
+            "revealRadius": -1
+        },
+        {
+            "words": "I'm glad they made the party, at least what's left of them.",
+            "wordsColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+            },
+            "selectedCastDefId": "castDef_Davion_Craig_Stewart",
+            "emote": "Default",
+            "audioName": "NONE",
+            "cameraFocusGuid": "",
+            "cameraDistance": "Far",
+            "cameraHeight": "Default",
+            "revealRadius": -1
+        },
+        {
+            "words": "Copy that, Major.",
+            "wordsColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+            },
+            "selectedCastDefId": "castDef_DariusDefault",
+            "emote": "Default",
+            "audioName": "NONE",
+            "cameraFocusGuid": "",
+            "cameraDistance": "Far",
+            "cameraHeight": "Default",
+            "revealRadius": -1
+        }
+    ]
+}

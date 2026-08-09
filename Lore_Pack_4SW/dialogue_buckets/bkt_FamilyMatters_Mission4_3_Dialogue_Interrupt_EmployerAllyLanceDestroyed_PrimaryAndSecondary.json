@@ -1,0 +1,37 @@
+{
+    "identifier": "bkt_FamilyMatters_Mission4_3_Dialogue_Interrupt_EmployerAllyLanceDestroyed_PrimaryAndSecondary",
+    "contents": [
+        {
+            "words": "My second lance is out of the fight. Pick up your game, merc!",
+            "wordsColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+            },
+            "selectedCastDefId": "castDef_Davion_Craig_Stewart",
+            "emote": "Default",
+            "audioName": "NONE",
+            "cameraFocusGuid": "",
+            "cameraDistance": "Far",
+            "cameraHeight": "Default",
+            "revealRadius": -1
+        },
+        {
+            "words": "It's not like the Commander is holding a BBQ down there, Major.",
+            "wordsColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+            },
+            "selectedCastDefId": "castDef_DariusDefault",
+            "emote": "Default",
+            "audioName": "NONE",
+            "cameraFocusGuid": "",
+            "cameraDistance": "Far",
+            "cameraHeight": "Default",
+            "revealRadius": -1
+        }
+    ]
+}

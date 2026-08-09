@@ -1,0 +1,53 @@
+{
+    "identifier": "bkt_FamilyMatters_Mission4_2_Dialogue_MissionStart",
+    "contents": [
+        {
+            "words": "Same ground, same dance  -  Ijori won't give up this bog. My company's shot up from last time; I'm down two tanks and several others are damaged, so I need you to watch the flanks for me.",
+            "wordsColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+            },
+            "selectedCastDefId": "castDef_Davion_Craig_Stewart",
+            "emote": "Default",
+            "audioName": "NONE",
+            "cameraFocusGuid": "",
+            "cameraDistance": "Far",
+            "cameraHeight": "Default",
+            "revealRadius": -1
+        },
+        {
+            "words": "We see you, Major, and we'll cover those little toys you buzz about in. Good hunting.",
+            "wordsColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+            },
+            "selectedCastDefId": "castDef_DariusDefault",
+            "emote": "Default",
+            "audioName": "NONE",
+            "cameraFocusGuid": "",
+            "cameraDistance": "Far",
+            "cameraHeight": "Default",
+            "revealRadius": -1
+        },
+        {
+            "words": "Very funny, but we'll see who takes the prize this time. There are striker and support vehicles ahead, with mech reinforcements behind them. We worked well together last mission  -  let's do it again.",
+            "wordsColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+            },
+            "selectedCastDefId": "castDef_Davion_Craig_Stewart",
+            "emote": "Default",
+            "audioName": "NONE",
+            "cameraFocusGuid": "",
+            "cameraDistance": "Far",
+            "cameraHeight": "Default",
+            "revealRadius": -1
+        }
+    ]
+}

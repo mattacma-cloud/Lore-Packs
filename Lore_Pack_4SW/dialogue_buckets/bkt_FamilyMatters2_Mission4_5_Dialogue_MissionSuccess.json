@@ -1,0 +1,21 @@
+{
+    "identifier": "bkt_FamilyMatters2_Mission4_5_Dialogue_MissionSuccess",
+    "contents": [
+        {
+            "words": "You fought courageously. Though it looks like Vanessa slipped the net again... at least she still lives. That is something.",
+            "wordsColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+            },
+            "selectedCastDefId": "castDef_Davion_Vernon_Fredricks",
+            "emote": "Default",
+            "audioName": "NONE",
+            "cameraFocusGuid": "",
+            "cameraDistance": "Far",
+            "cameraHeight": "Default",
+            "revealRadius": -1
+        }
+    ]
+}

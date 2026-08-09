@@ -1,0 +1,21 @@
+{
+    "identifier": "bkt_FamilyMatters2_Mission4_5_Dialogue_DuelTaunt",
+    "contents": [
+        {
+            "words": "Two of your best against me and mine. For Trimaldi  -  for everything my Father and Prince Davion stole from me. Come die for Davion, merc.",
+            "wordsColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+            },
+            "selectedCastDefId": "castDef_Liao_Vanessa_Fredericks",
+            "emote": "Default",
+            "audioName": "NONE",
+            "cameraFocusGuid": "",
+            "cameraDistance": "Far",
+            "cameraHeight": "Default",
+            "revealRadius": -1
+        }
+    ]
+}
