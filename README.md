@@ -44,11 +44,11 @@ Drag the Lore_Pack_4SW and MissionControl folders into your \BATTLETECH\Mods fol
 
 You must complete Touring Tikonov, or use the BattleTech Save Editor to give yourself the tag "Ardan_is_Interested", in order for An Evening with Ardan to spawn.
 
-**ONLY** choose the 7th Crucis Lancer's, 3rd Davion Guards or 33rd Avalon Hussars options at this time, as the other 2 Flashpoints are not yet delivered and you will get nothing more than a note from Darius if you choose any of the other flashpoints in An Evening with Ardan.
+**ONLY** choose the 7th Crucis Lancer's, 3rd Davion Guards, 33rd Avalon Hussars or 4th Deneb Light Cavalry options at this time, as the other Flashpoint is not yet delivered and you will get nothing more than a note from Darius if you choose the 12th Vegan Rangers option in An Evening with Ardan.
 
-Once you complete An Evening with Ardan, you must advance the timeline one day and then the Tikonov Flashpoint will spawn. The 3rd Davion / 33rd Avalon Flashpoints fire in August (Flashpoint I) and then September (Flashpoint II).
+Once you complete An Evening with Ardan, you must advance the timeline one day and then the relevant Flashpoint will spawn. The 3rd Davion / 33rd Avalon Flashpoints fire in August (Flashpoint I) and then September (Flashpoint II).
 
-**NOTE:** Foxes of Tikonov and Charge of the Guards, and to a lesser extent, Liao's Bane, are not designed to be easy Flashpoints. You will face difficult missions against skilled, well equipped, and numerous foes. If you started a 3028 career, you'll get properly pasted. Until the other Davion flashpoints are ready (they will have lower difficulty settings), use a 3025 or post-Arano campaign, or the BattleTech Save Editor, so that you can have a fair chance at fishing the Flashpoints.
+**NOTE:** Foxes of Tikonov and Charge of the Guards, and to a lesser extent, Liao's Bane, are not designed to be easy Flashpoints. You will face difficult missions against skilled, well equipped, and numerous foes. If you started a 3028 career, you'll get properly pasted. Until the other Davion flashpoints are ready (they will have lower difficulty settings), use a 3025 or post-Arano campaign, or the BattleTech Save Editor, so that you can have a fair chance at fishing the Flashpoints. The 4th Deneb Light Cavalry (Family Matters) is now ready and somewhat easier.
 
 
 **Lore Packs Development Map Version Plan**
@@ -65,13 +65,13 @@ Once you complete An Evening with Ardan, you must advance the timeline one day a
 
 0.1.5	Liao's Bane (33rd Avalon Hussars) 
 
-**IN ACTIVE DEVELOPMENT**
-
 0.1.6	4th Deneb Light Cavalry 
 
-**IN PRE-DEVELOPMENT**
+**IN ACTIVE DEVELOPMENT**
 
 0.1.7	12th Vegan Rangers Delta Regiment
+
+**IN PRE-DEVELOPMENT**
 
 0.1.8	Screaming Eagles 
 
