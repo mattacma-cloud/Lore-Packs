@@ -40,36 +40,35 @@ Drag the Lore_Pack_4SW and MissionControl folders into your \BATTLETECH\Mods fol
 - ColourfulFlashPoint
 
 
-**GAME PLAY NOTES AS OF RELEASE 0.1.5**
+**GAME PLAY NOTES AS OF RELEASE 0.1.6**
 
 You must complete Touring Tikonov, or use the BattleTech Save Editor to give yourself the tag "Ardan_is_Interested", in order for An Evening with Ardan to spawn.
 
-**ONLY** choose the 7th Crucis Lancer's, 3rd Davion Guards, 33rd Avalon Hussars or 4th Deneb Light Cavalry options at this time, as the other Flashpoint is not yet delivered and you will get nothing more than a note from Darius if you choose the 12th Vegan Rangers option in An Evening with Ardan.
+Once you complete An Evening with Ardan, you must advance the timeline one day and then the relevant Flashpoint will spawn. The non-Crucis Lancer Flashpoints fire in August (Flashpoint I) and then September (Flashpoint II).
 
-Once you complete An Evening with Ardan, you must advance the timeline one day and then the relevant Flashpoint will spawn. The 3rd Davion / 33rd Avalon Flashpoints fire in August (Flashpoint I) and then September (Flashpoint II).
-
-**NOTE:** Foxes of Tikonov and Charge of the Guards, and to a lesser extent, Liao's Bane, are not designed to be easy Flashpoints. You will face difficult missions against skilled, well equipped, and numerous foes. If you started a 3028 career, you'll get properly pasted. Until the other Davion flashpoints are ready (they will have lower difficulty settings), use a 3025 or post-Arano campaign, or the BattleTech Save Editor, so that you can have a fair chance at fishing the Flashpoints. The 4th Deneb Light Cavalry (Family Matters) is now ready and somewhat easier.
-
+**NOTE:** Foxes of Tikonov and Charge of the Guards, and to a lesser extent, Liao's Bane, are not designed to be easy Flashpoints. You will face difficult missions against skilled, well equipped, and numerous foes. If you started a 3028 career, you'll get properly pasted. It is advised that you use a 3025 or post-Arano campaign, or the BattleTech Save Editor, so that you can have a fair chance at fishing the Flashpoints. The 4th Deneb Light Cavalry (Family Matters) and 12th Vegan Rangers (Mercenary Relations) are somewhat easier and designed for lower skilled/equipped commands. 
 
 **Lore Packs Development Map Version Plan**
 
 **RELEASED**
 
-0.1.0	Touring Tikonov 
+0.1.0	Touring Tikonov [1 of 1 planned Flashpoint available]
 
-0.1.1	An Evening with Ardan
+0.1.1	An Evening with Ardan [1 of 1 planned Flashpoint available]
 
-0.1.3	Foxes of Tikonov (7th Crucis Lancers)
+0.1.3	Foxes of Tikonov (7th Crucis Lancers) [1 of 5 planned Flashpoint available]
 
-0.1.4	Charge of the Guards (3rd Davion Guards) 
+0.1.4	Charge of the Guards (3rd Davion Guards) [2 of 4 planned Flashpoint available]
 
-0.1.5	Liao's Bane (33rd Avalon Hussars) 
+0.1.5	Liao's Bane (33rd Avalon Hussars) [2 of 4 planned Flashpoint available]
 
-0.1.6	4th Deneb Light Cavalry 
+0.1.6	Family Matters (4th Deneb Light Cavalry) [2 of 4 planned Flashpoint available]
+
+0.1.7	Mercenary Relations (12th Vegan Rangers Delta Regiment) [2 of 7 planned Flashpoint available]
 
 **IN ACTIVE DEVELOPMENT**
 
-0.1.7	12th Vegan Rangers Delta Regiment
+Flashpoints 2-4 of Foxes of Tikonov.
 
 **IN PRE-DEVELOPMENT**
 
