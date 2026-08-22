@@ -1,1 +1,6 @@
+This mod expands the number of active Flashpoints that will display on the map. 
+This has been built to allow the many Flashpoints of the Lore Packs to display on the star map.
 
+Note, this can lead to may flashpoints appearing at once. Should you wish for less Flashpoints to be displayed
+change "MaxActiveFlashpoints" in "\Lore_Pack_4SW_FP_Cap\StreamingAssets\data\simGameConstants\SimGameConstants.json"
+to a lower number. This can be found at the end of the JSON file.
