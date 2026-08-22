@@ -1,0 +1,15 @@
+{
+  "Name": "Lore_Pack_4SW_FP_Cap",
+  "Enabled": true,
+  "Version": "0.0.1-unpublished",
+  "Description": "UNPUBLISHED — Optional Lore Pack companion: career MaxActiveFlashpoints 25 (CE-safe full SimGameConstants merge). Leave Enabled false until released. Requires BT_Extended_CE.",
+  "Author": "Blacknova",
+  "DependsOn": [
+    "ModTek",
+    "BT_Extended",
+    "BT_Extended_CE"
+  ],
+  "OptionallyDependsOn": [
+    "Lore_Pack_4SW"
+  ]
+}

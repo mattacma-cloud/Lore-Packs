@@ -1,0 +1,43 @@
+{
+   "Finances" : {
+		"MechWarriorBaseCostPerPoint" : 1400.0,
+		"MechWarriorBonusCostPerPoint" : 700.0,
+		"LeopardBaseMaintenanceCost" : 60000,
+		"ArgoBaseMaintenanceCost" : 70000,
+		"QuartersYouCanAffordWithoutTriggeringWarning" : 0,
+	},
+   "Story" : {
+		"StartingMechTechSkill" : 3000,
+		"SpartanMoraleModifier" : -15,
+		"RestrictedMoraleModifier" : -5,
+		"NormalMoraleModifier" : 0,
+		"GenerousMoraleModifier" : 5,
+		"ExtravagantMoraleModifier" : 10,
+		"MechReadyTime" :  7000,
+		"NotifLowFundsQtrRemainThreshold": 0,
+		"NotifLowFundsRecurrence": 999,
+		"NotifDangerLowFundsQtrRemainThreshold": 0,
+		"NotifDangerLowFundsRecurrence": 999,
+		"ContractRenewalPerWeek" : 3
+   },
+   "CareerMode" : {
+		"ContractRenewalPerWeek" : 3
+   },
+   "MechLab" :{
+		"StructureRepairTechPoints" : 20,
+		"ComponentRepairTechPoints" : 2000,
+		"BallisticInstallTechPoints" : 5000,
+		"MissileInstallTechPoints" : 5000,
+		"EnergyInstallTechPoints" : 5000,
+		"APInstallTechPoints" : 2500,
+		"AmmoInstallTechPoints" : 2500,
+		"JumpJetInstallTechPoints" : 2500,
+		"HeatSinkInstallTechPoints" : 2500,
+		"ArmorInstallTechPoints" : 0,
+		"OtherInstallTechPoints" : 2500,
+		"UninstallTechPoints" : 0,
+   },
+   "Flashpoints" : {
+		"MaxActiveFlashpoints" : 25
+   }
+}
