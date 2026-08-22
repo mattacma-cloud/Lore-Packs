@@ -1,0 +1,21 @@
+{
+    "identifier": "bkt_MercRelations2_Mission5_3_Dialogue_TargetBuildingDamaged",
+    "contents": [
+        {
+            "words": "Try to take them down, not just chip the paint.",
+            "wordsColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+            },
+            "selectedCastDefId": "castDef_Mercenaries_12VRDR_Mitch_Nelson",
+            "emote": "Default",
+            "audioName": "NONE",
+            "cameraFocusGuid": "",
+            "cameraDistance": "Far",
+            "cameraHeight": "Default",
+            "revealRadius": -1
+        }
+    ]
+}

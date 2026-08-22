@@ -1,0 +1,21 @@
+{
+    "identifier": "bkt_MercRelations_Mission5_1_Dialogue_MissionSuccess",
+    "contents": [
+        {
+            "words": "Santana is on the bird. Clean work, despite the time you took, Commander — Nelson out.",
+            "wordsColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+            },
+            "selectedCastDefId": "castDef_Mercenaries_12VRDR_Mitch_Nelson",
+            "emote": "Default",
+            "audioName": "NONE",
+            "cameraFocusGuid": "",
+            "cameraDistance": "Far",
+            "cameraHeight": "Default",
+            "revealRadius": -1
+        }
+    ]
+}

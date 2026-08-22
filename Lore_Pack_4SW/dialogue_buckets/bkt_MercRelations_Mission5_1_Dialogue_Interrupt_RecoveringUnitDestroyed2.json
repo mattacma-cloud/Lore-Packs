@@ -1,0 +1,21 @@
+{
+    "identifier": "bkt_MercRelations_Mission5_1_Dialogue_Interrupt_RecoveringUnitDestroyed2",
+    "contents": [
+        {
+            "words": "Damn it, Commander, the aide is dead. You better pray that Santana makes it out.",
+            "wordsColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+            },
+            "selectedCastDefId": "castDef_Mercenaries_12VRDR_Mitch_Nelson",
+            "emote": "Default",
+            "audioName": "NONE",
+            "cameraFocusGuid": "",
+            "cameraDistance": "Far",
+            "cameraHeight": "Default",
+            "revealRadius": -1
+        }
+    ]
+}

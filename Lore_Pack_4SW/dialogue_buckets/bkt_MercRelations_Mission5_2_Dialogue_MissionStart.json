@@ -1,0 +1,53 @@
+{
+    "identifier": "bkt_MercRelations_Mission5_2_Dialogue_MissionStart",
+    "contents": [
+        {
+            "words": "Santana's convoy is forming up in Crimson Valley. Get her to safety.",
+            "wordsColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+            },
+            "selectedCastDefId": "castDef_Mercenaries_12VRDR_Mitch_Nelson",
+            "emote": "Default",
+            "audioName": "NONE",
+            "cameraFocusGuid": "",
+            "cameraDistance": "Far",
+            "cameraHeight": "Default",
+            "revealRadius": -1
+        },
+        {
+            "words": "We'll send the transport to rendezvous with you once you have extracted Santana.",
+            "wordsColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+            },
+            "selectedCastDefId": "castDef_Mercenaries_12VRDR_Mitch_Nelson",
+            "emote": "Default",
+            "audioName": "NONE",
+            "cameraFocusGuid": "",
+            "cameraDistance": "Far",
+            "cameraHeight": "Default",
+            "revealRadius": -1
+        },
+        {
+            "words": "The Home Guard will try to prevent the escape, so keep them off the civilians in the transports.",
+            "wordsColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+            },
+            "selectedCastDefId": "castDef_Mercenaries_12VRDR_Mitch_Nelson",
+            "emote": "Default",
+            "audioName": "NONE",
+            "cameraFocusGuid": "",
+            "cameraDistance": "Far",
+            "cameraHeight": "Default",
+            "revealRadius": -1
+        }
+    ]
+}

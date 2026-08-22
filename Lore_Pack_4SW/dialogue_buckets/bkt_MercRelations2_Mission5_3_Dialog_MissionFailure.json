@@ -1,0 +1,21 @@
+{
+    "identifier": "bkt_MercRelations2_Mission5_3_Dialog_MissionFailure",
+    "contents": [
+        {
+            "words": "I was expecting you to fail at some point, but you might have cost us BattleMechs into the bargain as well.",
+            "wordsColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+            },
+            "selectedCastDefId": "castDef_Mercenaries_12VRDR_Mitch_Nelson",
+            "emote": "Default",
+            "audioName": "NONE",
+            "cameraFocusGuid": "",
+            "cameraDistance": "Far",
+            "cameraHeight": "Default",
+            "revealRadius": -1
+        }
+    ]
+}

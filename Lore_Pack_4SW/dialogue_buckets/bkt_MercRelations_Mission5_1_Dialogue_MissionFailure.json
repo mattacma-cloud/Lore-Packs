@@ -1,0 +1,21 @@
+{
+    "identifier": "bkt_MercRelations_Mission5_1_Dialogue_MissionFailure",
+    "contents": [
+        {
+            "words": "Santana's gone. Pull out before the Guard rolls over you too, or don't, at this point I could care less if you came back.",
+            "wordsColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+            },
+            "selectedCastDefId": "castDef_Mercenaries_12VRDR_Mitch_Nelson",
+            "emote": "Default",
+            "audioName": "NONE",
+            "cameraFocusGuid": "",
+            "cameraDistance": "Far",
+            "cameraHeight": "Default",
+            "revealRadius": -1
+        }
+    ]
+}

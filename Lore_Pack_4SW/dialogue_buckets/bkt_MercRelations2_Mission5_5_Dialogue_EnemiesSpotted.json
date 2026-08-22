@@ -1,0 +1,21 @@
+{
+    "identifier": "bkt_MercRelations2_Mission5_5_Dialogue_EnemiesSpotted",
+    "contents": [
+        {
+            "words": "There's the rest of the Ranger company. Take them out before they can call for help.",
+            "wordsColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+            },
+            "selectedCastDefId": "castDef_DariusDefault",
+            "emote": "Default",
+            "audioName": "NONE",
+            "cameraFocusGuid": "",
+            "cameraDistance": "Far",
+            "cameraHeight": "Default",
+            "revealRadius": -1
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "identifier": "bkt_MercRelations_Mission5_2_Dialogue_Interrupt_HunterWarning",
+    "contents": [
+        {
+            "words": "There's a Hunter Lance on sensors. The Home Guard really does not want Santana leaving.",
+            "wordsColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+            },
+            "selectedCastDefId": "castDef_Mercenaries_12VRDR_Mitch_Nelson",
+            "emote": "Default",
+            "audioName": "NONE",
+            "cameraFocusGuid": "",
+            "cameraDistance": "Far",
+            "cameraHeight": "Default",
+            "revealRadius": -1
+        }
+    ]
+}
