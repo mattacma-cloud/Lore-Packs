@@ -1,0 +1,68 @@
+{
+  "AllowRefitTime": true,
+  "AvailableTimeout": 0,
+  "Description": {
+    "Icon": "uixTxrSpot_fp_lp4sw_AEWA.png",
+    "Name": "Mercenary Relations",
+    "Id": "fp_lp4sw_MercRelations",
+    "Details": "Delta Regiment of the 12th Vegan Rangers request your presence on Poznan immidiately, where you are to support the main operations."
+  },
+  "InProgressTimeout": 0,
+  "UnitDropTonnageHint": "Light",
+  "Repeatable": false,
+  "FlashpointDescriberCastDefId": "castDef_Mercenaries_12VRDR_Mitch_Nelson",
+  "LocationRequirements": {
+    "Scope": "StarSystem",
+    "RequirementTags": {
+      "items": [
+        "planet_name_poznan"
+      ],
+      "tagSetSourceFile": "Tags/PlanetNameTags"
+    },
+    "RequirementComparisons": [],
+    "ExclusionTags": {
+      "items": [],
+      "tagSetSourceFile": ""
+    }
+  },
+  "RewardCollectionID": "itemCollection_AEWA_500a",
+  "TargetFaction": "Liao",
+  "PotentialEmployers": [
+    "Davion"
+  ],
+  "PublishState": "PUBLISHED",
+  "FlashpointShortDescription": "Delta Regiment of the 12th Vegan Rangers request your presence on Poznan immidiately, where you are to support the main operations.",
+  "MilestoneSetID": "ms_fp_lp4sw_MercRelations",
+  "Difficulty": 2,
+  "Tags": {
+    "items": [
+      "BLACKLISTED"
+    ],
+    "tagSetSourceFile": "tags/FlashpointTags"
+  },
+  "UseAvailableTimeoutOverride": false,
+  "UseInProgressTimeoutOverride": false,
+  "Requirements": [
+    {
+      "Scope": "Company",
+      "RequirementTags": {
+        "items": [
+          "fp_choice_OpRat12VRD",
+          "MercRelations_Active"
+        ],
+        "tagSetSourceFile": "Tags/CompanyTags"
+      },
+      "RequirementComparisons": [],
+      "ExclusionTags": {
+        "items": [
+          "fp_finished_MercRelations_success"
+        ],
+        "tagSetSourceFile": "Tags/CompanyTags"
+      }
+    }
+  ],
+  "LanceDropTonnageHint": "None",
+  "FlashpointLength": "SHORT",
+  "InternalName": "lp4sw_MercRelations",
+  "Weight": 10
+}

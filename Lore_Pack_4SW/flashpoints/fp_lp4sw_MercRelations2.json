@@ -1,0 +1,68 @@
+{
+  "AllowRefitTime": true,
+  "AvailableTimeout": 0,
+  "Description": {
+    "Icon": "uixTxrSpot_fp_lp4sw_AEWA.png",
+    "Name": "Mercenary Relations II",
+    "Id": "fp_lp4sw_MercRelations2",
+    "Details": "Poznan is under Federated Suns control and Colonel Mitch Nelson has orders for our unit on Buchlau. Delta Regiment of the 12th Vegan Rangers need us there for the next wave of Operation RAT."
+  },
+  "InProgressTimeout": 0,
+  "UnitDropTonnageHint": "Light",
+  "Repeatable": false,
+  "FlashpointDescriberCastDefId": "castDef_Mercenaries_12VRDR_Mitch_Nelson",
+  "LocationRequirements": {
+    "Scope": "StarSystem",
+    "RequirementTags": {
+      "items": [
+        "planet_name_buchlau"
+      ],
+      "tagSetSourceFile": "Tags/PlanetNameTags"
+    },
+    "RequirementComparisons": [],
+    "ExclusionTags": {
+      "items": [],
+      "tagSetSourceFile": ""
+    }
+  },
+  "RewardCollectionID": "itemCollection_AEWA_500b",
+  "TargetFaction": "Liao",
+  "PotentialEmployers": [
+    "Davion"
+  ],
+  "PublishState": "PUBLISHED",
+  "FlashpointShortDescription": "Poznan is under Federated Suns control and Colonel Mitch Nelson has orders for our unit on Buchlau. Delta Regiment of the 12th Vegan Rangers need us there for the next wave of Operation RAT.",
+  "MilestoneSetID": "ms_fp_lp4sw_MercRelations2",
+  "Difficulty": 2,
+  "Tags": {
+    "items": [
+      "BLACKLISTED"
+    ],
+    "tagSetSourceFile": "tags/FlashpointTags"
+  },
+  "UseAvailableTimeoutOverride": false,
+  "UseInProgressTimeoutOverride": false,
+  "Requirements": [
+    {
+      "Scope": "Company",
+      "RequirementTags": {
+        "items": [
+          "fp_finished_MercRelations_success",
+          "MercRelations2_Active"
+        ],
+        "tagSetSourceFile": "Tags/CompanyTags"
+      },
+      "RequirementComparisons": [],
+      "ExclusionTags": {
+        "items": [
+          "fp_finished_MercRelations2_success"
+        ],
+        "tagSetSourceFile": "Tags/CompanyTags"
+      }
+    }
+  ],
+  "LanceDropTonnageHint": "None",
+  "FlashpointLength": "MEDIUM",
+  "InternalName": "lp4sw_MercRelations2",
+  "Weight": 10
+}
