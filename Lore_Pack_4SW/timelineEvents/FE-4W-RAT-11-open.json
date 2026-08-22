@@ -1,0 +1,116 @@
+{
+  "Description": {
+    "Id": "FE-4W-RAT-11-open",
+    "Name": "MERC NET - BUCHLAU DEPLOYMENT",
+    "Details": "MERC NET ADVISORY: Priority contract activity reported on [[DM.SystemDefs[starsystemdef_Buchlau],Buchlau]].\r\n\r\nColonel Mitch Nelson has advised that the Buchlau follow-on assignments are now active. With Poznan settled, Delta Regiment of the 12th Vegan Rangers require your services on Buchlau.",
+    "Icon": "uixTxrTimeLine_ComStarNewsBureau.png"
+  },
+  "Scope": "Company",
+  "Weight": 0,
+  "Requirements": {
+    "Scope": "Company",
+    "RequirementTags": {
+      "items": [
+        "fp_choice_OpRat12VRD",
+        "fp_finished_MercRelations_success"
+      ],
+      "tagSetSourceFile": "Tags/CompanyTags"
+    },
+    "ExclusionTags": {
+      "items": [
+        "event_MercRelations2_open_seen",
+        "fp_finished_MercRelations2_success"
+      ],
+      "tagSetSourceFile": "Tags/CompanyTags"
+    },
+    "RequirementComparisons": []
+  },
+  "AdditionalRequirements": [],
+  "AdditionalObjects": [],
+  "Options": [
+    {
+      "Description": {
+        "Id": "outcome_0",
+        "Name": "Acknowledge",
+        "Details": "There is a priority contract to serve alongside Delta Regiment of the 12th Vegan Rangers ready on Buchlau.",
+        "Icon": ""
+      },
+      "RequirementList": [],
+      "ResultSets": [
+        {
+          "Description": {
+            "Id": "outcome_0_0",
+            "Name": "Mercenary Relations II flagged",
+            "Details": "There is a priority contract to serve alongside Delta Regiment of the 12th Vegan Rangers ready on Buchlau.",
+            "Icon": ""
+          },
+          "Weight": 100,
+          "Results": [
+            {
+              "Scope": "Company",
+              "Requirements": null,
+              "AddedTags": {
+                "items": [
+                  "event_MercRelations2_open_seen",
+                  "MercRelations2_Active",
+                  "MercRelations2_DateOk"
+                ],
+                "tagSetSourceFile": "Tags/CompanyTags"
+              },
+              "RemovedTags": {
+                "items": null,
+                "tagSetSourceFile": ""
+              },
+              "Stats": null,
+              "Actions": null,
+              "ForceEvents": null,
+              "TemporaryResult": false,
+              "ResultDuration": 0
+            },
+            {
+              "Scope": "Company",
+              "Requirements": null,
+              "AddedTags": {
+                "items": null,
+                "tagSetSourceFile": ""
+              },
+              "RemovedTags": {
+                "items": null,
+                "tagSetSourceFile": ""
+              },
+              "Stats": null,
+              "Actions": [
+                {
+                  "Type": "System_AddFlashpoint",
+                  "value": "fp_lp4sw_MercRelations2",
+                  "valueConstant": null,
+                  "additionalValues": [
+                    "starsystemdef_Buchlau"
+                  ]
+                }
+              ],
+              "ForceEvents": null,
+              "TemporaryResult": false,
+              "ResultDuration": 0
+            }
+          ]
+        }
+      ],
+      "Requirements": {
+        "Scope": "Company",
+        "RequirementTags": {
+          "items": null,
+          "tagSetSourceFile": ""
+        },
+        "ExclusionTags": {
+          "items": null,
+          "tagSetSourceFile": ""
+        },
+        "RequirementComparisons": []
+      }
+    }
+  ],
+  "PublishState": "PUBLISHED",
+  "ValidationState": "UNTESTED",
+  "EventType": "NORMAL"
+}

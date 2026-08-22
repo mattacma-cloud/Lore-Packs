@@ -1,0 +1,89 @@
+{
+  "Description": {
+    "Id": "FE-4W-RAT-10-floor",
+    "Name": "MERC NET - Operation RAT 12th Vegan Rangers Delta Wave 1 Advisory",
+    "Details": "MERC NET ADVISORY: Priority contract activity reported on [[DM.SystemDefs[starsystemdef_Poznan],Poznan]].\r\n\r\nColonel Mitch Nelson has posted priority contracts for the Delta Regiment, 12th Vegan Rangers as part of Operation RAT. Delta Regiment require mercenary support on Poznan immediately.",
+    "Icon": "uixTxrTimeLine_ComStarNewsBureau.png"
+  },
+  "Scope": "Company",
+  "Weight": 0,
+  "Requirements": {
+    "Scope": "Company",
+    "RequirementTags": {
+      "items": [
+        "fp_choice_OpRat12VRD"
+      ],
+      "tagSetSourceFile": "Tags/CompanyTags"
+    },
+    "ExclusionTags": {
+      "items": [
+        "fp_finished_AEWA",
+        "MercRelations_DateOk",
+        "event_MercRelations_open_seen",
+        "fp_finished_MercRelations_success"
+      ],
+      "tagSetSourceFile": "Tags/CompanyTags"
+    },
+    "RequirementComparisons": []
+  },
+  "AdditionalRequirements": [],
+  "AdditionalObjects": [],
+  "Options": [
+    {
+      "Description": {
+        "Id": "outcome_0",
+        "Name": "Acknowledge",
+        "Details": "Report to Poznan to review Colonel Nelson's contract in the Command Center.",
+        "Icon": ""
+      },
+      "RequirementList": [],
+      "ResultSets": [
+        {
+          "Description": {
+            "Id": "outcome_0_0",
+            "Name": "Poznan floor unlocked",
+            "Details": "Report to Poznan to review Colonel Nelson's contract in the Command Center.",
+            "Icon": ""
+          },
+          "Weight": 100,
+          "Results": [
+            {
+              "Scope": "Company",
+              "Requirements": null,
+              "AddedTags": {
+                "items": [
+                  "MercRelations_DateOk"
+                ],
+                "tagSetSourceFile": "Tags/CompanyTags"
+              },
+              "RemovedTags": {
+                "items": null,
+                "tagSetSourceFile": ""
+              },
+              "Stats": null,
+              "Actions": null,
+              "ForceEvents": null,
+              "TemporaryResult": false,
+              "ResultDuration": 0
+            }
+          ]
+        }
+      ],
+      "Requirements": {
+        "Scope": "Company",
+        "RequirementTags": {
+          "items": null,
+          "tagSetSourceFile": ""
+        },
+        "ExclusionTags": {
+          "items": null,
+          "tagSetSourceFile": ""
+        },
+        "RequirementComparisons": []
+      }
+    }
+  ],
+  "PublishState": "PUBLISHED",
+  "ValidationState": "UNTESTED",
+  "EventType": "NORMAL"
+}
