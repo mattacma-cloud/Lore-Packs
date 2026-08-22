@@ -56,15 +56,15 @@ Once you complete An Evening with Ardan, you must advance the timeline one day a
 
 0.1.1	An Evening with Ardan [1 of 1 planned Flashpoint available]
 
-0.1.3	Foxes of Tikonov (7th Crucis Lancers) [1 of 5 planned Flashpoint available]
+0.1.3	Foxes of Tikonov (7th Crucis Lancers) [1 of 5 planned Flashpoints available]
 
-0.1.4	Charge of the Guards (3rd Davion Guards) [2 of 4 planned Flashpoint available]
+0.1.4	Charge of the Guards (3rd Davion Guards) [2 of 4 planned Flashpoints available]
 
-0.1.5	Liao's Bane (33rd Avalon Hussars) [2 of 4 planned Flashpoint available]
+0.1.5	Liao's Bane (33rd Avalon Hussars) [2 of 4 planned Flashpoints available]
 
-0.1.6	Family Matters (4th Deneb Light Cavalry) [2 of 4 planned Flashpoint available]
+0.1.6	Family Matters (4th Deneb Light Cavalry) [2 of 4 planned Flashpoints available]
 
-0.1.7	Mercenary Relations (12th Vegan Rangers Delta Regiment) [2 of 7 planned Flashpoint available]
+0.1.7	Mercenary Relations (12th Vegan Rangers Delta Regiment) [2 of 7 planneds Flashpoint available]
 
 **IN ACTIVE DEVELOPMENT**
 
