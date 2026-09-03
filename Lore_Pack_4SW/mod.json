@@ -14,8 +14,6 @@
     "ColourfulFlashPoints",
     "LorePack_Helpers",
     "The_Big_Deal_Campaign_Add-on",
-    "Lore_Pack_4SW_FP_Cap",
-    "LorePack_Helpers"
   ],
   "DataAddendumEntries": [
     { "name": "BattleTech.FactionEnumeration", "path": "enums/Faction.json" }
