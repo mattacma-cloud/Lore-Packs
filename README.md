@@ -38,6 +38,8 @@ Drag the Lore_Pack_4SW and MissionControl folders into your \BATTLETECH\Mods fol
 - ExtendedConversations
 - Mission Control
 - ColourfulFlashPoint
+- Lore_Pack_4SW_FP_Cap
+- LorePack_Helpers
 
 
 **GAME PLAY NOTES AS OF RELEASE 0.1.6**
