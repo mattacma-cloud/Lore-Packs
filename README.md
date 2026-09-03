@@ -46,7 +46,7 @@ Drag the Lore_Pack_4SW, LorePack_Helpers, Lore_Pack_4SW_FP_Cap and MissionContro
 
 You must complete Touring Tikonov, or use the BattleTech Save Editor to give yourself the tag "Ardan_is_Interested", in order for An Evening with Ardan to spawn.
 
-Once you complete An Evening with Ardan, you must advance the timeline one day and then the relevant Flashpoint will spawn. The non-Crucis Lancer Flashpoints fire in August (Flashpoint I) and then September (Flashpoint II).
+Once you complete An Evening with Ardan, you must advance the timeline and then the relevant Flashpoint will spawn. The non-Crucis Lancer Flashpoints fire in August (Flashpoint I) and then September (Flashpoint II).
 
 **NOTE:** Foxes of Tikonov and Charge of the Guards, and to a lesser extent, Liao's Bane, are not designed to be easy Flashpoints. You will face difficult missions against skilled, well equipped, and numerous foes. If you started a 3028 career, you'll get properly pasted. It is advised that you use a 3025 or post-Arano campaign, or the BattleTech Save Editor, so that you can have a fair chance at fishing the Flashpoints. The 4th Deneb Light Cavalry (Family Matters) and 12th Vegan Rangers (Mercenary Relations) are somewhat easier and designed for lower skilled/equipped commands. 
 
