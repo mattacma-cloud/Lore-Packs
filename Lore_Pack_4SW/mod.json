@@ -1,7 +1,7 @@
 {
   "Name": "Lore_Pack_4SW",
   "Enabled": true,
-  "Version": "0.1.0",
+  "Version": "0.1.7",
   "Description": "BEXT Fourth Succession War Lore Pack (flat shared pools; fp stems group content).",
   "Author": "Blacknova",
   "DependsOn": [
@@ -12,6 +12,9 @@
     "ExtendedConversations",
     "Mission Control",
     "ColourfulFlashPoints",
+    "LorePack_Helpers",
+    "The_Big_Deal_Campaign_Add-on",
+    "Lore_Pack_4SW_FP_Cap",
     "LorePack_Helpers"
   ],
   "DataAddendumEntries": [
