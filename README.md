@@ -26,7 +26,7 @@ Thanks to the following folks for assisting with making these flashpoints work: 
 
 **INSTALLATION**
 
-Drag the Lore_Pack_4SW and MissionControl folders into your \BATTLETECH\Mods folder
+Drag the Lore_Pack_4SW, LorePack_Helpers, Lore_Pack_4SW_FP_Cap and MissionControl folders into your \BATTLETECH\Mods folder
 
 
 **CURRENT DEPENDENCIES**
