@@ -16,7 +16,9 @@
                          "ExclusionTags":  {
                                                "items":  [
                                                              "event_touring_tikonov_open_seen",
-                                                             "fp_finished_touring_tikonov"
+                                                             "fp_finished_touring_tikonov",
+                                                             "touring_tikonov_closed",
+                                                             "timeline_3028_07_01"
                                                          ],
                                                "tagSetSourceFile":  "Tags/CompanyTags"
                                            },

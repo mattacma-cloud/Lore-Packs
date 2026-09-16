@@ -10,15 +10,14 @@
   "Requirements": {
     "Scope": "Company",
     "RequirementTags": {
-      "items": [
-        "AEWA_Active"
-      ],
+      "items": [],
       "tagSetSourceFile": "Tags/CompanyTags"
     },
     "RequirementComparisons": [],
     "ExclusionTags": {
       "items": [
-        "fp_finished_AEWA"
+        "fp_finished_AEWA",
+        "timeline_3028_07_31"
       ],
       "tagSetSourceFile": "Tags/CompanyTags"
     }

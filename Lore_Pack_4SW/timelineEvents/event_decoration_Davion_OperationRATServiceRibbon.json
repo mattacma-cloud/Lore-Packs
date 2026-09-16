@@ -1,0 +1,62 @@
+{
+  "Description": {
+    "Id": "event_decoration_Davion_OperationRATServiceRibbon",
+    "Name": "Operation RAT Service Ribbon",
+    "Details": "Darius taps a short AFFS communique onto your desk.\r\n\r\n\"{CompanyName} is authorized the [[DM.BaseDescriptionDefs[LoreDecoration_Davion_OperationRATServiceRibbon],Operation RAT Service Ribbon]] for service under Federated Suns command during [[DM.BaseDescriptionDefs[LoreOpRAT],Operation RAT]].\"\r\n\r\n\"The full citation is logged under Decorations in the Captain's Quarters.\"",
+    "Icon": "decoration_Davion_OperationRATServiceRibbon"
+  },
+  "Scope": "Company",
+  "Weight": 0,
+  "Requirements": {
+    "Scope": "Company",
+    "RequirementTags": {
+      "items": [],
+      "tagSetSourceFile": ""
+    },
+    "ExclusionTags": {
+      "items": [],
+      "tagSetSourceFile": ""
+    },
+    "RequirementComparisons": []
+  },
+  "AdditionalRequirements": [],
+  "AdditionalObjects": [],
+  "Options": [
+    {
+      "Description": {
+        "Id": "outcome_0",
+        "Name": "Acknowledge the award",
+        "Details": "Accept",
+        "Icon": null
+      },
+      "RequirementList": [],
+      "ResultSets": [
+        {
+          "Description": {
+            "Id": "outcome_0_0",
+            "Name": "Logged",
+            "Details": "The citation is entered in the company record. You can review decorations from the Captain's Quarters.",
+            "Icon": null
+          },
+          "Weight": 100,
+          "Results": []
+        }
+      ],
+      "Requirements": {
+        "Scope": "Company",
+        "RequirementTags": {
+          "items": [],
+          "tagSetSourceFile": ""
+        },
+        "ExclusionTags": {
+          "items": [],
+          "tagSetSourceFile": ""
+        },
+        "RequirementComparisons": []
+      }
+    }
+  ],
+  "PublishState": "PUBLISHED",
+  "ValidationState": "UNTESTED",
+  "EventType": "NORMAL"
+}

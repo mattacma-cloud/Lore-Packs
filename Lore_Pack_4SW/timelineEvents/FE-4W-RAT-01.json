@@ -18,7 +18,8 @@
     "ExclusionTags": {
       "items": [
         "event_AEWA_open_seen",
-        "fp_finished_AEWA"
+        "fp_finished_AEWA",
+        "timeline_3028_07_30"
       ],
       "tagSetSourceFile": "Tags/CompanyTags"
     },
@@ -40,7 +41,7 @@
           "Description": {
             "Id": "outcome_0_0",
             "Name": "AEWA flagged",
-            "Details": "Procede to the designated systems for priority contract negotiations. Offer closes on 31 July, 3028.",
+            "Details": "Procede to the designated systems for priority contract negotiations. Offer closes on 31 July.",
             "Icon": ""
           },
           "Weight": 100,

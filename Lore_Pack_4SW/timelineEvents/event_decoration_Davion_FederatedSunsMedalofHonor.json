@@ -1,0 +1,62 @@
+{
+  "Description": {
+    "Id": "event_decoration_Davion_FederatedSunsMedalofHonor",
+    "Name": "Federated Suns Medal of Honor",
+    "Details": "Darius clears his throat and reads from a formal AFFS dispatch.\r\n\r\n\"House Davion has awarded {CompanyName} the [[DM.BaseDescriptionDefs[LoreDecoration_Davion_FederatedSunsMedalofHonor],Federated Suns Medal of Honor]] for service during [[DM.BaseDescriptionDefs[LoreOpRAT],Operation RAT]].\"\r\n\r\n\"The full citation is in your Decorations record, Commander. The Suns do not hand these out lightly.\"",
+    "Icon": "decoration_Davion_FederatedSunsMedalofHonor"
+  },
+  "Scope": "Company",
+  "Weight": 0,
+  "Requirements": {
+    "Scope": "Company",
+    "RequirementTags": {
+      "items": [],
+      "tagSetSourceFile": ""
+    },
+    "ExclusionTags": {
+      "items": [],
+      "tagSetSourceFile": ""
+    },
+    "RequirementComparisons": []
+  },
+  "AdditionalRequirements": [],
+  "AdditionalObjects": [],
+  "Options": [
+    {
+      "Description": {
+        "Id": "outcome_0",
+        "Name": "Acknowledge the award",
+        "Details": "Accept",
+        "Icon": null
+      },
+      "RequirementList": [],
+      "ResultSets": [
+        {
+          "Description": {
+            "Id": "outcome_0_0",
+            "Name": "Logged",
+            "Details": "The citation is entered in the company record. You can review decorations from the Captain's Quarters.",
+            "Icon": null
+          },
+          "Weight": 100,
+          "Results": []
+        }
+      ],
+      "Requirements": {
+        "Scope": "Company",
+        "RequirementTags": {
+          "items": [],
+          "tagSetSourceFile": ""
+        },
+        "ExclusionTags": {
+          "items": [],
+          "tagSetSourceFile": ""
+        },
+        "RequirementComparisons": []
+      }
+    }
+  ],
+  "PublishState": "PUBLISHED",
+  "ValidationState": "UNTESTED",
+  "EventType": "NORMAL"
+}
