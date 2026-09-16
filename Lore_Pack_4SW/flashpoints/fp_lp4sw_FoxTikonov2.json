@@ -1,0 +1,71 @@
+{
+  "AllowRefitTime": true,
+  "AvailableTimeout": 0,
+  "Description": {
+    "Icon": "uixTxrSpot_fp_lp4sw_AEWA.png",
+    "Name": "Fox's OF Tikonov II",
+    "Id": "fp_lp4sw_FoxTikonov2",
+    "Details": "Commander, McKinnon's Raiders are ready for us on [[DM.SystemDefs[starsystemdef_Menkar],Menkar]]. We won't have long to launch the operation there, so we best get a move on."
+  },
+  "InProgressTimeout": 0,
+  "UnitDropTonnageHint": "Light",
+  "Repeatable": false,
+  "FlashpointDescriberCastDefId": "castDef_Davion_Ian_McKinnon",
+  "LocationRequirements": {
+    "Scope": "StarSystem",
+    "RequirementTags": {
+      "items": [
+        "planet_name_menkar"
+      ],
+      "tagSetSourceFile": "Tags/PlanetNameTags"
+    },
+    "RequirementComparisons": [],
+    "ExclusionTags": {
+      "items": [],
+      "tagSetSourceFile": ""
+    }
+  },
+  "RewardCollectionID": "itemCollection_AEWA_102",
+  "TargetFaction": "Liao",
+  "PotentialEmployers": [
+    "Davion"
+  ],
+  "PublishState": "PUBLISHED",
+  "FlashpointShortDescription": "The Third Wave of Operation Rat is ready to commence.",
+  "MilestoneSetID": "ms_fp_lp4sw_FoxTikonov2",
+  "Difficulty": 8,
+  "Tags": {
+    "items": [
+      "BLACKLISTED"
+    ],
+    "tagSetSourceFile": "tags/FlashpointTags"
+  },
+  "UseAvailableTimeoutOverride": false,
+  "UseInProgressTimeoutOverride": false,
+  "Requirements": [
+    {
+      "Scope": "Company",
+      "RequirementTags": {
+        "items": [
+          "fp_finished_FoxTikonov_success",
+          "FoxTikonov2_Active"
+        ],
+        "tagSetSourceFile": "Tags/CompanyTags"
+      },
+      "RequirementComparisons": [],
+      "ExclusionTags": {
+        "items": [
+          "fp_finished_FoxTikonov2_success",
+          "fp_finished_FoxTikonov2_failed",
+          "FoxTikonov2_closed",
+          "timeline_3029_01_18"
+        ],
+        "tagSetSourceFile": "Tags/CompanyTags"
+      }
+    }
+  ],
+  "LanceDropTonnageHint": "Light",
+  "FlashpointLength": "SHORT",
+  "InternalName": "lp4sw_FoxTikonov2",
+  "Weight": 10
+}

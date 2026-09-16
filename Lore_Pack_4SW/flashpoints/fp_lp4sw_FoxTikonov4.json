@@ -1,0 +1,71 @@
+{
+  "AllowRefitTime": true,
+  "AvailableTimeout": 0,
+  "Description": {
+    "Icon": "uixTxrSpot_fp_lp4sw_AEWA.png",
+    "Name": "Fox's OF Tikonov IV",
+    "Id": "fp_lp4sw_FoxTikonov4",
+    "Details": "Commander, McKinnon's Raiders are ready for us on [[DM.SystemDefs[starsystemdef_NewMacao],New Macao]]. We won't have long to launch the operation there, so we best get a move on."
+  },
+  "InProgressTimeout": 0,
+  "UnitDropTonnageHint": "Light",
+  "Repeatable": false,
+  "FlashpointDescriberCastDefId": "castDef_Davion_Ian_McKinnon",
+  "LocationRequirements": {
+    "Scope": "StarSystem",
+    "RequirementTags": {
+      "items": [
+        "planet_name_newmacao"
+      ],
+      "tagSetSourceFile": "Tags/PlanetNameTags"
+    },
+    "RequirementComparisons": [],
+    "ExclusionTags": {
+      "items": [],
+      "tagSetSourceFile": ""
+    }
+  },
+  "RewardCollectionID": "itemCollection_AEWA_104",
+  "TargetFaction": "Liao",
+  "PotentialEmployers": [
+    "Davion"
+  ],
+  "PublishState": "PUBLISHED",
+  "FlashpointShortDescription": "The Firth Wave of Operation Rat is commencing and we are getting close to catching Agent Diaconu.",
+  "MilestoneSetID": "ms_fp_lp4sw_FoxTikonov4",
+  "Difficulty": 10,
+  "Tags": {
+    "items": [
+      "BLACKLISTED"
+    ],
+    "tagSetSourceFile": "tags/FlashpointTags"
+  },
+  "UseAvailableTimeoutOverride": false,
+  "UseInProgressTimeoutOverride": false,
+  "Requirements": [
+    {
+      "Scope": "Company",
+      "RequirementTags": {
+        "items": [
+          "fp_finished_FoxTikonov3_success",
+          "FoxTikonov4_Active"
+        ],
+        "tagSetSourceFile": "Tags/CompanyTags"
+      },
+      "RequirementComparisons": [],
+      "ExclusionTags": {
+        "items": [
+          "fp_finished_FoxTikonov4_success",
+          "fp_finished_FoxTikonov4_failed",
+          "FoxTikonov4_closed",
+          "timeline_3029_06_24"
+        ],
+        "tagSetSourceFile": "Tags/CompanyTags"
+      }
+    }
+  ],
+  "LanceDropTonnageHint": "Light",
+  "FlashpointLength": "MEDIUM",
+  "InternalName": "lp4sw_FoxTikonov4",
+  "Weight": 10
+}

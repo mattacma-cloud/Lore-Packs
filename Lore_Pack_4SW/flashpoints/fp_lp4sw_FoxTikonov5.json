@@ -1,0 +1,72 @@
+{
+  "AllowRefitTime": true,
+  "AvailableTimeout": 0,
+  "Description": {
+    "Icon": "uixTxrSpot_fp_lp4sw_AEWA.png",
+    "Name": "Fox's OF Tikonov V",
+    "Id": "fp_lp4sw_FoxTikonov5",
+    "Details": "Commander, McKinnon's Raiders are ready for us on [[DM.SystemDefs[starsystemdef_Matsu],Matsu]]. We won't have long to launch the operation there, so we best get a move on."
+  },
+  "InProgressTimeout": 0,
+  "UnitDropTonnageHint": "Light",
+  "Repeatable": false,
+  "FlashpointDescriberCastDefId": "castDef_Davion_Ian_McKinnon",
+  "LocationRequirements": {
+    "Scope": "StarSystem",
+    "RequirementTags": {
+      "items": [
+        "planet_name_matsu"
+      ],
+      "tagSetSourceFile": "Tags/PlanetNameTags"
+    },
+    "RequirementComparisons": [],
+    "ExclusionTags": {
+      "items": [],
+      "tagSetSourceFile": ""
+    }
+  },
+  "RewardCollectionID": "itemCollection_AEWA_105",
+  "TargetFaction": "Liao",
+  "PotentialEmployers": [
+    "Davion"
+  ],
+  "PublishState": "PUBLISHED",
+  "FlashpointShortDescription": "The Sixth Wave of Operation Rat is launching and we have Diaconu pinned. There will be no escape this time, Commander.",
+  "MilestoneSetID": "ms_fp_lp4sw_FoxTikonov5",
+  "Difficulty": 10,
+  "Tags": {
+    "items": [
+      "BLACKLISTED"
+    ],
+    "tagSetSourceFile": "tags/FlashpointTags"
+  },
+  "UseAvailableTimeoutOverride": false,
+  "UseInProgressTimeoutOverride": false,
+  "Requirements": [
+    {
+      "Scope": "Company",
+      "RequirementTags": {
+        "items": [
+          "fp_finished_FoxTikonov4_success",
+          "FoxTikonov5_Active",
+          "timeline_3029_08_11"
+        ],
+        "tagSetSourceFile": "Tags/CompanyTags"
+      },
+      "RequirementComparisons": [],
+      "ExclusionTags": {
+        "items": [
+          "fp_finished_FoxTikonov5_success",
+          "fp_finished_FoxTikonov5_failed",
+          "FoxTikonov5_closed",
+          "timeline_3029_10_11"
+        ],
+        "tagSetSourceFile": "Tags/CompanyTags"
+      }
+    }
+  ],
+  "LanceDropTonnageHint": "Light",
+  "FlashpointLength": "SHORT",
+  "InternalName": "lp4sw_FoxTikonov5",
+  "Weight": 10
+}

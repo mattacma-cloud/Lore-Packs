@@ -1,0 +1,71 @@
+{
+  "AllowRefitTime": true,
+  "AvailableTimeout": 0,
+  "Description": {
+    "Icon": "uixTxrSpot_fp_lp4sw_AEWA.png",
+    "Name": "Fox's OF Tikonov III",
+    "Id": "fp_lp4sw_FoxTikonov3",
+    "Details": "Commander, McKinnon's Raiders are ready for us on [[DM.SystemDefs[starsystemdef_Foochow],Foochow]]. We won't have long to launch the operation there, so we best get a move on."
+  },
+  "InProgressTimeout": 0,
+  "UnitDropTonnageHint": "Light",
+  "Repeatable": false,
+  "FlashpointDescriberCastDefId": "castDef_Davion_Ian_McKinnon",
+  "LocationRequirements": {
+    "Scope": "StarSystem",
+    "RequirementTags": {
+      "items": [
+        "planet_name_foochow"
+      ],
+      "tagSetSourceFile": "Tags/PlanetNameTags"
+    },
+    "RequirementComparisons": [],
+    "ExclusionTags": {
+      "items": [],
+      "tagSetSourceFile": ""
+    }
+  },
+  "RewardCollectionID": "itemCollection_AEWA_103",
+  "TargetFaction": "Liao",
+  "PotentialEmployers": [
+    "Davion"
+  ],
+  "PublishState": "PUBLISHED",
+  "FlashpointShortDescription": "The Fourth Wave of Operation Rat is underway and I need your assistance on Foochow.",
+  "MilestoneSetID": "ms_fp_lp4sw_FoxTikonov3",
+  "Difficulty": 9,
+  "Tags": {
+    "items": [
+      "BLACKLISTED"
+    ],
+    "tagSetSourceFile": "tags/FlashpointTags"
+  },
+  "UseAvailableTimeoutOverride": false,
+  "UseInProgressTimeoutOverride": false,
+  "Requirements": [
+    {
+      "Scope": "Company",
+      "RequirementTags": {
+        "items": [
+          "fp_finished_FoxTikonov2_success",
+          "FoxTikonov3_Active"
+        ],
+        "tagSetSourceFile": "Tags/CompanyTags"
+      },
+      "RequirementComparisons": [],
+      "ExclusionTags": {
+        "items": [
+          "fp_finished_FoxTikonov3_success",
+          "fp_finished_FoxTikonov3_failed",
+          "FoxTikonov3_closed",
+          "timeline_3029_03_12"
+        ],
+        "tagSetSourceFile": "Tags/CompanyTags"
+      }
+    }
+  ],
+  "LanceDropTonnageHint": "Light",
+  "FlashpointLength": "SHORT",
+  "InternalName": "lp4sw_FoxTikonov3",
+  "Weight": 10
+}
