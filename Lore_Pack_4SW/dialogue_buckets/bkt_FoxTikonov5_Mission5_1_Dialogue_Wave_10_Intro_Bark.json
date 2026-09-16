@@ -1,0 +1,21 @@
+{
+  "identifier": "bkt_FoxTikonov5_Mission5_1_Dialogue_Wave_10_Intro_Bark",
+  "contents": [
+    {
+      "words": "I know Yang wants the lot, but this could be a bridge too far. Your low on ammo, battered and if my eyes do not decisve me, that's a god damn Royal Nighstar out there!",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_DariusDefault",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

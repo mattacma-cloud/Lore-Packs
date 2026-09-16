@@ -1,0 +1,21 @@
+{
+  "identifier": "bkt_FoxTikonov5_Mission5_1_Dialogue_Wave_02_Intro_Bark",
+  "contents": [
+    {
+      "words": "Here come's the rest of the first company. We need to break these Spy-Jocks so the infantry can go through.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Ian_McKinnon",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

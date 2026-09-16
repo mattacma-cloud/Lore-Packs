@@ -1,0 +1,21 @@
+{
+  "identifier": "bkt_FoxTikonov4_Mission4_3_Dialogue_MissionSuccess",
+  "contents": [
+    {
+      "words": "You should go to Solaris, Commander, that was impressive.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Ian_McKinnon",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

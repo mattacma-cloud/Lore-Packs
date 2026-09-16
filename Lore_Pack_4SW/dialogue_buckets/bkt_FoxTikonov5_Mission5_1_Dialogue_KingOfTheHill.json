@@ -1,0 +1,21 @@
+{
+  "identifier": "bkt_FoxTikonov5_Mission5_1_Dialogue_KingOfTheHill",
+  "contents": [
+    {
+      "words": "How about that. A reinforced battalion taken down by a single company. This will be a tale the Fox's Teeth tell for centuries. I can's say enough about your people, Commander.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Ian_McKinnon",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

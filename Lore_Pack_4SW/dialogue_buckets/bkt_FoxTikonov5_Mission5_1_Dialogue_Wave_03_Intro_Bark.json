@@ -1,0 +1,21 @@
+{
+  "identifier": "bkt_FoxTikonov5_Mission5_1_Dialogue_Wave_03_Intro_Bark",
+  "contents": [
+    {
+      "words": "We've got them three-to-two, we'll have those Exterminators in no time.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Karl_Ryder",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

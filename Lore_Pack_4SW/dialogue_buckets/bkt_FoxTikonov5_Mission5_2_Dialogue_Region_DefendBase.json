@@ -1,0 +1,21 @@
+{
+  "identifier": "bkt_FoxTikonov5_Mission5_2_Dialogue_Region_DefendBase",
+  "contents": [
+    {
+      "words": "This is the position we have to hold. There'll be two waves to escort out, se we'll need to be flexible with our 'Mechs and cover both groups, as well as the base.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Ian_McKinnon",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

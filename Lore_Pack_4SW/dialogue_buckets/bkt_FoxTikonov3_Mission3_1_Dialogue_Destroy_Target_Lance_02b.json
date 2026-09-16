@@ -1,0 +1,21 @@
+{
+  "identifier": "bkt_FoxTikonov3_Mission3_1_Dialogue_Destroy_Target_Lance_02b",
+  "contents": [
+    {
+      "words": "Lance down, Commander. Let's wrap this up.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Ian_McKinnon",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

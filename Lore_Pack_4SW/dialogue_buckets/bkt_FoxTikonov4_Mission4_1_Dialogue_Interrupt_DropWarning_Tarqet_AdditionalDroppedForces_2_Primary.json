@@ -1,0 +1,21 @@
+{
+  "identifier": "bkt_FoxTikonov4_Mission4_1_Dialogue_Interrupt_DropWarning_Tarqet_AdditionalDroppedForces_2_Primary",
+  "contents": [
+    {
+      "words": "Ah, we have some real problems now. A third Maskirovka lance is coming in.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Ian_McKinnon",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

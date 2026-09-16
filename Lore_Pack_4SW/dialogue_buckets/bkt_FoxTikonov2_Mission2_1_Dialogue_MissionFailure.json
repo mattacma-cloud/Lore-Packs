@@ -1,0 +1,21 @@
+{
+  "identifier": "bkt_FoxTikonov2_Mission2_1_Dialogue_MissionFailure",
+  "contents": [
+    {
+      "words": "Damn it, Commander, we're cooked on this one, it's too tough a nut to crack!",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Ian_McKinnon",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

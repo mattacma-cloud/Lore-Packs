@@ -1,0 +1,101 @@
+{
+  "identifier": "bkt_FoxTikonov3_Mission3_1_Dialogue_MissionStart",
+  "contents": [
+    {
+      "words": "All right, Commander, we've have to cover the installation while the Rabid Fox's do their thing. We have reports of incoming hostiles from multiple directions, so expect all sorts of trouble. They'll be targeting the structures to try and kill the special forces teams; intercept them before they can, and bring them down. Good luck.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Ian_McKinnon",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "Copy, Captain.  <color=#99ebff><b>{MC.PlayerLances.TeamPilot_Position_1.DisplayName}</b></color> down.  Systems green. I've got visual on the facility, still intact, but I'm nowhere near the target area.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_TeamPilot_Position_1",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "0f10a383-7325-4726-b2c4-a0ef416e4b27",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "<color=#99ebff><b>{MC.PlayerLances.TeamPilot_Position_4.DisplayName}</b></color> down; but Sumire is shouting drinks after that landing. <color=#99ebff><b>{MC.PlayerLances.TeamPilot_Position_1.DisplayName}</b></color>. I've got scratched paint and a bruised ego, but otherwise I am good to go.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_TeamPilot_Position_4",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "5df48a48-1840-49b0-84e9-126847053afa",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "...<color=#99ebff><b>{MC.PlayerLances.TeamPilot_Position_2.DisplayName}</b></color> is down...but the Great Pumpkin knows where. Heading for the base now.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_TeamPilot_Position_2",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "21a03616-c88b-4edd-a9a9-b4dd54b46d6c",
+      "cameraDistance": "Medium",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "Well, that was a hot mess. sorry folks, the Capellan air cover is all over me.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_SumireDefault",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "Understood, Commander.  New plan...we cover the Rabid Fox's while we come together.\\n\\r\\n<color=#99ebff><b>{MC.PlayerLances.TeamPilot_Position_4.DisplayName}</b></color>, you and your <color=#99ebff><b>{MC.PlayerLances.TeamPilot_Position_4.UnitName}</b></color> stick with me --- <color=#99ebff><b>{MC.PlayerLances.TeamPilot_Position_3.DisplayName}</b></color>, screen the midpoint. <color=#99ebff><b>{MC.PlayerLances.TeamPilot_Position_2.DisplayName}</b></color>, move fast; we'll need your firepower.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Ian_McKinnon",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "identifier": "bkt_FoxTikonov5_Mission5_1_Dialogue_MissionSuccess",
+  "contents": [
+    {
+      "words": "That's the hole made, Commander. We've got the Exterminator's in the bag!",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Ian_McKinnon",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "Oh, everyday is Christmas when you're here with me, I'm safe in your arms, you're my angel, baby, Everyday is Christmas when you're by my side, You're the gift that keeps givin', my angel for life. Everyday is Christmas, everyday is Christmas. Everyday is Christmas with you by my side. Everyday is Christmas, everyday is Christmas. Everyday is Christmas with you by my side.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_YangDefault",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "He's singing over the ship's coms...it's...it's awful.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_FarahDefault",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

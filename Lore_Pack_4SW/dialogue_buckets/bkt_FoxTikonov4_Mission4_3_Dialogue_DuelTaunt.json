@@ -1,0 +1,37 @@
+{
+  "identifier": "bkt_FoxTikonov4_Mission4_3_Dialogue_DuelTaunt",
+  "contents": [
+    {
+      "words": "You've been more than a willing foe, my friend, but I cannot have you pestering me any longer. My best duellists will show you the strength and power of the Confederation.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Liao_Ina_Diaconu",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "That would be impressive, Agent Diaconu, as Capellan power has been in short supply in the war so far.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Commander",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

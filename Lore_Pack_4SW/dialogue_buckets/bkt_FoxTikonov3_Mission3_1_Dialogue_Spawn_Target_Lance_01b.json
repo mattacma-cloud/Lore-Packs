@@ -1,0 +1,21 @@
+{
+  "identifier": "bkt_FoxTikonov3_Mission3_1_Dialogue_Spawn_Target_Lance_01b",
+  "contents": [
+    {
+      "words": "Commander, there's one of the enemy lances now. Get your people together and get after them.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Ian_McKinnon",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

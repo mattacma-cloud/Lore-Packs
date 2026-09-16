@@ -1,0 +1,21 @@
+{
+  "identifier": "bkt_FoxTikonov4_Mission4_2_Dialogue_ConvoyDamaged",
+  "contents": [
+    {
+      "words": "Commander, that's the target hit, let's pile it on now.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Ian_McKinnon",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

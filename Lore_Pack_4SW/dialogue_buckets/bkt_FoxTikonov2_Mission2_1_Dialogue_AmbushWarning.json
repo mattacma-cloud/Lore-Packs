@@ -1,0 +1,37 @@
+{
+  "identifier": "bkt_FoxTikonov2_Mission2_1_Dialogue_AmbushWarning",
+  "contents": [
+    {
+      "words": "Watch out, Commander, more Maskirovka heavies coming in!",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Ian_McKinnon",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "76b654a6-4f2c-4a6f-86e6-d4cf868335fe",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "Roger, Captain, I see them. We'll cover you.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_DariusDefault",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "76b654a6-4f2c-4a6f-86e6-d4cf868335fe",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

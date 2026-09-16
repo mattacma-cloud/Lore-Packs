@@ -1,0 +1,37 @@
+{
+  "identifier": "bkt_FoxTikonov3_Mission3_2_Dialogue_Target_Lance_01_Evacs",
+  "contents": [
+    {
+      "words": "Abano, you're safe now, we are bringing in the transport for you.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Ian_McKinnon",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "Captain McKinnon, I must applaud your efforts. Now to sit down and provide you with the information that can sting our now mutual foe..",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Liao_Akhmat_Abano",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

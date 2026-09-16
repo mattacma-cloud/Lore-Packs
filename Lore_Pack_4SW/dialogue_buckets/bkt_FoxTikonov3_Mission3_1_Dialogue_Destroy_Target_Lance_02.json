@@ -1,0 +1,37 @@
+{
+  "identifier": "bkt_FoxTikonov3_Mission3_1_Dialogue_Destroy_Target_Lance_02",
+  "contents": [
+    {
+      "words": "Good work, mercs, we are chewing through these spy-jocks.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Ian_McKinnon",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    },
+    {
+      "words": "<color=#99ebff><b>{MC.PlayerLances.TeamPilot_Position_4.DisplayName}</b></color> Spy-Jocks? That's brilliant, Captain, and I'm stealing it too.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_TeamPilot_Position_4",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}
