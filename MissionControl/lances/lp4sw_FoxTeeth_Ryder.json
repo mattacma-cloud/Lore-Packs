@@ -1,0 +1,95 @@
+{
+  "lanceKey": "lp4sw_FoxTeeth_Ryder",
+  "lanceDefId": "Manual",
+  "lanceDifficultyAdjustment": 0,
+  "unitSpawnPointOverrideList": [
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "heraldrydef_DavionA7_AEWA_FT",
+      "customUnitName": "Lt. Karl Ryder",
+      "unitDefId": "mechdef_crusader_CRD-3R",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": []
+      },
+      "pilotDefId": "pilotDef_Ryder_Karl",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    },
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "heraldrydef_DavionA7_AEWA_FT",
+      "customUnitName": "Iskoru Chipende",
+      "unitDefId": "mechdef_phoenixhawk_PXH-1K",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": []
+      },
+      "pilotDefId": "pilotDef_Chipende_Iskoru",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    },
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "heraldrydef_DavionA7_AEWA_FT",
+      "customUnitName": "Ernst Lang",
+      "unitDefId": "mechdef_rifleman_RFL-3N",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": []
+      },
+      "pilotDefId": "pilotDef_Lang_Ernst",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    },
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "heraldrydef_DavionA7_AEWA_FT",
+      "customUnitName": "Henrik Dekker",
+      "unitDefId": "mechdef_wasp_WSP-1A",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": []
+      },
+      "pilotDefId": "pilotDef_Dekker_Henrik",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    }
+  ]
+}

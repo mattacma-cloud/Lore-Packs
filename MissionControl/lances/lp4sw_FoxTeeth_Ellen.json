@@ -1,0 +1,95 @@
+{
+  "lanceKey": "lp4sw_FoxTeeth_Ellen",
+  "lanceDefId": "Manual",
+  "lanceDifficultyAdjustment": 0,
+  "unitSpawnPointOverrideList": [
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "heraldrydef_davionA7",
+      "customUnitName": "Lt. Ellen Doreen",
+      "unitDefId": "mechdef_assassin_ASN-21",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": []
+      },
+      "pilotDefId": "pilotDef_Ellen_Doreen",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    },
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "heraldrydef_davionA7",
+      "customUnitName": "Llewwellyn Smyth-Jones",
+      "unitDefId": "mechdef_spider_SDR-5D",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": []
+      },
+      "pilotDefId": "pilotDef_SmythJones_Llewwellyn",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    },
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "heraldrydef_davionA7",
+      "customUnitName": "Dwayne Mathers",
+      "unitDefId": "mechdef_ostscout_OTT-7J",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": []
+      },
+      "pilotDefId": "pilotDef_Mathers_Dwayne",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    },
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "heraldrydef_davionA7",
+      "customUnitName": "Lynx Craken",
+      "unitDefId": "mechdef_ostscout_OTT-7J",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": []
+      },
+      "pilotDefId": "pilotDef_Craken_Lynx",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    }
+  ]
+}
