@@ -1,0 +1,58 @@
+{
+  "ID": "c_fp_lp4sw_FoxTikonov5_Mission5_2",
+  "RandomSpawns": {
+    "Enable": false
+  },
+  "HotDropProtection": {
+    "Enable": false
+  },
+  "AdditionalLances": {
+    "Enable": true,
+    "UseDialogue": true,
+    "EnemyLanceCount": 0,
+    "EnemyLances": [],
+    "EnemyLanceObjectiveNames": [],
+    "HideObjective": true,
+    "ShowObjectiveOnLanceDetected": true,
+    "AlwaysDisplayHiddenObjectiveIfPrimary": false,
+    "AllyLanceCount": 2,
+    "AllyLances": [
+      "lp4sw_FoxTeeth_McKinnon_Raiders",
+      "lp4sw_FoxTeeth_Ryder"
+    ],
+    "DialogueCastDefId": "castDef_Davion_Ian_McKinnon",
+    "Dialogue": "Fox's Teeth down and primed.",
+    "AllyLanceDialogues": [
+      {
+        "LanceKey": "lp4sw_FoxTeeth_McKinnon_Raiders",
+        "CastDefId": "castDef_Davion_Ian_McKinnon",
+        "Dialogue": "Fox's Teeth down and primed."
+      },
+      {
+        "LanceKey": "lp4sw_FoxTeeth_Ryder",
+        "CastDefId": "castDef_Davion_Karl_Ryder",
+        "Dialogue": "My Lance is good to go."
+      }
+    ]
+  },
+  "ExtendedLances": {
+    "Enable": false,
+    "TargetLanceSize": 4,
+    "EmployerLanceSize": 4,
+    "TargetAllyLanceSize": 4,
+    "EmployerAllyLanceSize": 4,
+    "HostileToAllLanceSize": 4,
+    "NeutralToAllLanceSize": 4,
+    "Autofill": false
+  },
+  "ExtendedBoundaries": {
+    "Enable": false,
+    "IncreaseBoundarySizeByPercentage": 0.6
+  },
+  "DynamicWithdraw": {
+    "Enable": false
+  },
+  "AdditionalPlayerMechs": {
+    "Enable": true
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "ID": "c_fp_lp4sw_FoxTikonov3_Mission3_2",
+  "RandomSpawns": {
+    "Enable": false
+  },
+  "HotDropProtection": {
+    "Enable": false
+  },
+  "AdditionalLances": {
+    "Enable": true,
+    "UseDialogue": true,
+    "EnemyLanceCount": 0,
+    "EnemyLances": [],
+    "EnemyLanceObjectiveNames": [],
+    "HideObjective": true,
+    "ShowObjectiveOnLanceDetected": true,
+    "AlwaysDisplayHiddenObjectiveIfPrimary": false,
+    "AllyLanceCount": 1,
+    "AllyLances": [
+      "lp4sw_FoxTeeth_McKinnon_Raiders"
+    ],
+    "DialogueCastDefId": "castDef_Davion_Ian_McKinnon",
+    "Dialogue": "I am down, Commander. Let's see if we can bag this guy."
+  },
+  "ExtendedLances": {
+    "Enable": false,
+    "TargetLanceSize": 4,
+    "EmployerLanceSize": 4,
+    "TargetAllyLanceSize": 4,
+    "EmployerAllyLanceSize": 4,
+    "HostileToAllLanceSize": 4,
+    "NeutralToAllLanceSize": 4,
+    "Autofill": false
+  },
+  "ExtendedBoundaries": {
+    "Enable": false,
+    "IncreaseBoundarySizeByPercentage": 0.6
+  },
+  "DynamicWithdraw": {
+    "Enable": false
+  },
+  "AdditionalPlayerMechs": {
+    "Enable": false
+  }
+}
