@@ -1,0 +1,23 @@
+{
+    "id" : "castDef_Liao_Akhmat_Abano",
+    "internalName" : "Liao_Akhmat_Abano",
+    "firstName" : "Akhmat",
+    "lastName" : "Abano",
+    "callsign" : "",
+    "rank" : "Maskirovka Contractor",
+    "gender" : "Male",
+    "factionID" : "Liao",
+    "sgCharType" : "UNSET",
+    "showRank" : true,
+    "showFirstName" : true,
+    "showCallsign" : false,
+    "showLastName" : true,
+    "localizeName" : true,
+    "defaultEmotePortrait" : {
+        "emote" : "Default",
+        "portraitAssetPath" : "../../Mods/Lore_Pack_4SW/portraits/guiTxrPort_Akhmat_Abano.png"
+    },
+    "emotePotraitList" : [
+        
+    ]
+}
