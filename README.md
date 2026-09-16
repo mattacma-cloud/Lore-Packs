@@ -6,7 +6,7 @@ The Lore Packs are intended to be a large series of campaigns that bring the can
 
 In order to develop the Lore Packs, significant research was undertaken into how to deliver new flashpoints as an unskilled mod maker. Any advice, hints and tips you might have are welcomed in making these Flashpoints better. I am only new to modding and I welcome any advice from those with more experience.
 
-Specail thanks to Victor Lapin for his assistance in getting this project off the ground.
+Special thanks to Victor Lapin for his assistance in getting this project off the ground. To Kierk and Hounfor for help and for answer questions. To Haree and CWolf for their preexisiting work in making BEXT possible. And to kaiotik for creating extra mission types.
 
 The planned series of Lore Packs are as follows:
 <img width="1973" height="1167" alt="image" src="https://github.com/user-attachments/assets/771133b8-5d72-40e4-9c04-3348c1aeecc4" />
@@ -37,18 +37,22 @@ Drag the Lore_Pack_4SW, LorePack_Helpers, Lore_Pack_4SW_FP_Cap and MissionContro
 - Timeline
 - ExtendedConversations
 - Mission Control
+ - MissionPack-BEX which adds new mission types 
 - ColourfulFlashPoint
-- Lore_Pack_4SW_FP_Cap
-- LorePack_Helpers
+- Lore_Pack_4SW_FP_Cap (Part of this mod downloads)
+- LorePack_Helpers (Part of this mod downloads)
+- Company Decorations (https://github.com/mattacma-cloud/Decorations)
 
 
-**GAME PLAY NOTES AS OF RELEASE 0.1.6**
+**GAME PLAY NOTES AS OF RELEASE 0.1.75**
 
 You must complete Touring Tikonov, or use the BattleTech Save Editor to give yourself the tag "Ardan_is_Interested", in order for An Evening with Ardan to spawn.
 
 Once you complete An Evening with Ardan, you must advance the timeline and then the relevant Flashpoint will spawn. The non-Crucis Lancer Flashpoints fire in August (Flashpoint I) and then September (Flashpoint II).
 
 **NOTE:** Foxes of Tikonov and Charge of the Guards, and to a lesser extent, Liao's Bane, are not designed to be easy Flashpoints. You will face difficult missions against skilled, well equipped, and numerous foes. If you started a 3028 career, you'll get properly pasted. It is advised that you use a 3025 or post-Arano campaign, or the BattleTech Save Editor, so that you can have a fair chance at fishing the Flashpoints. The 4th Deneb Light Cavalry (Family Matters) and 12th Vegan Rangers (Mercenary Relations) are somewhat easier and designed for lower skilled/equipped commands. 
+
+Currently, only the Fox's of Tikonov arc is complete, taking you to the end of the 4th Succession War with the 7th Crucis Lancers / McKinnon's Raiders. The remaining Flashpoints for the other Davion arcs, after thier first 2, are in development.
 
 **Lore Packs Development Map Version Plan**
 
@@ -58,7 +62,7 @@ Once you complete An Evening with Ardan, you must advance the timeline and then 
 
 0.1.1	An Evening with Ardan [1 of 1 planned Flashpoint available]
 
-0.1.3	Foxes of Tikonov (7th Crucis Lancers) [1 of 5 planned Flashpoints available]
+0.1.3	Foxes of Tikonov (7th Crucis Lancers) [5 of 5 planned Flashpoints available]
 
 0.1.4	Charge of the Guards (3rd Davion Guards) [2 of 4 planned Flashpoints available]
 
@@ -70,7 +74,7 @@ Once you complete An Evening with Ardan, you must advance the timeline and then 
 
 **IN ACTIVE DEVELOPMENT**
 
-Flashpoints 2-4 of Foxes of Tikonov.
+Flashpoints 3-4 of Charge of the Guards.
 
 **IN PRE-DEVELOPMENT**
 
