@@ -1,0 +1,18 @@
+{
+    "Description" : {
+        "Cost" : 0,
+        "Rarity" : 1,
+        "Purchasable" : false,
+        "Manufacturer" : "null",
+        "Model" : "null",
+        "UIName" : "null",
+        "Id" : "heraldrydef_liaoA2_ZSJ",
+        "Name" : "Maskirovka Zang Shu Jian",
+        "Details" : "This is the heraldry def for the Maskirovka Zang Shu Jian",
+        "Icon" : ""
+    },
+    "textureLogoID" : "uixTxrLogo_Maskirovka_ZSJ",
+    "primaryMechColorID" : "Greyscale_04",
+    "secondaryMechColorID" : "Greyscale_03",
+    "tertiaryMechColorID" : "Green_02"
+}
