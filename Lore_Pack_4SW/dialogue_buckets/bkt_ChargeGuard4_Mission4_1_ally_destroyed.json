@@ -1,0 +1,21 @@
+{
+  "identifier": "bkt_ChargeGuard4_Mission4_1_ally_destroyed",
+  "contents": [
+    {
+      "words": "My lance is down, Commander. You had best complete this mission or I'll have your head!",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Boyar_Christophoros",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

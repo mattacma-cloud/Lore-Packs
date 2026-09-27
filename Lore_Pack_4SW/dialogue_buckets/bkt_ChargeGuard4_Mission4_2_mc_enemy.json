@@ -1,0 +1,21 @@
+{
+  "identifier": "bkt_ChargeGuard4_Mission4_2_mc_enemy",
+  "contents": [
+    {
+      "words": "Another lance, another chance to be decorated.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_Davion_Boyar_Christophoros",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}

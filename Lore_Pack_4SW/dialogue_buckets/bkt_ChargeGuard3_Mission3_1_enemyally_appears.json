@@ -1,0 +1,21 @@
+{
+  "identifier": "bkt_ChargeGuard3_Mission3_1_enemyally_appears",
+  "contents": [
+    {
+      "words": "Home Guard forces dropping in, Commander. You might want to cover Jenkin's back...or not.",
+      "wordsColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "selectedCastDefId": "castDef_DariusDefault",
+      "emote": "Default",
+      "audioName": "NONE",
+      "cameraFocusGuid": "",
+      "cameraDistance": "Far",
+      "cameraHeight": "Default",
+      "revealRadius": -1
+    }
+  ]
+}
