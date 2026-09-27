@@ -1,0 +1,91 @@
+{
+  "Description": {
+    "Id": "FE-4W-RAT-17-floor",
+    "Name": "Operation RAT - Wave 4: Deployment to Azha",
+    "Details": "Marshal Hobaugh requests our presence on [[DM.SystemDefs[starsystemdef_Azha],Azha]] for the next phase of Operation RAT to assist the 3rd Davion Guards RCT.",
+    "Icon": "uixTxrTimeLine_ComStarNewsBureau.png"
+  },
+  "Scope": "Company",
+  "Weight": 0,
+  "Requirements": {
+    "Scope": "Company",
+    "RequirementTags": {
+      "items": [
+        "fp_choice_OpRat3DG"
+      ],
+      "tagSetSourceFile": "Tags/CompanyTags"
+    },
+    "ExclusionTags": {
+      "items": [
+        "ChargeGuard4_DateOk",
+        "event_ChargeGuard4_open_seen",
+        "fp_finished_ChargeGuard4_success",
+        "ChargeGuard4_closed",
+        "timeline_3029_03_12",
+        "fp_finished_ChargeGuard3_success"
+      ],
+      "tagSetSourceFile": "Tags/CompanyTags"
+    },
+    "RequirementComparisons": []
+  },
+  "AdditionalRequirements": [],
+  "AdditionalObjects": [],
+  "Options": [
+    {
+      "Description": {
+        "Id": "outcome_0",
+        "Name": "Acknowledge",
+        "Details": "Marshal Hobaugh requests our presence on [[DM.SystemDefs[starsystemdef_Azha],Azha]] for the next phase of Operation RAT to assist the 3rd Davion Guards RCT.",
+        "Icon": ""
+      },
+      "RequirementList": [],
+      "ResultSets": [
+        {
+          "Description": {
+            "Id": "outcome_0_0",
+            "Name": "Operation RAT - Wave 4: Deployment to Azha floor",
+            "Details": "Marshal Hobaugh requests our presence on [[DM.SystemDefs[starsystemdef_Azha],Azha]] for the next phase of Operation RAT to assist the 3rd Davion Guards RCT.",
+            "Icon": ""
+          },
+          "Weight": 100,
+          "Results": [
+            {
+              "Scope": "Company",
+              "Requirements": null,
+              "AddedTags": {
+                "items": [
+                  "ChargeGuard4_DateOk"
+                ],
+                "tagSetSourceFile": "Tags/CompanyTags"
+              },
+              "RemovedTags": {
+                "items": null,
+                "tagSetSourceFile": ""
+              },
+              "Stats": null,
+              "Actions": null,
+              "ForceEvents": null,
+              "TemporaryResult": false,
+              "ResultDuration": 0
+            }
+          ]
+        }
+      ],
+      "Requirements": {
+        "Scope": "Company",
+        "RequirementTags": {
+          "items": null,
+          "tagSetSourceFile": ""
+        },
+        "ExclusionTags": {
+          "items": null,
+          "tagSetSourceFile": ""
+        },
+        "RequirementComparisons": []
+      }
+    }
+  ],
+  "PublishState": "PUBLISHED",
+  "ValidationState": "UNTESTED",
+  "EventType": "NORMAL"
+}
