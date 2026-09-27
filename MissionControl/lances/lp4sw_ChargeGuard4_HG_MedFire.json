@@ -1,0 +1,32 @@
+{
+  "lanceKey": "lp4sw_ChargeGuard4_HG_MedFire",
+  "lanceDefId": "Tagged",
+  "lanceDifficultyAdjustment": -2,
+  "lanceTagSet": {
+    "items": [
+      "lance_type_fire",
+      "lance_type_medium",
+      "lance_type_mech",
+      "lance_type_dynamic"
+    ]
+  },
+  "lanceExcludedTagSet": {
+    "items": [
+      "lance_type_vehicle"
+    ]
+  },
+  "unitSpawnPointOverrideList": [
+    {
+      "unitType": "Mech"
+    },
+    {
+      "unitType": "Mech"
+    },
+    {
+      "unitType": "Mech"
+    },
+    {
+      "unitType": "Mech"
+    }
+  ]
+}

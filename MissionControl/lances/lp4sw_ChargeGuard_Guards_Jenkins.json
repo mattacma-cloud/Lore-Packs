@@ -1,0 +1,103 @@
+{
+  "lanceKey": "lp4sw_ChargeGuard_Guards_Jenkins",
+  "lanceDefId": "Manual",
+  "lanceDifficultyAdjustment": 0,
+  "unitSpawnPointOverrideList": [
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "",
+      "customUnitName": "Lt. L.R. Jenkins",
+      "unitDefId": "mechdef_phoenixhawk_PXH-1D",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": [
+          "spawn_poorly_maintained_50"
+        ]
+      },
+      "pilotDefId": "pilotdef_Jenkins_LR",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    },
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "",
+      "customUnitName": "Pille Oorschot",
+      "unitDefId": "mechdef_phoenixhawk_PXH-1",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": [
+          "spawn_poorly_maintained_50"
+        ]
+      },
+      "pilotDefId": "pilotDef_Oorschot_Pille",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    },
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "",
+      "customUnitName": "Mate Neuman",
+      "unitDefId": "mechdef_phoenixhawk_PXH-1D",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": [
+          "spawn_poorly_maintained_50"
+        ]
+      },
+      "pilotDefId": "pilotDef_Neuman_Mate",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    },
+    {
+      "unitType": "Mech",
+      "customHeraldryDefId": "",
+      "customUnitName": "Goitseone Baldovini",
+      "unitDefId": "mechdef_phoenixhawk_PXH-1",
+      "unitTagSet": {
+        "items": []
+      },
+      "unitExcludedTagSet": {
+        "items": []
+      },
+      "spawnEffectTags": {
+        "items": [
+          "spawn_poorly_maintained_50"
+        ]
+      },
+      "pilotDefId": "pilotDef_Baldovini_Goitseone",
+      "pilotTagSet": {
+        "items": []
+      },
+      "pilotExcludedTagSet": {
+        "items": []
+      }
+    }
+  ]
+}
