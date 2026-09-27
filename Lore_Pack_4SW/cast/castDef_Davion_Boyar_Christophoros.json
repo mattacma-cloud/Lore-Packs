@@ -1,8 +1,8 @@
 {
     "id" : "castDef_Davion_Boyar_Christophoros",
     "internalName" : "Davion_Boyar_Christophoros",
-    "firstName" : "Boyar",
-    "lastName" : "Christophoros",
+    "firstName" : "Christophoros",
+    "lastName" : "Boyar",
     "callsign" : "",
     "rank" : "Lieutenant",
     "gender" : "Male",
