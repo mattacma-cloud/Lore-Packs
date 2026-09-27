@@ -1,12 +1,12 @@
 {
-  "StartingMilestoneID": "ms_fp_lp4sw_ChargeGuard2_001_Start",
+  "StartingMilestoneID": "ms_fp_lp4sw_ChargeGuard4_001_Start",
   "Milestones": [
     {
       "Description": {
         "Icon": null,
         "Name": "Start",
-        "Id": "ms_fp_lp4sw_ChargeGuard2_001_Start",
-        "Details": "Charge of the Guards II - tag cleanup -> 101_Talk"
+        "Id": "ms_fp_lp4sw_ChargeGuard4_001_Start",
+        "Details": "Charge of the Guards IV - tag cleanup -> 101_Talk"
       },
       "Scope": "Company",
       "Requirements": [],
@@ -23,8 +23,8 @@
           },
           "RemovedTags": {
             "items": [
-              "ChargeGuard_m4_done",
-              "ChargeGuard_m5_done"
+              "ChargeGuard4_m1_done",
+              "ChargeGuard4_m2_done"
             ],
             "tagSetSourceFile": "Tags/CompanyTags"
           },
@@ -52,7 +52,7 @@
           "Actions": [
             {
               "Type": "Flashpoint_SetNextMilestone",
-              "value": "ms_fp_lp4sw_ChargeGuard2_101_Talk",
+              "value": "ms_fp_lp4sw_ChargeGuard4_101_Talk",
               "valueConstant": null,
               "additionalValues": null
             }
@@ -64,8 +64,8 @@
       "Description": {
         "Icon": null,
         "Name": "Talk",
-        "Id": "ms_fp_lp4sw_ChargeGuard2_101_Talk",
-        "Details": "Charge of the Guards II: Ningpo arrival"
+        "Id": "ms_fp_lp4sw_ChargeGuard4_101_Talk",
+        "Details": "Charge of the Guards IV: Big, Bad and Stupid"
       },
       "Scope": "Company",
       "Requirements": [],
@@ -91,118 +91,18 @@
           "Actions": [
             {
               "Type": "System_StartConversation",
-              "value": "9368644974b54b97bb693baf",
+              "value": "cf634cb813fbd7a695efe4ab",
               "valueConstant": null,
               "additionalValues": [
-                "Charge of the Guards II: Ningpo Nightmare",
-                "Ningpo",
+                "Charge of the Guards IV: Big, Bad and Stupid",
+                "Azha",
                 "Briefing",
                 null
               ]
             },
             {
               "Type": "Flashpoint_SetNextMilestone",
-              "value": "ms_fp_lp4sw_ChargeGuard2_102_Mission",
-              "valueConstant": null,
-              "additionalValues": null
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Description": {
-        "Icon": null,
-        "Name": "Talk",
-        "Id": "ms_fp_lp4sw_ChargeGuard2_103_Talk",
-        "Details": "Charge of the Guards II: Highland Jig"
-      },
-      "Scope": "Company",
-      "Requirements": [],
-      "Repeatable": false,
-      "UseRandomInvocation": false,
-      "InvokeChance": 0,
-      "Results": [
-        {
-          "Scope": "Company",
-          "Requirements": null,
-          "AddedTags": {
-            "items": [],
-            "tagSetSourceFile": ""
-          },
-          "RemovedTags": {
-            "items": [],
-            "tagSetSourceFile": ""
-          },
-          "Stats": [],
-          "ForceEvents": [],
-          "TemporaryResult": false,
-          "ResultDuration": 0,
-          "Actions": [
-            {
-              "Type": "System_StartConversation",
-              "value": "13b748ee8178f59afd562e41",
-              "valueConstant": null,
-              "additionalValues": [
-                "Charge of the Guards II: Highland Jig",
-                "Ningpo",
-                "Debrief",
-                null
-              ]
-            },
-            {
-              "Type": "Flashpoint_SetNextMilestone",
-              "value": "ms_fp_lp4sw_ChargeGuard2_104_Mission",
-              "valueConstant": null,
-              "additionalValues": null
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Description": {
-        "Icon": null,
-        "Name": "Talk",
-        "Id": "ms_fp_lp4sw_ChargeGuard2_105_Talk",
-        "Details": "Charge of the Guards II: Happy Hobaugh"
-      },
-      "Scope": "Company",
-      "Requirements": [],
-      "Repeatable": false,
-      "UseRandomInvocation": false,
-      "InvokeChance": 0,
-      "Results": [
-        {
-          "Scope": "Company",
-          "Requirements": null,
-          "AddedTags": {
-            "items": [],
-            "tagSetSourceFile": ""
-          },
-          "RemovedTags": {
-            "items": [],
-            "tagSetSourceFile": ""
-          },
-          "Stats": [],
-          "ForceEvents": [],
-          "TemporaryResult": false,
-          "ResultDuration": 0,
-          "Actions": [
-            {
-              "Type": "System_StartConversation",
-              "value": "42ce2ff03214a216a6933b91",
-              "valueConstant": null,
-              "additionalValues": [
-                "Charge of the Guards II: Happy Hobaugh",
-                "Ningpo",
-                "Debrief",
-                null
-              ]
-            },
-            {
-              "Type": "Flashpoint_SetNextMilestone",
-              "value": "ms_fp_lp4sw_ChargeGuard2_106_End",
+              "value": "ms_fp_lp4sw_ChargeGuard4_102_Mission",
               "valueConstant": null,
               "additionalValues": null
             }
@@ -214,8 +114,8 @@
       "Description": {
         "Icon": null,
         "Name": "Mission",
-        "Id": "ms_fp_lp4sw_ChargeGuard2_102_Mission",
-        "Details": "c_fp_lp4sw_ChargeGuard_Mission2_1"
+        "Id": "ms_fp_lp4sw_ChargeGuard4_102_Mission",
+        "Details": "c_fp_lp4sw_ChargeGuard4_Mission4_1"
       },
       "Scope": "Company",
       "Requirements": [],
@@ -241,19 +141,19 @@
           "Actions": [
             {
               "Type": "Flashpoint_AddContract",
-              "value": "mapGeneral_rockyCliffs_vHigh",
+              "value": "mapGeneral_barterTown_aDes",
               "valueConstant": null,
               "additionalValues": [
                 "",
-                "a6edb15d-d488-48a2-83b6-b12c94b37745",
-                "c_fp_lp4sw_ChargeGuard_Mission2_1",
+                "d63ee8d7-3e47-4042-a6de-8e5ea63c5b20",
+                "c_fp_lp4sw_ChargeGuard4_Mission4_1",
                 "Davion",
                 "Liao",
-                "8",
-                "ms_fp_lp4sw_ChargeGuard2_103_Talk",
+                "7",
+                "ms_fp_lp4sw_ChargeGuard4_103_Talk",
                 null,
                 null,
-                "ms_fp_lp4sw_AEWA_900_Talk",
+                "ms_fp_lp4sw_ChargeGuard4_900_Talk",
                 null,
                 null
               ]
@@ -273,9 +173,59 @@
     {
       "Description": {
         "Icon": null,
+        "Name": "Talk",
+        "Id": "ms_fp_lp4sw_ChargeGuard4_103_Talk",
+        "Details": "Charge of the Guards IV: Thick as Two Atlas’s"
+      },
+      "Scope": "Company",
+      "Requirements": [],
+      "Repeatable": false,
+      "UseRandomInvocation": false,
+      "InvokeChance": 0,
+      "Results": [
+        {
+          "Scope": "Company",
+          "Requirements": null,
+          "AddedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Stats": [],
+          "ForceEvents": [],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": [
+            {
+              "Type": "System_StartConversation",
+              "value": "e209dc00f79ea68b476fca30",
+              "valueConstant": null,
+              "additionalValues": [
+                "Charge of the Guards IV: Thick as Two Atlas’s",
+                "Azha",
+                "Briefing",
+                null
+              ]
+            },
+            {
+              "Type": "Flashpoint_SetNextMilestone",
+              "value": "ms_fp_lp4sw_ChargeGuard4_104_Mission",
+              "valueConstant": null,
+              "additionalValues": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Description": {
+        "Icon": null,
         "Name": "Mission",
-        "Id": "ms_fp_lp4sw_ChargeGuard2_104_Mission",
-        "Details": "c_fp_lp4sw_ChargeGuard_Mission2_2"
+        "Id": "ms_fp_lp4sw_ChargeGuard4_104_Mission",
+        "Details": "c_fp_lp4sw_ChargeGuard4_Mission4_2"
       },
       "Scope": "Company",
       "Requirements": [],
@@ -301,19 +251,19 @@
           "Actions": [
             {
               "Type": "Flashpoint_AddContract",
-              "value": "mapGeneral_escarpmentValley_vLow",
+              "value": "mapGeneral_lostCanyon_aBad",
               "valueConstant": null,
               "additionalValues": [
                 "",
-                "65f01c56-027f-49bd-a8df-63b8ec032495",
-                "c_fp_lp4sw_ChargeGuard_Mission2_2",
+                "a1aca787-fdb5-47b6-a22d-3894c56ca771",
+                "c_fp_lp4sw_ChargeGuard4_Mission4_2",
                 "Davion",
                 "Liao",
-                "8",
-                "ms_fp_lp4sw_ChargeGuard2_105_Talk",
+                "7",
+                "ms_fp_lp4sw_ChargeGuard4_105_Talk",
                 null,
                 null,
-                "ms_fp_lp4sw_AEWA_900_Talk",
+                "ms_fp_lp4sw_ChargeGuard4_900_Talk",
                 null,
                 null
               ]
@@ -325,6 +275,56 @@
               "additionalValues": [
                 "BaseFlashpoint"
               ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Description": {
+        "Icon": null,
+        "Name": "Talk",
+        "Id": "ms_fp_lp4sw_ChargeGuard4_105_Talk",
+        "Details": "Charge of the Guards IV: Enough is Enough"
+      },
+      "Scope": "Company",
+      "Requirements": [],
+      "Repeatable": false,
+      "UseRandomInvocation": false,
+      "InvokeChance": 0,
+      "Results": [
+        {
+          "Scope": "Company",
+          "Requirements": null,
+          "AddedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Stats": [],
+          "ForceEvents": [],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": [
+            {
+              "Type": "System_StartConversation",
+              "value": "09d0b9aa085520900f15fcde",
+              "valueConstant": null,
+              "additionalValues": [
+                "Charge of the Guards IV: Enough is Enough",
+                "Azha",
+                "Debrief",
+                null
+              ]
+            },
+            {
+              "Type": "Flashpoint_SetNextMilestone",
+              "value": "ms_fp_lp4sw_ChargeGuard4_106_End",
+              "valueConstant": null,
+              "additionalValues": null
             }
           ]
         }
@@ -334,8 +334,8 @@
       "Description": {
         "Icon": null,
         "Name": "Complete",
-        "Id": "ms_fp_lp4sw_ChargeGuard2_106_End",
-        "Details": "Charge of the Guards II loot step ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â itemCollection_AEWA_200b (Fox FIX-ARC-002 split)"
+        "Id": "ms_fp_lp4sw_ChargeGuard4_106_End",
+        "Details": "Charge of the Guards IV loot — itemCollection_AEWA_202"
       },
       "Scope": "Company",
       "Requirements": [],
@@ -348,20 +348,37 @@
           "Requirements": null,
           "AddedTags": {
             "items": [
-              "fp_finished_ChargeGuard2_success"
+              "fp_finished_ChargeGuard4_success",
+              "decoration_Davion_SunburstDiamond",
+              "decoration_Davion_OperationRAT_ChargeGuard"
             ],
             "tagSetSourceFile": "Tags/CompanyTags"
           },
           "RemovedTags": {
             "items": [
-              "ChargeGuard2_Active",
-              "ChargeGuard_m4_done",
-              "ChargeGuard_m5_done"
+              "ChargeGuard4_Active",
+              "ChargeGuard4_m1_done",
+              "ChargeGuard4_m2_done"
             ],
             "tagSetSourceFile": "Tags/CompanyTags"
           },
           "Stats": [],
-          "ForceEvents": [],
+          "ForceEvents": [
+            {
+              "Scope": "Company",
+              "EventID": "event_decoration_Davion_SunburstDiamond",
+              "MinDaysWait": 1,
+              "MaxDaysWait": 1,
+              "Probability": 100
+            },
+            {
+              "Scope": "Company",
+              "EventID": "event_decoration_Davion_OperationRAT_ChargeGuard",
+              "MinDaysWait": 2,
+              "MaxDaysWait": 2,
+              "Probability": 100
+            }
+          ],
           "TemporaryResult": false,
           "ResultDuration": 0,
           "Actions": [
@@ -373,64 +390,11 @@
             },
             {
               "Type": "Flashpoint_CompleteFlashpoint",
-              "value": "ms_fp_lp4sw_ChargeGuard2_106_Reward",
+              "value": "ms_fp_lp4sw_ChargeGuard4_107_Reward",
               "valueConstant": null,
               "additionalValues": [
-                "itemCollection_AEWA_200b",
+                "itemCollection_AEWA_202",
                 null
-              ]
-            }
-          ]
-        }
-        ,
-        {
-          "Scope": "Company",
-          "Requirements": {
-            "Scope": "Company",
-            "RequirementTags": {
-              "items": [
-                "ChargeGuard3_DateOk"
-              ],
-              "tagSetSourceFile": "Tags/CompanyTags"
-            },
-            "ExclusionTags": {
-              "items": [
-                "event_ChargeGuard3_open_seen"
-              ],
-              "tagSetSourceFile": "Tags/CompanyTags"
-            },
-            "RequirementComparisons": []
-          },
-          "AddedTags": {
-            "items": [
-              "event_ChargeGuard3_open_seen",
-              "ChargeGuard3_Active"
-            ],
-            "tagSetSourceFile": "Tags/CompanyTags"
-          },
-          "RemovedTags": {
-            "items": [],
-            "tagSetSourceFile": ""
-          },
-          "Stats": [],
-          "ForceEvents": [
-            {
-              "Scope": "Company",
-              "EventID": "FE-4W-RAT-16",
-              "MinDaysWait": 1,
-              "MaxDaysWait": 1,
-              "Probability": 100
-            }
-          ],
-          "TemporaryResult": false,
-          "ResultDuration": 0,
-          "Actions": [
-            {
-              "Type": "System_AddFlashpoint",
-              "value": "fp_lp4sw_ChargeGuard3",
-              "valueConstant": null,
-              "additionalValues": [
-                "starsystemdef_Slocum"
               ]
             }
           ]
@@ -441,8 +405,8 @@
       "Description": {
         "Icon": null,
         "Name": "Reward",
-        "Id": "ms_fp_lp4sw_ChargeGuard2_106_Reward",
-        "Details": "Charge of the Guards II payout ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â $800k + Davion +3 (Stats off CompleteFlashpoint step)"
+        "Id": "ms_fp_lp4sw_ChargeGuard4_107_Reward",
+        "Details": "Charge of the Guards IV payout"
       },
       "Scope": "Company",
       "Requirements": [],
@@ -472,7 +436,7 @@
             {
               "typeString": "System.Int32",
               "name": "Reputation.Davion",
-              "value": "3",
+              "value": "4",
               "set": false,
               "valueConstant": null
             }
@@ -488,8 +452,8 @@
       "Description": {
         "Icon": null,
         "Name": "Talk",
-        "Id": "ms_fp_lp4sw_AEWA_900_Talk",
-        "Details": "Shared AEWA fail hub — Fox-identical Talk/Complete split (ChargeGuard I/II + LiaoBane I/II)"
+        "Id": "ms_fp_lp4sw_ChargeGuard4_900_Talk",
+        "Details": "Charge of the Guards IV: Fail"
       },
       "Scope": "Company",
       "Requirements": [],
@@ -518,15 +482,15 @@
               "value": "3134e8810ee258758024ae2c",
               "valueConstant": null,
               "additionalValues": [
-                "Charge of the Guards Ã¢â‚¬â€ Failure",
-                "Capellan March",
+                "Charge of the Guards IV: Fail",
+                "Azha",
                 "Debrief",
                 null
               ]
             },
             {
               "Type": "Flashpoint_SetNextMilestone",
-              "value": "ms_fp_lp4sw_AEWA_900_Complete",
+              "value": "ms_fp_lp4sw_ChargeGuard4_900_Complete",
               "valueConstant": null,
               "additionalValues": null
             }
@@ -538,8 +502,8 @@
       "Description": {
         "Icon": null,
         "Name": "Complete",
-        "Id": "ms_fp_lp4sw_AEWA_900_Complete",
-        "Details": "Fail end â€” fp_finished_AEWA_failed; handoff to 900_Reward (FIX-ARC-002 split)"
+        "Id": "ms_fp_lp4sw_ChargeGuard4_900_Complete",
+        "Details": "Fail end — CompletedWithoutReward (T18)"
       },
       "Scope": "Company",
       "Requirements": [],
@@ -552,25 +516,29 @@
           "Requirements": null,
           "AddedTags": {
             "items": [
-              "fp_finished_AEWA_failed"
+              "fp_finished_ChargeGuard4_failed",
+              "decoration_Davion_OperationRAT_ChargeGuard"
             ],
             "tagSetSourceFile": "Tags/CompanyTags"
           },
           "RemovedTags": {
             "items": [
-              "ChargeGuard_Active",
-              "ChargeGuard2_Active",
-              "LiaoBane_Active",
-              "LiaoBane2_Active",
-              "FamilyMatters_Active",
-              "FamilyMatters2_Active",
-              "MercRelations_Active",
-              "MercRelations2_Active"
+              "ChargeGuard4_Active",
+              "ChargeGuard4_m1_done",
+              "ChargeGuard4_m2_done"
             ],
             "tagSetSourceFile": "Tags/CompanyTags"
           },
           "Stats": [],
-          "ForceEvents": [],
+          "ForceEvents": [
+            {
+              "Scope": "Company",
+              "EventID": "event_decoration_Davion_OperationRAT_ChargeGuard",
+              "MinDaysWait": 1,
+              "MaxDaysWait": 1,
+              "Probability": 100
+            }
+          ],
           "TemporaryResult": false,
           "ResultDuration": 0,
           "Actions": [
@@ -582,11 +550,11 @@
             },
             {
               "Type": "Flashpoint_CompleteFlashpoint",
-              "value": "ms_fp_lp4sw_AEWA_900_Reward",
+              "value": "ms_fp_lp4sw_ChargeGuard4_900_Reward",
               "valueConstant": null,
               "additionalValues": [
                 null,
-                null
+                "CompletedWithoutReward"
               ]
             }
           ]
@@ -597,8 +565,8 @@
       "Description": {
         "Icon": null,
         "Name": "Reward",
-        "Id": "ms_fp_lp4sw_AEWA_900_Reward",
-        "Details": "Fail penalty â€” -,000,000 + Davion -50 (Stats off CompleteFlashpoint step; shared AEWA hub)"
+        "Id": "ms_fp_lp4sw_ChargeGuard4_900_Reward",
+        "Details": "Fail penalty"
       },
       "Scope": "Company",
       "Requirements": [],
