@@ -51,7 +51,7 @@
 	"DefaultCombatLeaderCastDefId" : "castDef_DavionDefaultCommander",
     "DefaultRepresentativeCastDefId" : "castDef_DavionRepDefault",
     "DataManager" : null,
-    "factionID" : "faction_DavionA7_AEWA_7CL_FT",
+    "factionID" : "DavionA7_AEWA_7CL_FT",
   	"icon" : "uixTxrLogo_AEWA_7CL_FT",
     "heraldryDefId" : "heraldrydef_DavionA7_AEWA_FT",
     "storePanelImage" : null,
