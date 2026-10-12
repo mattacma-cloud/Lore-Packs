@@ -1,0 +1,91 @@
+{
+  "Description": {
+    "Id": "FE-4W-RAT-19-floor",
+    "Name": "Operation RAT - Wave 4: Deployment to Woodstock",
+    "Details": "General Mandella requests our presence on [[DM.SystemDefs[starsystemdef_Woodstock],Woodstock]] for the next phase of Operation RAT to assist the 33rd Avalon Hussars RCT.",
+    "Icon": "uixTxrTimeLine_ComStarNewsBureau.png"
+  },
+  "Scope": "Company",
+  "Weight": 0,
+  "Requirements": {
+    "Scope": "Company",
+    "RequirementTags": {
+      "items": [
+        "fp_choice_OpRat33AH"
+      ],
+      "tagSetSourceFile": "Tags/CompanyTags"
+    },
+    "ExclusionTags": {
+      "items": [
+        "LiaoBane4_DateOk",
+        "event_LiaoBane4_open_seen",
+        "fp_finished_LiaoBane4_success",
+        "LiaoBane4_closed",
+        "timeline_3029_03_12",
+        "fp_finished_LiaoBane3_success"
+      ],
+      "tagSetSourceFile": "Tags/CompanyTags"
+    },
+    "RequirementComparisons": []
+  },
+  "AdditionalRequirements": [],
+  "AdditionalObjects": [],
+  "Options": [
+    {
+      "Description": {
+        "Id": "outcome_0",
+        "Name": "Acknowledge",
+        "Details": "General Mandella requests our presence on [[DM.SystemDefs[starsystemdef_Woodstock],Woodstock]] for the next phase of Operation RAT to assist the 33rd Avalon Hussars RCT.",
+        "Icon": ""
+      },
+      "RequirementList": [],
+      "ResultSets": [
+        {
+          "Description": {
+            "Id": "outcome_0_0",
+            "Name": "Operation RAT - Wave 4: Deployment to Woodstock floor",
+            "Details": "General Mandella requests our presence on [[DM.SystemDefs[starsystemdef_Woodstock],Woodstock]] for the next phase of Operation RAT to assist the 33rd Avalon Hussars RCT.",
+            "Icon": ""
+          },
+          "Weight": 100,
+          "Results": [
+            {
+              "Scope": "Company",
+              "Requirements": null,
+              "AddedTags": {
+                "items": [
+                  "LiaoBane4_DateOk"
+                ],
+                "tagSetSourceFile": "Tags/CompanyTags"
+              },
+              "RemovedTags": {
+                "items": null,
+                "tagSetSourceFile": ""
+              },
+              "Stats": null,
+              "Actions": null,
+              "ForceEvents": null,
+              "TemporaryResult": false,
+              "ResultDuration": 0
+            }
+          ]
+        }
+      ],
+      "Requirements": {
+        "Scope": "Company",
+        "RequirementTags": {
+          "items": null,
+          "tagSetSourceFile": ""
+        },
+        "ExclusionTags": {
+          "items": null,
+          "tagSetSourceFile": ""
+        },
+        "RequirementComparisons": []
+      }
+    }
+  ],
+  "PublishState": "PUBLISHED",
+  "ValidationState": "UNTESTED",
+  "EventType": "NORMAL"
+}
