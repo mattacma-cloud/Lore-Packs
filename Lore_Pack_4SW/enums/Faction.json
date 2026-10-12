@@ -359,6 +359,26 @@
             "IsCareerStartingDisplayFaction" : false,
             "IsStoryStartingDisplayFaction" : false,
             "HasAIBehaviorVariableScope" : false
+        },
+        {
+            "ID" : 12019,
+            "Name" : "LiaoA3_NR",
+            "FriendlyName" : "Nightriders",
+            "Description" : "",
+            "FactionDefID" : "faction_LiaoA3_NR",
+            "IsRealFaction" : false,
+            "IsGreatHouse" : false,
+            "IsClan" : false,
+            "IsMercenary" : false,
+            "IsPirate" : false,
+            "DoesGainReputation" : false,
+            "CanAlly" : false,
+            "IsProceduralContractFaction" : false,
+            "IsCareerScoringFaction" : false,
+            "IsCareerIgnoredContractTarget" : false,
+            "IsCareerStartingDisplayFaction" : false,
+            "IsStoryStartingDisplayFaction" : false,
+            "HasAIBehaviorVariableScope" : false
         }
     ]
 }
