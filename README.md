@@ -44,7 +44,7 @@ Drag the Lore_Pack_4SW, LorePack_Helpers, Lore_Pack_4SW_FP_Cap and MissionContro
 - Company Decorations (https://github.com/mattacma-cloud/Decorations)
 
 
-**GAME PLAY NOTES AS OF RELEASE 0.1.76**
+**GAME PLAY NOTES AS OF RELEASE 0.1.77**
 
 You must complete Touring Tikonov, or use the BattleTech Save Editor to give yourself the tag "Ardan_is_Interested", in order for An Evening with Ardan to spawn.
 
@@ -52,7 +52,7 @@ Once you complete An Evening with Ardan, you must advance the timeline and then 
 
 **NOTE:** Foxes of Tikonov and Charge of the Guards, and to a lesser extent, Liao's Bane, are not designed to be easy Flashpoints. You will face difficult missions against skilled, well equipped, and numerous foes. If you started a 3028 career, you'll get properly pasted. It is advised that you use a 3025 or post-Arano campaign, or the BattleTech Save Editor, so that you can have a fair chance at fishing the Flashpoints. The 4th Deneb Light Cavalry (Family Matters) and 12th Vegan Rangers (Mercenary Relations) are somewhat easier and designed for lower skilled/equipped commands. 
 
-Currently, only the Fox's of Tikonov and Charge of the Guards arcs are complete, taking you to the end of the 4th Succession War with the 7th Crucis Lancers / McKinnon's Raiders or the 3rd Davion Guards. The remaining Flashpoints for the other Davion arcs, after thier first 2, are in development.
+Currently, only the Fox's of Tikonov, Charge of the Guards and Liao's Bane arcs are complete, taking you to the end of the 4th Succession War with the 7th Crucis Lancers / McKinnon's Raiders, the 3rd Davion Guards, and the 33rd Avalon Hussars. The remaining Flashpoints for the other Davion arcs, after thier first 2, are in development.
 
 **Lore Packs Development Map Version Plan**
 
@@ -66,7 +66,7 @@ Currently, only the Fox's of Tikonov and Charge of the Guards arcs are complete,
 
 0.1.4	Charge of the Guards (3rd Davion Guards) [4 of 4 planned Flashpoints available]
 
-0.1.5	Liao's Bane (33rd Avalon Hussars) [2 of 4 planned Flashpoints available]
+0.1.5	Liao's Bane (33rd Avalon Hussars) [4 of 4 planned Flashpoints available]
 
 0.1.6	Family Matters (4th Deneb Light Cavalry) [2 of 4 planned Flashpoints available]
 
@@ -74,7 +74,7 @@ Currently, only the Fox's of Tikonov and Charge of the Guards arcs are complete,
 
 **IN ACTIVE DEVELOPMENT**
 
-Flashpoints 3-4 of Liao's Bane.
+Flashpoints 3-4 of Family Matters.
 
 **IN PRE-DEVELOPMENT**
 
