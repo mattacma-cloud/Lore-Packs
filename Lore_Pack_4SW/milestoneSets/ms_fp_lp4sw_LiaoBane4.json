@@ -1,0 +1,626 @@
+{
+  "StartingMilestoneID": "ms_fp_lp4sw_LiaoBane4_001_Start",
+  "Milestones": [
+    {
+      "Description": {
+        "Icon": null,
+        "Name": "Start",
+        "Id": "ms_fp_lp4sw_LiaoBane4_001_Start",
+        "Details": "Liao's Bane IV - tag cleanup -> 101_Talk"
+      },
+      "Scope": "Company",
+      "Requirements": [],
+      "Repeatable": false,
+      "UseRandomInvocation": false,
+      "InvokeChance": 0,
+      "Results": [
+        {
+          "Scope": "Company",
+          "Requirements": null,
+          "AddedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "RemovedTags": {
+            "items": [
+              "LiaoBane4_m1_done",
+              "LiaoBane4_m2_done"
+            ],
+            "tagSetSourceFile": "Tags/CompanyTags"
+          },
+          "Stats": [],
+          "ForceEvents": [],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": []
+        },
+        {
+          "Scope": "Company",
+          "Requirements": null,
+          "AddedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Stats": [],
+          "ForceEvents": [],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": [
+            {
+              "Type": "Flashpoint_SetNextMilestone",
+              "value": "ms_fp_lp4sw_LiaoBane4_101_Talk",
+              "valueConstant": null,
+              "additionalValues": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Description": {
+        "Icon": null,
+        "Name": "Talk",
+        "Id": "ms_fp_lp4sw_LiaoBane4_101_Talk",
+        "Details": "Liao's Bane IV: Guard Yourselves"
+      },
+      "Scope": "Company",
+      "Requirements": [],
+      "Repeatable": false,
+      "UseRandomInvocation": false,
+      "InvokeChance": 0,
+      "Results": [
+        {
+          "Scope": "Company",
+          "Requirements": null,
+          "AddedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Stats": [],
+          "ForceEvents": [],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": [
+            {
+              "Type": "System_StartConversation",
+              "value": "47dd899e696965429cc097bf",
+              "valueConstant": null,
+              "additionalValues": [
+                "Liao's Bane IV: Guard Yourselves",
+                "Woodstock",
+                "Briefing",
+                null
+              ]
+            },
+            {
+              "Type": "Flashpoint_SetNextMilestone",
+              "value": "ms_fp_lp4sw_LiaoBane4_102_Mission",
+              "valueConstant": null,
+              "additionalValues": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Description": {
+        "Icon": null,
+        "Name": "Mission",
+        "Id": "ms_fp_lp4sw_LiaoBane4_102_Mission",
+        "Details": "c_fp_lp4sw_LiaoBane4_Mission4_1"
+      },
+      "Scope": "Company",
+      "Requirements": [],
+      "Repeatable": false,
+      "UseRandomInvocation": false,
+      "InvokeChance": 0,
+      "Results": [
+        {
+          "Scope": "Company",
+          "Requirements": null,
+          "AddedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Stats": [],
+          "ForceEvents": [],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": [
+            {
+              "Type": "Flashpoint_AddContract",
+              "value": "mapGeneral_borealForest_iGlc",
+              "valueConstant": null,
+              "additionalValues": [
+                "",
+                "52272cbe-9c16-461d-aa8c-230d1905c484",
+                "c_fp_lp4sw_LiaoBane4_Mission4_1",
+                "Davion",
+                "Liao",
+                "6",
+                "ms_fp_lp4sw_LiaoBane4_103_Talk",
+                null,
+                null,
+                "ms_fp_lp4sw_AEWA_900_Talk",
+                null,
+                null
+              ]
+            },
+            {
+              "Type": "System_ForceDropshipRoom",
+              "value": "Contract",
+              "valueConstant": null,
+              "additionalValues": [
+                "BaseFlashpoint"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Description": {
+        "Icon": null,
+        "Name": "Talk",
+        "Id": "ms_fp_lp4sw_LiaoBane4_103_Talk",
+        "Details": "Liao's Bane IV: Depot Dash"
+      },
+      "Scope": "Company",
+      "Requirements": [],
+      "Repeatable": false,
+      "UseRandomInvocation": false,
+      "InvokeChance": 0,
+      "Results": [
+        {
+          "Scope": "Company",
+          "Requirements": null,
+          "AddedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Stats": [],
+          "ForceEvents": [],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": [
+            {
+              "Type": "System_StartConversation",
+              "value": "d806d8eed3a1db751622fd85",
+              "valueConstant": null,
+              "additionalValues": [
+                "Liao's Bane IV: Depot Dash",
+                "Woodstock",
+                "Briefing",
+                null
+              ]
+            },
+            {
+              "Type": "Flashpoint_SetNextMilestone",
+              "value": "ms_fp_lp4sw_LiaoBane4_104_Mission",
+              "valueConstant": null,
+              "additionalValues": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Description": {
+        "Icon": null,
+        "Name": "Mission",
+        "Id": "ms_fp_lp4sw_LiaoBane4_104_Mission",
+        "Details": "c_fp_lp4sw_LiaoBane4_Mission4_2"
+      },
+      "Scope": "Company",
+      "Requirements": [],
+      "Repeatable": false,
+      "UseRandomInvocation": false,
+      "InvokeChance": 0,
+      "Results": [
+        {
+          "Scope": "Company",
+          "Requirements": null,
+          "AddedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Stats": [],
+          "ForceEvents": [],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": [
+            {
+              "Type": "Flashpoint_AddContract",
+              "value": "mapGeneral_barterTown_aDes",
+              "valueConstant": null,
+              "additionalValues": [
+                "",
+                "b766db2e-f76d-4df5-9cd4-636e3f61bbdc",
+                "c_fp_lp4sw_LiaoBane4_Mission4_2",
+                "Davion",
+                "Liao",
+                "6",
+                "ms_fp_lp4sw_LiaoBane4_105_Talk",
+                null,
+                null,
+                "ms_fp_lp4sw_AEWA_900_Talk",
+                null,
+                null
+              ]
+            },
+            {
+              "Type": "System_ForceDropshipRoom",
+              "value": "Contract",
+              "valueConstant": null,
+              "additionalValues": [
+                "BaseFlashpoint"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Description": {
+        "Icon": null,
+        "Name": "Talk",
+        "Id": "ms_fp_lp4sw_LiaoBane4_105_Talk",
+        "Details": "Liao's Bane IV: Royal Score"
+      },
+      "Scope": "Company",
+      "Requirements": [],
+      "Repeatable": false,
+      "UseRandomInvocation": false,
+      "InvokeChance": 0,
+      "Results": [
+        {
+          "Scope": "Company",
+          "Requirements": null,
+          "AddedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Stats": [],
+          "ForceEvents": [],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": [
+            {
+              "Type": "System_StartConversation",
+              "value": "36c531dfc94431bffad883d2",
+              "valueConstant": null,
+              "additionalValues": [
+                "Liao's Bane IV: Royal Score",
+                "Woodstock",
+                "Debrief",
+                null
+              ]
+            },
+            {
+              "Type": "Flashpoint_SetNextMilestone",
+              "value": "ms_fp_lp4sw_LiaoBane4_106_End",
+              "valueConstant": null,
+              "additionalValues": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Description": {
+        "Icon": null,
+        "Name": "Complete",
+        "Id": "ms_fp_lp4sw_LiaoBane4_106_End",
+        "Details": "Liao's Bane IV loot — itemCollection_AEWA_304"
+      },
+      "Scope": "Company",
+      "Requirements": [],
+      "Repeatable": false,
+      "UseRandomInvocation": false,
+      "InvokeChance": 0,
+      "Results": [
+        {
+          "Scope": "Company",
+          "Requirements": null,
+          "AddedTags": {
+            "items": [
+              "fp_finished_LiaoBane4_success",
+              "decoration_Davion_SunburstGold",
+              "decoration_Davion_LimpSwordFlag",
+              "decoration_Davion_OperationRAT_LiaoBane",
+              "decoration_Mercenary_BlueStarPin"
+            ],
+            "tagSetSourceFile": "Tags/CompanyTags"
+          },
+          "RemovedTags": {
+            "items": [
+              "LiaoBane4_Active",
+              "LiaoBane4_m1_done",
+              "LiaoBane4_m2_done"
+            ],
+            "tagSetSourceFile": "Tags/CompanyTags"
+          },
+          "Stats": [],
+          "ForceEvents": [
+            {
+              "Scope": "Company",
+              "EventID": "event_decoration_Davion_SunburstGold",
+              "MinDaysWait": 1,
+              "MaxDaysWait": 1,
+              "Probability": 100
+            },
+            {
+              "Scope": "Company",
+              "EventID": "event_decoration_Davion_LimpSwordFlag",
+              "MinDaysWait": 2,
+              "MaxDaysWait": 2,
+              "Probability": 100
+            },
+            {
+              "Scope": "Company",
+              "EventID": "event_decoration_Davion_OperationRAT_LiaoBane",
+              "MinDaysWait": 3,
+              "MaxDaysWait": 3,
+              "Probability": 100
+            },
+            {
+              "Scope": "Company",
+              "EventID": "event_decoration_Mercenary_BlueStarPin",
+              "MinDaysWait": 4,
+              "MaxDaysWait": 4,
+              "Probability": 100
+            }
+          ],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": [
+            {
+              "Type": "System_ForceDropshipRoom",
+              "value": "Ship",
+              "valueConstant": null,
+              "additionalValues": null
+            },
+            {
+              "Type": "Flashpoint_CompleteFlashpoint",
+              "value": "ms_fp_lp4sw_LiaoBane4_106_Reward",
+              "valueConstant": null,
+              "additionalValues": [
+                "itemCollection_AEWA_304",
+                null
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Description": {
+        "Icon": null,
+        "Name": "Reward",
+        "Id": "ms_fp_lp4sw_LiaoBane4_106_Reward",
+        "Details": "Liao's Bane IV payout — $0.6M + Davion +3"
+      },
+      "Scope": "Company",
+      "Requirements": [],
+      "Repeatable": false,
+      "UseRandomInvocation": false,
+      "InvokeChance": 0,
+      "Results": [
+        {
+          "Scope": "Company",
+          "Requirements": null,
+          "AddedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Stats": [
+            {
+              "typeString": "System.Int32",
+              "name": "Funds",
+              "value": "600000",
+              "set": false,
+              "valueConstant": null
+            },
+            {
+              "typeString": "System.Int32",
+              "name": "Reputation.Davion",
+              "value": "3",
+              "set": false,
+              "valueConstant": null
+            }
+          ],
+          "ForceEvents": [],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": []
+        }
+      ]
+    },
+    {
+      "Description": {
+        "Icon": null,
+        "Name": "Talk",
+        "Id": "ms_fp_lp4sw_AEWA_900_Talk",
+        "Details": "Shared AEWA fail hub — Fox-identical Talk/Complete split (ChargeGuard I/II + LiaoBane I/II)"
+      },
+      "Scope": "Company",
+      "Requirements": [],
+      "Repeatable": false,
+      "UseRandomInvocation": false,
+      "InvokeChance": 0,
+      "Results": [
+        {
+          "Scope": "Company",
+          "Requirements": null,
+          "AddedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Stats": [],
+          "ForceEvents": [],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": [
+            {
+              "Type": "System_StartConversation",
+              "value": "3134e8810ee258758024ae2c",
+              "valueConstant": null,
+              "additionalValues": [
+                "Charge of the Guards Ã¢â‚¬â€ Failure",
+                "Capellan March",
+                "Debrief",
+                null
+              ]
+            },
+            {
+              "Type": "Flashpoint_SetNextMilestone",
+              "value": "ms_fp_lp4sw_AEWA_900_Complete",
+              "valueConstant": null,
+              "additionalValues": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Description": {
+        "Icon": null,
+        "Name": "Complete",
+        "Id": "ms_fp_lp4sw_AEWA_900_Complete",
+        "Details": "Fail end â€” fp_finished_AEWA_failed; handoff to 900_Reward (FIX-ARC-002 split)"
+      },
+      "Scope": "Company",
+      "Requirements": [],
+      "Repeatable": false,
+      "UseRandomInvocation": false,
+      "InvokeChance": 0,
+      "Results": [
+        {
+          "Scope": "Company",
+          "Requirements": null,
+          "AddedTags": {
+            "items": [
+              "fp_finished_AEWA_failed"
+            ],
+            "tagSetSourceFile": "Tags/CompanyTags"
+          },
+          "RemovedTags": {
+            "items": [
+              "ChargeGuard_Active",
+              "ChargeGuard2_Active",
+              "LiaoBane_Active",
+              "LiaoBane2_Active",
+              "FamilyMatters_Active",
+              "FamilyMatters2_Active",
+              "MercRelations_Active",
+              "MercRelations2_Active",
+              "LiaoBane3_Active",
+              "LiaoBane4_Active"
+            ],
+            "tagSetSourceFile": "Tags/CompanyTags"
+          },
+          "Stats": [],
+          "ForceEvents": [],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": [
+            {
+              "Type": "System_ForceDropshipRoom",
+              "value": "Ship",
+              "valueConstant": null,
+              "additionalValues": null
+            },
+            {
+              "Type": "Flashpoint_CompleteFlashpoint",
+              "value": "ms_fp_lp4sw_AEWA_900_Reward",
+              "valueConstant": null,
+              "additionalValues": [
+                null,
+                null
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Description": {
+        "Icon": null,
+        "Name": "Reward",
+        "Id": "ms_fp_lp4sw_AEWA_900_Reward",
+        "Details": "Fail penalty â€” -,000,000 + Davion -50 (Stats off CompleteFlashpoint step; shared AEWA hub)"
+      },
+      "Scope": "Company",
+      "Requirements": [],
+      "Repeatable": false,
+      "UseRandomInvocation": false,
+      "InvokeChance": 0,
+      "Results": [
+        {
+          "Scope": "Company",
+          "Requirements": null,
+          "AddedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Stats": [
+            {
+              "typeString": "System.Int32",
+              "name": "Funds",
+              "value": "-1000000",
+              "set": false,
+              "valueConstant": null
+            },
+            {
+              "typeString": "System.Int32",
+              "name": "Reputation.Davion",
+              "value": "-50",
+              "set": false,
+              "valueConstant": null
+            }
+          ],
+          "ForceEvents": [],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": []
+        }
+      ]
+    }
+  ]
+}
