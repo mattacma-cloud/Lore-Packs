@@ -1,0 +1,52 @@
+{
+  "ID": "c_fp_lp4sw_LiaoBane3_Mission3_1",
+  "RandomSpawns": {
+    "Enable": false
+  },
+  "HotDropProtection": {
+    "Enable": false
+  },
+  "AdditionalLances": {
+    "Enable": true,
+    "UseDialogue": true,
+    "EnemyLanceCount": 0,
+    "EnemyLances": [],
+    "EnemyLanceObjectiveNames": [],
+    "HideObjective": true,
+    "ShowObjectiveOnLanceDetected": true,
+    "AlwaysDisplayHiddenObjectiveIfPrimary": false,
+    "AllyLanceCount": 1,
+    "AllyLances": [
+      "lp4sw_LiaoBane3_33AH_Holzmann"
+    ],
+    "DialogueCastDefId": "castDef_Davion_Holzmann_Kord",
+    "Dialogue": "Hussars are down and ready to roll.",
+    "AllyLanceDialogues": [
+      {
+        "LanceKey": "lp4sw_LiaoBane3_33AH_Holzmann",
+        "CastDefId": "castDef_Davion_Holzmann_Kord",
+        "Dialogue": "Hussars are down and ready to roll."
+      }
+    ]
+  },
+  "ExtendedLances": {
+    "Enable": false,
+    "TargetLanceSize": 4,
+    "EmployerLanceSize": 4,
+    "TargetAllyLanceSize": 4,
+    "EmployerAllyLanceSize": 4,
+    "HostileToAllLanceSize": 4,
+    "NeutralToAllLanceSize": 4,
+    "Autofill": false
+  },
+  "ExtendedBoundaries": {
+    "Enable": false,
+    "IncreaseBoundarySizeByPercentage": 0.6
+  },
+  "DynamicWithdraw": {
+    "Enable": false
+  },
+  "AdditionalPlayerMechs": {
+    "Enable": false
+  }
+}
