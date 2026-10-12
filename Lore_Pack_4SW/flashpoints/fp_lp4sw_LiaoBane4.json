@@ -1,0 +1,72 @@
+{
+  "AllowRefitTime": true,
+  "AvailableTimeout": 0,
+  "Description": {
+    "Icon": "uixTxrSpot_fp_lp4sw_AEWA.png",
+    "Name": "Liao's Bane IV",
+    "Id": "fp_lp4sw_LiaoBane4",
+    "Details": "Commander, the 33rd Avalon Hussars are ready for us on [[DM.SystemDefs[starsystemdef_Woodstock],Woodstock]]. We won't have long to launch the operation there, so we best get a move on."
+  },
+  "InProgressTimeout": 0,
+  "UnitDropTonnageHint": "Heavy",
+  "Repeatable": false,
+  "FlashpointDescriberCastDefId": "castDef_Davion_Wilson_Mandella",
+  "LocationRequirements": {
+    "Scope": "StarSystem",
+    "RequirementTags": {
+      "items": [
+        "planet_name_woodstock"
+      ],
+      "tagSetSourceFile": "Tags/PlanetNameTags"
+    },
+    "RequirementComparisons": [],
+    "ExclusionTags": {
+      "items": [],
+      "tagSetSourceFile": ""
+    }
+  },
+  "RewardCollectionID": "itemCollection_AEWA_304",
+  "TargetFaction": "Liao",
+  "PotentialEmployers": [
+    "Davion"
+  ],
+  "PublishState": "PUBLISHED",
+  "FlashpointShortDescription": "The Fourth Wave of Operation Rat is ready to commence.",
+  "MilestoneSetID": "ms_fp_lp4sw_LiaoBane4",
+  "Difficulty": 6,
+  "Tags": {
+    "items": [
+      "BLACKLISTED"
+    ],
+    "tagSetSourceFile": "tags/FlashpointTags"
+  },
+  "UseAvailableTimeoutOverride": false,
+  "UseInProgressTimeoutOverride": false,
+  "Requirements": [
+    {
+      "Scope": "Company",
+      "RequirementTags": {
+        "items": [
+          "fp_finished_LiaoBane3_success",
+          "LiaoBane4_Active",
+          "timeline_3029_01_12"
+        ],
+        "tagSetSourceFile": "Tags/CompanyTags"
+      },
+      "RequirementComparisons": [],
+      "ExclusionTags": {
+        "items": [
+          "fp_finished_LiaoBane4_success",
+          "fp_finished_LiaoBane4_failed",
+          "LiaoBane4_closed",
+          "timeline_3029_03_12"
+        ],
+        "tagSetSourceFile": "Tags/CompanyTags"
+      }
+    }
+  ],
+  "LanceDropTonnageHint": "Heavy",
+  "FlashpointLength": "SHORT",
+  "InternalName": "lp4sw_LiaoBane4",
+  "Weight": 1000
+}
