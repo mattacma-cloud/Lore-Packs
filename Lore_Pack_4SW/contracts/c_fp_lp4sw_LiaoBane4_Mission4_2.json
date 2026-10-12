@@ -1,0 +1,1140 @@
+{
+  "ID": "c_fp_lp4sw_LiaoBane4_Mission4_2",
+  "contractName": "Depot Dash",
+  "contractDisplayStyle": "BaseFlashpoint",
+  "difficulty": 6,
+  "weight": 1,
+  "scope": "STANDARD",
+  "finalDifficulty": 6,
+  "shortDescription": "If what we think is true about that base turns out to be right, we need to secure it and do so rapidly. Get out there, Commander, and see if the rumours of Star League technology are true.",
+  "longDescription": "Chasing moonbeams can never lead to good things, Commander.",
+  "salvagePotential": 12,
+  "requirementList": [],
+  "OnContractSuccessResults": [
+    {
+      "Scope": "Company",
+      "Requirements": null,
+      "AddedTags": {
+        "items": [
+          "LiaoBane4_m2_done"
+        ],
+        "tagSetSourceFile": "Tags/CompanyTags"
+      },
+      "RemovedTags": {
+        "items": [],
+        "tagSetSourceFile": ""
+      },
+      "Stats": [],
+      "Actions": [],
+      "ForceEvents": [],
+      "TemporaryResult": false,
+      "ResultDuration": 0
+    }
+  ],
+  "OnContractFailureResults": [],
+  "contractType": "DestroyBase",
+  "encounterPlayStyle": "SinglePlayer",
+  "maxNumberOfPlayerUnits": 4,
+  "mapMood": "AridNightFoggy",
+  "startingFogOfWarVisibility": "Observed",
+  "contractObjectiveList": [
+    {
+      "contractObjective": {
+        "EncounterObjectGuid": "6f5f8d17-70ed-44a8-acc0-ccf9258925aa"
+      },
+      "title": "Destroy the BSLA facility and Escape",
+      "description": "Destroy Enemy Structures and Extract Safely",
+      "isPrimary": true,
+      "forPlayer": "Player1",
+      "objectiveGuids": [
+        "3ac1476d-5ab0-436b-aa68-e1a5436e796f",
+        "3a753f8c-2d38-4ea6-9812-c9c169cd3545",
+        "979864d1-7d84-4797-b032-696a157deed8",
+        "ea4504c3-8dcc-4049-bff2-784c423f0aa8"
+      ]
+    }
+  ],
+  "objectiveList": [
+    {
+      "objective": {
+        "EncounterObjectGuid": "3ac1476d-5ab0-436b-aa68-e1a5436e796f"
+      },
+      "title": "Destroy the BSLA Facility",
+      "description": "The objective to destroy the targeted buildings.",
+      "isPrimary": true,
+      "OnSuccessResults": [],
+      "OnFailureResults": []
+    },
+    {
+      "objective": {
+        "EncounterObjectGuid": "979864d1-7d84-4797-b032-696a157deed8"
+      },
+      "title": "Eliminate Home Guard Garrison Forces",
+      "description": "The primary objective to destroy the garrison / defenders of the base.",
+      "isPrimary": true,
+      "OnSuccessResults": [],
+      "OnFailureResults": []
+    },
+    {
+      "objective": {
+        "EncounterObjectGuid": "71f98492-dc71-450f-a9a7-2bb4bb09591a"
+      },
+      "title": "Destroy/Disable BSLA Base Turrets",
+      "description": "HIDDEN Objective: Destroy Base Turrets",
+      "isPrimary": false,
+      "OnSuccessResults": [],
+      "OnFailureResults": []
+    },
+    {
+      "objective": {
+        "EncounterObjectGuid": "ea4504c3-8dcc-4049-bff2-784c423f0aa8"
+      },
+      "title": "Destroy Home Guard Reinforcements",
+      "description": "The objective to eliminate enemy reinforcements who attack.",
+      "isPrimary": false,
+      "OnSuccessResults": [],
+      "OnFailureResults": []
+    },
+    {
+      "objective": {
+        "EncounterObjectGuid": "3a753f8c-2d38-4ea6-9812-c9c169cd3545"
+      },
+      "title": "Get to the Evac Zone",
+      "description": "The objective for the player to extract their units.",
+      "isPrimary": true,
+      "OnSuccessResults": [],
+      "OnFailureResults": []
+    }
+  ],
+  "buildingList": [],
+  "chunkList": [
+    {
+      "name": "Chunk_Ambush (Bonus)",
+      "encounterChunk": {
+        "EncounterObjectGuid": "a5257151-5269-4222-9a0d-31001a70fe22"
+      },
+      "enableChunkFromContract": true
+    }
+  ],
+  "cameraFocusHelperList": [
+    {
+      "name": "Spawner_PlayerLance",
+      "encounterObject": {
+        "EncounterObjectGuid": "dafd0d98-c88a-4f90-b137-4fe5ed94ebbb"
+      }
+    },
+    {
+      "name": "Lance_Enemy_OpposingForce",
+      "encounterObject": {
+        "EncounterObjectGuid": "5a1b1a4a-0325-4a6d-b021-d9ba167e2ac8"
+      }
+    },
+    {
+      "name": "Lance_Enemy_BaseTurrets",
+      "encounterObject": {
+        "EncounterObjectGuid": "40decd4d-427d-4f2e-8fc7-fc379ae4bbc2"
+      }
+    },
+    {
+      "name": "Lance_Enemy_Ambushers",
+      "encounterObject": {
+        "EncounterObjectGuid": "bb480a51-ce9c-4dcf-9bbc-3ef5698c4422"
+      }
+    },
+    {
+      "name": "Region_Ambush",
+      "encounterObject": {
+        "EncounterObjectGuid": "0ee819bd-b34c-464a-8d2a-987005fe0bc7"
+      }
+    },
+    {
+      "name": "Region_Escape",
+      "encounterObject": {
+        "EncounterObjectGuid": "f22d699f-edce-4f14-b520-8580535f620f"
+      }
+    }
+  ],
+  "dialogueList": [
+    {
+      "dialogue": {
+        "EncounterObjectGuid": "73df8d9c-a274-48fd-98c9-2bd0d7860e83"
+      },
+      "name": "Dialog_MissionStart",
+      "overrideDialogueBucketId": "",
+      "dialogueContent": [
+        {
+          "words": "Alright, Commander. Whenever anyone says 'Star League', chaos tends to be the end result. Let's take this one carefully.",
+          "wordsColor": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "selectedCastDefId": "castDef_Davion_Holzmann_Kord",
+          "emote": "Default",
+          "audioName": "NONE",
+          "cameraFocusGuid": "",
+          "cameraDistance": "Far",
+          "cameraHeight": "Default",
+          "revealRadius": -1
+        },
+        {
+          "words": "I hear you, Captain.",
+          "wordsColor": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "selectedCastDefId": "castDef_Commander",
+          "emote": "Default",
+          "audioName": "NONE",
+          "cameraFocusGuid": "",
+          "cameraDistance": "Far",
+          "cameraHeight": "Default",
+          "revealRadius": -1
+        },
+        {
+          "words": "Be extra careful down there. Yang is having a fit up here that he can't be on the ground with you.",
+          "wordsColor": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "selectedCastDefId": "castDef_DariusDefault",
+          "emote": "Default",
+          "audioName": "NONE",
+          "cameraFocusGuid": "",
+          "cameraDistance": "Far",
+          "cameraHeight": "Default",
+          "revealRadius": -1
+        },
+        {
+          "words": "You know the drill, XO. Sedatives and colouring books until he calms down.",
+          "wordsColor": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "selectedCastDefId": "castDef_Commander",
+          "emote": "Default",
+          "audioName": "NONE",
+          "cameraFocusGuid": "",
+          "cameraDistance": "Far",
+          "cameraHeight": "Default",
+          "revealRadius": -1
+        },
+        {
+          "words": "I ah...ok. Well, if that's settled, let's get on with things.",
+          "wordsColor": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "selectedCastDefId": "castDef_Davion_Holzmann_Kord",
+          "emote": "Default",
+          "audioName": "NONE",
+          "cameraFocusGuid": "",
+          "cameraDistance": "Far",
+          "cameraHeight": "Default",
+          "revealRadius": -1
+        }
+      ]
+    },
+    {
+      "dialogue": {
+        "EncounterObjectGuid": "4011a4c3-cba2-4d22-b2b3-3b19a3297ab9"
+      },
+      "name": "Dialog_MissionSuccess",
+      "overrideDialogueBucketId": "",
+      "dialogueContent": [
+        {
+          "words": "We've done it! Nicely done, Commander, let's see what toys are inside.",
+          "wordsColor": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "selectedCastDefId": "castDef_Davion_Holzmann_Kord",
+          "emote": "Default",
+          "audioName": "NONE",
+          "cameraFocusGuid": "",
+          "cameraDistance": "Far",
+          "cameraHeight": "Default",
+          "revealRadius": -1
+        }
+      ]
+    },
+    {
+      "dialogue": {
+        "EncounterObjectGuid": "d3d33d95-9ed7-4686-b9eb-954ebe51cc02"
+      },
+      "name": "Dialog_MissionFailure",
+      "overrideDialogueBucketId": "",
+      "dialogueContent": [
+        {
+          "words": "Damn it, we needed that facility.",
+          "wordsColor": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "selectedCastDefId": "castDef_Davion_Holzmann_Kord",
+          "emote": "Default",
+          "audioName": "NONE",
+          "cameraFocusGuid": "",
+          "cameraDistance": "Far",
+          "cameraHeight": "Default",
+          "revealRadius": -1
+        }
+      ]
+    },
+    {
+      "dialogue": {
+        "EncounterObjectGuid": "5e45a01d-01a2-40bf-b4ce-c963eb32f26d"
+      },
+      "name": "Dialogue_Interrupt_AmbushWarning",
+      "overrideDialogueBucketId": "",
+      "dialogueContent": [
+        {
+          "words": "More Home Guards, look sharp.",
+          "wordsColor": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "selectedCastDefId": "castDef_Davion_Holzmann_Kord",
+          "emote": "Default",
+          "audioName": "NONE",
+          "cameraFocusGuid": "",
+          "cameraDistance": "Far",
+          "cameraHeight": "Default",
+          "revealRadius": -1
+        }
+      ]
+    },
+    {
+      "dialogue": {
+        "EncounterObjectGuid": "a2472c65-4ab9-4c45-a5d3-e51a151ae25e"
+      },
+      "name": "Dialogue_EscapeDirection",
+      "overrideDialogueBucketId": "",
+      "dialogueContent": [
+        {
+          "words": "Time to bug out. Head for your evac zone.",
+          "wordsColor": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "selectedCastDefId": "castDef_Davion_Holzmann_Kord",
+          "emote": "Default",
+          "audioName": "NONE",
+          "cameraFocusGuid": "",
+          "cameraDistance": "Far",
+          "cameraHeight": "Default",
+          "revealRadius": -1
+        }
+      ]
+    },
+    {
+      "dialogue": {
+        "EncounterObjectGuid": "719d08e9-5bf9-4dc0-a13b-ad86bac4a65d"
+      },
+      "name": "Dialogue_TargetBuildingDamaged",
+      "overrideDialogueBucketId": "",
+      "dialogueContent": [
+        {
+          "words": "That's it, take out the key supporting structures so we can get into this place.",
+          "wordsColor": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "selectedCastDefId": "castDef_Davion_Holzmann_Kord",
+          "emote": "Default",
+          "audioName": "NONE",
+          "cameraFocusGuid": "",
+          "cameraDistance": "Far",
+          "cameraHeight": "Default",
+          "revealRadius": -1
+        }
+      ]
+    },
+    {
+      "dialogue": {
+        "EncounterObjectGuid": "e882f006-f7fd-4048-9c29-56553a5b5698"
+      },
+      "name": "Dialogue_TargetBuildingDestroyed",
+      "overrideDialogueBucketId": "",
+      "dialogueContent": [
+        {
+          "words": "Excellent! That's the supporting structures starting to come down, well done.",
+          "wordsColor": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "selectedCastDefId": "castDef_Davion_Holzmann_Kord",
+          "emote": "Default",
+          "audioName": "NONE",
+          "cameraFocusGuid": "",
+          "cameraDistance": "Far",
+          "cameraHeight": "Default",
+          "revealRadius": -1
+        }
+      ]
+    },
+    {
+      "dialogue": {
+        "EncounterObjectGuid": "aeff78ff-42fd-430a-8785-2aad29f83326"
+      },
+      "name": "Dialogue_TargetGarrisonDestroyed",
+      "overrideDialogueBucketId": "",
+      "dialogueContent": [
+        {
+          "words": "Garrison is done, let's finish the job.",
+          "wordsColor": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "selectedCastDefId": "castDef_Davion_Holzmann_Kord",
+          "emote": "Default",
+          "audioName": "NONE",
+          "cameraFocusGuid": "",
+          "cameraDistance": "Far",
+          "cameraHeight": "Default",
+          "revealRadius": -1
+        }
+      ]
+    }
+  ],
+  "disableNegotations": true,
+  "disableLanceConfiguration": false,
+  "disableCancelButton": false,
+  "disableAfterAction": false,
+  "contractRewardOverride": 600000,
+  "travelOnly": false,
+  "useTravelCostPenalty": false,
+  "usesExpiration": false,
+  "expirationTimeOverride": -1,
+  "negotiatedSalary": 0.5,
+  "negotiatedSalvage": 0.5,
+  "player1Team": {
+    "encounterLayerData": {
+      "EncounterObjectGuid": "b766db2e-f76d-4df5-9cd4-636e3f61bbdc"
+    },
+    "teamGuid": "bf40fd39-ccf9-47c4-94a6-061809681140",
+    "teamName": "Player 1",
+    "faction": "Player1sMercUnit",
+    "teamLeaderCastDefId": "castDef_TeamLeader_Current",
+    "lanceOverrideList": [
+      {
+        "lanceSpawner": {
+          "EncounterObjectGuid": "dafd0d98-c88a-4f90-b137-4fe5ed94ebbb"
+        },
+        "name": "Spawner_PlayerLance",
+        "lanceDefId": "Manual",
+        "lanceTagSet": {
+          "items": [],
+          "tagSetSourceFile": ""
+        },
+        "lanceExcludedTagSet": {
+          "items": [],
+          "tagSetSourceFile": "Tags/LanceTags"
+        },
+        "spawnEffectTags": {
+          "items": [],
+          "tagSetSourceFile": "Tags/SpawnEffectTags"
+        },
+        "lanceDifficultyAdjustment": 0,
+        "selectedLanceDefId": null,
+        "selectedLanceDifficulty": 0,
+        "unitSpawnPointOverrideList": [
+          {
+            "unitSpawnPoint": {
+              "EncounterObjectGuid": "1668c1ba-b9c6-4ef3-83df-19bfec270da1"
+            },
+            "customUnitName": "",
+            "customHeraldryDefId": "",
+            "unitType": "Mech",
+            "unitDefId": "mechDef_None",
+            "unitTagSet": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "unitExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/UnitTags"
+            },
+            "spawnEffectTags": {
+              "items": [],
+              "tagSetSourceFile": "Tags/SpawnEffectTags"
+            },
+            "pilotDefId": "pilot_default",
+            "pilotTagSet": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "pilotExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/PilotTags"
+            },
+            "selectedUnitType": "UNDEFINED",
+            "selectedUnitDefId": null,
+            "selectedPilotDefId": null
+          },
+          {
+            "unitSpawnPoint": {
+              "EncounterObjectGuid": "6b4979b9-b730-460b-8f18-c9b19efbb91c"
+            },
+            "customUnitName": "",
+            "customHeraldryDefId": "",
+            "unitType": "Mech",
+            "unitDefId": "mechDef_None",
+            "unitTagSet": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "unitExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/UnitTags"
+            },
+            "spawnEffectTags": {
+              "items": [],
+              "tagSetSourceFile": "Tags/SpawnEffectTags"
+            },
+            "pilotDefId": "pilot_default",
+            "pilotTagSet": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "pilotExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/PilotTags"
+            },
+            "selectedUnitType": "UNDEFINED",
+            "selectedUnitDefId": null,
+            "selectedPilotDefId": null
+          },
+          {
+            "unitSpawnPoint": {
+              "EncounterObjectGuid": "0a320081-2d60-450e-8e00-092c838496b4"
+            },
+            "customUnitName": "",
+            "customHeraldryDefId": "",
+            "unitType": "Mech",
+            "unitDefId": "mechDef_None",
+            "unitTagSet": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "unitExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/UnitTags"
+            },
+            "spawnEffectTags": {
+              "items": [],
+              "tagSetSourceFile": "Tags/SpawnEffectTags"
+            },
+            "pilotDefId": "pilot_default",
+            "pilotTagSet": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "pilotExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/PilotTags"
+            },
+            "selectedUnitType": "UNDEFINED",
+            "selectedUnitDefId": null,
+            "selectedPilotDefId": null
+          },
+          {
+            "unitSpawnPoint": {
+              "EncounterObjectGuid": "34a720da-9acc-4c57-bb4a-2cbe22da78a8"
+            },
+            "customUnitName": "",
+            "customHeraldryDefId": "",
+            "unitType": "Mech",
+            "unitDefId": "mechDef_None",
+            "unitTagSet": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "unitExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/UnitTags"
+            },
+            "spawnEffectTags": {
+              "items": [],
+              "tagSetSourceFile": "Tags/SpawnEffectTags"
+            },
+            "pilotDefId": "pilot_default",
+            "pilotTagSet": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "pilotExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/PilotTags"
+            },
+            "selectedUnitType": "UNDEFINED",
+            "selectedUnitDefId": null,
+            "selectedPilotDefId": null
+          }
+        ]
+      }
+    ]
+  },
+  "player2Team": {
+    "encounterLayerData": {
+      "EncounterObjectGuid": "b766db2e-f76d-4df5-9cd4-636e3f61bbdc"
+    },
+    "teamGuid": "757173dd-b4e1-4bb5-9bee-d78e623cc867",
+    "teamName": "Player 2",
+    "faction": "Player2sMercUnit",
+    "teamLeaderCastDefId": "castDef_TeamLeader_Current",
+    "lanceOverrideList": []
+  },
+  "employerTeam": {
+    "encounterLayerData": {
+      "EncounterObjectGuid": "b766db2e-f76d-4df5-9cd4-636e3f61bbdc"
+    },
+    "teamGuid": "ecc8d4f2-74b4-465d-adf6-84445e5dfc230",
+    "teamName": "Employer",
+    "faction": "DavionA4",
+    "teamLeaderCastDefId": "castDef_TeamLeader_Current",
+    "lanceOverrideList": []
+  },
+  "targetTeam": {
+    "encounterLayerData": {
+      "EncounterObjectGuid": "b766db2e-f76d-4df5-9cd4-636e3f61bbdc"
+    },
+    "teamGuid": "be77cadd-e245-4240-a93e-b99cc98902a5",
+    "teamName": "Target",
+    "faction": "LiaoHomeGuard",
+    "teamLeaderCastDefId": "castDef_TeamLeader_Current",
+    "lanceOverrideList": [
+      {
+        "lanceSpawner": {
+          "EncounterObjectGuid": "5a1b1a4a-0325-4a6d-b021-d9ba167e2ac8"
+        },
+        "name": "Lance_Enemy_OpposingForce",
+        "lanceDefId": "lancedef_mech_d8_dynamic_HeavyBattle",
+        "lanceTagSet": {
+          "items": [],
+          "tagSetSourceFile": "Tags/LanceTags"
+        },
+        "lanceExcludedTagSet": {
+          "items": [],
+          "tagSetSourceFile": "Tags/LanceTags"
+        },
+        "spawnEffectTags": {
+          "items": [],
+          "tagSetSourceFile": "Tags/SpawnEffectTags"
+        },
+        "lanceDifficultyAdjustment": 0,
+        "selectedLanceDefId": "lancedef_mech_d8_dynamic_HeavyBattle",
+        "selectedLanceDifficulty": 0,
+        "unitSpawnPointOverrideList": [
+          {
+            "unitSpawnPoint": {
+              "EncounterObjectGuid": "63ad3b03-b392-49b8-ac26-1ad827b010b4"
+            },
+            "customUnitName": "Liao Home Guard",
+            "customHeraldryDefId": "heraldrydef_LiaoHomeGuard",
+            "unitType": "Mech",
+            "unitDefId": "mechDef_InheritLance",
+            "unitTagSet": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "unitExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/UnitTags"
+            },
+            "spawnEffectTags": {
+              "items": [],
+              "tagSetSourceFile": "Tags/SpawnEffectTags"
+            },
+            "pilotDefId": "pilotDef_InheritLance",
+            "pilotTagSet": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "pilotExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/PilotTags"
+            },
+            "selectedUnitType": "UNDEFINED",
+            "selectedUnitDefId": null,
+            "selectedPilotDefId": null
+          },
+          {
+            "unitSpawnPoint": {
+              "EncounterObjectGuid": "74a1e790-8882-4e72-844f-26b1a3804231"
+            },
+            "customUnitName": "Liao Home Guard",
+            "customHeraldryDefId": "heraldrydef_LiaoHomeGuard",
+            "unitType": "Mech",
+            "unitDefId": "mechDef_InheritLance",
+            "unitTagSet": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "unitExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/UnitTags"
+            },
+            "spawnEffectTags": {
+              "items": [],
+              "tagSetSourceFile": "Tags/SpawnEffectTags"
+            },
+            "pilotDefId": "pilotDef_InheritLance",
+            "pilotTagSet": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "pilotExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/PilotTags"
+            },
+            "selectedUnitType": "UNDEFINED",
+            "selectedUnitDefId": null,
+            "selectedPilotDefId": null
+          },
+          {
+            "unitSpawnPoint": {
+              "EncounterObjectGuid": "b7eb8d4e-6b3d-4670-a48a-baf2757e024a"
+            },
+            "customUnitName": "Liao Home Guard",
+            "customHeraldryDefId": "heraldrydef_LiaoHomeGuard",
+            "unitType": "Mech",
+            "unitDefId": "mechDef_InheritLance",
+            "unitTagSet": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "unitExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/UnitTags"
+            },
+            "spawnEffectTags": {
+              "items": [],
+              "tagSetSourceFile": "Tags/SpawnEffectTags"
+            },
+            "pilotDefId": "pilotDef_InheritLance",
+            "pilotTagSet": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "pilotExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/PilotTags"
+            },
+            "selectedUnitType": "UNDEFINED",
+            "selectedUnitDefId": null,
+            "selectedPilotDefId": null
+          },
+          {
+            "unitSpawnPoint": {
+              "EncounterObjectGuid": "74c2e448-9cc6-44bf-9c23-6442756067bf"
+            },
+            "customUnitName": "Liao Home Guard",
+            "customHeraldryDefId": "heraldrydef_LiaoHomeGuard",
+            "unitType": "Mech",
+            "unitDefId": "mechDef_InheritLance",
+            "unitTagSet": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "unitExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/UnitTags"
+            },
+            "spawnEffectTags": {
+              "items": [],
+              "tagSetSourceFile": "Tags/SpawnEffectTags"
+            },
+            "pilotDefId": "pilotDef_InheritLance",
+            "pilotTagSet": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "pilotExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/PilotTags"
+            },
+            "selectedUnitType": "UNDEFINED",
+            "selectedUnitDefId": null,
+            "selectedPilotDefId": null
+          }
+        ]
+      },
+      {
+        "lanceSpawner": {
+          "EncounterObjectGuid": "40decd4d-427d-4f2e-8fc7-fc379ae4bbc2"
+        },
+        "name": "Lance_Enemy_BaseTurrets",
+        "lanceDefId": "Tagged",
+        "lanceTagSet": {
+          "items": [
+            "lance_type_turret"
+          ],
+          "tagSetSourceFile": "Tags/LanceTags"
+        },
+        "lanceExcludedTagSet": {
+          "items": [],
+          "tagSetSourceFile": "Tags/LanceTags"
+        },
+        "spawnEffectTags": {
+          "items": [],
+          "tagSetSourceFile": "Tags/SpawnEffectTags"
+        },
+        "lanceDifficultyAdjustment": 0,
+        "selectedLanceDefId": null,
+        "selectedLanceDifficulty": 0,
+        "unitSpawnPointOverrideList": [
+          {
+            "unitSpawnPoint": {
+              "EncounterObjectGuid": "26da7487-142c-4be0-bff2-d2d1194df6b8"
+            },
+            "customUnitName": "Liao Home Guard",
+            "customHeraldryDefId": "heraldrydef_LiaoHomeGuard",
+            "unitType": "Turret",
+            "unitDefId": "turretDef_InheritLance",
+            "unitTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/UnitTags"
+            },
+            "unitExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/UnitTags"
+            },
+            "spawnEffectTags": {
+              "items": [],
+              "tagSetSourceFile": "Tags/SpawnEffectTags"
+            },
+            "pilotDefId": "pilot_default",
+            "pilotTagSet": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "pilotExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/PilotTags"
+            },
+            "selectedUnitType": "UNDEFINED",
+            "selectedUnitDefId": null,
+            "selectedPilotDefId": null
+          },
+          {
+            "unitSpawnPoint": {
+              "EncounterObjectGuid": "60b090eb-ec4e-4852-a36e-a942842955d1"
+            },
+            "customUnitName": "Liao Home Guard",
+            "customHeraldryDefId": "heraldrydef_LiaoHomeGuard",
+            "unitType": "Turret",
+            "unitDefId": "turretDef_InheritLance",
+            "unitTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/UnitTags"
+            },
+            "unitExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/UnitTags"
+            },
+            "spawnEffectTags": {
+              "items": [],
+              "tagSetSourceFile": "Tags/SpawnEffectTags"
+            },
+            "pilotDefId": "pilot_default",
+            "pilotTagSet": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "pilotExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/PilotTags"
+            },
+            "selectedUnitType": "UNDEFINED",
+            "selectedUnitDefId": null,
+            "selectedPilotDefId": null
+          },
+          {
+            "unitSpawnPoint": {
+              "EncounterObjectGuid": "08b13e63-0a1d-4299-aea6-9fd4d5365e6a"
+            },
+            "customUnitName": "Liao Home Guard",
+            "customHeraldryDefId": "heraldrydef_LiaoHomeGuard",
+            "unitType": "Turret",
+            "unitDefId": "turretDef_InheritLance",
+            "unitTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/UnitTags"
+            },
+            "unitExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/UnitTags"
+            },
+            "spawnEffectTags": {
+              "items": [],
+              "tagSetSourceFile": "Tags/SpawnEffectTags"
+            },
+            "pilotDefId": "pilot_default",
+            "pilotTagSet": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "pilotExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/PilotTags"
+            },
+            "selectedUnitType": "UNDEFINED",
+            "selectedUnitDefId": null,
+            "selectedPilotDefId": null
+          },
+          {
+            "unitSpawnPoint": {
+              "EncounterObjectGuid": "6fd7746a-0546-4322-820f-a6130e33a84b"
+            },
+            "customUnitName": "Liao Home Guard",
+            "customHeraldryDefId": "heraldrydef_LiaoHomeGuard",
+            "unitType": "Turret",
+            "unitDefId": "turretDef_InheritLance",
+            "unitTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/UnitTags"
+            },
+            "unitExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/UnitTags"
+            },
+            "spawnEffectTags": {
+              "items": [],
+              "tagSetSourceFile": "Tags/SpawnEffectTags"
+            },
+            "pilotDefId": "pilot_default",
+            "pilotTagSet": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "pilotExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/PilotTags"
+            },
+            "selectedUnitType": "UNDEFINED",
+            "selectedUnitDefId": null,
+            "selectedPilotDefId": null
+          }
+        ]
+      },
+      {
+        "lanceSpawner": {
+          "EncounterObjectGuid": "bb480a51-ce9c-4dcf-9bbc-3ef5698c4422"
+        },
+        "name": "Lance_Enemy_Ambushers",
+        "lanceDefId": "lancedef_mech_d7_dynamic_HeavyFire",
+        "lanceTagSet": {
+          "items": [],
+          "tagSetSourceFile": "Tags/LanceTags"
+        },
+        "lanceExcludedTagSet": {
+          "items": [],
+          "tagSetSourceFile": "Tags/LanceTags"
+        },
+        "spawnEffectTags": {
+          "items": [],
+          "tagSetSourceFile": "Tags/SpawnEffectTags"
+        },
+        "lanceDifficultyAdjustment": 0,
+        "selectedLanceDefId": "lancedef_mech_d7_dynamic_HeavyFire",
+        "selectedLanceDifficulty": 0,
+        "unitSpawnPointOverrideList": [
+          {
+            "unitSpawnPoint": {
+              "EncounterObjectGuid": "6a902689-eca8-469b-9b45-32a1dcd904c6"
+            },
+            "customUnitName": "Liao Home Guard",
+            "customHeraldryDefId": "heraldrydef_LiaoHomeGuard",
+            "unitType": "Mech",
+            "unitDefId": "mechDef_InheritLance",
+            "unitTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/UnitTags"
+            },
+            "unitExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/UnitTags"
+            },
+            "spawnEffectTags": {
+              "items": [],
+              "tagSetSourceFile": "Tags/SpawnEffectTags"
+            },
+            "pilotDefId": "pilotDef_InheritLance",
+            "pilotTagSet": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "pilotExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/PilotTags"
+            },
+            "selectedUnitType": "UNDEFINED",
+            "selectedUnitDefId": null,
+            "selectedPilotDefId": null
+          },
+          {
+            "unitSpawnPoint": {
+              "EncounterObjectGuid": "4ad6002d-6d87-42c8-a99d-ffeb35d62723"
+            },
+            "customUnitName": "Liao Home Guard",
+            "customHeraldryDefId": "heraldrydef_LiaoHomeGuard",
+            "unitType": "Mech",
+            "unitDefId": "mechDef_InheritLance",
+            "unitTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/UnitTags"
+            },
+            "unitExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/UnitTags"
+            },
+            "spawnEffectTags": {
+              "items": [],
+              "tagSetSourceFile": "Tags/SpawnEffectTags"
+            },
+            "pilotDefId": "pilotDef_InheritLance",
+            "pilotTagSet": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "pilotExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/PilotTags"
+            },
+            "selectedUnitType": "UNDEFINED",
+            "selectedUnitDefId": null,
+            "selectedPilotDefId": null
+          },
+          {
+            "unitSpawnPoint": {
+              "EncounterObjectGuid": "98f65ba4-c2dc-4435-959b-fb5a2e30a889"
+            },
+            "customUnitName": "Liao Home Guard",
+            "customHeraldryDefId": "heraldrydef_LiaoHomeGuard",
+            "unitType": "Mech",
+            "unitDefId": "mechDef_InheritLance",
+            "unitTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/UnitTags"
+            },
+            "unitExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/UnitTags"
+            },
+            "spawnEffectTags": {
+              "items": [],
+              "tagSetSourceFile": "Tags/SpawnEffectTags"
+            },
+            "pilotDefId": "pilotDef_InheritLance",
+            "pilotTagSet": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "pilotExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/PilotTags"
+            },
+            "selectedUnitType": "UNDEFINED",
+            "selectedUnitDefId": null,
+            "selectedPilotDefId": null
+          },
+          {
+            "unitSpawnPoint": {
+              "EncounterObjectGuid": "3839b098-fae1-429f-b0fc-276b115894f8"
+            },
+            "customUnitName": "Liao Home Guard",
+            "customHeraldryDefId": "heraldrydef_LiaoHomeGuard",
+            "unitType": "Mech",
+            "unitDefId": "mechDef_InheritLance",
+            "unitTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/UnitTags"
+            },
+            "unitExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/UnitTags"
+            },
+            "spawnEffectTags": {
+              "items": [],
+              "tagSetSourceFile": "Tags/SpawnEffectTags"
+            },
+            "pilotDefId": "pilotDef_InheritLance",
+            "pilotTagSet": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "pilotExcludedTagSet": {
+              "items": [],
+              "tagSetSourceFile": "Tags/PilotTags"
+            },
+            "selectedUnitType": "UNDEFINED",
+            "selectedUnitDefId": null,
+            "selectedPilotDefId": null
+          }
+        ]
+      }
+    ]
+  },
+  "targetsAllyTeam": {
+    "encounterLayerData": {
+      "EncounterObjectGuid": "b766db2e-f76d-4df5-9cd4-636e3f61bbdc"
+    },
+    "teamGuid": "31151ed6-cfc2-467e-98c4-9ae5bea784cf",
+    "teamName": "Target's Ally",
+    "faction": "INVALID_UNSET",
+    "teamLeaderCastDefId": "castDef_TeamLeader_Current",
+    "lanceOverrideList": []
+  },
+  "neutralToAllTeam": {
+    "encounterLayerData": {
+      "EncounterObjectGuid": "ca92ce11-36c5-40d1-ac17-2559e1d3bcc9"
+    },
+    "teamGuid": "61612bb3-abf9-4586-952a-0559fa9dcd75",
+    "teamName": "Neutral to All",
+    "faction": "INVALID_UNSET",
+    "teamLeaderCastDefId": "castDef_TeamLeader_Current",
+    "lanceOverrideList": []
+  },
+  "hostileToAllTeam": {
+    "encounterLayerData": {
+      "EncounterObjectGuid": "b766db2e-f76d-4df5-9cd4-636e3f61bbdc"
+    },
+    "teamGuid": "3c9f3a20-ab03-4bcb-8ab6-b1ef0442bbf0",
+    "teamName": "Hostile to All",
+    "faction": "INVALID_UNSET",
+    "teamLeaderCastDefId": "castDef_TeamLeader_Current",
+    "lanceOverrideList": []
+  },
+  "representativeCastDefIDOverride": "castDef_Davion_Wilson_Mandella",
+  "missionSuccessStatementOverride": "A magnificent effort, Commander. The haul from that site is going to make the NAIS very happy.",
+  "badFaithStatementOverride": "Why would you run from such riches, Commander?",
+  "goodFaithStatementOverride": "You fell at the last step, Commander. That is so disappointing.",
+  "excludedFromProceduralGeneration": true,
+  "limitFlashpointDrop": true,
+  "respectFourDropLimit": true,
+  "overrideAutoCompleteDialogueId": ""
+}
