@@ -42,7 +42,7 @@
             "pilot_npc_defender",
             "pilot_npc_dynamic",
             "pilot_npc_d6",
-			"BLACKLISTED"
+	    "BLACKLISTED"
         ],
         "tagSetSourceFile": ""
     },
