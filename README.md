@@ -37,11 +37,12 @@ Drag the Lore_Pack_4SW, LorePack_Helpers, Lore_Pack_4SW_FP_Cap and MissionContro
 - Timeline
 - ExtendedConversations
 - Mission Control
- - MissionPack-BEX which adds new mission types 
+- MissionPack-BEX which adds new mission types 
 - ColourfulFlashPoint
 - Lore_Pack_4SW_FP_Cap (Part of this mod downloads)
 - LorePack_Helpers (Part of this mod downloads)
 - Company Decorations (https://github.com/mattacma-cloud/Decorations)
+- The Big Deal
 
 
 **GAME PLAY NOTES AS OF RELEASE 0.1.77**
