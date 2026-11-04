@@ -1,0 +1,12 @@
+Family Matters III and IV starmap pins
+
+Append each object in settings\cfp-markers\fp_lp4sw_FamilyMatters3.json and
+fp_lp4sw_FamilyMatters4.json to:
+
+  Mods\ColourfulFlashpoints\settings.json  ->  markers
+
+Keep the existing markers. Put a comma between objects.
+These fragments are not a mod.json Manifest type.
+
+Merged into this install's ColourfulFlashpoints settings.json on 2026-10-29.
+A Colourful Flashpoints update can overwrite that file. Paste the fragments again if the pins disappear.

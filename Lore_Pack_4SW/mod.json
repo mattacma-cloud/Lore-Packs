@@ -4,6 +4,8 @@
   "Version": "0.1.7",
   "Description": "BEXT Fourth Succession War Lore Pack (flat shared pools; fp stems group content).",
   "Author": "Blacknova",
+  "DLL": "FamilyMattersInjury.dll",
+  "DLLEntryPoint": "LorePack.FamilyMatters.Main.Init",
   "DependsOn": [
     "ModTek",
     "BT_Extended",
@@ -15,6 +17,7 @@
     "LorePack_Helpers",
     "The_Big_Deal_Campaign_Add-on",
     "BTX_CAC_Compatibility",
+    "CompanyDecorations"
   ],
   "DataAddendumEntries": [
     { "name": "BattleTech.FactionEnumeration", "path": "enums/Faction.json" }
@@ -23,6 +26,8 @@
     { "Type": "FlashpointDef", "Path": "flashpoints", "AddToDB": true },
     { "Type": "SimGameMilestoneSet", "Path": "milestoneSets" },
     { "Type": "ContractOverride", "Path": "contracts", "AddToDB": true },
+    { "Type": "LanceDef", "Path": "lance", "AddToDB": true },
+    { "Type": "AbilityDef", "Path": "abilities", "AddToDB": true },
     { "Type": "PilotDef", "Path": "pilot", "AddToDB": true },
     { "Type": "SimGameConversations", "Path": "simGameConversations" },
     { "Type": "CastDef", "Path": "cast" },
