@@ -1,0 +1,40 @@
+{
+  "ID": "c_fp_lp4sw_FamilyMatters4_Mission4_2",
+  "RandomSpawns": { "Enable": false },
+  "HotDropProtection": { "Enable": false },
+  "AdditionalLances": {
+    "Enable": true,
+    "UseDialogue": true,
+    "ShowObjectiveOnLanceDetected": true,
+    "EnemyLanceObjectiveNames": [
+      "Destroy Enemy Reinforcements"
+    ],
+    "HideObjective": true,
+    "AlwaysDisplayHiddenObjectiveIfPrimary": false,
+    "AllyLances": [
+      "lp4sw_FamilyMatters_M2_Stewart_Pegasus",
+      "lp4sw_FamilyMatters_M2_Stewart_Condor",
+      "lp4sw_FamilyMatters_M2_Stewart_Maxim"
+    ],
+    "AllyLanceCount": 3,
+    "EnemyLances": [
+      "lp4sw_FamilyMatters4_M2_Enemy_Cavalry"
+    ],
+    "EnemyLanceCount": 1,
+    "DialogueCastDefId": "castDef_Davion_Craig_Stewart",
+    "Dialogue": "Oh god, Commander, they've drooped us on top of the facility. Get her as fast as you can to support us!"
+  },
+  "ExtendedLances": {
+    "Enable": false,
+    "TargetLanceSize": 4,
+    "EmployerLanceSize": 4,
+    "TargetAllyLanceSize": 4,
+    "EmployerAllyLanceSize": 4,
+    "HostileToAllLanceSize": 4,
+    "NeutralToAllLanceSize": 4,
+    "Autofill": false
+  },
+  "ExtendedBoundaries": { "Enable": true, "IncreaseBoundarySizeByPercentage": 1 },
+  "DynamicWithdraw": { "Enable": false },
+  "AdditionalPlayerMechs": { "Enable": false }
+}
