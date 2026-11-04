@@ -335,7 +335,7 @@
         "Icon": null,
         "Name": "Complete",
         "Id": "ms_fp_lp4sw_FamilyMatters2_106_End",
-        "Details": "Family Matters II loot - itemCollection_AEWA_400b; arc end, no late ForceEvents."
+        "Details": "Family Matters II loot - itemCollection_AEWA_400b; hands off to Family Matters III when FamilyMatters3_DateOk is set."
       },
       "Scope": "Company",
       "Requirements": [],
@@ -378,6 +378,58 @@
               "additionalValues": [
                 "itemCollection_AEWA_400b",
                 null
+              ]
+            }
+          ]
+        },
+        {
+          "Scope": "Company",
+          "Requirements": {
+            "Scope": "Company",
+            "RequirementTags": {
+              "items": [
+                "FamilyMatters3_DateOk"
+              ],
+              "tagSetSourceFile": "Tags/CompanyTags"
+            },
+            "ExclusionTags": {
+              "items": [
+                "event_FamilyMatters3_open_seen"
+              ],
+              "tagSetSourceFile": "Tags/CompanyTags"
+            },
+            "RequirementComparisons": []
+          },
+          "AddedTags": {
+            "items": [
+              "event_FamilyMatters3_open_seen",
+              "FamilyMatters3_Active"
+            ],
+            "tagSetSourceFile": "Tags/CompanyTags"
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Stats": [],
+          "ForceEvents": [
+            {
+              "Scope": "Company",
+              "EventID": "FE-4W-RAT-20",
+              "MinDaysWait": 1,
+              "MaxDaysWait": 1,
+              "Probability": 100
+            }
+          ],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": [
+            {
+              "Type": "System_AddFlashpoint",
+              "value": "fp_lp4sw_FamilyMatters3",
+              "valueConstant": null,
+              "additionalValues": [
+                "starsystemdef_Saiph"
               ]
             }
           ]
@@ -510,7 +562,9 @@
               "LiaoBane_Active",
               "LiaoBane2_Active",
               "FamilyMatters_Active",
-              "FamilyMatters2_Active"
+              "FamilyMatters2_Active",
+              "MercRelations_Active",
+              "MercRelations2_Active"
             ],
             "tagSetSourceFile": "Tags/CompanyTags"
           },

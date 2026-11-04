@@ -1,0 +1,612 @@
+{
+  "StartingMilestoneID": "ms_fp_lp4sw_FamilyMatters4_001_Start",
+  "Milestones": [
+    {
+      "Description": {
+        "Icon": null,
+        "Name": "Start",
+        "Id": "ms_fp_lp4sw_FamilyMatters4_001_Start",
+        "Details": "Family Matters IV - tag cleanup -> 101_Talk"
+      },
+      "Scope": "Company",
+      "Requirements": [],
+      "Repeatable": false,
+      "UseRandomInvocation": false,
+      "InvokeChance": 0,
+      "Results": [
+        {
+          "Scope": "Company",
+          "Requirements": null,
+          "AddedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "RemovedTags": {
+            "items": [
+              "FamilyMatters4_m1_done",
+              "FamilyMatters4_m2_done"
+            ],
+            "tagSetSourceFile": "Tags/CompanyTags"
+          },
+          "Stats": [],
+          "ForceEvents": [],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": []
+        },
+        {
+          "Scope": "Company",
+          "Requirements": null,
+          "AddedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Stats": [],
+          "ForceEvents": [],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": [
+            {
+              "Type": "Flashpoint_SetNextMilestone",
+              "value": "ms_fp_lp4sw_FamilyMatters4_101_Talk",
+              "valueConstant": null,
+              "additionalValues": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Description": {
+        "Icon": null,
+        "Name": "Talk",
+        "Id": "ms_fp_lp4sw_FamilyMatters4_101_Talk",
+        "Details": "Family Matters IV: Tall Tales"
+      },
+      "Scope": "Company",
+      "Requirements": [],
+      "Repeatable": false,
+      "UseRandomInvocation": false,
+      "InvokeChance": 0,
+      "Results": [
+        {
+          "Scope": "Company",
+          "Requirements": null,
+          "AddedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Stats": [],
+          "ForceEvents": [],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": [
+            {
+              "Type": "System_StartConversation",
+              "value": "44a4923ae0aa368d00e48af9",
+              "valueConstant": null,
+              "additionalValues": [
+                "Family Matters IV: Tall Tales",
+                "Tall Trees",
+                "Briefing",
+                null
+              ]
+            },
+            {
+              "Type": "Flashpoint_SetNextMilestone",
+              "value": "ms_fp_lp4sw_FamilyMatters4_102_Mission",
+              "valueConstant": null,
+              "additionalValues": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Description": {
+        "Icon": null,
+        "Name": "Mission",
+        "Id": "ms_fp_lp4sw_FamilyMatters4_102_Mission",
+        "Details": "c_fp_lp4sw_FamilyMatters4_Mission4_1"
+      },
+      "Scope": "Company",
+      "Requirements": [],
+      "Repeatable": false,
+      "UseRandomInvocation": false,
+      "InvokeChance": 0,
+      "Results": [
+        {
+          "Scope": "Company",
+          "Requirements": null,
+          "AddedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Stats": [],
+          "ForceEvents": [],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": [
+            {
+              "Type": "Flashpoint_AddContract",
+              "value": "mapGeneral_highPeak_iGlc",
+              "valueConstant": null,
+              "additionalValues": [
+                "",
+                "43cd018c-5bd3-497a-95d4-76291e458daf",
+                "c_fp_lp4sw_FamilyMatters4_Mission4_1",
+                "Davion",
+                "Liao",
+                "4",
+                "ms_fp_lp4sw_FamilyMatters4_103_Talk",
+                null,
+                null,
+                "ms_fp_lp4sw_AEWA_900_Talk",
+                null,
+                null
+              ]
+            },
+            {
+              "Type": "System_ForceDropshipRoom",
+              "value": "Contract",
+              "valueConstant": null,
+              "additionalValues": [
+                "BaseFlashpoint"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Description": {
+        "Icon": null,
+        "Name": "Talk",
+        "Id": "ms_fp_lp4sw_FamilyMatters4_103_Talk",
+        "Details": "Family Matters IV: Tall Stories"
+      },
+      "Scope": "Company",
+      "Requirements": [],
+      "Repeatable": false,
+      "UseRandomInvocation": false,
+      "InvokeChance": 0,
+      "Results": [
+        {
+          "Scope": "Company",
+          "Requirements": null,
+          "AddedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Stats": [],
+          "ForceEvents": [],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": [
+            {
+              "Type": "System_StartConversation",
+              "value": "4d9ac6177f82121a1f8b2abb",
+              "valueConstant": null,
+              "additionalValues": [
+                "Family Matters IV: Tall Stories",
+                "Tall Trees",
+                "Briefing",
+                null
+              ]
+            },
+            {
+              "Type": "Flashpoint_SetNextMilestone",
+              "value": "ms_fp_lp4sw_FamilyMatters4_104_Mission",
+              "valueConstant": null,
+              "additionalValues": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Description": {
+        "Icon": null,
+        "Name": "Mission",
+        "Id": "ms_fp_lp4sw_FamilyMatters4_104_Mission",
+        "Details": "c_fp_lp4sw_FamilyMatters4_Mission4_2"
+      },
+      "Scope": "Company",
+      "Requirements": [],
+      "Repeatable": false,
+      "UseRandomInvocation": false,
+      "InvokeChance": 0,
+      "Results": [
+        {
+          "Scope": "Company",
+          "Requirements": null,
+          "AddedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Stats": [],
+          "ForceEvents": [],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": [
+            {
+              "Type": "Flashpoint_AddContract",
+              "value": "mapGeneral_frostySlopes_iTnd",
+              "valueConstant": null,
+              "additionalValues": [
+                "",
+                "518aca65-7c33-4bc2-8632-717240d5f2de",
+                "c_fp_lp4sw_FamilyMatters4_Mission4_2",
+                "Davion",
+                "Liao",
+                "4",
+                "ms_fp_lp4sw_FamilyMatters4_105_Talk",
+                null,
+                null,
+                "ms_fp_lp4sw_AEWA_900_Talk",
+                null,
+                null
+              ]
+            },
+            {
+              "Type": "System_ForceDropshipRoom",
+              "value": "Contract",
+              "valueConstant": null,
+              "additionalValues": [
+                "BaseFlashpoint"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Description": {
+        "Icon": null,
+        "Name": "Talk",
+        "Id": "ms_fp_lp4sw_FamilyMatters4_105_Talk",
+        "Details": "Family Matters IV: Tall Fall"
+      },
+      "Scope": "Company",
+      "Requirements": [],
+      "Repeatable": false,
+      "UseRandomInvocation": false,
+      "InvokeChance": 0,
+      "Results": [
+        {
+          "Scope": "Company",
+          "Requirements": null,
+          "AddedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Stats": [],
+          "ForceEvents": [],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": [
+            {
+              "Type": "System_StartConversation",
+              "value": "2b038cfe81f0e75e76d83134",
+              "valueConstant": null,
+              "additionalValues": [
+                "Family Matters IV: Tall Fall",
+                "Tall Trees",
+                "Debrief",
+                null
+              ]
+            },
+            {
+              "Type": "Flashpoint_SetNextMilestone",
+              "value": "ms_fp_lp4sw_FamilyMatters4_106_End",
+              "valueConstant": null,
+              "additionalValues": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Description": {
+        "Icon": null,
+        "Name": "Complete",
+        "Id": "ms_fp_lp4sw_FamilyMatters4_106_End",
+        "Details": "Family Matters IV loot — itemCollection_AEWA_404"
+      },
+      "Scope": "Company",
+      "Requirements": [],
+      "Repeatable": false,
+      "UseRandomInvocation": false,
+      "InvokeChance": 0,
+      "Results": [
+        {
+          "Scope": "Company",
+          "Requirements": null,
+          "AddedTags": {
+            "items": [
+              "fp_finished_FamilyMatters4_success",
+              "decoration_Davion_SunburstSilver",
+              "decoration_Davion_OperationRAT_FamilyMatters"
+            ],
+            "tagSetSourceFile": "Tags/CompanyTags"
+          },
+          "RemovedTags": {
+            "items": [
+              "FamilyMatters4_Active",
+              "FamilyMatters4_m1_done",
+              "FamilyMatters4_m2_done"
+            ],
+            "tagSetSourceFile": "Tags/CompanyTags"
+          },
+          "Stats": [],
+          "ForceEvents": [
+            {
+              "Scope": "Company",
+              "EventID": "event_decoration_Davion_SunburstSilver",
+              "MinDaysWait": 1,
+              "MaxDaysWait": 1,
+              "Probability": 100
+            },
+            {
+              "Scope": "Company",
+              "EventID": "event_decoration_Davion_OperationRAT_FamilyMatters",
+              "MinDaysWait": 2,
+              "MaxDaysWait": 2,
+              "Probability": 100
+            }
+          ],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": [
+            {
+              "Type": "System_ForceDropshipRoom",
+              "value": "Ship",
+              "valueConstant": null,
+              "additionalValues": null
+            },
+            {
+              "Type": "Flashpoint_CompleteFlashpoint",
+              "value": "ms_fp_lp4sw_FamilyMatters4_106_Reward",
+              "valueConstant": null,
+              "additionalValues": [
+                "itemCollection_AEWA_404",
+                null
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Description": {
+        "Icon": null,
+        "Name": "Reward",
+        "Id": "ms_fp_lp4sw_FamilyMatters4_106_Reward",
+        "Details": "Family Matters IV payout — $400,000 + Davion +2"
+      },
+      "Scope": "Company",
+      "Requirements": [],
+      "Repeatable": false,
+      "UseRandomInvocation": false,
+      "InvokeChance": 0,
+      "Results": [
+        {
+          "Scope": "Company",
+          "Requirements": null,
+          "AddedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Stats": [
+            {
+              "typeString": "System.Int32",
+              "name": "Funds",
+              "value": "400000",
+              "set": false,
+              "valueConstant": null
+            },
+            {
+              "typeString": "System.Int32",
+              "name": "Reputation.Davion",
+              "value": "2",
+              "set": false,
+              "valueConstant": null
+            }
+          ],
+          "ForceEvents": [],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": []
+        }
+      ]
+    },
+    {
+      "Description": {
+        "Icon": null,
+        "Name": "Talk",
+        "Id": "ms_fp_lp4sw_AEWA_900_Talk",
+        "Details": "Shared AEWA fail hub — Fox-identical Talk/Complete split (ChargeGuard I/II + LiaoBane I/II)"
+      },
+      "Scope": "Company",
+      "Requirements": [],
+      "Repeatable": false,
+      "UseRandomInvocation": false,
+      "InvokeChance": 0,
+      "Results": [
+        {
+          "Scope": "Company",
+          "Requirements": null,
+          "AddedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Stats": [],
+          "ForceEvents": [],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": [
+            {
+              "Type": "System_StartConversation",
+              "value": "3134e8810ee258758024ae2c",
+              "valueConstant": null,
+              "additionalValues": [
+                "Charge of the Guards Ã¢â‚¬â€ Failure",
+                "Capellan March",
+                "Debrief",
+                null
+              ]
+            },
+            {
+              "Type": "Flashpoint_SetNextMilestone",
+              "value": "ms_fp_lp4sw_AEWA_900_Complete",
+              "valueConstant": null,
+              "additionalValues": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Description": {
+        "Icon": null,
+        "Name": "Complete",
+        "Id": "ms_fp_lp4sw_AEWA_900_Complete",
+        "Details": "Fail end â€” fp_finished_AEWA_failed; handoff to 900_Reward (FIX-ARC-002 split)"
+      },
+      "Scope": "Company",
+      "Requirements": [],
+      "Repeatable": false,
+      "UseRandomInvocation": false,
+      "InvokeChance": 0,
+      "Results": [
+        {
+          "Scope": "Company",
+          "Requirements": null,
+          "AddedTags": {
+            "items": [
+              "fp_finished_AEWA_failed"
+            ],
+            "tagSetSourceFile": "Tags/CompanyTags"
+          },
+          "RemovedTags": {
+            "items": [
+              "ChargeGuard_Active",
+              "ChargeGuard2_Active",
+              "LiaoBane_Active",
+              "LiaoBane2_Active",
+              "FamilyMatters_Active",
+              "FamilyMatters2_Active",
+              "FamilyMatters3_Active",
+              "FamilyMatters4_Active",
+              "MercRelations_Active",
+              "MercRelations2_Active",
+              "LiaoBane3_Active",
+              "LiaoBane4_Active"
+            ],
+            "tagSetSourceFile": "Tags/CompanyTags"
+          },
+          "Stats": [],
+          "ForceEvents": [],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": [
+            {
+              "Type": "System_ForceDropshipRoom",
+              "value": "Ship",
+              "valueConstant": null,
+              "additionalValues": null
+            },
+            {
+              "Type": "Flashpoint_CompleteFlashpoint",
+              "value": "ms_fp_lp4sw_AEWA_900_Reward",
+              "valueConstant": null,
+              "additionalValues": [
+                null,
+                null
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Description": {
+        "Icon": null,
+        "Name": "Reward",
+        "Id": "ms_fp_lp4sw_AEWA_900_Reward",
+        "Details": "Fail penalty â€” -,000,000 + Davion -50 (Stats off CompleteFlashpoint step; shared AEWA hub)"
+      },
+      "Scope": "Company",
+      "Requirements": [],
+      "Repeatable": false,
+      "UseRandomInvocation": false,
+      "InvokeChance": 0,
+      "Results": [
+        {
+          "Scope": "Company",
+          "Requirements": null,
+          "AddedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Stats": [
+            {
+              "typeString": "System.Int32",
+              "name": "Funds",
+              "value": "-1000000",
+              "set": false,
+              "valueConstant": null
+            },
+            {
+              "typeString": "System.Int32",
+              "name": "Reputation.Davion",
+              "value": "-50",
+              "set": false,
+              "valueConstant": null
+            }
+          ],
+          "ForceEvents": [],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": []
+        }
+      ]
+    }
+  ]
+}
