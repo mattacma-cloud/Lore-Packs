@@ -1,0 +1,113 @@
+{
+  "Description": {
+    "Id": "abilitydef_lp4sw_fm_move_cap_25",
+    "Name": "Seized Actuators",
+    "Details": "Walk, run, and jump are cut to a quarter.",
+    "Icon": "UixSvgIcon_specialEquip_System"
+  },
+  "Type": "Trait",
+  "ShortDesc": "Movement cut to 25 percent",
+  "DisplayParams": "ShowInMWTRay",
+  "ActivationTime": "Passive",
+  "EffectData": [
+    {
+      "Description": {
+        "Id": "StatusEffect-lp4sw-fm-WalkSpeed",
+        "Name": "Seized Actuators",
+        "Details": "Walk distance is cut to a quarter.",
+        "Icon": "UixSvgIcon_specialEquip_System"
+      },
+      "effectType": "StatisticEffect",
+      "nature": "Debuff",
+      "durationData": { "duration": -1, "stackLimit": 1 },
+      "targetingData": {
+        "effectTriggerType": "Passive",
+        "effectTargetType": "Creator",
+        "forcePathRebuild": true,
+        "showInTargetPreview": false,
+        "showInStatusPanel": true,
+        "hideApplicationFloatie": false
+      },
+      "statisticData": {
+        "appliesEachTick": false,
+        "effectsPersistAfterDestruction": false,
+        "statName": "WalkSpeed",
+        "operation": "Float_Multiply",
+        "modValue": "0.25",
+        "modType": "System.Single",
+        "additionalRules": "NotSet",
+        "targetCollection": "NotSet",
+        "targetWeaponCategory": "NotSet",
+        "targetWeaponType": "NotSet",
+        "targetAmmoCategory": "NotSet",
+        "targetWeaponSubType": "NotSet"
+      }
+    },
+    {
+      "Description": {
+        "Id": "StatusEffect-lp4sw-fm-RunSpeed",
+        "Name": "Seized Actuators",
+        "Details": "Run distance is cut to a quarter.",
+        "Icon": "UixSvgIcon_specialEquip_System"
+      },
+      "effectType": "StatisticEffect",
+      "nature": "Debuff",
+      "durationData": { "duration": -1, "stackLimit": 1 },
+      "targetingData": {
+        "effectTriggerType": "Passive",
+        "effectTargetType": "Creator",
+        "forcePathRebuild": true,
+        "showInTargetPreview": false,
+        "showInStatusPanel": true,
+        "hideApplicationFloatie": false
+      },
+      "statisticData": {
+        "appliesEachTick": false,
+        "effectsPersistAfterDestruction": false,
+        "statName": "RunSpeed",
+        "operation": "Float_Multiply",
+        "modValue": "0.25",
+        "modType": "System.Single",
+        "additionalRules": "NotSet",
+        "targetCollection": "NotSet",
+        "targetWeaponCategory": "NotSet",
+        "targetWeaponType": "NotSet",
+        "targetAmmoCategory": "NotSet",
+        "targetWeaponSubType": "NotSet"
+      }
+    },
+    {
+      "Description": {
+        "Id": "StatusEffect-lp4sw-fm-JumpDistance",
+        "Name": "Seized Actuators",
+        "Details": "Jump distance is cut to a quarter.",
+        "Icon": "UixSvgIcon_specialEquip_System"
+      },
+      "effectType": "StatisticEffect",
+      "nature": "Debuff",
+      "durationData": { "duration": -1, "stackLimit": 1 },
+      "targetingData": {
+        "effectTriggerType": "Passive",
+        "effectTargetType": "Creator",
+        "forcePathRebuild": true,
+        "showInTargetPreview": false,
+        "showInStatusPanel": true,
+        "hideApplicationFloatie": false
+      },
+      "statisticData": {
+        "appliesEachTick": false,
+        "effectsPersistAfterDestruction": false,
+        "statName": "JumpDistance",
+        "operation": "Float_Multiply",
+        "modValue": "0.25",
+        "modType": "System.Single",
+        "additionalRules": "NotSet",
+        "targetCollection": "NotSet",
+        "targetWeaponCategory": "NotSet",
+        "targetWeaponType": "NotSet",
+        "targetAmmoCategory": "NotSet",
+        "targetWeaponSubType": "NotSet"
+      }
+    }
+  ]
+}

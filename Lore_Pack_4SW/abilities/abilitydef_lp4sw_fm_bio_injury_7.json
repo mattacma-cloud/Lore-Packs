@@ -1,0 +1,51 @@
+{
+  "Description": {
+    "Id": "abilitydef_lp4sw_fm_bio_injury_7",
+    "Name": "Pathogen Exposure",
+    "Details": "One injury at the end of every seventh round.",
+    "Icon": "UixSvgIcon_specialEquip_System"
+  },
+  "Type": "Trait",
+  "ShortDesc": "Injury every seven rounds",
+  "DisplayParams": "NeverShow",
+  "ActivationTime": "Passive",
+  "EffectData": [
+    {
+      "Description": {
+        "Id": "StatusEffect-lp4sw-fm-bio-injury",
+        "Name": "Pathogen Exposure",
+        "Details": "The Tall Trees pathogen adds one injury every seven rounds.",
+        "Icon": "UixSvgIcon_specialEquip_System"
+      },
+      "effectType": "StatisticEffect",
+      "nature": "Debuff",
+      "durationData": {
+        "duration": 7,
+        "stackLimit": 3,
+        "ticksOnEndOfRound": true,
+        "ticksOnActivations": false
+      },
+      "targetingData": {
+        "effectTriggerType": "Passive",
+        "effectTargetType": "Creator",
+        "showInTargetPreview": false,
+        "showInStatusPanel": true,
+        "hideApplicationFloatie": false
+      },
+      "statisticData": {
+        "appliesEachTick": true,
+        "effectsPersistAfterDestruction": true,
+        "statName": "Injuries",
+        "operation": "Int_Add",
+        "modValue": "1",
+        "modType": "System.Int32",
+        "additionalRules": "NotSet",
+        "targetCollection": "NotSet",
+        "targetWeaponCategory": "NotSet",
+        "targetWeaponType": "NotSet",
+        "targetAmmoCategory": "NotSet",
+        "targetWeaponSubType": "NotSet"
+      }
+    }
+  ]
+}
