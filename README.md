@@ -26,7 +26,7 @@ Thanks to the following folks for assisting with making these flashpoints work: 
 
 **INSTALLATION**
 
-Drag the Lore_Pack_4SW, LorePack_Helpers, Lore_Pack_4SW_FP_Cap and MissionControl folders into your \BATTLETECH\Mods folder
+Drag the Lore_Pack_4SW, LorePack_Helpers, Lore_Pack_4SW_FP_Cap and MissionControl folders into your \BATTLETECH\Mods folder and copy over files when promted to do so.
 
 
 **CURRENT DEPENDENCIES**
@@ -45,15 +45,15 @@ Drag the Lore_Pack_4SW, LorePack_Helpers, Lore_Pack_4SW_FP_Cap and MissionContro
 - The Big Deal
 
 
-**GAME PLAY NOTES AS OF RELEASE 0.1.77**
+**GAME PLAY NOTES AS OF RELEASE 0.1.78**
 
 You must complete Touring Tikonov, or use the BattleTech Save Editor to give yourself the tag "Ardan_is_Interested", in order for An Evening with Ardan to spawn.
 
 Once you complete An Evening with Ardan, you must advance the timeline and then the relevant Flashpoint will spawn. The non-Crucis Lancer Flashpoints fire in August (Flashpoint I) and then September (Flashpoint II).
 
-**NOTE:** Foxes of Tikonov and Charge of the Guards, and to a lesser extent, Liao's Bane, are not designed to be easy Flashpoints. You will face difficult missions against skilled, well equipped, and numerous foes. If you started a 3028 career, you'll get properly pasted. It is advised that you use a 3025 or post-Arano campaign, or the BattleTech Save Editor, so that you can have a fair chance at fishing the Flashpoints. The 4th Deneb Light Cavalry (Family Matters) and 12th Vegan Rangers (Mercenary Relations) are somewhat easier and designed for lower skilled/equipped commands. 
+**NOTE:** Foxes of Tikonov and Charge of the Guards, and to a lesser extent, Liao's Bane, are not designed to be easy Flashpoints. You will face difficult missions against skilled, well equipped, and numerous foes. If you started a 3028 career, you'll get properly pasted. It is advised that you use a 3025, a post-Arano campaign, or the BattleTech Save Editor so that you can have a fair chance at fishing the Flashpoints. The 4th Deneb Light Cavalry (Family Matters) and 12th Vegan Rangers (Mercenary Relations) are somewhat easier and designed for lower skilled/equipped commands. 
 
-Currently, only the Fox's of Tikonov, Charge of the Guards and Liao's Bane arcs are complete, taking you to the end of the 4th Succession War with the 7th Crucis Lancers / McKinnon's Raiders, the 3rd Davion Guards, and the 33rd Avalon Hussars. The remaining Flashpoints for the other Davion arcs, after thier first 2, are in development.
+Currently, only the Fox's of Tikonov, Charge of the Guards, Liao's Bane and Family Matters arcs are complete, taking you to the end of the 4th Succession War with the 7th Crucis Lancers / McKinnon's Raiders, the 3rd Davion Guards, the 33rd Avalon Hussars and the 4th Deneb Light Cavalry. The remaining Flashpoints for the 12th Vegan Ranger arc, after thier first 2, are in development.
 
 **Lore Packs Development Map Version Plan**
 
@@ -75,7 +75,7 @@ Currently, only the Fox's of Tikonov, Charge of the Guards and Liao's Bane arcs 
 
 **IN ACTIVE DEVELOPMENT**
 
-Flashpoints 3-4 of Family Matters.
+Flashpoints 3-7 of Mercenary Relations.
 
 **IN PRE-DEVELOPMENT**
 
