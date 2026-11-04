@@ -1,0 +1,44 @@
+{
+    "Description": {
+        "Id": "pilotDef_lp4sw_fm_move_cap_tactician",
+        "Name": "Tactician",
+        "FirstName": "Tactician",
+        "LastName": "NONE",
+        "Callsign": "Tactician",
+        "Gender": "Female",
+        "factionID": "Davion",
+        "Age": 30,
+        "Details": "NONE",
+        "Icon": "Wildfire"
+    },
+    "BaseGunnery": "4",
+    "BonusGunnery": 0,
+    "BasePiloting": "3",
+    "BonusPiloting": 0,
+    "BaseGuts": "2",
+    "BonusGuts": 0,
+    "BaseTactics": "5",
+    "BonusTactics": 0,
+    "ExperienceUnspent": 0,
+    "ExperienceSpent": 0,
+    "Injuries": 0,
+    "Health": 3,
+    "LethalInjury": false,
+    "Incapacitated": false,
+    "Morale": 0,
+    "Voice": "f_overload01",
+    "abilityDefNames": [
+        "abilitydef_lp4sw_fm_move_cap_25",
+		"TraitDefIndirectReduceOne",
+		"TraitDefMinRangeReduce45",
+		"AbilityDefT5A"
+    ],
+    "AIPersonality": "Undefined",
+    "PilotTags": {
+        "items": [
+            "pilot_lp4sw_fm_move_cap"
+        ],
+        "tagSetSourceFile": ""
+    },
+    "PilotCost": 0
+}

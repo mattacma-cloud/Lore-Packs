@@ -1,0 +1,43 @@
+{
+    "Description": {
+        "Id": "pilotDef_lp4sw_fm_move_cap_pilot",
+        "Name": "Pilot",
+        "FirstName": "Pilot",
+        "LastName": "NONE",
+        "Callsign": "Pilot",
+        "Gender": "Female",
+        "factionID": "Davion",
+        "Age": 30,
+        "Details": "NONE",
+        "Icon": "Wildfire"
+    },
+    "BaseGunnery": "4",
+    "BonusGunnery": 0,
+    "BasePiloting": "5",
+    "BonusPiloting": 0,
+    "BaseGuts": "3",
+    "BonusGuts": 0,
+    "BaseTactics": "2",
+    "BonusTactics": 0,
+    "ExperienceUnspent": 0,
+    "ExperienceSpent": 0,
+    "Injuries": 0,
+    "Health": 3,
+    "LethalInjury": false,
+    "Incapacitated": false,
+    "Morale": 0,
+    "Voice": "f_overload01",
+    "abilityDefNames": [
+        "abilitydef_lp4sw_fm_move_cap_25",
+		"TraitDefUnsteadySet60",
+		"AbilityDefP5"
+    ],
+    "AIPersonality": "Undefined",
+    "PilotTags": {
+        "items": [
+            "pilot_lp4sw_fm_move_cap"
+        ],
+        "tagSetSourceFile": ""
+    },
+    "PilotCost": 0
+}
