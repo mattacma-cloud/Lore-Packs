@@ -1,0 +1,72 @@
+{
+  "AllowRefitTime": true,
+  "AvailableTimeout": 0,
+  "Description": {
+    "Icon": "uixTxrSpot_fp_lp4sw_AEWA.png",
+    "Name": "Family Matters IV",
+    "Id": "fp_lp4sw_FamilyMatters4",
+    "Details": "Commander, the 4th Deneb Light Cavalry are ready for us on [[DM.SystemDefs[starsystemdef_TallTrees],Tall Trees]]. We won't have long to launch the operation there, so we best get a move on."
+  },
+  "InProgressTimeout": 0,
+  "UnitDropTonnageHint": "Mixed",
+  "Repeatable": false,
+  "FlashpointDescriberCastDefId": "castDef_Davion_Vernon_Fredricks",
+  "LocationRequirements": {
+    "Scope": "StarSystem",
+    "RequirementTags": {
+      "items": [
+        "planet_name_talltrees"
+      ],
+      "tagSetSourceFile": "Tags/PlanetNameTags"
+    },
+    "RequirementComparisons": [],
+    "ExclusionTags": {
+      "items": [],
+      "tagSetSourceFile": ""
+    }
+  },
+  "RewardCollectionID": "itemCollection_AEWA_404",
+  "TargetFaction": "Liao",
+  "PotentialEmployers": [
+    "Davion"
+  ],
+  "PublishState": "PUBLISHED",
+  "FlashpointShortDescription": "The Fourth Wave of Operation Rat is ready to commence.",
+  "MilestoneSetID": "ms_fp_lp4sw_FamilyMatters4",
+  "Difficulty": 4,
+  "Tags": {
+    "items": [
+      "BLACKLISTED"
+    ],
+    "tagSetSourceFile": "tags/FlashpointTags"
+  },
+  "UseAvailableTimeoutOverride": false,
+  "UseInProgressTimeoutOverride": false,
+  "Requirements": [
+    {
+      "Scope": "Company",
+      "RequirementTags": {
+        "items": [
+          "fp_finished_FamilyMatters3_success",
+          "FamilyMatters4_Active",
+          "timeline_3029_01_12"
+        ],
+        "tagSetSourceFile": "Tags/CompanyTags"
+      },
+      "RequirementComparisons": [],
+      "ExclusionTags": {
+        "items": [
+          "fp_finished_FamilyMatters4_success",
+          "fp_finished_FamilyMatters4_failed",
+          "FamilyMatters4_closed",
+          "timeline_3029_03_12"
+        ],
+        "tagSetSourceFile": "Tags/CompanyTags"
+      }
+    }
+  ],
+  "LanceDropTonnageHint": "Mixed",
+  "FlashpointLength": "SHORT",
+  "InternalName": "lp4sw_FamilyMatters4",
+  "Weight": 1000
+}
