@@ -11,8 +11,7 @@
     "Scope": "Company",
     "RequirementTags": {
       "items": [
-        "fp_finished_FamilyMatters_success",
-        "FamilyMatters2_DateOk"
+        "fp_finished_FamilyMatters_success"
       ],
       "tagSetSourceFile": "Tags/CompanyTags"
     },

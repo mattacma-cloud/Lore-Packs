@@ -1,0 +1,118 @@
+{
+  "Description": {
+    "Id": "FE-4W-RAT-20",
+    "Name": "4th Deneb Light Cavalry Priority Contract Available",
+    "Details": "Marshal Fredricks requests our presence on [[DM.SystemDefs[starsystemdef_Saiph],Saiph]] for the next phase of Operation RAT to assist the 4th Deneb Light Cavalry RCT.",
+    "Icon": "uixTxrTimeLine_ComStarNewsBureau.png"
+  },
+  "Scope": "Company",
+  "Weight": 0,
+  "Requirements": {
+    "Scope": "Company",
+    "RequirementTags": {
+      "items": [
+        "fp_finished_FamilyMatters2_success",
+        "FamilyMatters3_DateOk"
+      ],
+      "tagSetSourceFile": "Tags/CompanyTags"
+    },
+    "ExclusionTags": {
+      "items": [
+        "event_FamilyMatters3_open_seen",
+        "fp_finished_FamilyMatters3_success",
+        "FamilyMatters3_closed",
+        "timeline_3029_01_18"
+      ],
+      "tagSetSourceFile": "Tags/CompanyTags"
+    },
+    "RequirementComparisons": []
+  },
+  "AdditionalRequirements": [],
+  "AdditionalObjects": [],
+  "Options": [
+    {
+      "Description": {
+        "Id": "outcome_0",
+        "Name": "Accept the Offer",
+        "Details": "The contract to serve alongside the 4th Deneb Light Cavalry RCT is now available in the Saiph system.",
+        "Icon": ""
+      },
+      "RequirementList": [],
+      "ResultSets": [
+        {
+          "Description": {
+            "Id": "outcome_0_0",
+            "Name": "Operation RAT - Wave 3: Deployment to Saiph",
+            "Details": "The contract to serve alongside the 4th Deneb Light Cavalry RCT is now available in the Saiph system.",
+            "Icon": ""
+          },
+          "Weight": 100,
+          "Results": [
+            {
+              "Scope": "Company",
+              "Requirements": null,
+              "AddedTags": {
+                "items": [
+                  "event_FamilyMatters3_open_seen",
+                  "FamilyMatters3_Active",
+                  "FamilyMatters3_DateOk"
+                ],
+                "tagSetSourceFile": "Tags/CompanyTags"
+              },
+              "RemovedTags": {
+                "items": null,
+                "tagSetSourceFile": ""
+              },
+              "Stats": null,
+              "Actions": null,
+              "ForceEvents": null,
+              "TemporaryResult": false,
+              "ResultDuration": 0
+            },
+            {
+              "Scope": "Company",
+              "Requirements": null,
+              "AddedTags": {
+                "items": null,
+                "tagSetSourceFile": ""
+              },
+              "RemovedTags": {
+                "items": null,
+                "tagSetSourceFile": ""
+              },
+              "Stats": null,
+              "Actions": [
+                {
+                  "Type": "System_AddFlashpoint",
+                  "value": "fp_lp4sw_FamilyMatters3",
+                  "valueConstant": null,
+                  "additionalValues": [
+                    "starsystemdef_Saiph"
+                  ]
+                }
+              ],
+              "ForceEvents": null,
+              "TemporaryResult": false,
+              "ResultDuration": 0
+            }
+          ]
+        }
+      ],
+      "Requirements": {
+        "Scope": "Company",
+        "RequirementTags": {
+          "items": null,
+          "tagSetSourceFile": ""
+        },
+        "ExclusionTags": {
+          "items": null,
+          "tagSetSourceFile": ""
+        },
+        "RequirementComparisons": []
+      }
+    }
+  ],
+  "PublishState": "PUBLISHED",
+  "ValidationState": "UNTESTED",
+  "EventType": "NORMAL"
+}
