@@ -38,7 +38,7 @@
                                        {
                                            "unitType":  "Mech",
                                            "customHeraldryDefId":  "heraldrydef_merc7a",
-                                           "customUnitName":  "",
+                                           "customUnitName":  "MW Ramzi Angelova",
                                            "unitDefId":  "mechdef_hunchback_HBK-4J",
                                            "unitTagSet":  {
                                                               "items":  [
@@ -70,7 +70,7 @@
                                        {
                                            "unitType":  "Mech",
                                            "customHeraldryDefId":  "heraldrydef_merc7a",
-                                           "customUnitName":  "",
+                                           "customUnitName":  "MW Radojka Petran",
                                            "unitDefId":  "mechdef_grasshopper_GHR-5H",
                                            "unitTagSet":  {
                                                               "items":  [
@@ -102,7 +102,7 @@
                                        {
                                            "unitType":  "Mech",
                                            "customHeraldryDefId":  "heraldrydef_merc7a",
-                                           "customUnitName":  "",
+                                           "customUnitName":  "MW Fahima Ibrohimov",
                                            "unitDefId":  "mechdef_rifleman_RFL-3N",
                                            "unitTagSet":  {
                                                               "items":  [

@@ -14,7 +14,7 @@
     "showLastName" : true,
     "defaultEmotePortrait" : {
         "emote" : "Default",
-        "portraitAssetPath" : "Portraits/guiTxrPort_Mandella.png"
+        "portraitAssetPath" : "../../Mods/Lore_Pack_4SW/portraits/guiTxrPort_Mandella.png"
     },
     "emotePotraitList" : [
         

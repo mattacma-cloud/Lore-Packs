@@ -654,7 +654,9 @@
               "LiaoBane_Active",
               "LiaoBane2_Active",
               "FamilyMatters_Active",
-              "FamilyMatters2_Active"
+              "FamilyMatters2_Active",
+              "MercRelations_Active",
+              "MercRelations2_Active"
             ],
             "tagSetSourceFile": "Tags/CompanyTags"
           },

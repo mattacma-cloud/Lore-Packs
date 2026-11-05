@@ -318,7 +318,7 @@
         "Icon": null,
         "Name": "Complete 7CL",
         "Id": "ms_fp_lp4sw_AEWA_004_Complete_7CL",
-        "Details": "FP1 complete — MercNet FE-4W-RAT-03 queued +1 sim day (Phase B)"
+        "Details": "FP1 complete \u2014 MercNet FE-4W-RAT-03 queued +1 sim day (Phase B)"
       },
       "Scope": "Company",
       "Requirements": [],
@@ -377,7 +377,7 @@
         "Icon": null,
         "Name": "Complete Stub 3DG",
         "Id": "ms_fp_lp4sw_AEWA_004_Complete_Stub_3DG",
-        "Details": "FP1 complete — branch 200 not yet available"
+        "Details": "FP1 complete \u2014 calendar open owns CG I on 3028-08-01. Late path: Result B requires ChargeGuard_DateOk then ForceEvents FE-4W-RAT-04 (Result.Requirements gate; ForceEvents alone bypasses event Requirements)."
       },
       "Scope": "Company",
       "Requirements": [],
@@ -402,15 +402,6 @@
           },
           "Actions": [
             {
-              "Type": "System_PauseNotification",
-              "value": "Commander, Colonel Sortek's Algol deployment briefing isn't ready yet. We'll follow up in the Command Center when AFFS staff release the contract.",
-              "valueConstant": null,
-              "additionalValues": [
-                "Priority Mission",
-                "castDef_DariusDefault"
-              ]
-            },
-            {
               "Type": "Flashpoint_CompleteFlashpoint",
               "value": "ms_fp_lp4sw_AEWA_004_Reward",
               "valueConstant": null,
@@ -427,6 +418,43 @@
             }
           ],
           "ForceEvents": [],
+          "TemporaryResult": false,
+          "ResultDuration": 0
+        },
+        {
+          "Scope": "Company",
+          "Requirements": {
+            "Scope": "Company",
+            "RequirementTags": {
+              "items": [
+                "ChargeGuard_DateOk"
+              ],
+              "tagSetSourceFile": "Tags/CompanyTags"
+            },
+            "ExclusionTags": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "RequirementComparisons": []
+          },
+          "AddedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Actions": [],
+          "ForceEvents": [
+            {
+              "Scope": "Company",
+              "EventID": "FE-4W-RAT-04",
+              "MinDaysWait": 0,
+              "MaxDaysWait": 0,
+              "Probability": 100
+            }
+          ],
           "TemporaryResult": false,
           "ResultDuration": 0
         }
@@ -437,7 +465,7 @@
         "Icon": null,
         "Name": "Complete Stub 33AH",
         "Id": "ms_fp_lp4sw_AEWA_004_Complete_Stub_33AH",
-        "Details": "FP1 complete — branch 300 not yet available"
+        "Details": "FP1 complete \u2014 calendar open owns Liao's Bane I on 3028-08-01. Late path: Result B requires LiaoBane_DateOk then ForceEvents FE-4W-RAT-06 (Result.Requirements gate; ForceEvents alone bypasses event Requirements)."
       },
       "Scope": "Company",
       "Requirements": [],
@@ -462,15 +490,6 @@
           },
           "Actions": [
             {
-              "Type": "System_PauseNotification",
-              "value": "Commander, the Avalon liaison package Sortek mentioned isn't on the board yet. Check the Command Center later — House Davion moves on its own schedule.",
-              "valueConstant": null,
-              "additionalValues": [
-                "Priority Mission",
-                "castDef_DariusDefault"
-              ]
-            },
-            {
               "Type": "Flashpoint_CompleteFlashpoint",
               "value": "ms_fp_lp4sw_AEWA_004_Reward",
               "valueConstant": null,
@@ -487,6 +506,43 @@
             }
           ],
           "ForceEvents": [],
+          "TemporaryResult": false,
+          "ResultDuration": 0
+        },
+        {
+          "Scope": "Company",
+          "Requirements": {
+            "Scope": "Company",
+            "RequirementTags": {
+              "items": [
+                "LiaoBane_DateOk"
+              ],
+              "tagSetSourceFile": "Tags/CompanyTags"
+            },
+            "ExclusionTags": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "RequirementComparisons": []
+          },
+          "AddedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Actions": [],
+          "ForceEvents": [
+            {
+              "Scope": "Company",
+              "EventID": "FE-4W-RAT-06",
+              "MinDaysWait": 0,
+              "MaxDaysWait": 0,
+              "Probability": 100
+            }
+          ],
           "TemporaryResult": false,
           "ResultDuration": 0
         }
@@ -497,7 +553,7 @@
         "Icon": null,
         "Name": "Complete Stub 4DLC",
         "Id": "ms_fp_lp4sw_AEWA_004_Complete_Stub_4DLC",
-        "Details": "FP1 complete — branch 400 not yet available"
+        "Details": "FP1 complete \u2014 calendar open owns Family Matters I on 3028-08-01. Late path: Result B requires FamilyMatters_DateOk then ForceEvents FE-4W-RAT-08 (Result.Requirements gate; ForceEvents alone bypasses event Requirements)."
       },
       "Scope": "Company",
       "Requirements": [],
@@ -522,15 +578,6 @@
           },
           "Actions": [
             {
-              "Type": "System_PauseNotification",
-              "value": "Commander, the family-estate operation Sortek outlined is still being cleared. We'll notify you when it's ready for review in the Command Center.",
-              "valueConstant": null,
-              "additionalValues": [
-                "Priority Mission",
-                "castDef_DariusDefault"
-              ]
-            },
-            {
               "Type": "Flashpoint_CompleteFlashpoint",
               "value": "ms_fp_lp4sw_AEWA_004_Reward",
               "valueConstant": null,
@@ -547,6 +594,63 @@
             }
           ],
           "ForceEvents": [],
+          "TemporaryResult": false,
+          "ResultDuration": 0
+        },
+        {
+          "Scope": "Company",
+          "Requirements": {
+            "Scope": "Company",
+            "RequirementTags": {
+              "items": [
+                "FamilyMatters_DateOk"
+              ],
+              "tagSetSourceFile": "Tags/CompanyTags"
+            },
+            "ExclusionTags": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "RequirementComparisons": []
+          },
+          "AddedTags": {
+            "items": [
+              "event_FamilyMatters_open_seen",
+              "FamilyMatters_Active",
+              "event_FamilyMatters_recover_done"
+            ],
+            "tagSetSourceFile": "Tags/CompanyTags"
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Actions": [
+            {
+              "Type": "System_AddFlashpoint",
+              "value": "fp_lp4sw_FamilyMatters",
+              "valueConstant": null,
+              "additionalValues": [
+                "starsystemdef_Aldebaran"
+              ]
+            }
+          ],
+          "ForceEvents": [
+            {
+              "Scope": "Company",
+              "EventID": "FE-4W-RAT-08",
+              "MinDaysWait": 0,
+              "MaxDaysWait": 0,
+              "Probability": 100
+            },
+            {
+              "Scope": "Company",
+              "EventID": "FE-4W-RAT-08-recover",
+              "MinDaysWait": 1,
+              "MaxDaysWait": 1,
+              "Probability": 100
+            }
+          ],
           "TemporaryResult": false,
           "ResultDuration": 0
         }
@@ -557,7 +661,7 @@
         "Icon": null,
         "Name": "Complete Stub 12VRD",
         "Id": "ms_fp_lp4sw_AEWA_004_Complete_Stub_12VRD",
-        "Details": "FP1 complete — branch 500 not yet available"
+        "Details": "FP1 complete \u2014 calendar open owns Mercenary Relations I on 3028-08-01. Late path: Result B requires MercRelations_DateOk then ForceEvents FE-4W-RAT-10 (Result.Requirements gate; ForceEvents alone bypasses event Requirements). Pre-window Result C keeps the Darius holding message."
       },
       "Scope": "Company",
       "Requirements": [],
@@ -565,6 +669,45 @@
       "UseRandomInvocation": false,
       "InvokeChance": 0,
       "Results": [
+        {
+          "Scope": "Company",
+          "Requirements": {
+            "Scope": "Company",
+            "RequirementTags": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "ExclusionTags": {
+              "items": [
+                "MercRelations_DateOk"
+              ],
+              "tagSetSourceFile": "Tags/CompanyTags"
+            },
+            "RequirementComparisons": []
+          },
+          "AddedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Actions": [
+            {
+              "Type": "System_PauseNotification",
+              "value": "Commander, the mercenary-relations task force hasn't posted their contract yet. We'll pick it up from the Command Center when they're ready for us.",
+              "valueConstant": null,
+              "additionalValues": [
+                "Priority Mission",
+                "castDef_DariusDefault"
+              ]
+            }
+          ],
+          "ForceEvents": [],
+          "TemporaryResult": false,
+          "ResultDuration": 0
+        },
         {
           "Scope": "Company",
           "Requirements": null,
@@ -581,15 +724,6 @@
             "tagSetSourceFile": "Tags/CompanyTags"
           },
           "Actions": [
-            {
-              "Type": "System_PauseNotification",
-              "value": "Commander, the mercenary-relations task force hasn't posted their contract yet. We'll pick it up from the Command Center when they're ready for us.",
-              "valueConstant": null,
-              "additionalValues": [
-                "Priority Mission",
-                "castDef_DariusDefault"
-              ]
-            },
             {
               "Type": "Flashpoint_CompleteFlashpoint",
               "value": "ms_fp_lp4sw_AEWA_004_Reward",
@@ -609,6 +743,43 @@
           "ForceEvents": [],
           "TemporaryResult": false,
           "ResultDuration": 0
+        },
+        {
+          "Scope": "Company",
+          "Requirements": {
+            "Scope": "Company",
+            "RequirementTags": {
+              "items": [
+                "MercRelations_DateOk"
+              ],
+              "tagSetSourceFile": "Tags/CompanyTags"
+            },
+            "ExclusionTags": {
+              "items": [],
+              "tagSetSourceFile": ""
+            },
+            "RequirementComparisons": []
+          },
+          "AddedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Actions": [],
+          "ForceEvents": [
+            {
+              "Scope": "Company",
+              "EventID": "FE-4W-RAT-10",
+              "MinDaysWait": 0,
+              "MaxDaysWait": 0,
+              "Probability": 100
+            }
+          ],
+          "TemporaryResult": false,
+          "ResultDuration": 0
         }
       ]
     },
@@ -617,7 +788,7 @@
         "Icon": null,
         "Name": "Reward",
         "Id": "ms_fp_lp4sw_AEWA_004_Reward",
-        "Details": "Transportation support payout ($30k) — CompleteFlashpoint value target"
+        "Details": "Transportation support payout ($30k) \u2014 CompleteFlashpoint value target"
       },
       "Scope": "Company",
       "Requirements": [],

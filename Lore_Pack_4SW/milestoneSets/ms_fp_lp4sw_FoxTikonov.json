@@ -647,6 +647,58 @@
               ]
             }
           ]
+        },
+        {
+          "Scope": "Company",
+          "Requirements": {
+            "Scope": "Company",
+            "RequirementTags": {
+              "items": [
+                "FoxTikonov2_DateOk"
+              ],
+              "tagSetSourceFile": "Tags/CompanyTags"
+            },
+            "ExclusionTags": {
+              "items": [
+                "event_FoxTikonov2_open_seen"
+              ],
+              "tagSetSourceFile": "Tags/CompanyTags"
+            },
+            "RequirementComparisons": []
+          },
+          "AddedTags": {
+            "items": [
+              "event_FoxTikonov2_open_seen",
+              "FoxTikonov2_Active"
+            ],
+            "tagSetSourceFile": "Tags/CompanyTags"
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Stats": [],
+          "ForceEvents": [
+            {
+              "Scope": "Company",
+              "EventID": "FE-4W-RAT-12",
+              "MinDaysWait": 1,
+              "MaxDaysWait": 1,
+              "Probability": 100
+            }
+          ],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": [
+            {
+              "Type": "System_AddFlashpoint",
+              "value": "fp_lp4sw_FoxTikonov2",
+              "valueConstant": null,
+              "additionalValues": [
+                "starsystemdef_Menkar"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -702,7 +754,7 @@
         "Icon": null,
         "Name": "Complete",
         "Id": "ms_fp_lp4sw_FoxTikonov_900_Complete",
-        "Details": "Fail end — fp_finished_FoxTikonov_failed"
+        "Details": "Fail end — fp_finished_FoxTikonov_failed; handoff to 900_Reward (FIX-ARC-002 split)"
       },
       "Scope": "Company",
       "Requirements": [],
@@ -725,15 +777,7 @@
             ],
             "tagSetSourceFile": "Tags/CompanyTags"
           },
-          "Stats": [
-            {
-              "typeString": "System.Int32",
-              "name": "Reputation.Davion",
-              "value": "-50",
-              "set": false,
-              "valueConstant": null
-            }
-          ],
+          "Stats": [],
           "ForceEvents": [],
           "TemporaryResult": false,
           "ResultDuration": 0,
@@ -746,14 +790,61 @@
             },
             {
               "Type": "Flashpoint_CompleteFlashpoint",
-              "value": null,
+              "value": "ms_fp_lp4sw_FoxTikonov_900_Reward",
               "valueConstant": null,
               "additionalValues": [
                 null,
-                "CompletedWithoutReward"
+                null
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "Description": {
+        "Icon": null,
+        "Name": "Reward",
+        "Id": "ms_fp_lp4sw_FoxTikonov_900_Reward",
+        "Details": "Fail penalty — -$1,000,000 + Davion -50 (Stats off CompleteFlashpoint step)"
+      },
+      "Scope": "Company",
+      "Requirements": [],
+      "Repeatable": false,
+      "UseRandomInvocation": false,
+      "InvokeChance": 0,
+      "Results": [
+        {
+          "Scope": "Company",
+          "Requirements": null,
+          "AddedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Stats": [
+            {
+              "typeString": "System.Int32",
+              "name": "Funds",
+              "value": "-1000000",
+              "set": false,
+              "valueConstant": null
+            },
+            {
+              "typeString": "System.Int32",
+              "name": "Reputation.Davion",
+              "value": "-50",
+              "set": false,
+              "valueConstant": null
+            }
+          ],
+          "ForceEvents": [],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": []
         }
       ]
     }

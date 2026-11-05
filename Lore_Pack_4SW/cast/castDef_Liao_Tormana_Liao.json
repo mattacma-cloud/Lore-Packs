@@ -15,7 +15,7 @@
     "localizeName" : true,
     "defaultEmotePortrait" : {
         "emote" : "Default",
-        "portraitAssetPath" : "Portraits/guiTxrPort_Tormana_Liao"
+        "portraitAssetPath" : "../../Mods/Lore_Pack_4SW/portraits/guiTxrPort_Tormana_Liao"
     },
     "emotePotraitList" : [
         

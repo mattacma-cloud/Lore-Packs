@@ -49,7 +49,7 @@
     "DefaultRepresentativeCastDefId" : "castDef_LiaoRepDefault",
     "DataManager" : null,
     "factionID" : "LiaoHomeGuard",
-    "icon" : "uixTxrLogo_Liao",
+    "icon" : "guiTxrPort_Liao_default_utr",
     "heraldryDefId" : "heraldrydef_LiaoHomeGuard",
     "storePanelImage" : null,
     "factionStoreColor" : null,

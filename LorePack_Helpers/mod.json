@@ -11,7 +11,7 @@
     "Mission Control"
   ],
   "Settings": {
-    "ContractIdContains": [ "c_fp_lp", "touring_tikonov" ],
+    "ContractIdContains": [ "c_fp_lp", "touring_tikonov", "TheVice_CapitolHillTest" ],
     "MirrorSlotTonnage": true,
     "AllowUnevenExpandedDrops": true,
     "ForceContractDropSlots": true,

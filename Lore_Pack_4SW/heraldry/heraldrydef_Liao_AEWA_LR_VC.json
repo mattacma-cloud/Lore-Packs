@@ -11,7 +11,8 @@
         "Details" : "This is the heraldry def for Vincent's Commandos",
         "Icon" : ""
     },
-    "textureLogoID" : "uixTxrLogo_AEWA_LiaRes",
-    "primaryMechColorID" : "BrightWhite_012",
+    "textureLogoID" : "uixTxrLogo_AEWA_VinCom",
+    "primaryMechColorID" : "BrightWhite_01",
     "secondaryMechColorID" : "BrightWhite_01",
-    "tertiaryMechColorID" : "Greyscale_01"}
+    "tertiaryMechColorID" : "Greyscale_01"
+}

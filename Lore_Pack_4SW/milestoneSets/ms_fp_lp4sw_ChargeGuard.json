@@ -446,7 +446,7 @@
         "Icon": null,
         "Name": "Complete",
         "Id": "ms_fp_lp4sw_ChargeGuard_108_End",
-        "Details": "Charge of the Guards I loot — itemCollection_AEWA_200a; calendar open owns CG II on 3028-09-18. Late path: Result B requires ChargeGuard2_DateOk then ForceEvents FE-4W-RAT-05."
+        "Details": "Charge of the Guards I loot â€” itemCollection_AEWA_200a; calendar open owns CG II on 3028-09-18. Late path: Result B requires ChargeGuard2_DateOk then ForceEvents FE-4W-RAT-05."
       },
       "Scope": "Company",
       "Requirements": [],
@@ -539,7 +539,7 @@
         "Icon": null,
         "Name": "Reward",
         "Id": "ms_fp_lp4sw_ChargeGuard_108_Reward",
-        "Details": "Charge of the Guards I payout Ã¢â‚¬â€ $1.2M + Davion +5 (Stats off CompleteFlashpoint step)"
+        "Details": "Charge of the Guards I payout ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â $1.2M + Davion +5 (Stats off CompleteFlashpoint step)"
       },
       "Scope": "Company",
       "Requirements": [],
@@ -586,7 +586,7 @@
         "Icon": null,
         "Name": "Talk",
         "Id": "ms_fp_lp4sw_AEWA_900_Talk",
-        "Details": "Shared AEWA fail hub â€” Fox-identical Talk/Complete split (ChargeGuard I/II)"
+        "Details": "Shared AEWA fail hub — Fox-identical Talk/Complete split (ChargeGuard I/II + LiaoBane I/II)"
       },
       "Scope": "Company",
       "Requirements": [],
@@ -615,7 +615,7 @@
               "value": "3134e8810ee258758024ae2c",
               "valueConstant": null,
               "additionalValues": [
-                "Charge of the Guards â€” Failure",
+                "Charge of the Guards Ã¢â‚¬â€ Failure",
                 "Capellan March",
                 "Debrief",
                 null
@@ -636,7 +636,7 @@
         "Icon": null,
         "Name": "Complete",
         "Id": "ms_fp_lp4sw_AEWA_900_Complete",
-        "Details": "Fail end — fp_finished_AEWA_failed; handoff to 900_Reward (FIX-ARC-002 split)"
+        "Details": "Fail end â€” fp_finished_AEWA_failed; handoff to 900_Reward (FIX-ARC-002 split)"
       },
       "Scope": "Company",
       "Requirements": [],
@@ -656,7 +656,13 @@
           "RemovedTags": {
             "items": [
               "ChargeGuard_Active",
-              "ChargeGuard2_Active"
+              "ChargeGuard2_Active",
+              "LiaoBane_Active",
+              "LiaoBane2_Active",
+              "FamilyMatters_Active",
+              "FamilyMatters2_Active",
+              "MercRelations_Active",
+              "MercRelations2_Active"
             ],
             "tagSetSourceFile": "Tags/CompanyTags"
           },
@@ -689,7 +695,7 @@
         "Icon": null,
         "Name": "Reward",
         "Id": "ms_fp_lp4sw_AEWA_900_Reward",
-        "Details": "Fail penalty — -,000,000 + Davion -50 (Stats off CompleteFlashpoint step; shared AEWA hub)"
+        "Details": "Fail penalty â€” -,000,000 + Davion -50 (Stats off CompleteFlashpoint step; shared AEWA hub)"
       },
       "Scope": "Company",
       "Requirements": [],

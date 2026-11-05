@@ -15,7 +15,7 @@
     "localizeName" : true,
     "defaultEmotePortrait" : {
         "emote" : "Default",
-        "portraitAssetPath" : "Portraits/guiTxrPort_Nelson.png"
+        "portraitAssetPath" : "../../Mods/Lore_Pack_4SW/portraits/guiTxrPort_Nelson.png"
     },
     "emotePotraitList" : [
         
