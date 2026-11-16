@@ -1,0 +1,1626 @@
+{
+    "ID": "c_fp_lp4sw_MercRelations3_Mission3_1",
+    "contractName": "The Lonely Patrol",
+    "contractDisplayStyle": "BaseFlashpoint",
+    "difficulty": 2,
+    "difficultyUIModifier": 0,
+    "weight": 1,
+    "scope": "STANDARD",
+    "finalDifficulty": 0,
+    "representativeCastDefIDOverride": "castDef_Mercenaries_12VRDR_Mitch_Nelson",
+    "missionSuccessStatementOverride": "You did something useful for a change.",
+    "badFaithStatementOverride": "Typical performance from a sub-par unit.",
+    "goodFaithStatementOverride": "You can;t even do the simple things right, can you?",
+    "shortDescription": "I don't have time to micro-manage you and need intelligence. Get out across the front and see what's there so my Rangers can do the real work.",
+    "longDescription": "No intel, so we need to generate the intel. This will end well.",
+    "salvagePotential": 4,
+    "requirementList": [],
+    "OnContractSuccessResults": [],
+    "OnContractFailureResults": [],
+    "contractTypeID": "CombatPatrolD2",
+    "encounterPlayStyle": "SinglePlayer",
+    "maxNumberOfPlayerUnits": 4,
+    "lanceMinTonnage": -1,
+    "lanceMaxTonnage": -1,
+    "mechMinTonnages": [
+        -1,
+        -1,
+        -1,
+        -1
+    ],
+    "mechMaxTonnages": [
+        -1,
+        -1,
+        -1,
+        -1
+    ],
+    "mapMood": "ArcticDayFrozen",
+    "startingFogOfWarVisibility": "Surveyed",
+    "contractObjectiveList": [
+        {
+            "contractObjective": {
+                "EncounterObjectGuid": "73275787-720a-4c33-9f20-953b1bbf48bd"
+            },
+            "title": "Complete the patrol on time",
+            "description": "",
+            "isPrimary": true,
+            "forPlayer": "Player1",
+            "objectiveGuids": [
+                "14d170ac-f882-4855-9596-01c96b41a64a",
+                "eedeacf0-2412-49a4-b3ef-f384a1cc2719",
+                "a11e5002-0005-4c00-a000-000000000005",
+                "d8dd6175-b1c3-4c59-97e0-dd55e299788f",
+                "8b8cb8ad-4b6f-4296-b879-c1ce0678152e"
+            ]
+        }
+    ],
+    "objectiveList": [
+        {
+            "objective": {
+                "EncounterObjectGuid": "8b8cb8ad-4b6f-4296-b879-c1ce0678152e"
+            },
+            "title": "Destroy All Buildings Within the Objective Zone",
+            "description": "The objective counts the structures inside the mark. Destroy them all.",
+            "isPrimary": true,
+            "OnSuccessResults": [],
+            "OnFailureResults": [],
+            "OnSuccessDialogueGUID": null,
+            "OnFailureDialogueGUID": null
+        },
+        {
+            "objective": {
+                "EncounterObjectGuid": "14d170ac-f882-4855-9596-01c96b41a64a"
+            },
+            "title": "Reach Waypoint 1 in 9 rounds with your entire lance",
+            "description": "",
+            "isPrimary": true,
+            "OnSuccessResults": [],
+            "OnFailureResults": [],
+            "OnSuccessDialogueGUID": null,
+            "OnFailureDialogueGUID": null
+        },
+        {
+            "objective": {
+                "EncounterObjectGuid": "eedeacf0-2412-49a4-b3ef-f384a1cc2719"
+            },
+            "title": "Reach Waypoint 2 in 12 rounds with your entire lance",
+            "description": "",
+            "isPrimary": true,
+            "OnSuccessResults": [],
+            "OnFailureResults": [],
+            "OnSuccessDialogueGUID": null,
+            "OnFailureDialogueGUID": null
+        },
+        {
+            "objective": {
+                "EncounterObjectGuid": "1cdd0efa-365c-4f25-a493-1ef1808ec3f5"
+            },
+            "title": "Destroy Ambushing Tanks",
+            "description": "",
+            "isPrimary": false,
+            "OnSuccessResults": [
+                {
+                    "Scope": "Company",
+                    "Requirements": null,
+                    "AddedTags": {
+                        "items": [],
+                        "tagSetSourceFile": ""
+                    },
+                    "RemovedTags": {
+                        "items": [],
+                        "tagSetSourceFile": ""
+                    },
+                    "Stats": [
+                        {
+                            "typeString": "System.Single",
+                            "name": "ContractBonusRewardPct",
+                            "value": "0.1",
+                            "set": false,
+                            "valueConstant": null
+                        }
+                    ],
+                    "Actions": [],
+                    "ForceEvents": [],
+                    "TemporaryResult": false,
+                    "ResultDuration": 0
+                }
+            ],
+            "OnFailureResults": [],
+            "OnSuccessDialogueGUID": null,
+            "OnFailureDialogueGUID": null
+        },
+        {
+            "objective": {
+                "EncounterObjectGuid": "d8dd6175-b1c3-4c59-97e0-dd55e299788f"
+            },
+            "title": "Get to the dust-off in 7 rounds",
+            "description": "",
+            "isPrimary": true,
+            "OnSuccessResults": [],
+            "OnFailureResults": [],
+            "OnSuccessDialogueGUID": null,
+            "OnFailureDialogueGUID": null
+        },
+        {
+            "objective": {
+                "EncounterObjectGuid": "b22e6007-0006-4c00-b000-000000000006"
+            },
+            "title": "Second 'Mech lance [Optional]",
+            "description": "",
+            "isPrimary": false,
+            "OnSuccessResults": [
+                {
+                    "Scope": "Company",
+                    "Requirements": null,
+                    "AddedTags": {
+                        "items": [],
+                        "tagSetSourceFile": ""
+                    },
+                    "RemovedTags": {
+                        "items": [],
+                        "tagSetSourceFile": ""
+                    },
+                    "Stats": [
+                        {
+                            "typeString": "System.Single",
+                            "name": "ContractBonusRewardPct",
+                            "value": "0.1",
+                            "set": false,
+                            "valueConstant": null
+                        }
+                    ],
+                    "Actions": [],
+                    "ForceEvents": [],
+                    "TemporaryResult": false,
+                    "ResultDuration": 0
+                }
+            ],
+            "OnFailureResults": [],
+            "OnSuccessDialogueGUID": null,
+            "OnFailureDialogueGUID": null
+        },
+        {
+            "objective": {
+                "EncounterObjectGuid": "a11e5002-0005-4c00-a000-000000000005"
+            },
+            "title": "Reach Waypoint 3 in 14 rounds with your entire lance",
+            "description": "",
+            "isPrimary": true,
+            "OnSuccessResults": [],
+            "OnFailureResults": [],
+            "OnSuccessDialogueGUID": null,
+            "OnFailureDialogueGUID": null
+        }
+    ],
+    "artilleryObjectiveList": [],
+    "buildingList": [],
+    "chunkList": [],
+    "cameraFocusHelperList": [
+        {
+            "name": "Spawner_PlayerLance",
+            "encounterObject": {
+                "EncounterObjectGuid": "76b654a6-4f2c-4a6f-86e6-d4cf868335fe"
+            }
+        }
+    ],
+    "dialogueList": [
+        {
+            "dialogue": {
+                "EncounterObjectGuid": "f7e65b8c-6927-4a2a-baf2-04fe19319c7a"
+            },
+            "name": "Dialogue_MissionStart",
+            "overrideDialogueBucketId": "",
+            "dialogueContent": [
+                {
+                    "words": "The Vegan Rangers have marked the route they want us to patrol, Commander. Make sure that you hit every waypoint before you run out of time. Do not linger at any point and get to the first waypoint as quickly as you can.",
+                    "wordsColor": {
+                        "g": 1,
+                        "r": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_DariusDefault",
+                    "emote": "Default",
+                    "audioName": "NONE",
+                    "cameraFocusGuid": "",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": -1
+                }
+            ]
+        },
+        {
+            "dialogue": {
+                "EncounterObjectGuid": "efc566be-c3f2-4616-88f3-7f81d4adad72"
+            },
+            "name": "Dialogue_Timer_Half",
+            "overrideDialogueBucketId": "",
+            "dialogueContent": [
+                {
+                    "words": "Clock's half gone, Commander. Get to the next waypoint.",
+                    "wordsColor": {
+                        "g": 1,
+                        "r": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_DariusDefault",
+                    "emote": "Default",
+                    "audioName": "NONE",
+                    "cameraFocusGuid": "",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": -1
+                }
+            ]
+        },
+        {
+            "dialogue": {
+                "EncounterObjectGuid": "c3776212-fa69-43da-b21e-ae2975317d02"
+            },
+            "name": "Dialogue_Timer_LastRound",
+            "overrideDialogueBucketId": "",
+            "dialogueContent": [
+                {
+                    "words": "One round left to reach the next waypoint, Commander.",
+                    "wordsColor": {
+                        "g": 1,
+                        "r": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_DariusDefault",
+                    "emote": "Default",
+                    "audioName": "NONE",
+                    "cameraFocusGuid": "",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": -1
+                }
+            ]
+        },
+        {
+            "dialogue": {
+                "EncounterObjectGuid": "e64491df-79cb-4fd2-973c-e59557b990ed"
+            },
+            "name": "Dialogue_Leg_1",
+            "overrideDialogueBucketId": "",
+            "dialogueContent": [
+                {
+                    "words": "Waypoint One is ahead. Move quickly. Don't forget that Nelson will be watching us.",
+                    "wordsColor": {
+                        "g": 1,
+                        "r": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_DariusDefault",
+                    "emote": "Default",
+                    "audioName": "NONE",
+                    "cameraFocusGuid": "",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": -1
+                }
+            ]
+        },
+        {
+            "dialogue": {
+                "EncounterObjectGuid": "082c974c-446e-4bca-9c78-289db306cbc5"
+            },
+            "name": "Dialogue_Leg_2",
+            "overrideDialogueBucketId": "",
+            "dialogueContent": [
+                {
+                    "words": "Waypoint two is ahead. Clock is now ticking and I am getting pressure from the VEgans to get you through this patrol quickly.",
+                    "wordsColor": {
+                        "g": 1,
+                        "r": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_DariusDefault",
+                    "emote": "Default",
+                    "audioName": "NONE",
+                    "cameraFocusGuid": "",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": -1
+                }
+            ]
+        },
+        {
+            "dialogue": {
+                "EncounterObjectGuid": "b28e2440-27ec-4bc9-9a4f-721323653543"
+            },
+            "name": "Dialogue_Leg_3",
+            "overrideDialogueBucketId": "",
+            "dialogueContent": [
+                {
+                    "words": "Waypoint three is up next. don't mess around.",
+                    "wordsColor": {
+                        "g": 1,
+                        "r": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_DariusDefault",
+                    "emote": "Default",
+                    "audioName": "NONE",
+                    "cameraFocusGuid": "",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": -1
+                }
+            ]
+        },
+        {
+            "dialogue": {
+                "EncounterObjectGuid": "3da7b424-d363-4ead-948c-67b72438d32e"
+            },
+            "name": "Dialogue_Shock",
+            "overrideDialogueBucketId": "",
+            "dialogueContent": [
+                {
+                    "words": "",
+                    "wordsColor": {
+                        "g": 1,
+                        "r": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_DariusDefault",
+                    "emote": "Default",
+                    "audioName": "NONE",
+                    "cameraFocusGuid": "",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": -1
+                }
+            ]
+        },
+        {
+            "dialogue": {
+                "EncounterObjectGuid": "21338b06-8b5b-4899-866b-2ad409c58a2d"
+            },
+            "name": "Dialogue_Leg_4",
+            "overrideDialogueBucketId": "",
+            "dialogueContent": [
+                {
+                    "words": "Destroy the buildings within the objective area and get to Waypoint 4.",
+                    "wordsColor": {
+                        "g": 1,
+                        "r": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_DariusDefault",
+                    "emote": "Default",
+                    "audioName": "NONE",
+                    "cameraFocusGuid": "",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": -1
+                }
+            ]
+        },
+        {
+            "dialogue": {
+                "EncounterObjectGuid": "7db35656-45bc-4a78-aa7f-7a91e0f45a6d"
+            },
+            "name": "Dialogue_Evac",
+            "overrideDialogueBucketId": "",
+            "dialogueContent": [
+                {
+                    "words": "Dropship is inbound. Get to the dust-off location and see if you can shake any enemy units that are still on your tail.",
+                    "wordsColor": {
+                        "g": 1,
+                        "r": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_DariusDefault",
+                    "emote": "Default",
+                    "audioName": "NONE",
+                    "cameraFocusGuid": "",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": -1
+                }
+            ]
+        },
+        {
+            "dialogue": {
+                "EncounterObjectGuid": "545c386f-ef13-48a7-be14-e662639a6f13"
+            },
+            "name": "Dialogue_TimeFailed",
+            "overrideDialogueBucketId": "",
+            "dialogueContent": [
+                {
+                    "words": "We took too long, Commander, and Colonel Nelson is already on the radio howling at me.",
+                    "wordsColor": {
+                        "g": 1,
+                        "r": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_DariusDefault",
+                    "emote": "Default",
+                    "audioName": "NONE",
+                    "cameraFocusGuid": "",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": -1
+                }
+            ]
+        },
+        {
+            "dialogue": {
+                "EncounterObjectGuid": "4011a4c3-cba2-4d22-b2b3-3b19a3297ab9"
+            },
+            "name": "Dialogue_MissionSuccess",
+            "overrideDialogueBucketId": "",
+            "dialogueContent": [
+                {
+                    "words": "That's it, commander, you've completed the patrol. Not that Colonel Nelson seems to really care.",
+                    "wordsColor": {
+                        "g": 1,
+                        "r": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_DariusDefault",
+                    "emote": "Default",
+                    "audioName": "NONE",
+                    "cameraFocusGuid": "",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": -1
+                }
+            ]
+        },
+        {
+            "dialogue": {
+                "EncounterObjectGuid": "d3d33d95-9ed7-4686-b9eb-954ebe51cc02"
+            },
+            "name": "Dialogue_MissionFailure",
+            "overrideDialogueBucketId": "",
+            "dialogueContent": [
+                {
+                    "words": "I imagine this is going to be quite the ugly debrief.",
+                    "wordsColor": {
+                        "g": 1,
+                        "r": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_DariusDefault",
+                    "emote": "Default",
+                    "audioName": "NONE",
+                    "cameraFocusGuid": "",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": -1
+                }
+            ]
+        },
+        {
+            "dialogue": {
+                "EncounterObjectGuid": "a11e5004-0005-4c00-a000-000000000005"
+            },
+            "name": "Dialogue_Leg_5",
+            "overrideDialogueBucketId": "",
+            "dialogueContent": [
+                {
+                    "words": "Leg five is live.",
+                    "wordsColor": {
+                        "g": 1,
+                        "r": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "selectedCastDefId": "castDef_DariusDefault",
+                    "emote": "Default",
+                    "audioName": "NONE",
+                    "cameraFocusGuid": "",
+                    "cameraDistance": "Far",
+                    "cameraHeight": "Default",
+                    "revealRadius": -1
+                }
+            ]
+        }
+    ],
+    "extractionOverrideList": [],
+    "overwriteMissionCompleteWhenAutoComplete": true,
+    "overrideAutoCompleteDialogueId": null,
+    "disableNegotations": false,
+    "disableLanceConfiguration": false,
+    "disableCancelButton": false,
+    "disableAfterAction": false,
+    "contractRewardOverride": 200000,
+    "travelOnly": false,
+    "useTravelCostPenalty": false,
+    "usesExpiration": false,
+    "expirationTimeOverride": -1,
+    "negotiatedSalary": 0.5,
+    "negotiatedSalvage": 0.5,
+    "excludedFromProceduralGeneration": true,
+    "player1Team": {
+        "encounterLayerData": {
+            "EncounterObjectGuid": "c1dd76b9-5f5f-46f1-b5a2-d1f22dd4991b"
+        },
+        "teamGuid": "bf40fd39-ccf9-47c4-94a6-061809681140",
+        "teamName": "Player 1",
+        "faction": "Player1sMercUnit",
+        "teamLeaderCastDefId": "castDef_TeamLeader_Current",
+        "lanceOverrideList": [
+            {
+                "lanceSpawner": {
+                    "EncounterObjectGuid": "76b654a6-4f2c-4a6f-86e6-d4cf868335fe"
+                },
+                "name": "Spawner_PlayerLance",
+                "lanceDefId": "Manual",
+                "lanceTagSet": {
+                    "items": [],
+                    "tagSetSourceFile": "tags/LanceTags"
+                },
+                "lanceExcludedTagSet": {
+                    "items": [],
+                    "tagSetSourceFile": "tags/LanceTags"
+                },
+                "spawnEffectTags": {
+                    "items": [],
+                    "tagSetSourceFile": "tags/SpawnEffectTags"
+                },
+                "lanceDifficultyAdjustment": 0,
+                "selectedLanceDefId": null,
+                "selectedLanceDifficulty": 0,
+                "unitSpawnPointOverrideList": [
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "ec9d2280-ca9a-4d90-8a20-963d8a4c0a39"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Mech",
+                        "unitDefId": "mechDef_None",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilotDef_InheritLance",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": "",
+                        "selectedPilotDefId": ""
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "5df48a48-1840-49b0-84e9-126847053afa"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Mech",
+                        "unitDefId": "mechDef_None",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilotDef_InheritLance",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": "",
+                        "selectedPilotDefId": ""
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "a55fc76c-c955-4b61-bb64-2608c9beb9f5"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Mech",
+                        "unitDefId": "mechDef_None",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilotDef_InheritLance",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": "",
+                        "selectedPilotDefId": ""
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "0f10a383-7325-4726-b2c4-a0ef416e4b27"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Mech",
+                        "unitDefId": "mechDef_None",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilotDef_InheritLance",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": "",
+                        "selectedPilotDefId": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "player2Team": {
+        "encounterLayerData": {
+            "EncounterObjectGuid": "c1dd76b9-5f5f-46f1-b5a2-d1f22dd4991b"
+        },
+        "teamGuid": "757173dd-b4e1-4bb5-9bee-d78e623cc867",
+        "teamName": "Player 2",
+        "faction": "Player2sMercUnit",
+        "teamLeaderCastDefId": "castDef_TeamLeader_Current",
+        "lanceOverrideList": []
+    },
+    "employerTeam": {
+        "encounterLayerData": {
+            "EncounterObjectGuid": "c1dd76b9-5f5f-46f1-b5a2-d1f22dd4991b"
+        },
+        "teamGuid": "ecc8d4f2-74b4-465d-adf6-84445e5dfc230",
+        "teamName": "Employer",
+        "faction": "AEWA_12VR_Delta",
+        "teamLeaderCastDefId": "castDef_TeamLeader_Current",
+        "lanceOverrideList": []
+    },
+    "targetTeam": {
+        "encounterLayerData": {
+            "EncounterObjectGuid": "c1dd76b9-5f5f-46f1-b5a2-d1f22dd4991b"
+        },
+        "teamGuid": "be77cadd-e245-4240-a93e-b99cc98902a5",
+        "teamName": "Target",
+        "faction": "LiaoHomeGuard",
+        "teamLeaderCastDefId": "castDef_TeamLeader_Current",
+        "lanceOverrideList": [
+            {
+                "lanceSpawner": {
+                    "EncounterObjectGuid": "76424e46-1b08-4465-9028-14aa796aee89"
+                },
+                "name": "Event_Mech",
+                "lanceDefId": "Tagged",
+                "lanceTagSet": {
+                    "items": [
+                        "lance_type_battle",
+                        "lance_type_mech"
+                    ],
+                    "tagSetSourceFile": "tags/LanceTags"
+                },
+                "lanceExcludedTagSet": {
+                    "items": [
+                        "lance_type_gladiator"
+                    ],
+                    "tagSetSourceFile": "tags/LanceTags"
+                },
+                "spawnEffectTags": {
+                    "items": [],
+                    "tagSetSourceFile": "tags/SpawnEffectTags"
+                },
+                "lanceDifficultyAdjustment": 0,
+                "selectedLanceDefId": "",
+                "selectedLanceDifficulty": 0,
+                "unitSpawnPointOverrideList": [
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "d03953b6-cca0-4ba8-89c0-2d5f2eaadb3a"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Mech",
+                        "unitDefId": "mechDef_InheritLance",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilotDef_InheritLance",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": "",
+                        "selectedPilotDefId": ""
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "f7ef75ce-f46f-4437-8b0a-c5a47263ad71"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Mech",
+                        "unitDefId": "mechDef_InheritLance",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilotDef_InheritLance",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": "",
+                        "selectedPilotDefId": ""
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "fc983b95-69bb-427d-9593-0d95b5f568cb"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Mech",
+                        "unitDefId": "mechDef_InheritLance",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilotDef_InheritLance",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": "",
+                        "selectedPilotDefId": ""
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "56036ee2-6a77-42a7-b01d-543a6014ef35"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Mech",
+                        "unitDefId": "mechDef_InheritLance",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilotDef_InheritLance",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": "",
+                        "selectedPilotDefId": ""
+                    }
+                ]
+            },
+            {
+                "lanceSpawner": {
+                    "EncounterObjectGuid": "6a59f5e1-8f14-4df2-9c30-bd29c7b6a3af"
+                },
+                "name": "Event_Tank",
+                "lanceDefId": "Tagged",
+                "lanceTagSet": {
+                    "items": [
+                        "lance_type_vehicle"
+                    ],
+                    "tagSetSourceFile": "tags/LanceTags"
+                },
+                "lanceExcludedTagSet": {
+                    "items": [
+                        "lance_type_gladiator"
+                    ],
+                    "tagSetSourceFile": "tags/LanceTags"
+                },
+                "spawnEffectTags": {
+                    "items": [],
+                    "tagSetSourceFile": "tags/SpawnEffectTags"
+                },
+                "lanceDifficultyAdjustment": 0,
+                "selectedLanceDefId": "",
+                "selectedLanceDifficulty": 0,
+                "unitSpawnPointOverrideList": [
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "b2f6fb15-0ae9-447a-8f15-5b56752476fb"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Vehicle",
+                        "unitDefId": "vehicleDef_InheritLance",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilotDef_InheritLance",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": "",
+                        "selectedPilotDefId": ""
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "c776ee73-4b3d-4576-9dbf-a8caecfb1584"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Vehicle",
+                        "unitDefId": "vehicleDef_InheritLance",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilotDef_InheritLance",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": "",
+                        "selectedPilotDefId": ""
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "3f4f6b27-7c87-421f-b896-fe01808ff4df"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Vehicle",
+                        "unitDefId": "vehicleDef_InheritLance",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilotDef_InheritLance",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": "",
+                        "selectedPilotDefId": ""
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "041c8143-3c1c-4551-87f6-25b750d550da"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Vehicle",
+                        "unitDefId": "vehicleDef_InheritLance",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilotDef_InheritLance",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": "",
+                        "selectedPilotDefId": ""
+                    }
+                ]
+            },
+            {
+                "lanceSpawner": {
+                    "EncounterObjectGuid": "da6bcda5-bf0e-4de9-bac6-848eeebc23a8"
+                },
+                "name": "Event_LightMech",
+                "lanceDefId": "lancedef_mech_d4_dynamic_lightMedBattle",
+                "lanceTagSet": {
+                    "items": [
+                        "lance_type_mech",
+                        "lance_type_light",
+                        "lance_type_battle"
+                    ],
+                    "tagSetSourceFile": "tags/LanceTags"
+                },
+                "lanceExcludedTagSet": {
+                    "items": [
+                        "lance_type_gladiator"
+                    ],
+                    "tagSetSourceFile": "tags/LanceTags"
+                },
+                "spawnEffectTags": {
+                    "items": [],
+                    "tagSetSourceFile": "tags/SpawnEffectTags"
+                },
+                "lanceDifficultyAdjustment": 0,
+                "selectedLanceDefId": "",
+                "selectedLanceDifficulty": 0,
+                "unitSpawnPointOverrideList": [
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "0672e771-43f8-446a-815e-988cd6d5ef79"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Mech",
+                        "unitDefId": "mechDef_InheritLance",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilotDef_InheritLance",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": "",
+                        "selectedPilotDefId": ""
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "43e3fe15-7b1d-41b6-97c8-60a40e790ce3"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Mech",
+                        "unitDefId": "mechDef_InheritLance",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilotDef_InheritLance",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": "",
+                        "selectedPilotDefId": ""
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "2ad36b72-a7e4-4bd3-b027-f7b28087253e"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Mech",
+                        "unitDefId": "mechDef_InheritLance",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilotDef_InheritLance",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": "",
+                        "selectedPilotDefId": ""
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "d8cfb7f4-2deb-4d29-b84f-1ff1ab3990e0"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Mech",
+                        "unitDefId": "mechDef_InheritLance",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilotDef_InheritLance",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": "",
+                        "selectedPilotDefId": ""
+                    }
+                ]
+            },
+            {
+                "lanceSpawner": {
+                    "EncounterObjectGuid": "8178be42-6e92-42ee-908f-c930ec4a1fde"
+                },
+                "name": "Event_Turrets",
+                "lanceDefId": "lancedef_combatpatrol_turret_1",
+                "lanceTagSet": {
+                    "items": [
+                        "lance_type_turret"
+                    ],
+                    "tagSetSourceFile": "tags/LanceTags"
+                },
+                "lanceExcludedTagSet": {
+                    "items": [
+                        "lance_type_gladiator"
+                    ],
+                    "tagSetSourceFile": "tags/LanceTags"
+                },
+                "spawnEffectTags": {
+                    "items": [],
+                    "tagSetSourceFile": "tags/SpawnEffectTags"
+                },
+                "lanceDifficultyAdjustment": 0,
+                "selectedLanceDefId": "",
+                "selectedLanceDifficulty": 0,
+                "unitSpawnPointOverrideList": []
+            },
+            {
+                "lanceSpawner": {
+                    "EncounterObjectGuid": "1ca284c3-6977-4344-b00a-b782ba6dfc6e"
+                },
+                "name": "Event_ArtilleryOverwatch",
+                "lanceDefId": "lancedef_arty_dynamic_battle1",
+                "lanceTagSet": {
+                    "items": [
+                        "lance_type_vehicle",
+                        "lance_type_battle"
+                    ],
+                    "tagSetSourceFile": "tags/LanceTags"
+                },
+                "lanceExcludedTagSet": {
+                    "items": [
+                        "lance_type_gladiator"
+                    ],
+                    "tagSetSourceFile": "tags/LanceTags"
+                },
+                "spawnEffectTags": {
+                    "items": [],
+                    "tagSetSourceFile": "tags/SpawnEffectTags"
+                },
+                "lanceDifficultyAdjustment": 0,
+                "selectedLanceDefId": "",
+                "selectedLanceDifficulty": 0,
+                "unitSpawnPointOverrideList": [
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "47a888cf-0a3e-4ea9-b8eb-9925b0a75827"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Vehicle",
+                        "unitDefId": "vehicleDef_InheritLance",
+                        "unitTagSet": {
+                            "items": [
+                                "unit_vehicle_artillery"
+                            ],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilotDef_InheritLance",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": "",
+                        "selectedPilotDefId": ""
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "42f7a86a-9d3c-4942-bcdc-eda19819de8c"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Vehicle",
+                        "unitDefId": "vehicleDef_InheritLance",
+                        "unitTagSet": {
+                            "items": [
+                                "unit_vehicle_artillery"
+                            ],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilotDef_InheritLance",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": "",
+                        "selectedPilotDefId": ""
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "e412e23e-44ec-4936-8856-67b6cc87a572"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Vehicle",
+                        "unitDefId": "vehicleDef_InheritLance",
+                        "unitTagSet": {
+                            "items": [
+                                "unit_vehicle_artillery"
+                            ],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilotDef_InheritLance",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": "",
+                        "selectedPilotDefId": ""
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "45331521-eff2-4e79-aa9f-b868d6d72049"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Vehicle",
+                        "unitDefId": "vehicleDef_InheritLance",
+                        "unitTagSet": {
+                            "items": [
+                                "unit_vehicle_spotter"
+                            ],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilotDef_InheritLance",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": "",
+                        "selectedPilotDefId": ""
+                    }
+                ]
+            },
+            {
+                "lanceSpawner": {
+                    "EncounterObjectGuid": "b22e6002-0006-4c00-b000-000000000006"
+                },
+                "name": "Event_Mech_2",
+                "lanceDefId": "Tagged",
+                "lanceTagSet": {
+                    "items": [
+                        "lance_type_battle",
+                        "lance_type_mech"
+                    ],
+                    "tagSetSourceFile": "tags/LanceTags"
+                },
+                "lanceExcludedTagSet": {
+                    "items": [
+                        "lance_type_gladiator"
+                    ],
+                    "tagSetSourceFile": "tags/LanceTags"
+                },
+                "spawnEffectTags": {
+                    "items": [],
+                    "tagSetSourceFile": "tags/SpawnEffectTags"
+                },
+                "lanceDifficultyAdjustment": 0,
+                "selectedLanceDefId": "",
+                "selectedLanceDifficulty": 0,
+                "unitSpawnPointOverrideList": [
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "b22e6003-0006-4c00-b000-000000000006"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Mech",
+                        "unitDefId": "mechDef_InheritLance",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilotDef_InheritLance",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": "",
+                        "selectedPilotDefId": ""
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "b22e6004-0006-4c00-b000-000000000006"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Mech",
+                        "unitDefId": "mechDef_InheritLance",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilotDef_InheritLance",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": "",
+                        "selectedPilotDefId": ""
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "b22e6005-0006-4c00-b000-000000000006"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Mech",
+                        "unitDefId": "mechDef_InheritLance",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilotDef_InheritLance",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": "",
+                        "selectedPilotDefId": ""
+                    },
+                    {
+                        "unitSpawnPoint": {
+                            "EncounterObjectGuid": "b22e6006-0006-4c00-b000-000000000006"
+                        },
+                        "customUnitName": "",
+                        "customHeraldryDefId": "",
+                        "unitType": "Mech",
+                        "unitDefId": "mechDef_InheritLance",
+                        "unitTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/UnitTags"
+                        },
+                        "spawnEffectTags": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId": "pilotDef_InheritLance",
+                        "pilotTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet": {
+                            "items": [],
+                            "tagSetSourceFile": "tags/PilotTags"
+                        },
+                        "selectedUnitType": "UNDEFINED",
+                        "selectedUnitDefId": "",
+                        "selectedPilotDefId": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "targetsAllyTeam": {
+        "encounterLayerData": {
+            "EncounterObjectGuid": "c1dd76b9-5f5f-46f1-b5a2-d1f22dd4991b"
+        },
+        "teamGuid": "31151ed6-cfc2-467e-98c4-9ae5bea784cf",
+        "teamName": "Target's Ally",
+        "faction": "INVALID_UNSET",
+        "teamLeaderCastDefId": "castDef_TeamLeader_Current",
+        "lanceOverrideList": []
+    },
+    "neutralToAllTeam": {
+        "encounterLayerData": {
+            "EncounterObjectGuid": "c1dd76b9-5f5f-46f1-b5a2-d1f22dd4991b"
+        },
+        "teamGuid": "61612bb3-abf9-4586-952a-0559fa9dcd75",
+        "teamName": "Neutral to All",
+        "faction": "INVALID_UNSET",
+        "teamLeaderCastDefId": "castDef_TeamLeader_Current",
+        "lanceOverrideList": []
+    },
+    "hostileToAllTeam": {
+        "encounterLayerData": {
+            "EncounterObjectGuid": "c1dd76b9-5f5f-46f1-b5a2-d1f22dd4991b"
+        },
+        "teamGuid": "3c9f3a20-ab03-4bcb-8ab6-b1ef0442bbf0",
+        "teamName": "Hostile to All",
+        "faction": "INVALID_UNSET",
+        "teamLeaderCastDefId": "castDef_TeamLeader_Current",
+        "lanceOverrideList": []
+    },
+    "employersAllyTeam": {
+        "encounterLayerData": null,
+        "teamGuid": "70af7e7f-39a8-4e81-87c2-bd01dcb01b5e",
+        "teamName": "Employers Ally",
+        "faction": "INVALID_UNSET",
+        "teamLeaderCastDefId": "castDef_TeamLeader_Current",
+        "lanceOverrideList": []
+    },
+    "limitFlashpointDrop": true,
+    "respectFourDropLimit": true
+}
