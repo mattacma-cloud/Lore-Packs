@@ -1,0 +1,90 @@
+{
+  "Description": {
+    "Id": "FE-4W-RAT-23-floor",
+    "Name": "Operation RAT - Wave 4: Deployment to Shipka",
+    "Details": "Marshal Fredricks requests our presence on [[DM.SystemDefs[starsystemdef_Shipka],Shipka]] for the next phase of Operation RAT to assist the 12th Vegan Rangers - Delta Regiment.",
+    "Icon": "uixTxrTimeLine_ComStarNewsBureau.png"
+  },
+  "Scope": "Company",
+  "Weight": 0,
+  "Requirements": {
+    "Scope": "Company",
+    "RequirementTags": {
+      "items": [
+        "fp_choice_OpRat12VRD"
+      ],
+      "tagSetSourceFile": "Tags/CompanyTags"
+    },
+    "ExclusionTags": {
+      "items": [
+        "MercRelations4_DateOk",
+        "event_MercRelations4_open_seen",
+        "fp_finished_MercRelations4_success",
+        "MercRelations4_closed",
+        "timeline_3029_03_12"
+      ],
+      "tagSetSourceFile": "Tags/CompanyTags"
+    },
+    "RequirementComparisons": []
+  },
+  "AdditionalRequirements": [],
+  "AdditionalObjects": [],
+  "Options": [
+    {
+      "Description": {
+        "Id": "outcome_0",
+        "Name": "Acknowledge",
+        "Details": "Marshal Fredricks requests our presence on [[DM.SystemDefs[starsystemdef_Shipka],Shipka]] for the next phase of Operation RAT to assist the 12th Vegan Rangers - Delta Regiment.",
+        "Icon": ""
+      },
+      "RequirementList": [],
+      "ResultSets": [
+        {
+          "Description": {
+            "Id": "outcome_0_0",
+            "Name": "Operation RAT - Wave 4: Deployment to Shipka",
+            "Details": "Marshal Fredricks requests our presence on [[DM.SystemDefs[starsystemdef_Shipka],Shipka]] for the next phase of Operation RAT to assist the 12th Vegan Rangers - Delta Regiment.",
+            "Icon": ""
+          },
+          "Weight": 100,
+          "Results": [
+            {
+              "Scope": "Company",
+              "Requirements": null,
+              "AddedTags": {
+                "items": [
+                  "MercRelations4_DateOk"
+                ],
+                "tagSetSourceFile": "Tags/CompanyTags"
+              },
+              "RemovedTags": {
+                "items": null,
+                "tagSetSourceFile": ""
+              },
+              "Stats": null,
+              "Actions": null,
+              "ForceEvents": null,
+              "TemporaryResult": false,
+              "ResultDuration": 0
+            }
+          ]
+        }
+      ],
+      "Requirements": {
+        "Scope": "Company",
+        "RequirementTags": {
+          "items": null,
+          "tagSetSourceFile": ""
+        },
+        "ExclusionTags": {
+          "items": null,
+          "tagSetSourceFile": ""
+        },
+        "RequirementComparisons": []
+      }
+    }
+  ],
+  "PublishState": "PUBLISHED",
+  "ValidationState": "UNTESTED",
+  "EventType": "NORMAL"
+}
