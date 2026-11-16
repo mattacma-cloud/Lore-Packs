@@ -43,6 +43,7 @@ Drag the Lore_Pack_4SW, LorePack_Helpers, Lore_Pack_4SW_FP_Cap and MissionContro
 - LorePack_Helpers (Part of this mod downloads)
 - Company Decorations (https://github.com/mattacma-cloud/Decorations)
 - The Big Deal
+- MoreMissions (https://github.com/mattacma-cloud/More-Missions)
 
 
 **GAME PLAY NOTES AS OF RELEASE 0.1.78**
