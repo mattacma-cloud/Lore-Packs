@@ -1,0 +1,43 @@
+{
+  "ID": "c_fp_lp4sw_MercRelations3_Mission3_1",
+  "RandomSpawns": {
+    "Enable": false
+  },
+  "HotDropProtection": {
+    "Enable": false
+  },
+  "AdditionalLances": {
+    "Enable": false,
+    "UseDialogue": false,
+    "ShowObjectiveOnLanceDetected": false,
+    "EnemyLanceObjectiveNames": [],
+    "HideObjective": false,
+    "AlwaysDisplayHiddenObjectiveIfPrimary": false,
+    "AllyLances": [],
+    "AllyLanceCount": 0,
+    "EnemyLances": [],
+    "EnemyLanceCount": 0,
+    "DialogueCastDefId": "",
+    "Dialogue": ""
+  },
+  "ExtendedLances": {
+    "Enable": false,
+    "TargetLanceSize": 4,
+    "EmployerLanceSize": 4,
+    "TargetAllyLanceSize": 4,
+    "EmployerAllyLanceSize": 4,
+    "HostileToAllLanceSize": 4,
+    "NeutralToAllLanceSize": 4,
+    "Autofill": false
+  },
+  "ExtendedBoundaries": {
+    "Enable": true,
+    "IncreaseBoundarySizeByPercentage": 1
+  },
+  "DynamicWithdraw": {
+    "Enable": false
+  },
+  "AdditionalPlayerMechs": {
+    "Enable": false
+  }
+}
