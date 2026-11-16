@@ -427,7 +427,7 @@
         "Icon": null,
         "Name": "Complete",
         "Id": "ms_fp_lp4sw_MercRelations2_107_End",
-        "Details": "Mercenary Relations II loot (NoSteal) - itemCollection_AEWA_500b; arc end, no late ForceEvents."
+        "Details": "Mercenary Relations II loot (NoSteal) - itemCollection_AEWA_500b. Late path: Result B requires MercRelations3_DateOk then direct System_AddFlashpoint Kansu + ForceEvents FE-4W-RAT-22 (MinDaysWait 1)."
       },
       "Scope": "Company",
       "Requirements": [],
@@ -473,6 +473,58 @@
               "additionalValues": [
                 "itemCollection_AEWA_500b",
                 null
+              ]
+            }
+          ]
+        },
+        {
+          "Scope": "Company",
+          "Requirements": {
+            "Scope": "Company",
+            "RequirementTags": {
+              "items": [
+                "MercRelations3_DateOk"
+              ],
+              "tagSetSourceFile": "Tags/CompanyTags"
+            },
+            "ExclusionTags": {
+              "items": [
+                "event_MercRelations3_open_seen"
+              ],
+              "tagSetSourceFile": "Tags/CompanyTags"
+            },
+            "RequirementComparisons": []
+          },
+          "AddedTags": {
+            "items": [
+              "event_MercRelations3_open_seen",
+              "MercRelations3_Active"
+            ],
+            "tagSetSourceFile": "Tags/CompanyTags"
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Stats": [],
+          "ForceEvents": [
+            {
+              "Scope": "Company",
+              "EventID": "FE-4W-RAT-22",
+              "MinDaysWait": 1,
+              "MaxDaysWait": 1,
+              "Probability": 100
+            }
+          ],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": [
+            {
+              "Type": "System_AddFlashpoint",
+              "value": "fp_lp4sw_MercRelations3",
+              "valueConstant": null,
+              "additionalValues": [
+                "starsystemdef_Kansu"
               ]
             }
           ]
@@ -641,7 +693,7 @@
         "Icon": null,
         "Name": "Complete",
         "Id": "ms_fp_lp4sw_MercRelations2_602_End",
-        "Details": "Mercenary Relations II loot (Steal) - itemCollection_AEWA_500c; arc end, no late ForceEvents."
+        "Details": "Mercenary Relations II loot (Steal) - itemCollection_AEWA_500c. Late path: Result B requires MercRelations3_DateOk then direct System_AddFlashpoint Kansu + ForceEvents FE-4W-RAT-22 (MinDaysWait 1)."
       },
       "Scope": "Company",
       "Requirements": [],
@@ -687,6 +739,58 @@
               "additionalValues": [
                 "itemCollection_AEWA_500c",
                 null
+              ]
+            }
+          ]
+        },
+        {
+          "Scope": "Company",
+          "Requirements": {
+            "Scope": "Company",
+            "RequirementTags": {
+              "items": [
+                "MercRelations3_DateOk"
+              ],
+              "tagSetSourceFile": "Tags/CompanyTags"
+            },
+            "ExclusionTags": {
+              "items": [
+                "event_MercRelations3_open_seen"
+              ],
+              "tagSetSourceFile": "Tags/CompanyTags"
+            },
+            "RequirementComparisons": []
+          },
+          "AddedTags": {
+            "items": [
+              "event_MercRelations3_open_seen",
+              "MercRelations3_Active"
+            ],
+            "tagSetSourceFile": "Tags/CompanyTags"
+          },
+          "RemovedTags": {
+            "items": [],
+            "tagSetSourceFile": ""
+          },
+          "Stats": [],
+          "ForceEvents": [
+            {
+              "Scope": "Company",
+              "EventID": "FE-4W-RAT-22",
+              "MinDaysWait": 1,
+              "MaxDaysWait": 1,
+              "Probability": 100
+            }
+          ],
+          "TemporaryResult": false,
+          "ResultDuration": 0,
+          "Actions": [
+            {
+              "Type": "System_AddFlashpoint",
+              "value": "fp_lp4sw_MercRelations3",
+              "valueConstant": null,
+              "additionalValues": [
+                "starsystemdef_Kansu"
               ]
             }
           ]
